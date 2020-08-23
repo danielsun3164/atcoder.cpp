@@ -5,7 +5,7 @@
 
 using namespace std;
 
-static const string COMMAND="./ex5"; 
+static const string COMMAND = "./ex5";
 
 TEST(ex5, case1) {
 	check(COMMAND, string("") + "1 2", string("") + "3");
