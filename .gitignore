@@ -1,5 +1,7 @@
-apg4b/test*
+apg4b/test_*
 apg4b/ex*
+practice/practice*
+practice/test_*
 /.metadata/
 */.cproject
 */.project
