@@ -21,14 +21,7 @@ vector<vector<int>> dfs(int max, int remain) {
 int main() {
 	int n;
 	cin >> n;
-	vector<vector<int>> r;
-	for (int i = n; i >= 1; i--) {
-		vector<vector<int>> vs = dfs(i, n - i);
-		for (vector<int> v : vs) {
-			v.insert(v.begin(), i);
-			r.push_back(v);
-		}
-	}
+	vector<vector<int>> r = dfs(n, n);
 	for (vector<int> v : r) {
 		for (unsigned int i = 0; i < v.size(); i++) {
 			if (i) {
