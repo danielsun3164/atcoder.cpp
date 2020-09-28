@@ -1,8 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int INF = 1000000000;
-
 struct Region {
 	int x1, y1, x2, y2;
 };
@@ -10,7 +8,7 @@ struct Region {
 int main() {
 	int n, r;
 	cin >> n >> r;
-	vector<Region> regions(n);
+	vector<Region> regions(n), v;
 	int x_max = 0, x_min = INT_MAX, y_max = 0, y_min = INT_MAX;
 	for (int i = 0; i < n; i++) {
 		int x1, y1, x2, y2;
@@ -24,11 +22,6 @@ int main() {
 	sort(regions.begin(), regions.end(), [](auto a, auto b) {
 		return a.y1 < b.y1;
 	});
-	auto compare = [](auto a, auto b) {
-		return a.y2 > b.y2;
-	};
-	priority_queue<Region, vector<Region>, decltype(compare)> *q = new priority_queue<Region, vector<Region>,
-			decltype(compare)> { compare };
 	int count = 0;
 	int dp[2][x_max - x_min + 1];
 	for (int i = 0; i < 2; i++) {
@@ -37,23 +30,17 @@ int main() {
 	long area = 0L, perimeter = 0L;
 	for (int i = y_min; i <= y_max; i++) {
 		fill_n(dp[i & 1], x_max - x_min + 1, 0);
-		while (!q->empty() && (q->top().y2 == i)) {
-			q->pop();
-		}
 		while ((count < n) && regions[count].y1 == i) {
-			q->push(regions[count++]);
+			v.push_back(regions[count++]);
 		}
-		priority_queue<Region, vector<Region>, decltype(compare)> *t = new priority_queue<Region, vector<Region>,
-				decltype(compare)> { compare };
-		while (!q->empty()) {
-			Region region = q->top();
-			t->push(region);
-			q->pop();
-			dp[i & 1][region.x1 - x_min]++;
-			dp[i & 1][region.x2 - x_min]--;
+		for (auto it = v.begin(); it != v.end(); it++) {
+			if (it->y2 == i) {
+				v.erase(it--);
+			} else {
+				dp[i & 1][it->x1 - x_min]++;
+				dp[i & 1][it->x2 - x_min]--;
+			}
 		}
-		delete (q);
-		q = t;
 		for (int j = 1; j < x_max - x_min + 1; j++) {
 			dp[i & 1][j] += dp[i & 1][j - 1];
 		}
