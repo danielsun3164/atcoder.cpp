@@ -4,7 +4,8 @@ CC=g++
 CFLAGS=-Og -g
 INCLUDE=-I../../include
 LIBS=-lgtest -lgtest_main
-OBJS_ABC001=test_abc001A abc001A test_abc001B abc001B test_abc001C abc001C test_abc001D abc001D
+OBJS_ABC001=test_abc001D abc001D
+#OBJS_ABC001=test_abc001A abc001A test_abc001B abc001B test_abc001C abc001C test_abc001D abc001D
 OBJS_ABC002=test_abc002A abc002A test_abc002B abc002B test_abc002C abc002C test_abc002D abc002D
 OBJS_ABC003=test_abc003A abc003A test_abc003B abc003B test_abc003C abc003C test_abc003D abc003D
 OBJS_ABC004=test_abc004A abc004A test_abc004B abc004B test_abc004C abc004C test_abc004D abc004D
@@ -55,7 +56,8 @@ OBJS_ABC048=test_abc048A abc048A test_abc048B abc048B test_abc048C abc048C test_
 OBJS_ABC049=test_abc049A abc049A test_abc049B abc049B test_abc049C abc049C test_abc049D abc049D
 OBJS_ABC050=test_abc050A abc050A test_abc050B abc050B test_abc050C abc050C test_abc050D abc050D
 
-all:	abc001 abc002 abc003 abc004 abc005 abc006 abc007 abc008 abc009 abc010 abc011 abc012 abc013 abc014 abc015 abc016 abc017 abc018 abc019 abc020 abc021 abc022 abc023 abc024 abc025 abc026 abc027 abc028 abc029 abc030 abc031 abc032 abc033 abc034 abc035 abc036 abc037 abc038 abc039 abc040 abc041 abc042 abc043 abc044 abc045 abc046 abc047 abc048 abc049 abc050
+all:	abc001
+#all:	abc001 abc002 abc003 abc004 abc005 abc006 abc007 abc008 abc009 abc010 abc011 abc012 abc013 abc014 abc015 abc016 abc017 abc018 abc019 abc020 abc021 abc022 abc023 abc024 abc025 abc026 abc027 abc028 abc029 abc030 abc031 abc032 abc033 abc034 abc035 abc036 abc037 abc038 abc039 abc040 abc041 abc042 abc043 abc044 abc045 abc046 abc047 abc048 abc049 abc050
 
 abc001:	$(OBJS_ABC001)
 
