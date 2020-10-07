@@ -1,7 +1,6 @@
 #include <gtest/gtest.h>
 #include <string>
-
-#include "command.h"
+#include <command.h>
 
 using namespace std;
 
