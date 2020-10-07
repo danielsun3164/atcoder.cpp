@@ -1,8 +1,11 @@
 SRC_DIR=./src
 TEST_DIR=./test
 CC=g++
+CFLAGS=-Og -g
+INCLUDE=-I../../include
 LIBS=-lgtest -lgtest_main
-OBJS_ABC001=test_abc001A abc001A test_abc001B abc001B test_abc001C abc001C test_abc001D abc001D
+OBJS_ABC001=test_abc001D abc001D
+#OBJS_ABC001=test_abc001A abc001A test_abc001B abc001B test_abc001C abc001C test_abc001D abc001D
 OBJS_ABC002=test_abc002A abc002A test_abc002B abc002B test_abc002C abc002C test_abc002D abc002D
 OBJS_ABC003=test_abc003A abc003A test_abc003B abc003B test_abc003C abc003C test_abc003D abc003D
 OBJS_ABC004=test_abc004A abc004A test_abc004B abc004B test_abc004C abc004C test_abc004D abc004D
@@ -53,7 +56,8 @@ OBJS_ABC048=test_abc048A abc048A test_abc048B abc048B test_abc048C abc048C test_
 OBJS_ABC049=test_abc049A abc049A test_abc049B abc049B test_abc049C abc049C test_abc049D abc049D
 OBJS_ABC050=test_abc050A abc050A test_abc050B abc050B test_abc050C abc050C test_abc050D abc050D
 
-all:	abc001 abc002 abc003 abc004 abc005 abc006 abc007 abc008 abc009 abc010 abc011 abc012 abc013 abc014 abc015 abc016 abc017 abc018 abc019 abc020 abc021 abc022 abc023 abc024 abc025 abc026 abc027 abc028 abc029 abc030 abc031 abc032 abc033 abc034 abc035 abc036 abc037 abc038 abc039 abc040 abc041 abc042 abc043 abc044 abc045 abc046 abc047 abc048 abc049 abc050
+all:	abc001
+#all:	abc001 abc002 abc003 abc004 abc005 abc006 abc007 abc008 abc009 abc010 abc011 abc012 abc013 abc014 abc015 abc016 abc017 abc018 abc019 abc020 abc021 abc022 abc023 abc024 abc025 abc026 abc027 abc028 abc029 abc030 abc031 abc032 abc033 abc034 abc035 abc036 abc037 abc038 abc039 abc040 abc041 abc042 abc043 abc044 abc045 abc046 abc047 abc048 abc049 abc050
 
 abc001:	$(OBJS_ABC001)
 
@@ -155,11 +159,11 @@ abc049:	$(OBJS_ABC049)
 
 abc050:	$(OBJS_ABC050)
 
-test_abc001D:	$(TEST_DIR)/test_abc001D.cpp $(TEST_DIR)/command.h
-	$(CC) $(^) -o $(@) $(LIBS)
+test_abc001D:	$(TEST_DIR)/test_abc001D.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
 
 abc001D:	$(SRC_DIR)/abc001D.cpp
-	$(CC) $(^) -o $(@)
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
 
 clean:
 	rm -f $(OBJS_ABC001) $(OBJS_ABC002) $(OBJS_ABC003) $(OBJS_ABC004) $(OBJS_ABC005) $(OBJS_ABC006) $(OBJS_ABC007) $(OBJS_ABC008) $(OBJS_ABC009) $(OBJS_ABC010) $(OBJS_ABC011) $(OBJS_ABC012) $(OBJS_ABC013) $(OBJS_ABC014) $(OBJS_ABC015) $(OBJS_ABC016) $(OBJS_ABC017) $(OBJS_ABC018) $(OBJS_ABC019) $(OBJS_ABC020) $(OBJS_ABC021) $(OBJS_ABC022) $(OBJS_ABC023) $(OBJS_ABC024) $(OBJS_ABC025) $(OBJS_ABC026) $(OBJS_ABC027) $(OBJS_ABC028) $(OBJS_ABC029) $(OBJS_ABC030) $(OBJS_ABC031) $(OBJS_ABC032) $(OBJS_ABC033) $(OBJS_ABC034) $(OBJS_ABC035) $(OBJS_ABC036) $(OBJS_ABC037) $(OBJS_ABC038) $(OBJS_ABC039) $(OBJS_ABC040) $(OBJS_ABC041) $(OBJS_ABC042) $(OBJS_ABC043) $(OBJS_ABC044) $(OBJS_ABC045) $(OBJS_ABC046) $(OBJS_ABC047) $(OBJS_ABC048) $(OBJS_ABC049) $(OBJS_ABC050)
