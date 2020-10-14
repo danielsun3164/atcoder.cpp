@@ -10,6 +10,7 @@
 #include <cstring>
 #include <stdexcept>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -122,6 +123,25 @@ void check(string command, string input, string output) {
 	cmd.StdIn = input + "\n";
 	cmd.execute();
 	EXPECT_EQ(output + "\n", cmd.StdOut);
+}
+
+void check(string command, string input, vector<string> output) {
+	Command cmd;
+	cmd.Command = command;
+	cmd.StdIn = input + "\n";
+	cmd.execute();
+	for (int i=0; i< output.size(); i++) {
+		output[i].append("\n");
+	}
+	EXPECT_TRUE(find(output.begin(), output.end(), cmd.StdOut) != output.end());
+	if (output.end() == find(output.begin(), output.end(), cmd.StdOut)) {
+		cout << "Actual:" << endl;
+		cout << cmd.StdOut << endl;
+		cout << "Expected:" << endl;
+		for (string s : output) {
+			cout << s << endl;
+		}
+	}
 }
 
 #endif  // COMMAND_H_
