@@ -1,18 +1,14 @@
-SRC_DIR=./src
-TEST_DIR=./test
-CC=g++
-CFLAGS=-Og -g
-INCLUDE=-I../include
-LIBS=-lgtest -lgtest_main
-OBJS=test_practiceA practiceA 
+PRACTICE=practice
+PRACTICE2=practice2
 
-all:	$(OBJS)
+all:	_$(PRACTICE) _$(PRACTICE2)
 
-test_practiceA:	$(TEST_DIR)/test_practiceA.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+_$(PRACTICE):
+	make -C $(PRACTICE)
 
-practiceA:	$(SRC_DIR)/practiceA.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+_$(PRACTICE2):
+	make -C $(PRACTICE2)
 
 clean:
-	rm -f $(OBJS)
+	make -C $(PRACTICE) clean
+	make -C $(PRACTICE2) clean
