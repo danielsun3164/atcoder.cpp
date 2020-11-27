@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 #include <atcoder/dsu>
 
 using namespace std;
