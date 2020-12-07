@@ -125,20 +125,22 @@ void check(string command, string input, string output) {
 	EXPECT_EQ(output + "\n", cmd.StdOut);
 }
 
-void check(string command, string input, vector<string> output) {
+template<typename ... Args>
+void check(string command, string input, const Args ... args) {
 	Command cmd;
 	cmd.Command = command;
 	cmd.StdIn = input + "\n";
 	cmd.execute();
-	for (int i=0; i< output.size(); i++) {
-		output[i].append("\n");
+	vector<string> outputs = { args... };
+	for (int i = 0; i < outputs.size(); i++) {
+		outputs[i].append("\n");
 	}
-	EXPECT_TRUE(find(output.begin(), output.end(), cmd.StdOut) != output.end());
-	if (output.end() == find(output.begin(), output.end(), cmd.StdOut)) {
+	EXPECT_TRUE(find(outputs.begin(), outputs.end(), cmd.StdOut) != outputs.end());
+	if (outputs.end() == find(outputs.begin(), outputs.end(), cmd.StdOut)) {
 		cout << "Actual:" << endl;
 		cout << cmd.StdOut << endl;
 		cout << "Expected:" << endl;
-		for (string s : output) {
+		for (string s : outputs) {
 			cout << s << endl;
 		}
 	}
