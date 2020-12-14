@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int fa(deque<int>, deque<int>, deque<int>);
-int fc(deque<int>, deque<int>, deque<int>);
+int fa(deque<int>&, deque<int>&, deque<int>&);
+int fc(deque<int>&, deque<int>&, deque<int>&);
 
 int pow(int n, int m) {
 	int result = 1;
@@ -16,7 +16,7 @@ int pow(int n, int m) {
 	return result;
 }
 
-int fa(deque<int> a_que, deque<int> b_que, deque<int> c_que) {
+int fa(deque<int> &a_que, deque<int> &b_que, deque<int> &c_que) {
 	if (b_que.empty() && c_que.empty()) {
 		return 0;
 	}
@@ -43,7 +43,7 @@ int fa(deque<int> a_que, deque<int> b_que, deque<int> c_que) {
 	return result;
 }
 
-int fc(deque<int> a_que, deque<int> b_que, deque<int> c_que) {
+int fc(deque<int> &a_que, deque<int> &b_que, deque<int> &c_que) {
 	if (a_que.empty() && b_que.empty()) {
 		return 0;
 	}

@@ -10,7 +10,7 @@ const string SEMICOLON = ";";
 const string VEC_START = "[";
 const string VEC_END = "]";
 
-int isdigit(string s) {
+int isdigit(string &s) {
 	for (int i = 0; i < s.size(); i++) {
 		if (!isdigit(s[i])) {
 			return 0;

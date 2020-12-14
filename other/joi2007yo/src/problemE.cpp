@@ -6,7 +6,7 @@ const int OK = 1;
 const int UNKNOWN = 2;
 const int N = 3;
 
-void ok(int a, vector<int> &status, vector<vector<int>> v1, vector<vector<int>> &v2) {
+void ok(int a, vector<int> &status, vector<vector<int>> &v1, vector<vector<int>> &v2) {
 	if (OK != status[a]) {
 		status[a] = OK;
 		for (int index : v1[a]) {
