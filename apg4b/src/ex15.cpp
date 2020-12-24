@@ -4,7 +4,7 @@ using namespace std;
 // 1人のテストの点数を表す配列から合計点を計算して返す関数
 // 引数 scores: scores.at(i)にi番目のテストの点数が入っている
 // 返り値: 1人のテストの合計点
-int sum(vector<int> scores) {
+int sum(vector<int> &scores) {
 	int sum = 0;
 	for (int score : scores) {
 		sum += score;

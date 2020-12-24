@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-string convert(string s) {
+string convert(string &s) {
 	char prev = 0;
 	int count = 0;
 	string r;

@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void func(int now, vector<vector<int>> v, vector<bool> &used, vector<int> &r) {
+void func(int now, vector<vector<int>> &v, vector<bool> &used, vector<int> &r) {
 	if (!used[now]) {
 		used[now] = true;
 		for (int w : v[now]) {

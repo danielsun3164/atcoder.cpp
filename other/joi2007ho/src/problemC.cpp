@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int distance(pair<int, int> a, pair<int, int> b) {
+int distance(pair<int, int> &a, pair<int, int> &b) {
 	return (a.first - b.first) * (a.first - b.first) + (a.second - b.second) * (a.second - b.second);
 }
 
