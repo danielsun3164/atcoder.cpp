@@ -1,9 +1,4 @@
-SRC_DIR=./src
-TEST_DIR=./test
-CC=g++
-CFLAGS=-Og -g
-INCLUDE=-I../../include
-LIBS=-lgtest -lgtest_main
+include ../CCOptions
 OBJS=test_practiceA practiceA 
 
 all:	$(OBJS)

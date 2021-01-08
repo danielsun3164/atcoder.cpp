@@ -6,7 +6,7 @@ int main() {
 	cin >> S;
 
 	int a = 1;
-	for (int i = 0; i < S.size(); i++) {
+	for (long unsigned int i = 0; i < S.size(); i++) {
 		char c = S.at(i);
 		if ('+' == c) {
 			a++;

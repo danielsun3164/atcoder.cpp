@@ -1,9 +1,4 @@
-SRC_DIR=./src
-TEST_DIR=./test
-CC=g++
-CFLAGS=-Og -g
-INCLUDE=-I../../include
-LIBS=-lgtest -lgtest_main
+include ../CCOptions
 ABC001=abc001
 ABC002=abc002
 ABC003=abc003

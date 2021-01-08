@@ -75,7 +75,7 @@ void print_set(bitset<50> S) {
 			cont.push_back(i);
 		}
 	}
-	for (int i = 0; i < cont.size(); i++) {
+	for (long unsigned int i = 0; i < cont.size(); i++) {
 		if (i > 0)
 			cout << " ";
 		cout << cont.at(i);
