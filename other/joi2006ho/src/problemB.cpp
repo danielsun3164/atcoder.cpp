@@ -5,7 +5,7 @@ string convert(string &s) {
 	char prev = 0;
 	int count = 0;
 	string r;
-	for (int i = 0; i < s.length(); i++) {
+	for (long unsigned int i = 0; i < s.length(); i++) {
 		if (prev != s[i]) {
 			if (prev) {
 				r = r + to_string(count) + prev;

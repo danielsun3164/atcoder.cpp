@@ -22,7 +22,7 @@ int main() {
 		b[i] = l;
 	}
 	vector<mint> c = atcoder::convolution(a, b);
-	for (int i = 0; i < c.size(); i++) {
+	for (long unsigned int i = 0; i < c.size(); i++) {
 		cout << ((i) ? " " : "");
 		cout << c[i].val();
 	}

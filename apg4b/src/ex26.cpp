@@ -11,7 +11,7 @@ const string VEC_START = "[";
 const string VEC_END = "]";
 
 int isdigit(string &s) {
-	for (int i = 0; i < s.size(); i++) {
+	for (long unsigned int i = 0; i < s.size(); i++) {
 		if (!isdigit(s[i])) {
 			return 0;
 		}
@@ -22,7 +22,7 @@ int isdigit(string &s) {
 // 問題文の形式でvec値を出力
 void print_vec(vector<int> vec) {
 	cout << VEC_START << " ";
-	for (int i = 0; i < vec.size(); i++) {
+	for (long unsigned int i = 0; i < vec.size(); i++) {
 		cout << vec.at(i) << " ";
 	}
 	cout << VEC_END << endl;
@@ -118,14 +118,14 @@ vector<int> calc_vec(map<string, int> &var_int, map<string, vector<int>> &var_ve
 		if (op == ADD) {
 			vector<int> vec1;
 			vector<int> vec2 = read_vec(var_int, var_vec);
-			for (int i = 0; i < vec.size(); i++) {
+			for (long unsigned int i = 0; i < vec.size(); i++) {
 				vec1.push_back(vec.at(i) + vec2.at(i));
 			}
 			vec = vec1;
 		} else if (op == SUBSTRACT) {
 			vector<int> vec1;
 			vector<int> vec2 = read_vec(var_int, var_vec);
-			for (int i = 0; i < vec.size(); i++) {
+			for (long unsigned int i = 0; i < vec.size(); i++) {
 				vec1.push_back(vec.at(i) - vec2.at(i));
 			}
 			vec = vec1;

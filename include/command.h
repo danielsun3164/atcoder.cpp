@@ -132,7 +132,7 @@ void check(string command, string input, const Args ... args) {
 	cmd.StdIn = input + "\n";
 	cmd.execute();
 	vector<string> outputs = { args... };
-	for (int i = 0; i < outputs.size(); i++) {
+	for (long unsigned int i = 0; i < outputs.size(); i++) {
 		outputs[i].append("\n");
 	}
 	EXPECT_TRUE(find(outputs.begin(), outputs.end(), cmd.StdOut) != outputs.end());

@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int f0(int N) {
+int f0(__attribute__ ((unused))int N) {
 	return 1;
 }
 
@@ -30,7 +30,7 @@ int f2(int N) {
 	return s;
 }
 
-int f3(int N) {
+int f3(__attribute__ ((unused)) int N) {
 	int s = 0;
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 3; j++) {
