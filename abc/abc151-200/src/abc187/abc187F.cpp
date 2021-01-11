@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-#include <atcoder/fenwicktree>
 using namespace std;
 
 const int INF = INT_MAX >> 1;
