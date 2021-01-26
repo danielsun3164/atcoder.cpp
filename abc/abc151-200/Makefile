@@ -87,7 +87,7 @@ OBJS_ABC185=test_abc185A abc185A test_abc185B abc185B test_abc185C abc185C  test
 OBJS_ABC186=test_abc186A abc186A test_abc186B abc186B test_abc186C abc186C  test_abc186D abc186D test_abc186E abc186E test_abc186F abc186F
 OBJS_ABC187=test_abc187A abc187A test_abc187B abc187B test_abc187C abc187C  test_abc187D abc187D test_abc187E abc187E test_abc187F abc187F
 OBJS_ABC188=test_abc188A abc188A test_abc188B abc188B test_abc188C abc188C  test_abc188D abc188D test_abc188E abc188E test_abc188F abc188F
-OBJS_ABC189=test_abc189A abc189A test_abc189B abc189B test_abc189C abc189C  test_abc189D abc189D test_abc189E abc189E test_abc189F abc189F
+OBJS_ABC189=test_abc189A abc189A test_abc189B abc189B test_abc189C abc189C  test_abc189D abc189D test_abc189E abc189E test_abc189F abc189F test_abc189F別回答 abc189F別回答
 OBJS_ABC190=test_abc190A abc190A test_abc190B abc190B test_abc190C abc190C  test_abc190D abc190D test_abc190E abc190E test_abc190F abc190F
 OBJS_ABC191=test_abc191A abc191A test_abc191B abc191B test_abc191C abc191C  test_abc191D abc191D test_abc191E abc191E test_abc191F abc191F
 OBJS_ABC192=test_abc192A abc192A test_abc192B abc192B test_abc192C abc192C  test_abc192D abc192D test_abc192E abc192E test_abc192F abc192F
@@ -100,7 +100,7 @@ OBJS_ABC198=test_abc198A abc198A test_abc198B abc198B test_abc198C abc198C  test
 OBJS_ABC199=test_abc199A abc199A test_abc199B abc199B test_abc199C abc199C  test_abc199D abc199D test_abc199E abc199E test_abc199F abc199F
 OBJS_ABC200=test_abc200A abc200A test_abc200B abc200B test_abc200C abc200C  test_abc200D abc200D test_abc200E abc200E test_abc200F abc200F
 
-all:	$(ABC185) $(ABC186) $(ABC187)
+all:	$(ABC185) $(ABC186) $(ABC187) $(ABC188) $(ABC189)
 #all:	$(ABC151) $(ABC152) $(ABC153) $(ABC154) $(ABC155) $(ABC156) $(ABC157) $(ABC158) $(ABC159) $(ABC160) $(ABC161) $(ABC162) $(ABC163) $(ABC164) $(ABC165) $(ABC166) $(ABC167) $(ABC168) $(ABC169) $(ABC170) $(ABC171) $(ABC172) $(ABC173) $(ABC174) $(ABC175) $(ABC176) $(ABC177) $(ABC178) $(ABC179) $(ABC180) $(ABC181) $(ABC182) $(ABC183) $(ABC184) $(ABC185) $(ABC186) $(ABC187) $(ABC188) $(ABC189) $(ABC190) $(ABC191) $(ABC192) $(ABC193) $(ABC194) $(ABC195) $(ABC196) $(ABC197) $(ABC198) $(ABC199) $(ABC200)
 
 abc151:	$(OBJS_ABC151)
@@ -315,6 +315,84 @@ test_abc187F:	$(TEST_DIR)/$(ABC187)/test_abc187F.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
 
 abc187F:	$(SRC_DIR)/$(ABC187)/abc187F.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc188A:	$(TEST_DIR)/$(ABC188)/test_abc188A.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc188A:	$(SRC_DIR)/$(ABC188)/abc188A.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc188B:	$(TEST_DIR)/$(ABC188)/test_abc188B.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc188B:	$(SRC_DIR)/$(ABC188)/abc188B.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc188C:	$(TEST_DIR)/$(ABC188)/test_abc188C.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc188C:	$(SRC_DIR)/$(ABC188)/abc188C.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc188D:	$(TEST_DIR)/$(ABC188)/test_abc188D.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc188D:	$(SRC_DIR)/$(ABC188)/abc188D.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc188E:	$(TEST_DIR)/$(ABC188)/test_abc188E.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc188E:	$(SRC_DIR)/$(ABC188)/abc188E.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc188F:	$(TEST_DIR)/$(ABC188)/test_abc188F.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc188F:	$(SRC_DIR)/$(ABC188)/abc188F.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc189A:	$(TEST_DIR)/$(ABC189)/test_abc189A.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc189A:	$(SRC_DIR)/$(ABC189)/abc189A.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc189B:	$(TEST_DIR)/$(ABC189)/test_abc189B.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc189B:	$(SRC_DIR)/$(ABC189)/abc189B.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc189C:	$(TEST_DIR)/$(ABC189)/test_abc189C.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc189C:	$(SRC_DIR)/$(ABC189)/abc189C.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc189D:	$(TEST_DIR)/$(ABC189)/test_abc189D.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc189D:	$(SRC_DIR)/$(ABC189)/abc189D.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc189E:	$(TEST_DIR)/$(ABC189)/test_abc189E.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc189E:	$(SRC_DIR)/$(ABC189)/abc189E.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc189F:	$(TEST_DIR)/$(ABC189)/test_abc189F.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc189F:	$(SRC_DIR)/$(ABC189)/abc189F.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc189F別回答:	$(TEST_DIR)/$(ABC189)/test_abc189F別回答.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc189F別回答:	$(SRC_DIR)/$(ABC189)/abc189F別回答.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
 
 clean:

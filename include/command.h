@@ -117,20 +117,22 @@ public:
 	}
 };
 
-void check(string command, string input, string output) {
+Command execute(string &command, string &input) {
 	Command cmd;
 	cmd.Command = command;
 	cmd.StdIn = input + "\n";
 	cmd.execute();
+	return cmd;
+}
+
+void check(string command, string input, string output) {
+	Command cmd = execute(command, input);
 	EXPECT_EQ(output + "\n", cmd.StdOut);
 }
 
 template<typename ... Args>
 void check(string command, string input, const Args ... args) {
-	Command cmd;
-	cmd.Command = command;
-	cmd.StdIn = input + "\n";
-	cmd.execute();
+	Command cmd = execute(command, input);
 	vector<string> outputs = { args... };
 	for (long unsigned int i = 0; i < outputs.size(); i++) {
 		outputs[i].append("\n");
@@ -144,6 +146,27 @@ void check(string command, string input, const Args ... args) {
 			cout << s << endl;
 		}
 	}
+}
+
+void check_about(string command, string input, double expected, double tolerance) {
+	Command cmd = execute(command, input);
+	streambuf *orig = cin.rdbuf();
+	istringstream input_ss(cmd.StdOut);
+	cin.rdbuf(input_ss.rdbuf());
+	double output;
+	cin >> output;
+	EXPECT_TRUE(abs(output - expected) < tolerance);
+	if (abs(output - expected) >= tolerance) {
+		cout << "Actual:" << endl;
+//		cout << fixed << setprecision(10) << output << endl;
+		cout << fixed << output << endl;
+		cout << "Expected:" << endl;
+//		cout << fixed << setprecision(10) << expected << endl;
+		cout << fixed << expected << endl;
+		cout << "TOLERANCE" << endl;
+		cout << defaultfloat << tolerance << endl;
+	}
+	cin.rdbuf(orig);
 }
 
 #endif  // COMMAND_H_

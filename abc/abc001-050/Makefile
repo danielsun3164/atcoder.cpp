@@ -49,8 +49,7 @@ ABC047=abc047
 ABC048=abc048
 ABC049=abc049
 ABC050=abc050
-OBJS_ABC001=test_abc001D abc001D
-#OBJS_ABC001=test_abc001A abc001A test_abc001B abc001B test_abc001C abc001C test_abc001D abc001D
+OBJS_ABC001=test_abc001A abc001A test_abc001B abc001B test_abc001C abc001C test_abc001D abc001D
 OBJS_ABC002=test_abc002A abc002A test_abc002B abc002B test_abc002C abc002C test_abc002D abc002D
 OBJS_ABC003=test_abc003A abc003A test_abc003B abc003B test_abc003C abc003C test_abc003D abc003D
 OBJS_ABC004=test_abc004A abc004A test_abc004B abc004B test_abc004C abc004C test_abc004D abc004D
@@ -101,7 +100,7 @@ OBJS_ABC048=test_abc048A abc048A test_abc048B abc048B test_abc048C abc048C test_
 OBJS_ABC049=test_abc049A abc049A test_abc049B abc049B test_abc049C abc049C test_abc049D abc049D
 OBJS_ABC050=test_abc050A abc050A test_abc050B abc050B test_abc050C abc050C test_abc050D abc050D
 
-all:	$(ABC001)
+all:	$(ABC001) $(ABC002) $(ABC003)
 #all:	$(ABC001) $(ABC002) $(ABC003) $(ABC004) $(ABC005) $(ABC006) $(ABC007) $(ABC008) $(ABC009) $(ABC010) $(ABC011) $(ABC012) $(ABC013) $(ABC014) $(ABC015) $(ABC016) $(ABC017) $(ABC018) $(ABC019) $(ABC020) $(ABC021) $(ABC022) $(ABC023) $(ABC024) $(ABC025) $(ABC026) $(ABC027) $(ABC028) $(ABC029) $(ABC030) $(ABC031) $(ABC032) $(ABC033) $(ABC034) $(ABC035) $(ABC036) $(ABC037) $(ABC038) $(ABC039) $(ABC040) $(ABC041) $(ABC042) $(ABC043) $(ABC044) $(ABC045) $(ABC046) $(ABC047) $(ABC048) $(ABC049) $(ABC050)
 
 $(ABC001):	$(OBJS_ABC001)
@@ -204,10 +203,76 @@ $(ABC049):	$(OBJS_ABC049)
 
 $(ABC050):	$(OBJS_ABC050)
 
+test_abc001A:	$(TEST_DIR)/$(ABC001)/test_abc001A.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc001A:	$(SRC_DIR)/$(ABC001)/abc001A.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc001B:	$(TEST_DIR)/$(ABC001)/test_abc001B.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc001B:	$(SRC_DIR)/$(ABC001)/abc001B.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc001C:	$(TEST_DIR)/$(ABC001)/test_abc001C.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc001C:	$(SRC_DIR)/$(ABC001)/abc001C.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
 test_abc001D:	$(TEST_DIR)/$(ABC001)/test_abc001D.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
 
 abc001D:	$(SRC_DIR)/$(ABC001)/abc001D.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc002A:	$(TEST_DIR)/$(ABC002)/test_abc002A.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc002A:	$(SRC_DIR)/$(ABC002)/abc002A.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc002B:	$(TEST_DIR)/$(ABC002)/test_abc002B.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc002B:	$(SRC_DIR)/$(ABC002)/abc002B.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc002C:	$(TEST_DIR)/$(ABC002)/test_abc002C.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc002C:	$(SRC_DIR)/$(ABC002)/abc002C.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc002D:	$(TEST_DIR)/$(ABC002)/test_abc002D.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc002D:	$(SRC_DIR)/$(ABC002)/abc002D.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc003A:	$(TEST_DIR)/$(ABC003)/test_abc003A.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc003A:	$(SRC_DIR)/$(ABC003)/abc003A.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc003B:	$(TEST_DIR)/$(ABC003)/test_abc003B.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc003B:	$(SRC_DIR)/$(ABC003)/abc003B.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc003C:	$(TEST_DIR)/$(ABC003)/test_abc003C.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc003C:	$(SRC_DIR)/$(ABC003)/abc003C.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc003D:	$(TEST_DIR)/$(ABC003)/test_abc003D.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc003D:	$(SRC_DIR)/$(ABC003)/abc003D.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
 
 clean:
