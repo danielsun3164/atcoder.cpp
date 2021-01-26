@@ -100,7 +100,7 @@ OBJS_ABC048=test_abc048A abc048A test_abc048B abc048B test_abc048C abc048C test_
 OBJS_ABC049=test_abc049A abc049A test_abc049B abc049B test_abc049C abc049C test_abc049D abc049D
 OBJS_ABC050=test_abc050A abc050A test_abc050B abc050B test_abc050C abc050C test_abc050D abc050D
 
-all:	$(ABC001) $(ABC002)
+all:	$(ABC001) $(ABC002) $(ABC003)
 #all:	$(ABC001) $(ABC002) $(ABC003) $(ABC004) $(ABC005) $(ABC006) $(ABC007) $(ABC008) $(ABC009) $(ABC010) $(ABC011) $(ABC012) $(ABC013) $(ABC014) $(ABC015) $(ABC016) $(ABC017) $(ABC018) $(ABC019) $(ABC020) $(ABC021) $(ABC022) $(ABC023) $(ABC024) $(ABC025) $(ABC026) $(ABC027) $(ABC028) $(ABC029) $(ABC030) $(ABC031) $(ABC032) $(ABC033) $(ABC034) $(ABC035) $(ABC036) $(ABC037) $(ABC038) $(ABC039) $(ABC040) $(ABC041) $(ABC042) $(ABC043) $(ABC044) $(ABC045) $(ABC046) $(ABC047) $(ABC048) $(ABC049) $(ABC050)
 
 $(ABC001):	$(OBJS_ABC001)
@@ -249,6 +249,30 @@ test_abc002D:	$(TEST_DIR)/$(ABC002)/test_abc002D.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
 
 abc002D:	$(SRC_DIR)/$(ABC002)/abc002D.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc003A:	$(TEST_DIR)/$(ABC003)/test_abc003A.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc003A:	$(SRC_DIR)/$(ABC003)/abc003A.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc003B:	$(TEST_DIR)/$(ABC003)/test_abc003B.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc003B:	$(SRC_DIR)/$(ABC003)/abc003B.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc003C:	$(TEST_DIR)/$(ABC003)/test_abc003C.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc003C:	$(SRC_DIR)/$(ABC003)/abc003C.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc003D:	$(TEST_DIR)/$(ABC003)/test_abc003D.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc003D:	$(SRC_DIR)/$(ABC003)/abc003D.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
 
 clean:
