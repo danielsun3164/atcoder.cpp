@@ -42,7 +42,7 @@ int main(void) {
 		cin >> a >> b >> t >> k;
 		a--;
 		b--;
-		childrens[a].emplace_back(make_tuple(b, t, k));
+		childrens[a].emplace_back(make_tuple(b, t, k)); // @suppress("Invalid arguments")
 		childrens[b].emplace_back(make_tuple(a, t, k)); // @suppress("Invalid arguments")
 	}
 	ll d = bfs(childrens, x)[y];
