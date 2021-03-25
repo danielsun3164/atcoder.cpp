@@ -31,60 +31,60 @@ public:
 		int errfd[2] = { 0, 0 };
 
 		auto cleanup = [&]() {
-			::close(infd[READ_END]);
-			::close(infd[WRITE_END]);
+			close(infd[READ_END]);
+			close(infd[WRITE_END]);
 
-			::close(outfd[READ_END]);
-			::close(outfd[WRITE_END]);
+			close(outfd[READ_END]);
+			close(outfd[WRITE_END]);
 
-			::close(errfd[READ_END]);
-			::close(errfd[WRITE_END]);
+			close(errfd[READ_END]);
+			close(errfd[WRITE_END]);
 		};
 
-		auto rc = ::pipe(infd);
+		auto rc = pipe(infd);
 		if (rc < 0) {
 			throw runtime_error(strerror(errno));
 		}
 
-		rc = ::pipe(outfd);
+		rc = pipe(outfd);
 		if (rc < 0) {
-			::close(infd[READ_END]);
-			::close(infd[WRITE_END]);
+			close(infd[READ_END]);
+			close(infd[WRITE_END]);
 			throw runtime_error(strerror(errno));
 		}
 
-		rc = ::pipe(errfd);
+		rc = pipe(errfd);
 		if (rc < 0) {
-			::close(infd[READ_END]);
-			::close(infd[WRITE_END]);
+			close(infd[READ_END]);
+			close(infd[WRITE_END]);
 
-			::close(outfd[READ_END]);
-			::close(outfd[WRITE_END]);
+			close(outfd[READ_END]);
+			close(outfd[WRITE_END]);
 			throw runtime_error(strerror(errno));
 		}
 
 		auto pid = fork();
 		if (pid > 0) { // PARENT
-			::close(infd[READ_END]);	// Parent does not read from stdin
-			::close(outfd[WRITE_END]);  // Parent does not write to stdout
-			::close(errfd[WRITE_END]);  // Parent does not write to stderr
+			close(infd[READ_END]);	// Parent does not read from stdin
+			close(outfd[WRITE_END]);  // Parent does not write to stdout
+			close(errfd[WRITE_END]);  // Parent does not write to stderr
 
-			if (::write(infd[WRITE_END], StdIn.data(), StdIn.size()) < 0) {
+			if (write(infd[WRITE_END], StdIn.data(), StdIn.size()) < 0) {
 				throw runtime_error(strerror(errno));
 			}
-			::close(infd[WRITE_END]); // Done writing
+			close(infd[WRITE_END]); // Done writing
 		} else if (pid == 0) // CHILD
 				{
-			::dup2(infd[READ_END], STDIN_FILENO);
-			::dup2(outfd[WRITE_END], STDOUT_FILENO);
-			::dup2(errfd[WRITE_END], STDERR_FILENO);
+			dup2(infd[READ_END], STDIN_FILENO);
+			dup2(outfd[WRITE_END], STDOUT_FILENO);
+			dup2(errfd[WRITE_END], STDERR_FILENO);
 
-			::close(infd[WRITE_END]);   // Child does not write to stdin
-			::close(outfd[READ_END]);   // Child does not read from stdout
-			::close(errfd[READ_END]);   // Child does not read from stderr
+			close(infd[WRITE_END]);   // Child does not write to stdin
+			close(outfd[READ_END]);   // Child does not read from stdout
+			close(errfd[READ_END]);   // Child does not read from stderr
 
-			::execl("/bin/bash", "bash", "-c", Command.c_str(), nullptr);
-			::exit(EXIT_SUCCESS);
+			execl("/bin/bash", "bash", "-c", Command.c_str(), nullptr);
+			exit(EXIT_SUCCESS);
 		}
 
 		// PARENT
@@ -94,18 +94,18 @@ public:
 		}
 
 		int status = 0;
-		::waitpid(pid, &status, 0);
+		waitpid(pid, &status, 0);
 
 		array<char, 256> buffer;
 
 		ssize_t bytes = 0;
 		do {
-			bytes = ::read(outfd[READ_END], buffer.data(), buffer.size());
+			bytes = read(outfd[READ_END], buffer.data(), buffer.size());
 			StdOut.append(buffer.data(), bytes);
 		} while (bytes > 0);
 
 		do {
-			bytes = ::read(errfd[READ_END], buffer.data(), buffer.size());
+			bytes = read(errfd[READ_END], buffer.data(), buffer.size());
 			StdErr.append(buffer.data(), bytes);
 		} while (bytes > 0);
 
@@ -117,7 +117,7 @@ public:
 	}
 };
 
-Command execute(string &command, string &input) {
+Command execute(string command, string input) {
 	Command cmd;
 	cmd.Command = command;
 	cmd.StdIn = input + "\n";
