@@ -158,11 +158,9 @@ void check_about(string command, string input, double expected, double tolerance
 	EXPECT_TRUE(abs(output - expected) < tolerance);
 	if (abs(output - expected) >= tolerance) {
 		cout << "Actual:" << endl;
-//		cout << fixed << setprecision(10) << output << endl;
-		cout << fixed << output << endl;
+		cout << fixed << setprecision(10) << output << endl;
 		cout << "Expected:" << endl;
-//		cout << fixed << setprecision(10) << expected << endl;
-		cout << fixed << expected << endl;
+		cout << fixed << setprecision(10) << expected << endl;
 		cout << "TOLERANCE" << endl;
 		cout << defaultfloat << tolerance << endl;
 	}
