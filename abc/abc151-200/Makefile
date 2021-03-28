@@ -100,7 +100,7 @@ OBJS_ABC198=test_abc198A abc198A test_abc198B abc198B test_abc198C abc198C  test
 OBJS_ABC199=test_abc199A abc199A test_abc199B abc199B test_abc199C abc199C  test_abc199D abc199D test_abc199E abc199E test_abc199F abc199F
 OBJS_ABC200=test_abc200A abc200A test_abc200B abc200B test_abc200C abc200C  test_abc200D abc200D test_abc200E abc200E test_abc200F abc200F
 
-all:	$(ABC185) $(ABC186) $(ABC187) $(ABC188) $(ABC189) $(ABC190) $(ABC191) $(ABC192) $(ABC193) $(ABC194) $(ABC195) $(ABC196)
+all:	$(ABC185) $(ABC186) $(ABC187) $(ABC188) $(ABC189) $(ABC190) $(ABC191) $(ABC192) $(ABC193) $(ABC194) $(ABC195) $(ABC196) $(ABC197)
 #all:	$(ABC151) $(ABC152) $(ABC153) $(ABC154) $(ABC155) $(ABC156) $(ABC157) $(ABC158) $(ABC159) $(ABC160) $(ABC161) $(ABC162) $(ABC163) $(ABC164) $(ABC165) $(ABC166) $(ABC167) $(ABC168) $(ABC169) $(ABC170) $(ABC171) $(ABC172) $(ABC173) $(ABC174) $(ABC175) $(ABC176) $(ABC177) $(ABC178) $(ABC179) $(ABC180) $(ABC181) $(ABC182) $(ABC183) $(ABC184) $(ABC185) $(ABC186) $(ABC187) $(ABC188) $(ABC189) $(ABC190) $(ABC191) $(ABC192) $(ABC193) $(ABC194) $(ABC195) $(ABC196) $(ABC197) $(ABC198) $(ABC199) $(ABC200)
 
 abc151:	$(OBJS_ABC151)
@@ -645,6 +645,42 @@ test_abc196F:	$(TEST_DIR)/$(ABC196)/test_abc196F.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
 
 abc196F:	$(SRC_DIR)/$(ABC196)/abc196F.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc197A:	$(TEST_DIR)/$(ABC197)/test_abc197A.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc197A:	$(SRC_DIR)/$(ABC197)/abc197A.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc197B:	$(TEST_DIR)/$(ABC197)/test_abc197B.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc197B:	$(SRC_DIR)/$(ABC197)/abc197B.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc197C:	$(TEST_DIR)/$(ABC197)/test_abc197C.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc197C:	$(SRC_DIR)/$(ABC197)/abc197C.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc197D:	$(TEST_DIR)/$(ABC197)/test_abc197D.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc197D:	$(SRC_DIR)/$(ABC197)/abc197D.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc197E:	$(TEST_DIR)/$(ABC197)/test_abc197E.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc197E:	$(SRC_DIR)/$(ABC197)/abc197E.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc197F:	$(TEST_DIR)/$(ABC197)/test_abc197F.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc197F:	$(SRC_DIR)/$(ABC197)/abc197F.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
 
 clean:
