@@ -3,22 +3,14 @@ using namespace std;
 
 const int INF = INT_MAX >> 1;
 
-struct path {
-	int f, r, c, cost;
-
-	path(int _f, int _r, int _c, int _cost) {
-		f = _f;
-		r = _r;
-		c = _c;
-		cost = _cost;
+void check(
+		priority_queue<tuple<int, int, int, int>, vector<tuple<int, int, int, int>>, greater<tuple<int, int, int, int>>> &que,
+		vector<vector<vector<int>>> &dist, int f, int r, int c, int cost) {
+	if (dist[f][r][c] > cost) {
+		dist[f][r][c] = cost;
+		que.emplace(cost, f, r, c);
 	}
-};
-
-struct comparePath {
-	bool operator()(path const &a, path const &b) {
-		return a.cost < b.cost;
-	}
-};
+}
 
 int main() {
 	int r, c;
@@ -42,30 +34,20 @@ int main() {
 		auto [cost, f, pr, pc] = que.top();
 		que.pop();
 		if (f) {
-			if (dist[0][pr][pc] > cost) {
-				dist[0][pr][pc] = cost;
-				que.emplace(dist[0][pr][pc], 0, pr, pc);
-			}
-			if ((pr > 0) && (dist[f][pr - 1][pc] > cost + 1)) {
-				dist[f][pr - 1][pc] = cost + 1;
-				que.emplace(dist[f][pr - 1][pc], f, pr - 1, pc);
+			check(que, dist, 0, pr, pc, cost);
+			if (pr > 0) {
+				check(que, dist, f, pr - 1, pc, cost + 1);
 			}
 		} else {
-			if (dist[1][pr][pc] > cost + 1) {
-				dist[1][pr][pc] = cost + 1;
-				que.emplace(dist[1][pr][pc], 1, pr, pc);
+			check(que, dist, 1, pr, pc, cost + 1);
+			if (pc < c - 1) {
+				check(que, dist, 0, pr, pc + 1, cost + a[pr][pc]);
 			}
-			if ((pc < c - 1) && (dist[0][pr][pc + 1] > cost + a[pr][pc])) {
-				dist[0][pr][pc + 1] = cost + a[pr][pc];
-				que.emplace(dist[0][pr][pc + 1], 0, pr, pc + 1);
+			if (pc > 0) {
+				check(que, dist, 0, pr, pc - 1, cost + a[pr][pc - 1]);
 			}
-			if ((pc > 0) && (dist[0][pr][pc - 1] > cost + a[pr][pc - 1])) {
-				dist[0][pr][pc - 1] = cost + a[pr][pc - 1];
-				que.emplace(dist[0][pr][pc - 1], 0, pr, pc - 1);
-			}
-			if ((pr < r - 1) && (dist[0][pr + 1][pc] > cost + b[pr][pc])) {
-				dist[0][pr + 1][pc] = cost + b[pr][pc];
-				que.emplace(dist[0][pr + 1][pc], 0, pr + 1, pc);
+			if (pr < r - 1) {
+				check(que, dist, 0, pr + 1, pc, cost + b[pr][pc]);
 			}
 		}
 	}
