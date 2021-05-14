@@ -6,7 +6,7 @@ int solve(vector<pair<int, int>> a) {
 		return (a[0].first > a[1].first) ? a[1].second : a[0].second;
 	}
 	vector<pair<int, int>> r(a.size() >> 1);
-	for (long unsigned int i = 0; i < (a.size() >> 1); i++) {
+	for (int i = 0; i < int(a.size() >> 1); i++) {
 		r[i] = (a[i * 2].first > a[i * 2 + 1].first) ? a[i * 2] : a[i * 2 + 1];
 	}
 	return solve(r);

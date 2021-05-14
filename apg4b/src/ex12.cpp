@@ -6,8 +6,7 @@ int main() {
 	cin >> S;
 
 	int a = 1;
-	for (long unsigned int i = 0; i < S.size(); i++) {
-		char c = S.at(i);
+	for (char c : S) {
 		if ('+' == c) {
 			a++;
 		} else if ('-' == c) {

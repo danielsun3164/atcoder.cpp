@@ -12,7 +12,7 @@ void convert(char &c) {
 int main() {
 	string s;
 	cin >> s;
-	for (long unsigned int i = 0; i < s.size(); i++) {
+	for (int i = 0; i < int(s.size()); i++) {
 		convert(s[i]);
 	}
 	cout << s << endl;

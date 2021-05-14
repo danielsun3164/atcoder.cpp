@@ -9,7 +9,7 @@ const vector<vector<int>> RESULT = { { 18768060, 18768060 }, { 81231940, 1876806
 
 int main() {
 	for (vector<int> line : RESULT) {
-		for (long unsigned int i = 0; i < line.size(); i++) {
+		for (int i = 0; i < int(line.size()); i++) {
 			if (i) {
 				cout << " ";
 			}

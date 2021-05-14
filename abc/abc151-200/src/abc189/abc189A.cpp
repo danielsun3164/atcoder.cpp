@@ -5,8 +5,8 @@ int main(void) {
 	string c;
 	cin >> c;
 	set<char> s;
-	for (unsigned long int i = 0; i < c.size(); i++) {
-		s.insert(c[i]);
+	for (char t : c) {
+		s.insert(t);
 	}
 	cout << ((1 == s.size()) ? "Won" : "Lost") << endl;
 	return 0;

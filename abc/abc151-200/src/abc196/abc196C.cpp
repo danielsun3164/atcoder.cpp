@@ -10,7 +10,7 @@ int main(void) {
 	ll n;
 	cin >> n;
 	ll ans = 0LL;
-	for (long unsigned int i = 0; i < KEYS.size(); i++) {
+	for (int i = 0; i < int(KEYS.size()); i++) {
 		if (n < LOWERS[i]) {
 			break;
 		}

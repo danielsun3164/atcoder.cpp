@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const array<int, 4> XS = { 0, 0, 1, 1 };
-const array<int, 4> YS = { 0, 1, 0, 1 };
+const vector<int> XS = { 0, 0, 1, 1 };
+const vector<int> YS = { 0, 1, 0, 1 };
 const char BLACK = '#';
 
 int count(int i, int j, vector<string> &s) {
 	int count = 0;
-	for (unsigned long int k = 0; k < XS.size(); k++) {
+	for (int k = 0; k < int(XS.size()); k++) {
 		if (BLACK == s[i + XS[k]][j + YS[k]]) {
 			count++;
 		}

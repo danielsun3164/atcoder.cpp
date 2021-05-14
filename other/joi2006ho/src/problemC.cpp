@@ -23,7 +23,7 @@ int main() {
 	cin >> n;
 	vector<vector<int>> r = dfs(n, n);
 	for (vector<int> v : r) {
-		for (unsigned int i = 0; i < v.size(); i++) {
+		for (int i = 0; i < int(v.size()); i++) {
 			if (i) {
 				cout << " ";
 			}

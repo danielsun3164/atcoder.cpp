@@ -6,7 +6,7 @@ const int N = 26;
 
 ll count(vector<int> &counts, vector<ll> &frac) {
 	int sum = 0;
-	for (unsigned long int i = 0; i < counts.size(); i++) {
+	for (int i = 0; i < int(counts.size()); i++) {
 		sum += counts[i];
 	}
 	ll ans = frac[sum];

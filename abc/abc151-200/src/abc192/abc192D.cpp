@@ -4,13 +4,13 @@ using ll = long long;
 
 bool ok(vector<int> xs, ll radix, ll m) {
 	__int128 sum = 0, r = 1;
-	for (long unsigned int i = 0; i < xs.size(); i++) {
+	for (int i = 0; i < int(xs.size()); i++) {
 		sum += xs[i] * r;
 		if (sum > m) {
 			return false;
 		}
 		r *= radix;
-		if ((i < xs.size() - 1) && (r > m)) {
+		if ((i < int(xs.size() - 1)) && (r > m)) {
 			return false;
 		}
 	}
@@ -27,7 +27,7 @@ int main(void) {
 	} else {
 		vector<int> xs(x.size());
 		int d = -1;
-		for (long unsigned int i = 0; i < x.size(); i++) {
+		for (int i = 0; i < int(x.size()); i++) {
 			xs[i] = x[x.size() - 1 - i] - '0';
 			d = max(d, xs[i]);
 		}

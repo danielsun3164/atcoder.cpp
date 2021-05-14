@@ -5,7 +5,7 @@ static const int N = 10;
 
 int calc(vector<int> &s) {
 	int ans = 0;
-	for (long unsigned int i = 0; i < s.size(); i++) {
+	for (int i = 0; i < int(s.size()); i++) {
 		ans += i * (int) pow(10, s[i]);
 	}
 	return ans;

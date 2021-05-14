@@ -22,7 +22,7 @@ int main() {
 			return p1.second > p2.second;
 		}
 	});
-	for (unsigned int i = 0; i < v.size(); i++) {
+	for (int i = 0; i < int(v.size()); i++) {
 		if (i) {
 			cout << " ";
 		}
