@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 #include <atcoder/math>
 using namespace std;
 using ll = long long;

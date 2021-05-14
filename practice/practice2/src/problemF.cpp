@@ -1,5 +1,4 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 #include <atcoder/modint>
 #include <atcoder/convolution>
 using namespace std;

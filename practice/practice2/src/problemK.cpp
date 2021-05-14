@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 #include <atcoder/lazysegtree>
 #include <atcoder/modint>
 using namespace std;

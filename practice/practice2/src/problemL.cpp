@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 #include <atcoder/lazysegtree>
 using namespace std;
 using ll = long long;

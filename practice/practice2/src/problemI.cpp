@@ -1,6 +1,4 @@
-#include <iostream>
-#include <string>
-#include <vector>
+#include <bits/stdc++.h>
 #include <atcoder/string>
 using namespace std;
 using ll = long long;

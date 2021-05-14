@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 #include <atcoder/fenwicktree>
 using namespace std;
 using ll = long long;
