@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <atcoder/twosat>
-
 using namespace std;
 
 int main() {

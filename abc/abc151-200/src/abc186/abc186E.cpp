@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 #include <atcoder/internal_math>
 using namespace std;
-
 using ll = long long;
 
 ll gcd(ll a, ll b) {

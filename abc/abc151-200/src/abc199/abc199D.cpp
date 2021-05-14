@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 #include <atcoder/dsu>
 using namespace std;
-
 using ll = long long;
 
 ll calc(vector<vector<int>> &edges, vector<int> &group, vector<int> &color, int idx) {
