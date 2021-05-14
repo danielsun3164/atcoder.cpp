@@ -1,19 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+using ll = long long;
+
 int main(void) {
 	int n;
 	cin >> n;
-	vector<pair<long long, long long>> d(n);
-	long long aoki = 0L, takahashi = 0L;
+	vector<pair<ll, ll>> d(n);
+	ll aoki = 0LL, takahashi = 0LL;
 	for (int i = 0; i < n; i++) {
-		long long a, b;
+		ll a, b;
 		cin >> a >> b;
 		d[i] = { a, b };
 		aoki += a;
 	}
-	sort(d.begin(), d.end(), [](pair<long long, long long> a, pair<long long, long long> b) {
-		return 2L * a.first + a.second > 2L * b.first + b.second;
+	sort(d.begin(), d.end(), [](pair<ll, ll> a, pair<ll, ll> b) {
+		return 2LL * a.first + a.second > 2L * b.first + b.second;
 	});
 	for (int i = 0; i < n; i++) {
 		takahashi += d[i].first + d[i].second;

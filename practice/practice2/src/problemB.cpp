@@ -1,14 +1,15 @@
 #include <iostream>
 #include <atcoder/fenwicktree>
-
 using namespace std;
+
+using ll = long long;
 
 int main() {
 	int n, q;
 	cin >> n >> q;
-	atcoder::fenwick_tree<long long> fw(n);
+	atcoder::fenwick_tree<ll> fw(n);
 	for (int i = 0; i < n; i++) {
-		long long a;
+		ll a;
 		cin >> a;
 		fw.add(i, a);
 	}

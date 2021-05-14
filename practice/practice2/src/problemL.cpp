@@ -1,11 +1,12 @@
 #include <iostream>
 #include <atcoder/lazysegtree>
-
 using namespace std;
+
+using ll = long long;
 
 struct S {
 	// # of 0 / # of 1 / inversion number
-	long long zero, one, inversion;
+	ll zero, one, inversion;
 };
 
 // swapping flag

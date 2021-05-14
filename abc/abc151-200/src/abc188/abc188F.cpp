@@ -1,17 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-long long x;
-map<long long, long long> m;
+using ll = long long;
 
-long long solve(long long y) {
+ll x;
+map<ll, ll> m;
+
+ll solve(ll y) {
 	if (x >= y) {
 		return x - y;
 	}
 	if (m.find(y) != m.end()) {
 		return m[y];
 	}
-	long long r = abs(y - x);
+	ll r = abs(y - x);
 	if (1L == (1L & y)) {
 		r = min(r, solve((y + 1) >> 1) + 2);
 		r = min(r, solve((y - 1) >> 1) + 2);
@@ -23,7 +25,7 @@ long long solve(long long y) {
 }
 
 int main() {
-	long long y;
+	ll y;
 	cin >> x >> y;
 	cout << solve(y) << endl;
 	return 0;

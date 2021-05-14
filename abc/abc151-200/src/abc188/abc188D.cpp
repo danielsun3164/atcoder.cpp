@@ -1,10 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+using ll = long long;
+
 int main(void) {
 	int n, C;
 	cin >> n >> C;
-	map<int, long long> m;
+	map<int, ll> m;
 	for (int i = 0; i < n; i++) {
 		int a, b, c;
 		cin >> a >> b >> c;
@@ -12,7 +14,7 @@ int main(void) {
 		m[b + 1] -= c;
 	}
 	auto pre = m.begin();
-	long long value = pre->second, ans = 0L;
+	ll value = pre->second, ans = 0LL;
 	for (auto it = next(m.begin()); it != m.end(); it++) {
 		ans += (it->first - pre->first) * ((value > C) ? C : value);
 		value += it->second;

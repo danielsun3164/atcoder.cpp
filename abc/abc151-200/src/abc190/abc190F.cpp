@@ -2,6 +2,8 @@
 #include <atcoder/fenwicktree>
 using namespace std;
 
+using ll = long long;
+
 int main() {
 	int n;
 	cin >> n;
@@ -9,8 +11,8 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		cin >> a[i];
 	}
-	atcoder::fenwick_tree<long long> ft(n);
-	long long ans = 0;
+	atcoder::fenwick_tree<ll> ft(n);
+	ll ans = 0;
 	for (int ai : a) {
 		ans += ft.sum(ai, n);
 		ft.add(ai, 1L);
