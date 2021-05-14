@@ -1,7 +1,6 @@
 #include <iostream>
 #include <atcoder/math>
 using namespace std;
-
 using ll = long long;
 
 int main() {

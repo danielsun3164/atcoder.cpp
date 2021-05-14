@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
 #include <atcoder/modint>
 using namespace std;
-
-using mint = atcoder::modint1000000007;
 using ll = long long;
+using mint = atcoder::modint1000000007;
 
 const char WILD_CARD = '?';
 const int INV2 = 500'000'004;

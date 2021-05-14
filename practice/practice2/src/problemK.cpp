@@ -1,9 +1,7 @@
 #include <iostream>
 #include <atcoder/lazysegtree>
 #include <atcoder/modint>
-
 using namespace std;
-
 using mint = atcoder::modint998244353;
 
 struct S {

@@ -2,7 +2,6 @@
 #include <iostream>
 #include <atcoder/mincostflow>
 using namespace std;
-
 using ll = long long;
 
 const ll INF = INT_MAX;

@@ -3,7 +3,6 @@
 #include <vector>
 #include <atcoder/string>
 using namespace std;
-
 using ll = long long;
 
 int main() {

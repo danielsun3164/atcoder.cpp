@@ -2,7 +2,6 @@
 #include <vector>
 #include <atcoder/modint>
 #include <atcoder/convolution>
-
 using namespace std;
 
 using mint = atcoder::modint998244353;

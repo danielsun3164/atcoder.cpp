@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 using ll = long long;
 
 bool check(vector<vector<pair<int, int>>> &rules, int n, int mask) {

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <atcoder/lazysegtree>
 using namespace std;
-
 using ll = long long;
 
 struct S {

@@ -2,7 +2,6 @@
 #include <atcoder/modint>
 #include <atcoder/convolution>
 using namespace std;
-
 using ll = long long;
 using mint = atcoder::modint998244353;
 

@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 using ll = long long;
 
 static const int INF = INT_MAX >> 1;

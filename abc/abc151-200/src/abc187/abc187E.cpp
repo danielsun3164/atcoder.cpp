@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 using ll = long long;
 
 void setDepths(int now, int from, int depth, vector<int> &depths, vector<vector<int>> &edges) {
