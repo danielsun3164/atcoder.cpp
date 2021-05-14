@@ -1,0 +1,18 @@
+#include <gtest/gtest.h>
+#include <string>
+#include <command.h>
+using namespace std;
+
+static const string COMMAND = "./abc200D";
+
+TEST(abc200D, case1) {
+	check(COMMAND, string("") + "5\n" + "180 186 189 191 218", string("") + "Yes\n" + "1 1\n" + "2 3 4");
+}
+
+TEST(abc200D, case2) {
+	check(COMMAND, string("") + "2\n" + "123 523", string("") + "Yes\n" + "1 1\n" + "1 2");
+}
+
+TEST(abc200D, case3) {
+	check(COMMAND, string("") + "6\n" + "2013 1012 2765 2021 508 6971", string("") + "No");
+}
