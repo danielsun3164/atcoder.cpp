@@ -1,18 +1,11 @@
-#ifndef COMMAND_H_
-#define COMMAND_H_
-
+#include <bits/stdc++.h>
 #include <gtest/gtest.h>
-#include <sys/wait.h>
-#include <unistd.h>
-#include <array>
-#include <cerrno>
-#include <cstdlib>
-#include <cstring>
-#include <stdexcept>
-#include <string>
-#include <vector>
+#include <stdio.h>
 
 using namespace std;
+
+const char QUESTION = '?';
+const char ANSWER = '!';
 
 class Command {
 public:
@@ -21,6 +14,8 @@ public:
 	string StdIn;
 	string StdOut;
 	string StdErr;
+	int n, q;
+	string expected;
 
 	void execute() {
 		const int READ_END = 0;
@@ -69,9 +64,43 @@ public:
 			close(outfd[WRITE_END]);  // Parent does not write to stdout
 			close(errfd[WRITE_END]);  // Parent does not write to stderr
 
-			if (write(infd[WRITE_END], StdIn.data(), StdIn.size()) < 0) {
-				throw runtime_error(strerror(errno));
+			int count = 0;
+			istringstream out_input;
+			array<char, 256> buffer;
+			ssize_t bytes = 0;
+			StdIn = to_string(n) + " " + to_string(q) + "\n";
+
+			while (true) {
+				if (write(infd[WRITE_END], StdIn.data(), StdIn.size()) < 0) {
+					throw runtime_error(strerror(errno));
+				}
+
+				if ((bytes = read(outfd[READ_END], buffer.data(), buffer.size())) < 0) {
+					throw runtime_error(strerror(errno));
+				}
+				out_input.rdbuf()->pubsetbuf(buffer.data(), bytes);
+				char mark;
+				out_input >> mark;
+				if (QUESTION == mark) {
+					char c1, c2;
+					out_input >> c1 >> c2;
+					auto c1_index = find(expected.begin(), expected.end(), c1);
+					auto c2_index = find(expected.begin(), expected.end(), c2);
+					ASSERT_NE(expected.end(), c1_index);
+					ASSERT_NE(expected.end(), c2_index);
+					StdIn = (c1_index > c2_index) ? ">\n" : "<\n";
+					count++;
+				} else if (ANSWER == mark) {
+					string answer;
+					out_input >> answer;
+					ASSERT_EQ(expected, answer);
+					break;
+				} else {
+					cout << "mark=" << mark << endl;
+					FAIL();
+				}
 			}
+			ASSERT_LE(count, q);
 			close(infd[WRITE_END]); // Done writing
 		} else if (pid == 0) { // CHILD
 			dup2(infd[READ_END], STDIN_FILENO);
@@ -95,75 +124,44 @@ public:
 		int status = 0;
 		waitpid(pid, &status, 0);
 
+		if (WIFEXITED(status)) {
+			ExitStatus = WEXITSTATUS(status);
+		}
+
 		array<char, 256> buffer;
-
 		ssize_t bytes = 0;
-		do {
-			bytes = read(outfd[READ_END], buffer.data(), buffer.size());
-			StdOut.append(buffer.data(), bytes);
-		} while (bytes > 0);
-
 		do {
 			bytes = read(errfd[READ_END], buffer.data(), buffer.size());
 			StdErr.append(buffer.data(), bytes);
 		} while (bytes > 0);
 
-		if (WIFEXITED(status)) {
-			ExitStatus = WEXITSTATUS(status);
-		}
-
 		cleanup();
 	}
 };
 
-Command execute(string command, string input) {
+static const string COMMAND = "./practiceB";
+
+void check(int n, int q, string expected) {
 	Command cmd;
-	cmd.Command = command;
-	cmd.StdIn = input + "\n";
+	cmd.Command = COMMAND;
+	cmd.n = n;
+	cmd.q = q;
+	cmd.expected = expected;
 	cmd.execute();
-	return cmd;
 }
 
-void check(string command, string input, string output) {
-	Command cmd = execute(command, input);
-	EXPECT_EQ(output + "\n", cmd.StdOut);
+TEST(practiceB, case1) {
+	check(5, 7, "ADCBE");
 }
 
-template<typename ... Args>
-void check(string command, string input, const Args ... args) {
-	Command cmd = execute(command, input);
-	vector<string> outputs = { args... };
-	for (long unsigned int i = 0; i < outputs.size(); i++) {
-		outputs[i].append("\n");
-	}
-	EXPECT_TRUE(find(outputs.begin(), outputs.end(), cmd.StdOut) != outputs.end());
-	if (outputs.end() == find(outputs.begin(), outputs.end(), cmd.StdOut)) {
-		cout << "Actual:" << endl;
-		cout << cmd.StdOut << endl;
-		cout << "Expected:" << endl;
-		for (string s : outputs) {
-			cout << s << endl;
-		}
-	}
+TEST(practiceB, case2) {
+	check(5, 7, "AEDBC");
 }
 
-void check_about(string command, string input, double expected, double tolerance) {
-	Command cmd = execute(command, input);
-	streambuf *orig = cin.rdbuf();
-	istringstream input_ss(cmd.StdOut);
-	cin.rdbuf(input_ss.rdbuf());
-	double output;
-	cin >> output;
-	EXPECT_TRUE(abs(output - expected) < tolerance);
-	if (abs(output - expected) >= tolerance) {
-		cout << "Actual:" << endl;
-		cout << fixed << setprecision(10) << output << endl;
-		cout << "Expected:" << endl;
-		cout << fixed << setprecision(10) << expected << endl;
-		cout << "TOLERANCE" << endl;
-		cout << defaultfloat << tolerance << endl;
-	}
-	cin.rdbuf(orig);
+TEST(practiceB, case3) {
+	check(26, 100, "TXGQNUJPWFRMVOZHKIAYLCBSDE");
 }
 
-#endif  // COMMAND_H_
+TEST(practiceB, case4) {
+	check(26, 100, "CSBNGZXDRJMLOFQAWTYUIEPHKV");
+}
