@@ -6,7 +6,7 @@ using namespace std;
 
 static const string COMMAND = "./abc193A";
 
-static const double TOLERANCE = 10E-2;
+static const double TOLERANCE = 1E-2;
 
 TEST(abc193A, case1) {
 	check_about(COMMAND, string("") + "100 80", 20.0, TOLERANCE);
