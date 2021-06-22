@@ -52,7 +52,7 @@ ABC250=abc250
 OBJS_ABC201=test_abc201A abc201A test_abc201B abc201B test_abc201C abc201C test_abc201D abc201D test_abc201E abc201E test_abc201F abc201F
 OBJS_ABC202=test_abc202A abc202A test_abc202B abc202B test_abc202C abc202C test_abc202D abc202D test_abc202E abc202E test_abc202F abc202F test_abc202F別回答 abc202F別回答
 OBJS_ABC203=test_abc203A abc203A test_abc203B abc203B test_abc203C abc203C test_abc203D abc203D test_abc203E abc203E test_abc203F abc203F
-OBJS_ABC204=test_abc204A abc204A test_abc204B abc204B test_abc204C abc204C test_abc204D abc204D test_abc204E abc204E test_abc204F abc204F
+OBJS_ABC204=test_abc204A abc204A test_abc204B abc204B test_abc204C abc204C test_abc204D abc204D test_abc204E abc204E test_abc204F abc204F test_abc204F別回答 abc204F別回答
 OBJS_ABC205=test_abc205A abc205A test_abc205B abc205B test_abc205C abc205C test_abc205D abc205D test_abc205E abc205E test_abc205F abc205F
 OBJS_ABC206=test_abc206A abc206A test_abc206B abc206B test_abc206C abc206C test_abc206D abc206D test_abc206E abc206E test_abc206F abc206F
 OBJS_ABC207=test_abc207A abc207A test_abc207B abc207B test_abc207C abc207C test_abc207D abc207D test_abc207E abc207E test_abc207F abc207F
@@ -351,6 +351,12 @@ test_abc204F:	$(TEST_DIR)/$(ABC204)/test_abc204F.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
 
 abc204F:	$(SRC_DIR)/$(ABC204)/abc204F.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc204F別回答:	$(TEST_DIR)/$(ABC204)/test_abc204F別回答.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc204F別回答:	$(SRC_DIR)/$(ABC204)/abc204F別回答.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
 
 test_abc205A:	$(TEST_DIR)/$(ABC204)/test_abc205A.cpp
