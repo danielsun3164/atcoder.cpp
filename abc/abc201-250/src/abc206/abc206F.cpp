@@ -39,7 +39,7 @@ int main() {
 			v[i].second--;
 		}
 		vector<vector<int>> dp(N, vector<int>(N, -1));
-		cout << ((grundy(0, N - 1, v, dp)) ? "Alice" : "Bob") << endl;
+		cout << (grundy(0, N - 1, v, dp) ? "Alice" : "Bob") << endl;
 	}
 	return 0;
 }
