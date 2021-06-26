@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 #include <gtest/gtest.h>
-#include <stdio.h>
 
 using namespace std;
 
