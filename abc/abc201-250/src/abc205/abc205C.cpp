@@ -1,11 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+string compare(int a, int b) {
+	return (a == b) ? "=" : ((a > b) ? ">" : "<");
+}
+
 string compare(int a, int b, int c) {
 	if (1 & c) {
-		return (a == b) ? "=" : ((a > b) ? ">" : "<");
+		return compare(a, b);
 	} else {
-		return compare(abs(a), abs(b), c >> 1);
+		return compare(abs(a), abs(b));
 	}
 }
 
