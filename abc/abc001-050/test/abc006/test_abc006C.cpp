@@ -6,7 +6,6 @@ using namespace std;
 
 static const string COMMAND = "./abc006C";
 
-template<typename ... Args>
 void check(int n, int m) {
 	string input = to_string(n) + " " + to_string(m);
 	Command cmd = execute(COMMAND, input); // @suppress("Invalid arguments")
@@ -16,7 +15,13 @@ void check(int n, int m) {
 	int a, b, c;
 	cin >> a >> b >> c;
 	EXPECT_EQ(n, a + b + c);
+	if (n != a + b + c) {
+		cout << n << "!=" << a << "+" << b << "+" << c << endl;
+	}
 	EXPECT_EQ(m, 2 * a + 3 * b + 4 * c);
+	if (m != 2 * a + 3 * b + 4 * c) {
+		cout << m << "!=2x" << a << "+3x" << b << "+4x" << c << endl;
+	}
 	cin.rdbuf(orig);
 }
 
