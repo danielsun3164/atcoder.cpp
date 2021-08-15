@@ -55,7 +55,7 @@ OBJS_ABC003=test_abc003A abc003A test_abc003B abc003B test_abc003C abc003C test_
 OBJS_ABC004=test_abc004A abc004A test_abc004B abc004B test_abc004C abc004C test_abc004D abc004D
 OBJS_ABC005=test_abc005A abc005A test_abc005B abc005B test_abc005C abc005C test_abc005D abc005D
 OBJS_ABC006=test_abc006A abc006A test_abc006B abc006B test_abc006C abc006C test_abc006D abc006D
-OBJS_ABC007=test_abc007A abc007A test_abc007B abc007B test_abc007C abc007C test_abc007D abc007D
+OBJS_ABC007=test_abc007A abc007A test_abc007B abc007B test_abc007C abc007C test_abc007D abc007D test_abc007D別回答 abc007D別回答
 OBJS_ABC008=test_abc008A abc008A test_abc008B abc008B test_abc008C abc008C test_abc008D abc008D
 OBJS_ABC009=test_abc009A abc009A test_abc009B abc009B test_abc009C abc009C test_abc009D abc009D
 OBJS_ABC010=test_abc010A abc010A test_abc010B abc010B test_abc010C abc010C test_abc010D abc010D
@@ -100,7 +100,7 @@ OBJS_ABC048=test_abc048A abc048A test_abc048B abc048B test_abc048C abc048C test_
 OBJS_ABC049=test_abc049A abc049A test_abc049B abc049B test_abc049C abc049C test_abc049D abc049D
 OBJS_ABC050=test_abc050A abc050A test_abc050B abc050B test_abc050C abc050C test_abc050D abc050D
 
-all:	$(ABC001) $(ABC002) $(ABC003) $(ABC004) $(ABC005) $(ABC006)
+all:	$(ABC001) $(ABC002) $(ABC003) $(ABC004) $(ABC005) $(ABC006) $(ABC007)
 #all:	$(ABC001) $(ABC002) $(ABC003) $(ABC004) $(ABC005) $(ABC006) $(ABC007) $(ABC008) $(ABC009) $(ABC010) $(ABC011) $(ABC012) $(ABC013) $(ABC014) $(ABC015) $(ABC016) $(ABC017) $(ABC018) $(ABC019) $(ABC020) $(ABC021) $(ABC022) $(ABC023) $(ABC024) $(ABC025) $(ABC026) $(ABC027) $(ABC028) $(ABC029) $(ABC030) $(ABC031) $(ABC032) $(ABC033) $(ABC034) $(ABC035) $(ABC036) $(ABC037) $(ABC038) $(ABC039) $(ABC040) $(ABC041) $(ABC042) $(ABC043) $(ABC044) $(ABC045) $(ABC046) $(ABC047) $(ABC048) $(ABC049) $(ABC050)
 
 $(ABC001):	$(OBJS_ABC001)
@@ -369,6 +369,12 @@ abc007D:	$(SRC_DIR)/$(ABC007)/abc007D.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
 
 test_abc007D:	$(TEST_DIR)/$(ABC007)/test_abc007D.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc007D別回答:	$(SRC_DIR)/$(ABC007)/abc007D別回答.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc007D別回答:	$(TEST_DIR)/$(ABC007)/test_abc007D別回答.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
 
 abc008A:	$(SRC_DIR)/$(ABC008)/abc008A.cpp
