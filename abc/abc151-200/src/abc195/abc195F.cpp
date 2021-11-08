@@ -26,12 +26,12 @@ int main() {
 	cin >> a >> b;
 	int n = (int) (b - a);
 	vector<ll> primes = get_primes(n);
-	long unsigned int m = primes.size();
+	int m = int(primes.size());
 	vector<vector<ll>> dp(n + 2, vector<ll>(1 << m, 0LL));
 	dp[0][0] = 1L;
 	for (int i = 0; i <= n; i++) {
 		int bits = 0;
-		for (long unsigned int j = 0; j < m; j++) {
+		for (int j = 0; j < m; j++) {
 			if (0LL == ((a + i) % primes[j])) {
 				bits += 1 << j;
 			}

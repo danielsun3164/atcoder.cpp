@@ -1,6 +1,5 @@
-#include <iostream>
+#include <bits/stdc++.h>
 #include <atcoder/dsu>
-
 using namespace std;
 
 int main() {

@@ -1,11 +1,10 @@
 #include <bits/stdc++.h>
 #include <atcoder/dsu>
 using namespace std;
-
 using ll = long long;
 
-ll calc(vector<vector<int>> &edges, vector<int> &group, vector<int> &color, long unsigned int idx) {
-	if (idx == group.size()) {
+ll calc(vector<vector<int>> &edges, vector<int> &group, vector<int> &color, int idx) {
+	if (idx == int(group.size())) {
 		return 1LL;
 	}
 	int u = group[idx];

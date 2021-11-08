@@ -1,6 +1,5 @@
 #include <iostream>
 #include <atcoder/scc>
-
 using namespace std;
 
 int main() {

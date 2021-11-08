@@ -1,8 +1,6 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 #include <atcoder/modint>
 #include <atcoder/convolution>
-
 using namespace std;
 
 using mint = atcoder::modint998244353;
@@ -22,7 +20,7 @@ int main() {
 		b[i] = l;
 	}
 	vector<mint> c = atcoder::convolution(a, b);
-	for (long unsigned int i = 0; i < c.size(); i++) {
+	for (int i = 0; i < int(c.size()); i++) {
 		cout << ((i) ? " " : "");
 		cout << c[i].val();
 	}

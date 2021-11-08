@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
 void setDepths(int now, int from, int depth, vector<int> &depths, vector<vector<int>> &edges) {
 	depths[now] = depth;
@@ -23,7 +24,7 @@ int main(void) {
 		edges[b[i]].push_back(a[i]);
 	}
 	setDepths(0, -1, 0, depths, edges);
-	vector<long long> s(n, 0L);
+	vector<ll> s(n, 0LL);
 	cin >> q;
 	for (int i = 0; i < q; i++) {
 		int t, e, x;

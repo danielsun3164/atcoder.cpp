@@ -7,9 +7,9 @@ vector<vector<ll>> OP2 = { { 0, 1L, 0 }, { -1L, 0, 0 }, { 0, 0, 1L } };
 
 vector<vector<ll>> mul(vector<vector<ll>> &a, vector<vector<ll>> &b) {
 	vector<vector<ll>> r(a.size(), vector<ll>(b[0].size(), 0L));
-	for (unsigned long int i = 0; i < a.size(); i++) {
-		for (unsigned long int j = 0; j < b[0].size(); j++) {
-			for (unsigned long int k = 0; k < a[i].size(); k++) {
+	for (int i = 0; i < int(a.size()); i++) {
+		for (int j = 0; j < int(b[0].size()); j++) {
+			for (int k = 0; k < int(a[i].size()); k++) {
 				r[i][j] += a[i][k] * b[k][j];
 			}
 		}

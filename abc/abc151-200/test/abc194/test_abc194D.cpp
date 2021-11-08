@@ -1,12 +1,12 @@
+#include <bits/stdc++.h>
 #include <gtest/gtest.h>
-#include <string>
 #include <command.h>
 
 using namespace std;
 
 static const string COMMAND = "./abc194D";
 
-static const double TOLERANCE = 10E-6;
+static const double TOLERANCE = 1E-6;
 
 TEST(abc194D, case1) {
 	check_about(COMMAND, string("") + "2", 2.0, TOLERANCE);

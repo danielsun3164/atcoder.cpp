@@ -28,7 +28,7 @@ const vector<vector<int>> RESULT = { { 5374995, 5374995 }, { 23994523, 5374995 }
 
 int main() {
 	for (vector<int> line : RESULT) {
-		for (long unsigned int i = 0; i < line.size(); i++) {
+		for (int i = 0; i < int(line.size()); i++) {
 			if (i) {
 				cout << " ";
 			}

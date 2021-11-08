@@ -32,9 +32,9 @@ int main() {
 	for (int ti : t) {
 		fw.add(ti, 1);
 	}
-	long unsigned int idx = 0;
+	int idx = 0;
 	for (int i = 0; i < mh[0]; i++) {
-		while ((idx < t.size()) && (i >= mh[t[idx]])) {
+		while ((idx < int(t.size())) && (i >= mh[t[idx]])) {
 			fw.add(t[idx++], -1);
 		}
 		ans -= fw.sum(0, mw[i]);

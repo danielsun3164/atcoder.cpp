@@ -73,8 +73,7 @@ public:
 				throw runtime_error(strerror(errno));
 			}
 			close(infd[WRITE_END]); // Done writing
-		} else if (pid == 0) // CHILD
-				{
+		} else if (pid == 0) { // CHILD
 			dup2(infd[READ_END], STDIN_FILENO);
 			dup2(outfd[WRITE_END], STDOUT_FILENO);
 			dup2(errfd[WRITE_END], STDERR_FILENO);

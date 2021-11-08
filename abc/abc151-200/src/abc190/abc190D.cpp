@@ -1,13 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
 int main(void) {
-	long long n;
+	ll n;
 	cin >> n;
 	int ans = 0;
-	for (long long i = 1L; i * i <= 2 * n; i++) {
+	for (ll i = 1LL; i * i <= 2 * n; i++) {
 		if (0L == (2 * n % i)) {
-			if (1L == (1L & (i + 2 * n / i))) {
+			if (1LL == (1LL & (i + 2 * n / i))) {
 				ans += 2;
 			}
 		}

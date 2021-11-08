@@ -1,11 +1,11 @@
+#include <bits/stdc++.h>
 #include <gtest/gtest.h>
-#include <string>
 #include <command.h>
 using namespace std;
 
 static const string COMMAND = "./abc197D";
 
-static const double TOLERANCE = 10E-5;
+static const double TOLERANCE = 1E-5;
 
 template<typename ... Args>
 void check(string input, const Args ... args) {

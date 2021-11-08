@@ -6,9 +6,9 @@ using mint = atcoder::modint1000000007;
 
 vector<vector<mint>> multiply(vector<vector<mint>> &a, vector<vector<mint>> &b) {
 	vector<vector<mint>> r(a.size(), vector<mint>(b[0].size()));
-	for (long unsigned int i = 0; i < a.size(); i++) {
-		for (long unsigned int j = 0; j < b[0].size(); j++) {
-			for (long unsigned int k = 0; k < a[i].size(); k++) {
+	for (int i = 0; i < int(a.size()); i++) {
+		for (int j = 0; j < int(b[0].size()); j++) {
+			for (int k = 0; k < int(a[i].size()); k++) {
 				r[i][j] += a[i][k] * b[k][j];
 			}
 		}
@@ -18,7 +18,7 @@ vector<vector<mint>> multiply(vector<vector<mint>> &a, vector<vector<mint>> &b) 
 
 vector<vector<mint>> pow(vector<vector<mint>> &m, int k) {
 	vector<vector<mint>> r(m.size(), vector<mint>(m.size()));
-	for (long unsigned int i = 0; i < r.size(); i++) {
+	for (int i = 0; i < int(r.size()); i++) {
 		r[i][i] = 1;
 	}
 	while (k) {

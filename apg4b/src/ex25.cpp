@@ -75,10 +75,11 @@ void print_set(bitset<50> S) {
 			cont.push_back(i);
 		}
 	}
-	for (long unsigned int i = 0; i < cont.size(); i++) {
-		if (i > 0)
+	for (int i = 0; i < int(cont.size()); i++) {
+		if (i) {
 			cout << " ";
-		cout << cont.at(i);
+		}
+		cout << cont[i];
 	}
 	cout << endl;
 }

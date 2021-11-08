@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+using ll = long long;
 
-long long fn(int n, int m) {
-	long long r = 1L;
+ll fn(int n, int m) {
+	ll r = 1LL;
 	for (int i = 0; i < m; i++) {
 		r *= n - i;
 		r /= i + 1;

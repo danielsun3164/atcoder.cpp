@@ -1,10 +1,9 @@
-#include <climits>
-#include <iostream>
+#include <bits/stdc++.h>
 #include <atcoder/mincostflow>
-
 using namespace std;
+using ll = long long;
 
-const long long INF = INT_MAX;
+const ll INF = INT_MAX;
 
 int main() {
 	int n, k;
@@ -15,7 +14,7 @@ int main() {
 	 * i-th row correspond to vertex i
 	 * i-th col correspond to vertex n + i
 	 **/
-	atcoder::mcf_graph<int, long long> g(2 * n + 2);
+	atcoder::mcf_graph<int, ll> g(2 * n + 2);
 	int s = 2 * n, t = 2 * n + 1;
 
 	g.add_edge(s, t, n * k, INF);

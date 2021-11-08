@@ -8,7 +8,7 @@ int main(void) {
 	string s, t;
 	cin >> s >> t;
 	bool result = true;
-	for (long unsigned int i = 0; i < s.length(); i++) {
+	for (int i = 0; i < int(s.length()); i++) {
 		if (WILD_CARD == s[i]) {
 			if (WILD_CARD_SET.end() == WILD_CARD_SET.find(t[i])) {
 				result = false;

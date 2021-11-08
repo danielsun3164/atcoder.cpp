@@ -1,12 +1,11 @@
-#include <iostream>
+#include <bits/stdc++.h>
 #include <atcoder/maxflow>
-
 using namespace std;
 
 // 障害物
 const char OBSTACLE = '#';
-const int XS[] { 0, 1, 0, -1 };
-const int YS[] { 1, 0, -1, 0 };
+const vector<int> XS = { 0, 1, 0, -1 };
+const vector<int> YS = { 1, 0, -1, 0 };
 
 int main() {
 	int n, m;
@@ -35,7 +34,7 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < m; j++) {
 			if ((OBSTACLE != grid[i][j]) && (0 == ((i + j) & 1))) {
-				for (int k = 0; k < 4; k++) {
+				for (int k = 0; k < int(XS.size()); k++) {
 					int x = i + XS[k], y = j + YS[k];
 					if ((x >= 0) && (x < n) && (y >= 0) && (y < m) && (OBSTACLE != grid[x][y])) {
 						g.add_edge(i * m + j, x * m + y, 1);

@@ -1,6 +1,6 @@
 #include <command.h>
+#include <bits/stdc++.h>
 #include <gtest/gtest.h>
-#include <string>
 
 using namespace std;
 

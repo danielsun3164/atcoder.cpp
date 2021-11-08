@@ -1,6 +1,5 @@
-#include <iostream>
+#include <bits/stdc++.h>
 #include <atcoder/segtree>
-
 using namespace std;
 
 int op(int a, int b) {
