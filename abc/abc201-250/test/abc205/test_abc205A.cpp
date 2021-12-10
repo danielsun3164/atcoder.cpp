@@ -3,7 +3,7 @@
 #include <command.h>
 using namespace std;
 
-static const string COMMAND = "./abc205A";
+static const string COMMAND = "abc205A";
 static const double TOLERANCE = 1E-6;
 
 TEST(abc205A, case1) {

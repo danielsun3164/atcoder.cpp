@@ -4,16 +4,16 @@
 
 using namespace std;
 
-static const string COMMAND = "./abc006B";
+static const string COMMAND = "abc006B";
 
 TEST(abc006B, case1) {
-	check(COMMAND, string("") + "7", string("") + "7");
+	check(PATH + COMMAND, string("") + "7", string("") + "7");
 }
 
 TEST(abc006B, case2) {
-	check(COMMAND, string("") + "1", string("") + "0");
+	check(PATH + COMMAND, string("") + "1", string("") + "0");
 }
 
 TEST(abc006B, case3) {
-	check(COMMAND, string("") + "100000", string("") + "7927");
+	check(PATH + COMMAND, string("") + "100000", string("") + "7927");
 }

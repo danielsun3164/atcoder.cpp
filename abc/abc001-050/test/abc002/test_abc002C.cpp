@@ -4,7 +4,7 @@
 
 using namespace std;
 
-static const string COMMAND = "./abc002C";
+static const string COMMAND = "abc002C";
 static const double TOLERANCE = 0.01;
 
 TEST(abc002C, case1) {
