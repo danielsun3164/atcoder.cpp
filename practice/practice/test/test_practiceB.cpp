@@ -138,7 +138,7 @@ public:
 	}
 };
 
-static const string COMMAND = "./practiceB";
+static const string COMMAND = "practiceB";
 
 void check(int n, int q, string expected) {
 	Command cmd;

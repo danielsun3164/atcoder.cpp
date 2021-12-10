@@ -4,8 +4,8 @@
 
 using namespace std;
 
-static const string COMMAND = "./ex3";
+static const string COMMAND = "ex3";
 
 TEST(ex3, case1) {
-	check(COMMAND, string(""), string("") + "5050");
+	check(PATH + COMMAND, string(""), string("") + "5050");
 }

@@ -4,14 +4,14 @@
 
 using namespace std;
 
-static const string COMMAND = "./problemE";
+static const string COMMAND = "problemE";
 
 TEST(problemE, case1) {
-	check(COMMAND, string("") + "3 3\n" + "10 1\n" + "10 10\n" + "1 10\n" + "1 10 1\n" + "1 10 1", string("") + "9");
+	check(PATH + COMMAND, string("") + "3 3\n" + "10 1\n" + "10 10\n" + "1 10\n" + "1 10 1\n" + "1 10 1", string("") + "9");
 }
 
 TEST(problemE, case2) {
-	check(COMMAND,
+	check(PATH + COMMAND,
 			string("") + "7 11\n" + "42 77 94 76 40 66 43 28 66 23\n" + "27 34 41 31 83 13 64 69 81 82\n"
 					+ "23 81 0 22 39 51 4 37 84 43\n" + "62 37 82 86 26 67 45 78 85 2\n"
 					+ "79 18 72 62 68 84 69 88 19 48\n" + "0 27 21 51 71 13 87 45 39 11\n"
@@ -22,7 +22,7 @@ TEST(problemE, case2) {
 }
 
 TEST(problemE, case3) {
-	check(COMMAND,
+	check(PATH + COMMAND,
 			string("") + "4 4\n" + "0 0 0\n" + "0 0 0\n" + "0 0 0\n" + "0 0 0\n" + "0 0 0 0\n" + "0 0 0 0\n"
 					+ "0 0 0 0", string("") + "0");
 }

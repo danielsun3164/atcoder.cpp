@@ -4,7 +4,7 @@
 
 using namespace std;
 
-static const string COMMAND = "./problemF_salt";
+static const string COMMAND = "problemF_salt";
 
 TEST(problemF, case1) {
 	Command cmd = execute(COMMAND, string("") + "7\n" + "3 4\n" + "5 7\n" + "4 6\n" + "2 4\n" + "1 4\n" + "1 7"); // @suppress("Invalid arguments")

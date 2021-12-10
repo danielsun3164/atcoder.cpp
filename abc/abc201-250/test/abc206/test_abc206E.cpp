@@ -3,16 +3,16 @@
 #include <command.h>
 using namespace std;
 
-static const string COMMAND = "./abc206E";
+static const string COMMAND = "abc206E";
 
 TEST(abc206E, case1) {
-	check(COMMAND, string("") + "3 7", string("") + "2");
+	check(PATH + COMMAND, string("") + "3 7", string("") + "2");
 }
 
 TEST(abc206E, case2) {
-	check(COMMAND, string("") + "4 10", string("") + "12");
+	check(PATH + COMMAND, string("") + "4 10", string("") + "12");
 }
 
 TEST(abc206E, case3) {
-	check(COMMAND, string("") + "1 1000000", string("") + "392047955148");
+	check(PATH + COMMAND, string("") + "1 1000000", string("") + "392047955148");
 }

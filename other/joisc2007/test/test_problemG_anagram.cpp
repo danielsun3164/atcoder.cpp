@@ -4,12 +4,12 @@
 
 using namespace std;
 
-static const string COMMAND = "./problemG_anagram";
+static const string COMMAND = "problemG_anagram";
 
 TEST(problemG, case1) {
-	check(COMMAND, string("") + "HEART", string("") + "55");
+	check(PATH + COMMAND, string("") + "HEART", string("") + "55");
 }
 
 TEST(problemG, case2) {
-	check(COMMAND, string("") + "IOI", string("") + "2");
+	check(PATH + COMMAND, string("") + "IOI", string("") + "2");
 }

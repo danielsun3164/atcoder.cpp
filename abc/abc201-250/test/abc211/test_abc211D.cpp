@@ -3,21 +3,21 @@
 #include <command.h>
 using namespace std;
 
-static const string COMMAND = "./abc211D";
+static const string COMMAND = "abc211D";
 
 TEST(abc211D, case1) {
-	check(COMMAND, string("") + "4 5\n" + "2 4\n" + "1 2\n" + "2 3\n" + "1 3\n" + "3 4", string("") + "2");
+	check(PATH + COMMAND, string("") + "4 5\n" + "2 4\n" + "1 2\n" + "2 3\n" + "1 3\n" + "3 4", string("") + "2");
 }
 
 TEST(abc211D, case2) {
-	check(COMMAND, string("") + "4 3\n" + "1 3\n" + "2 3\n" + "2 4", string("") + "1");
+	check(PATH + COMMAND, string("") + "4 3\n" + "1 3\n" + "2 3\n" + "2 4", string("") + "1");
 }
 
 TEST(abc211D, case3) {
-	check(COMMAND, string("") + "2 0", string("") + "0");
+	check(PATH + COMMAND, string("") + "2 0", string("") + "0");
 }
 
 TEST(abc211D, case4) {
-	check(COMMAND, string("") + "7 8\n" + "1 3\n" + "1 4\n" + "2 3\n" + "2 4\n" + "2 5\n" + "2 6\n" + "5 7\n" + "6 7",
+	check(PATH + COMMAND, string("") + "7 8\n" + "1 3\n" + "1 4\n" + "2 3\n" + "2 4\n" + "2 5\n" + "2 6\n" + "5 7\n" + "6 7",
 			string("") + "4");
 }
