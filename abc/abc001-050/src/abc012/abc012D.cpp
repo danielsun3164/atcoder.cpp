@@ -26,11 +26,7 @@ int main(void) {
 	}
 	int ans = INF;
 	for (int i = 0; i < n; i++) {
-		int max_dist = 0;
-		for (int j = 0; j < n; j++) {
-			max_dist = max(max_dist, dist[i][j]);
-		}
-		ans = min(ans, max_dist);
+		ans = min(ans, *max_element(dist[i].begin(), dist[i].end()));
 	}
 	cout << ans << endl;
 	return 0;
