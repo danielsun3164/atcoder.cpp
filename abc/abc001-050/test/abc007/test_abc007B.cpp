@@ -4,7 +4,7 @@
 
 using namespace std;
 
-static const string COMMAND = "./abc007B";
+static const string COMMAND = "abc007B";
 
 void check(string input) {
 	Command cmd = execute(COMMAND, input); // @suppress("Invalid arguments")
@@ -29,7 +29,7 @@ TEST(abc007B, case2) {
 }
 
 TEST(abc007B, case3) {
-	check(COMMAND, string("") + "a", string("") + "-1");
+	check(PATH + COMMAND, string("") + "a", string("") + "-1");
 }
 
 TEST(abc007B, case4) {

@@ -4,7 +4,7 @@
 
 using namespace std;
 
-static const string COMMAND = "./abc006C";
+static const string COMMAND = "abc006C";
 
 void check(int n, int m) {
 	string input = to_string(n) + " " + to_string(m);
@@ -34,5 +34,5 @@ TEST(abc006C, case2) {
 }
 
 TEST(abc006C, case3) {
-	check(COMMAND, string("") + "10 41", string("") + "-1 -1 -1");
+	check(PATH + COMMAND, string("") + "10 41", string("") + "-1 -1 -1");
 }

@@ -166,4 +166,13 @@ void check_about(string command, string input, double expected, double tolerance
 	cin.rdbuf(orig);
 }
 
+string PATH;
+
+int main(int argc, char **argv) {
+	testing::InitGoogleTest(&argc, argv);
+	string s(argv[0]);
+	PATH = s.substr(0, s.find_last_of("/")) + "/";
+	return RUN_ALL_TESTS();
+}
+
 #endif  // COMMAND_H_

@@ -4,12 +4,12 @@
 
 using namespace std;
 
-static const string COMMAND = "./problemD";
+static const string COMMAND = "problemD";
 
 TEST(problemD, case1) {
-	check(COMMAND, string("") + "ozRnonnoe", string("") + "zone");
+	check(PATH + COMMAND, string("") + "ozRnonnoe", string("") + "zone");
 }
 
 TEST(problemD, case2) {
-	check(COMMAND, string("") + "hellospaceRhellospace", string("") + "");
+	check(PATH + COMMAND, string("") + "hellospaceRhellospace", string("") + "");
 }
