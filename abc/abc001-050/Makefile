@@ -65,7 +65,7 @@ OBJS_ABC013=test_abc013A abc013A test_abc013B abc013B test_abc013C abc013C test_
 OBJS_ABC014=test_abc014A abc014A test_abc014B abc014B test_abc014C abc014C test_abc014D abc014D
 OBJS_ABC015=test_abc015A abc015A test_abc015B abc015B test_abc015C abc015C test_abc015D abc015D
 OBJS_ABC016=test_abc016A abc016A test_abc016B abc016B test_abc016C abc016C test_abc016D abc016D
-OBJS_ABC017=test_abc017A abc017A test_abc017B abc017B test_abc017C abc017C test_abc017D abc017D
+OBJS_ABC017=test_abc017A abc017A test_abc017B abc017B test_abc017C abc017C test_abc017D abc017D test_abc017D別回答 abc017D別回答
 OBJS_ABC018=test_abc018A abc018A test_abc018B abc018B test_abc018C abc018C test_abc018D abc018D
 OBJS_ABC019=test_abc019A abc019A test_abc019B abc019B test_abc019C abc019C test_abc019D abc019D
 OBJS_ABC020=test_abc020A abc020A test_abc020B abc020B test_abc020C abc020C test_abc020D abc020D
@@ -100,7 +100,7 @@ OBJS_ABC048=test_abc048A abc048A test_abc048B abc048B test_abc048C abc048C test_
 OBJS_ABC049=test_abc049A abc049A test_abc049B abc049B test_abc049C abc049C test_abc049D abc049D
 OBJS_ABC050=test_abc050A abc050A test_abc050B abc050B test_abc050C abc050C test_abc050D abc050D
 
-all:	$(ABC001) $(ABC002) $(ABC003) $(ABC004) $(ABC005) $(ABC006) $(ABC007) $(ABC008) $(ABC009) $(ABC010) $(ABC011) $(ABC012) $(ABC013) $(ABC014) $(ABC015) $(ABC016)
+all:	$(ABC001) $(ABC002) $(ABC003) $(ABC004) $(ABC005) $(ABC006) $(ABC007) $(ABC008) $(ABC009) $(ABC010) $(ABC011) $(ABC012) $(ABC013) $(ABC014) $(ABC015) $(ABC016) $(ABC017)
 #all:	$(ABC001) $(ABC002) $(ABC003) $(ABC004) $(ABC005) $(ABC006) $(ABC007) $(ABC008) $(ABC009) $(ABC010) $(ABC011) $(ABC012) $(ABC013) $(ABC014) $(ABC015) $(ABC016) $(ABC017) $(ABC018) $(ABC019) $(ABC020) $(ABC021) $(ABC022) $(ABC023) $(ABC024) $(ABC025) $(ABC026) $(ABC027) $(ABC028) $(ABC029) $(ABC030) $(ABC031) $(ABC032) $(ABC033) $(ABC034) $(ABC035) $(ABC036) $(ABC037) $(ABC038) $(ABC039) $(ABC040) $(ABC041) $(ABC042) $(ABC043) $(ABC044) $(ABC045) $(ABC046) $(ABC047) $(ABC048) $(ABC049) $(ABC050)
 
 $(ABC001):	$(OBJS_ABC001)
@@ -615,6 +615,12 @@ abc017D:	$(SRC_DIR)/$(ABC017)/abc017D.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
 
 test_abc017D:	$(TEST_DIR)/$(ABC017)/test_abc017D.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+abc017D別回答:	$(SRC_DIR)/$(ABC017)/abc017D別回答.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_abc017D別回答:	$(TEST_DIR)/$(ABC017)/test_abc017D別回答.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
 
 abc018A:	$(SRC_DIR)/$(ABC018)/abc018A.cpp
