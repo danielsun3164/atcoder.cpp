@@ -1,12 +1,15 @@
 #include <bits/stdc++.h>
 #include <gtest/gtest.h>
+#include <command.h>
 
 using namespace std;
+
+static const string COMMAND = "practiceB";
 
 const char QUESTION = '?';
 const char ANSWER = '!';
 
-class Command {
+class Command2 {
 public:
 	int ExitStatus = 0;
 	string Command;
@@ -138,11 +141,9 @@ public:
 	}
 };
 
-static const string COMMAND = "practiceB";
-
 void check(int n, int q, string expected) {
-	Command cmd;
-	cmd.Command = COMMAND;
+	Command2 cmd;
+	cmd.Command = PATH + COMMAND;
 	cmd.n = n;
 	cmd.q = q;
 	cmd.expected = expected;
