@@ -31,8 +31,8 @@ mint bostan_mori(vector<mint> &p, vector<mint> &q, ll n) {
 int main() {
 	ll s;
 	cin >> s;
-	vector<mint> p = { 1, 0, 0, 0, 1, 1, 3 }; // @suppress("Invalid arguments")
-	vector<mint> q = { 1, -1, -2, 0, 2, 4, -1, -3, -3, -1, 4, 2, 0, -2, -1, 1 }; // @suppress("Invalid arguments")
+	vector<mint> p = { 1, 0, 0, 0, 1, 1, 3 };
+	vector<mint> q = { 1, -1, -2, 0, 2, 4, -1, -3, -3, -1, 4, 2, 0, -2, -1, 1 };
 	cout << bostan_mori(p, q, s - 6).val() << endl;
 	return 0;
 }

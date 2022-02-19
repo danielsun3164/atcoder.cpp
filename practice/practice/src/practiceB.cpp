@@ -55,7 +55,7 @@ string merge_insertion_sort(string &s) {
 	}
 	for (int i = 0; i < n / 2; i++) {
 		if (!comp(s[2 * i], s[2 * i + 1])) {
-			swap(s[2 * i], s[2 * i + 1]); // @suppress("Invalid arguments")
+			swap(s[2 * i], s[2 * i + 1]);
 		}
 	}
 	string t;

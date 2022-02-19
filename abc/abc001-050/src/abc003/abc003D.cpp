@@ -37,7 +37,7 @@ int main(void) {
 	for (int i = n - 1; i >= 0; i--) {
 		inv_fact[i] = inv_fact[i + 1] * (i + 1);
 	}
-	mint ans = (r - x + 1) * (c - y + 1); // @suppress("Invalid arguments")
+	mint ans = (r - x + 1) * (c - y + 1);
 	ans *= solve(x, y, d, l);
 	cout << ans.val() << endl;
 	return 0;

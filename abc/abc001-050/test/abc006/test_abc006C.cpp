@@ -8,7 +8,7 @@ static const string COMMAND = "abc006C";
 
 void check(int n, int m) {
 	string input = to_string(n) + " " + to_string(m);
-	Command cmd = execute(COMMAND, input); // @suppress("Invalid arguments")
+	Command cmd = execute(PATH + COMMAND, input);
 	streambuf *orig = cin.rdbuf();
 	istringstream input_ss(cmd.StdOut);
 	cin.rdbuf(input_ss.rdbuf());

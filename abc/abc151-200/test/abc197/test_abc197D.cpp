@@ -9,7 +9,7 @@ static const double TOLERANCE = 1E-5;
 
 template<typename ... Args>
 void check(string input, const Args ... args) {
-	Command cmd = execute(COMMAND, input); // @suppress("Invalid arguments")
+	Command cmd = execute(PATH + COMMAND, input);
 	streambuf *orig = cin.rdbuf();
 	istringstream input_ss(cmd.StdOut);
 	cin.rdbuf(input_ss.rdbuf());

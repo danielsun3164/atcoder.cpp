@@ -54,7 +54,7 @@ int main() {
 		ma[i][i] = m - edges[i].size();
 		ma[i][i] /= m;
 		for (int j : edges[i]) {
-			mint t = 1; // @suppress("Invalid arguments")
+			mint t = 1;
 			ma[i][i] += t / m / 2;
 			ma[i][j] += t / m / 2;
 		}

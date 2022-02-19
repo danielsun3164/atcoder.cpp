@@ -12,6 +12,6 @@ TEST(problemD, case1) {
 }
 
 TEST(problemD, case2) {
-	check(PATH + COMMAND, string("") + "3\n" + "2\n" + "2 1\n" + "2 3", string("") + "2\n" + "1\n" + "3\n" + "1", // @suppress("Invalid arguments")
-	string("") + "2\n" + "3\n" + "1\n" + "1");
+	check(PATH + COMMAND, string("") + "3\n" + "2\n" + "2 1\n" + "2 3", string("") + "2\n" + "1\n" + "3\n" + "1",
+			string("") + "2\n" + "3\n" + "1\n" + "1");
 }

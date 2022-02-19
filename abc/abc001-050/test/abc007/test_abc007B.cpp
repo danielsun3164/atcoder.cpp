@@ -7,7 +7,7 @@ using namespace std;
 static const string COMMAND = "abc007B";
 
 void check(string input) {
-	Command cmd = execute(COMMAND, input); // @suppress("Invalid arguments")
+	Command cmd = execute(PATH + COMMAND, input);
 	streambuf *orig = cin.rdbuf();
 	istringstream input_ss(cmd.StdOut);
 	cin.rdbuf(input_ss.rdbuf());
