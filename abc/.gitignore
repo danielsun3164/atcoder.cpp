@@ -1,6 +1,6 @@
-/abc001-050/abc*
-/abc001-050/test_*
-/abc151-200/abc*
-/abc151-200/test_*
-/abc201-250/abc*
-/abc201-250/test_*
+/abc001-050/abc*/problem*
+/abc001-050/abc*/test_*
+/abc151-200/abc*/problem*
+/abc151-200/abc*/test_*
+/abc201-250/abc*/problem*
+/abc201-250/abc*/test_*
