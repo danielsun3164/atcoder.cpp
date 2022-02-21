@@ -4,9 +4,10 @@ using namespace std;
 using ll = long long;
 using mint = atcoder::modint1000000007;
 
-vector<int> divs;
-
-void calc_divisors(int k) {
+int main(void) {
+	int n, k;
+	cin >> n >> k;
+	vector<int> divs;
 	for (int i = 1; i * i <= k; i++) {
 		if (0 == k % i) {
 			divs.emplace_back(i);
@@ -16,12 +17,6 @@ void calc_divisors(int k) {
 		}
 	}
 	sort(divs.begin(), divs.end());
-}
-
-int main(void) {
-	int n, k;
-	cin >> n >> k;
-	calc_divisors(k);
 	vector<mint> sum(divs.size());
 	mint ans = 0;
 	for (int i = divs.size() - 1; i >= 0; i--) {
