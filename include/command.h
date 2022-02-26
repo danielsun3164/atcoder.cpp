@@ -130,7 +130,7 @@ void check(string command, string input, string output) {
 }
 
 template<typename ... Args>
-void check(string command, string input, const Args ... args) {
+void check(string command, string input, Args ... args) {
 	Command cmd = execute(command, input);
 	vector<string> outputs = { args... };
 	for (long unsigned int i = 0; i < outputs.size(); i++) {
@@ -164,6 +164,11 @@ void check_about(string command, string input, double expected, double tolerance
 		cout << defaultfloat << tolerance << endl;
 	}
 	cin.rdbuf(orig);
+}
+
+void check_empty(string command, string input) {
+	Command cmd = execute(command, input);
+	EXPECT_EQ("", cmd.StdOut);
 }
 
 string PATH;
