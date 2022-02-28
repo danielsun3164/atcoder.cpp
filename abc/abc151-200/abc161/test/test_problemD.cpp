@@ -19,5 +19,5 @@ TEST(problemD, case3) {
 }
 
 TEST(problemD, case4) {
-	check(PATH + COMMAND, "100000", "3234566667");
+	check(PATH + COMMAND, string("") + "100000", string("") + "3234566667");
 }

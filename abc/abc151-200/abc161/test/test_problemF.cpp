@@ -19,5 +19,5 @@ TEST(problemF, case3) {
 }
 
 TEST(problemF, case4) {
-	check(PATH + COMMAND, "2", "1");
+	check(PATH + COMMAND, string("") + "2", string("") + "1");
 }
