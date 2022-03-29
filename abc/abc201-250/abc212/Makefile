@@ -1,5 +1,5 @@
 include ../../CCOptions
-OBJS=test_problemA problemA test_problemB problemB test_problemC problemC test_problemD problemD test_problemE problemE test_problemF problemF
+OBJS=test_problemA problemA test_problemB problemB test_problemC problemC test_problemD problemD test_problemE problemE test_problemF problemF test_problemG problemG test_problemH problemH
 
 all:	$(OBJS)
 
@@ -37,6 +37,18 @@ test_problemF:	$(TEST_DIR)/test_problemF.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
 
 problemF:	$(SRC_DIR)/problemF.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_problemG:	$(TEST_DIR)/test_problemG.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+problemG:	$(SRC_DIR)/problemG.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_problemH:	$(TEST_DIR)/test_problemH.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+problemH:	$(SRC_DIR)/problemH.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
 
 clean:
