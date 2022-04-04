@@ -49,7 +49,7 @@ ABC048=abc048
 ABC049=abc049
 ABC050=abc050
 
-all:	_$(ABC001) _$(ABC002) _$(ABC003) _$(ABC004) _$(ABC005) _$(ABC006) _$(ABC007) _$(ABC008) _$(ABC009) _$(ABC010) _$(ABC011) _$(ABC012) _$(ABC013) _$(ABC014) _$(ABC015) _$(ABC016) _$(ABC017) _$(ABC018) _$(ABC019) _$(ABC020) _$(ABC021) _$(ABC022) _$(ABC023) _$(ABC024) _$(ABC025) _$(ABC026) _$(ABC027) _$(ABC028) _$(ABC029) #_$(ABC030) _$(ABC031) _$(ABC032) _$(ABC033) _$(ABC034) _$(ABC035) _$(ABC036) _$(ABC037) _$(ABC038) _$(ABC039) _$(ABC040) _$(ABC041) _$(ABC042) _$(ABC043) _$(ABC044) _$(ABC045) _$(ABC046) _$(ABC047) _$(ABC048) _$(ABC049) _$(ABC050)
+all:	_$(ABC001) _$(ABC002) _$(ABC003) _$(ABC004) _$(ABC005) _$(ABC006) _$(ABC007) _$(ABC008) _$(ABC009) _$(ABC010) _$(ABC011) _$(ABC012) _$(ABC013) _$(ABC014) _$(ABC015) _$(ABC016) _$(ABC017) _$(ABC018) _$(ABC019) _$(ABC020) _$(ABC021) _$(ABC022) _$(ABC023) _$(ABC024) _$(ABC025) _$(ABC026) _$(ABC027) _$(ABC028) _$(ABC029) _$(ABC030) #_$(ABC031) _$(ABC032) _$(ABC033) _$(ABC034) _$(ABC035) _$(ABC036) _$(ABC037) _$(ABC038) _$(ABC039) _$(ABC040) _$(ABC041) _$(ABC042) _$(ABC043) _$(ABC044) _$(ABC045) _$(ABC046) _$(ABC047) _$(ABC048) _$(ABC049) _$(ABC050)
 
 _$(ABC001):
 	make -C $(ABC001)
@@ -231,7 +231,7 @@ clean:
 	make -C $(ABC027) clean
 	make -C $(ABC028) clean
 	make -C $(ABC029) clean
-#	make -C $(ABC030) clean
+	make -C $(ABC030) clean
 #	make -C $(ABC031) clean
 #	make -C $(ABC032) clean
 #	make -C $(ABC033) clean
