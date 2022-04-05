@@ -1,5 +1,5 @@
 include ../../CCOptions
-OBJS=test_problemA problemA test_problemB problemB test_problemC problemC test_problemD problemD
+OBJS=test_problemA problemA test_problemB problemB test_problemC problemC test_problemD problemD test_problemD別回答 problemD別回答
 
 all:	$(OBJS)
 
@@ -25,6 +25,12 @@ test_problemD:	$(TEST_DIR)/test_problemD.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
 
 problemD:	$(SRC_DIR)/problemD.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
+test_problemD別回答:	$(TEST_DIR)/test_problemD別回答.cpp
+	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
+
+problemD別回答:	$(SRC_DIR)/problemD別回答.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
 
 clean:
