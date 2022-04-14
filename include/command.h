@@ -133,7 +133,7 @@ template<typename ... Args>
 void check(string command, string input, Args ... args) {
 	Command cmd = execute(command, input);
 	vector<string> outputs = { args... };
-	for (long unsigned int i = 0; i < outputs.size(); i++) {
+	for (int i = 0; i < int(outputs.size()); i++) {
 		outputs[i].append("\n");
 	}
 	EXPECT_TRUE(find(outputs.begin(), outputs.end(), cmd.StdOut) != outputs.end());
