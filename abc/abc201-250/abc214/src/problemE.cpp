@@ -3,7 +3,7 @@ using namespace std;
 
 const int MAX = 1'000'000'007;
 
-string to_string(vector<int> v) {
+string to_string(vector<int> &v) {
 	string s = "{";
 	for (int vi : v) {
 		s += to_string(vi) + ",";
