@@ -1,6 +1,9 @@
-OBJS=_joi2006yo _joi2006ho _joi2007yo _joi2007ho _joi2008yo _joisc2007 _loadchecking _zone2021
+OBJS=_atc001 _joi2006yo _joi2006ho _joi2007yo _joi2007ho _joi2008yo _joisc2007 _loadchecking _zone2021
 
 all:	$(OBJS)
+
+_atc001:
+	make -C atc001
 
 _joi2006yo:
 	make -C joi2006yo
@@ -27,6 +30,7 @@ _zone2021:
 	make -C zone2021
 
 clean:
+	make -C atc001 clean
 	make -C joi2006yo clean
 	make -C joi2006ho clean
 	make -C joi2007yo clean
