@@ -5,11 +5,11 @@ using namespace std;
 
 static const string COMMAND = "problemE";
 
-TEST(problemE, case1) {
+TEST(abc215_problemE, case1) {
 	check(PATH + COMMAND, string("") + "4\n" + "BGBH", string("") + "13");
 }
 
-TEST(problemE, case2) {
+TEST(abc215_problemE, case2) {
 	check(PATH + COMMAND,
 			string("") + "100\n"
 					+ "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBIEIJEIJIJCGCCFGIEBIHFCGFBFAEJIEJAJJHHEBBBJJJGJJJCCCBAAADCEHIIFEHHBGF",

@@ -5,14 +5,14 @@ using namespace std;
 
 static const string COMMAND = "problemF別回答";
 
-TEST(problemF別回答, case1) {
+TEST(abc204_problemF別回答, case1) {
 	check(PATH + COMMAND, string("") + "2 2", string("") + "7");
 }
 
-TEST(problemF別回答, case2) {
+TEST(abc204_problemF別回答, case2) {
 	check(PATH + COMMAND, string("") + "3 3", string("") + "131");
 }
 
-TEST(problemF別回答, case3) {
+TEST(abc204_problemF別回答, case3) {
 	check(PATH + COMMAND, string("") + "5 100", string("") + "379944232");
 }

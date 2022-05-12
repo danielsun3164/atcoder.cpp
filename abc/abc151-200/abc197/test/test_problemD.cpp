@@ -30,11 +30,11 @@ void check(string input, const Args ... args) {
 	cin.rdbuf(orig);
 }
 
-TEST(problemD, case1) {
+TEST(abc197_problemD, case1) {
 	check(string("") + "4\n" + "1 1\n" + "2 2", 2.0, 1.0);
 }
 
-TEST(problemD, case2) {
+TEST(abc197_problemD, case2) {
 	check(string("") + "6\n" + "5 3\n" + "7 4", 5.93301270189, 2.38397459622);
 }
 

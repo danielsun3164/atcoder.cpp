@@ -35,10 +35,10 @@ void check(int a, int b, int c) {
 	cin.rdbuf(orig);
 }
 
-TEST(problemD, case1) {
+TEST(abc026_problemD, case1) {
 	check(1, 1, 1);
 }
 
-TEST(problemD, case2) {
+TEST(abc026_problemD, case2) {
 	check(53, 82, 49);
 }

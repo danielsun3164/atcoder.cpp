@@ -7,14 +7,14 @@ static const string COMMAND = "problemA";
 
 static const double TOLERANCE = 1E-5;
 
-TEST(problemA, case1) {
+TEST(abc211_problemA, case1) {
 	check_about(PATH + COMMAND, string("") + "130 100", 110.0, TOLERANCE);
 }
 
-TEST(problemA, case2) {
+TEST(abc211_problemA, case2) {
 	check_about(PATH + COMMAND, string("") + "300 50", 133.3333333, TOLERANCE);
 }
 
-TEST(problemA, case3) {
+TEST(abc211_problemA, case3) {
 	check_about(PATH + COMMAND, string("") + "123 123", 123.0, TOLERANCE);
 }

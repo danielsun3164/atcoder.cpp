@@ -149,7 +149,7 @@ void check(int n, vector<vector<int>> e, int expected) {
 	cmd.execute();
 }
 
-TEST(problemD, case1) {
+TEST(abc019_problemD, case1) {
 	check(5, vector<vector<int>> { { 0, 1, 4, 2, 5 }, { 1, 0, 3, 3, 4 }, { 4, 3, 0, 6, 7 }, { 2, 3, 6, 0, 7 }, { 5, 4,
 			7, 7, 0 } }, 7);
 }

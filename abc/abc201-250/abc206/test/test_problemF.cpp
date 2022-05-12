@@ -5,7 +5,7 @@ using namespace std;
 
 static const string COMMAND = "problemF";
 
-TEST(problemF, case1) {
+TEST(abc206_problemF, case1) {
 	check(PATH + COMMAND,
 			string("") + "5\n" + "3\n" + "53 98\n" + "8 43\n" + "12 53\n" + "10\n" + "4 7\n" + "5 7\n" + "3 7\n"
 					+ "4 5\n" + "5 8\n" + "6 9\n" + "4 8\n" + "5 10\n" + "1 9\n" + "5 10\n" + "2\n" + "58 98\n"

@@ -29,10 +29,10 @@ void check(int n) {
 	EXPECT_EQ(n, sum);
 }
 
-TEST(problemA, case1) {
+TEST(abc021_problemA, case1) {
 	check(5);
 }
 
-TEST(problemA, case2) {
+TEST(abc021_problemA, case2) {
 	check(1);
 }

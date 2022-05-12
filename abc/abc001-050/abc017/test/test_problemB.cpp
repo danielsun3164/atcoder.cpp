@@ -6,14 +6,14 @@ using namespace std;
 
 static const string COMMAND = "problemB";
 
-TEST(problemB, case1) {
+TEST(abc017_problemB, case1) {
 	check(PATH + COMMAND, string("") + "chokuou", string("") + "YES");
 }
 
-TEST(problemB, case2) {
+TEST(abc017_problemB, case2) {
 	check(PATH + COMMAND, string("") + "kuccho", string("") + "NO");
 }
 
-TEST(problemB, case3) {
+TEST(abc017_problemB, case3) {
 	check(PATH + COMMAND, string("") + "atcoder", string("") + "NO");
 }

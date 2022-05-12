@@ -6,10 +6,10 @@ using namespace std;
 
 static const string COMMAND = "problemA";
 
-TEST(problemA, case1) {
+TEST(abc195_problemA, case1) {
 	check(PATH + COMMAND, string("") + "10 120", string("") + "Yes");
 }
 
-TEST(problemA, case2) {
+TEST(abc195_problemA, case2) {
 	check(PATH + COMMAND, string("") + "10 125", string("") + "No");
 }

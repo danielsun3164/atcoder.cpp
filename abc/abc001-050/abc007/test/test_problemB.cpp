@@ -20,18 +20,18 @@ void check(string input) {
 	cin.rdbuf(orig);
 }
 
-TEST(problemB, case1) {
+TEST(abc007_problemB, case1) {
 	check("xyz");
 }
 
-TEST(problemB, case2) {
+TEST(abc007_problemB, case2) {
 	check("c");
 }
 
-TEST(problemB, case3) {
+TEST(abc007_problemB, case3) {
 	check(PATH + COMMAND, string("") + "a", string("") + "-1");
 }
 
-TEST(problemB, case4) {
+TEST(abc007_problemB, case4) {
 	check("aaaaa");
 }

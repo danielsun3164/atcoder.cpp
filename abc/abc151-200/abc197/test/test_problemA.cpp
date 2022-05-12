@@ -5,10 +5,10 @@ using namespace std;
 
 static const string COMMAND = "problemA";
 
-TEST(problemA, case1) {
+TEST(abc197_problemA, case1) {
 	check(PATH + COMMAND, string("") + "abc", string("") + "bca");
 }
 
-TEST(problemA, case2) {
+TEST(abc197_problemA, case2) {
 	check(PATH + COMMAND, string("") + "aab", string("") + "aba");
 }

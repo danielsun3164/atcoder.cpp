@@ -5,14 +5,14 @@ using namespace std;
 
 static const string COMMAND = "problemA";
 
-TEST(problemA, case1) {
+TEST(abc215_problemA, case1) {
 	check(PATH + COMMAND, string("") + "Hello,World!", string("") + "AC");
 }
 
-TEST(problemA, case2) {
+TEST(abc215_problemA, case2) {
 	check(PATH + COMMAND, string("") + "Hello,world!", string("") + "WA");
 }
 
-TEST(problemA, case3) {
+TEST(abc215_problemA, case3) {
 	check(PATH + COMMAND, string("") + "Hello!World!", string("") + "WA");
 }

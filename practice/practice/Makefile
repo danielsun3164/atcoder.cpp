@@ -1,18 +1,18 @@
 include ../CCOptions
-OBJS=test_practiceA practiceA test_practiceB practiceB
+OBJS=test_problemA problemA test_problemB problemB
 
 all:	$(OBJS)
 
-test_practiceA:	$(TEST_DIR)/test_practiceA.cpp
+test_problemA:	$(TEST_DIR)/test_problemA.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
 
-practiceA:	$(SRC_DIR)/practiceA.cpp
+problemA:	$(SRC_DIR)/problemA.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
 
-test_practiceB:	$(TEST_DIR)/test_practiceB.cpp
+test_problemB:	$(TEST_DIR)/test_problemB.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
 
-practiceB:	$(SRC_DIR)/practiceB.cpp
+problemB:	$(SRC_DIR)/problemB.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
 
 clean:

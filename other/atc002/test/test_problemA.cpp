@@ -6,19 +6,19 @@ using namespace std;
 
 static const string COMMAND = "problemA";
 
-TEST(problemA, case1) {
+TEST(atc002_problemA, case1) {
 	check(PATH + COMMAND,
 			string("") + "7 8\n" + "2 2\n" + "4 5\n" + "########\n" + "#......#\n" + "#.######\n" + "#..#...#\n"
 					+ "#..##..#\n" + "##.....#\n" + "########", string("") + "11");
 }
 
-TEST(problemA, case2) {
+TEST(atc002_problemA, case2) {
 	check(PATH + COMMAND,
 			string("") + "5 8\n" + "2 2\n" + "2 4\n" + "########\n" + "#.#....#\n" + "#.###..#\n" + "#......#\n"
 					+ "########", string("") + "10");
 }
 
-TEST(problemA, case3) {
+TEST(atc002_problemA, case3) {
 	check(PATH + COMMAND,
 			string("") + "50 50\n" + "2 2\n" + "49 49\n" + "##################################################\n"
 					+ "#................................................#\n"

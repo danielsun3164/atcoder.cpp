@@ -5,11 +5,11 @@ using namespace std;
 
 static const string COMMAND = "problemE";
 
-TEST(problemE, case1) {
+TEST(abc197_problemE, case1) {
 	check(PATH + COMMAND, string("") + "5\n" + "2 2\n" + "3 1\n" + "1 3\n" + "4 2\n" + "5 3", string("") + "12");
 }
 
-TEST(problemE, case2) {
+TEST(abc197_problemE, case2) {
 	check(PATH + COMMAND,
 			string("") + "9\n" + "5 5\n" + "-4 4\n" + "4 3\n" + "6 3\n" + "-5 5\n" + "-3 2\n" + "2 2\n" + "3 3\n"
 					+ "1 4", string("") + "38");

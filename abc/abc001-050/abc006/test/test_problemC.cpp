@@ -25,14 +25,14 @@ void check(int n, int m) {
 	cin.rdbuf(orig);
 }
 
-TEST(problemC, case1) {
+TEST(abc006_problemC, case1) {
 	check(3, 9);
 }
 
-TEST(problemC, case2) {
+TEST(abc006_problemC, case2) {
 	check(7, 23);
 }
 
-TEST(problemC, case3) {
+TEST(abc006_problemC, case3) {
 	check(PATH + COMMAND, string("") + "10 41", string("") + "-1 -1 -1");
 }
