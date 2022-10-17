@@ -2,7 +2,7 @@
 using namespace std;
 
 pair<int, int> get_max(int n, int now) {
-	int m = 0, mi;
+	int m = 0, mi = 0;
 	for (int i = 1; i <= n; i++) {
 		if (now != i) {
 			cout << "? " << now << " " << i << endl;
