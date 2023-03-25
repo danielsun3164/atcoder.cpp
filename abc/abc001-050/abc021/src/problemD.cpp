@@ -3,7 +3,7 @@
 using namespace std;
 using mint = atcoder::modint1000000007;
 
-mint c(int n, int m) {
+mint ncr(int n, int m) {
 	mint res = 1;
 	for (int i = 0; i < m; i++) {
 		res = res * (n - i) / (i + 1);
@@ -14,6 +14,6 @@ mint c(int n, int m) {
 int main(void) {
 	int n, k;
 	cin >> n >> k;
-	cout << c(n + k - 1, k).val() << endl;
+	cout << ncr(n + k - 1, k).val() << endl;
 	return 0;
 }
