@@ -1,4 +1,3 @@
-include ../CCOptions
 ABC151=abc151
 ABC152=abc152
 ABC153=abc153
@@ -49,1971 +48,208 @@ ABC197=abc197
 ABC198=abc198
 ABC199=abc199
 ABC200=abc200
-OBJS_ABC151=test_abc151A abc151A test_abc151B abc151B test_abc151C abc151C  test_abc151D abc151D test_abc151E abc151E test_abc151F abc151F
-OBJS_ABC152=test_abc152A abc152A test_abc152B abc152B test_abc152C abc152C  test_abc152D abc152D test_abc152E abc152E test_abc152F abc152F
-OBJS_ABC153=test_abc153A abc153A test_abc153B abc153B test_abc153C abc153C  test_abc153D abc153D test_abc153E abc153E test_abc153F abc153F
-OBJS_ABC154=test_abc154A abc154A test_abc154B abc154B test_abc154C abc154C  test_abc154D abc154D test_abc154E abc154E test_abc154F abc154F
-OBJS_ABC155=test_abc155A abc155A test_abc155B abc155B test_abc155C abc155C  test_abc155D abc155D test_abc155E abc155E test_abc155F abc155F
-OBJS_ABC156=test_abc156A abc156A test_abc156B abc156B test_abc156C abc156C  test_abc156D abc156D test_abc156E abc156E test_abc156F abc156F
-OBJS_ABC157=test_abc157A abc157A test_abc157B abc157B test_abc157C abc157C  test_abc157D abc157D test_abc157E abc157E test_abc157F abc157F
-OBJS_ABC158=test_abc158A abc158A test_abc158B abc158B test_abc158C abc158C  test_abc158D abc158D test_abc158E abc158E test_abc158F abc158F
-OBJS_ABC159=test_abc159A abc159A test_abc159B abc159B test_abc159C abc159C  test_abc159D abc159D test_abc159E abc159E test_abc159F abc159F
-OBJS_ABC160=test_abc160A abc160A test_abc160B abc160B test_abc160C abc160C  test_abc160D abc160D test_abc160E abc160E test_abc160F abc160F
-OBJS_ABC161=test_abc161A abc161A test_abc161B abc161B test_abc161C abc161C  test_abc161D abc161D test_abc161E abc161E test_abc161F abc161F
-OBJS_ABC162=test_abc162A abc162A test_abc162B abc162B test_abc162C abc162C  test_abc162D abc162D test_abc162E abc162E test_abc162F abc162F
-OBJS_ABC163=test_abc163A abc163A test_abc163B abc163B test_abc163C abc163C  test_abc163D abc163D test_abc163E abc163E test_abc163F abc163F
-OBJS_ABC164=test_abc164A abc164A test_abc164B abc164B test_abc164C abc164C  test_abc164D abc164D test_abc164E abc164E test_abc164F abc164F
-OBJS_ABC165=test_abc165A abc165A test_abc165B abc165B test_abc165C abc165C  test_abc165D abc165D test_abc165E abc165E test_abc165F abc165F
-OBJS_ABC166=test_abc166A abc166A test_abc166B abc166B test_abc166C abc166C  test_abc166D abc166D test_abc166E abc166E test_abc166F abc166F
-OBJS_ABC167=test_abc167A abc167A test_abc167B abc167B test_abc167C abc167C  test_abc167D abc167D test_abc167E abc167E test_abc167F abc167F
-OBJS_ABC168=test_abc168A abc168A test_abc168B abc168B test_abc168C abc168C  test_abc168D abc168D test_abc168E abc168E test_abc168F abc168F
-OBJS_ABC169=test_abc169A abc169A test_abc169B abc169B test_abc169C abc169C  test_abc169D abc169D test_abc169E abc169E test_abc169F abc169F
-OBJS_ABC170=test_abc170A abc170A test_abc170B abc170B test_abc170C abc170C  test_abc170D abc170D test_abc170E abc170E test_abc170F abc170F
-OBJS_ABC171=test_abc171A abc171A test_abc171B abc171B test_abc171C abc171C  test_abc171D abc171D test_abc171E abc171E test_abc171F abc171F
-OBJS_ABC172=test_abc172A abc172A test_abc172B abc172B test_abc172C abc172C  test_abc172D abc172D test_abc172E abc172E test_abc172F abc172F
-OBJS_ABC173=test_abc173A abc173A test_abc173B abc173B test_abc173C abc173C  test_abc173D abc173D test_abc173E abc173E test_abc173F abc173F
-OBJS_ABC174=test_abc174A abc174A test_abc174B abc174B test_abc174C abc174C  test_abc174D abc174D test_abc174E abc174E test_abc174F abc174F
-OBJS_ABC175=test_abc175A abc175A test_abc175B abc175B test_abc175C abc175C  test_abc175D abc175D test_abc175E abc175E test_abc175F abc175F
-OBJS_ABC176=test_abc176A abc176A test_abc176B abc176B test_abc176C abc176C  test_abc176D abc176D test_abc176E abc176E test_abc176F abc176F
-OBJS_ABC177=test_abc177A abc177A test_abc177B abc177B test_abc177C abc177C  test_abc177D abc177D test_abc177E abc177E test_abc177F abc177F
-OBJS_ABC178=test_abc178A abc178A test_abc178B abc178B test_abc178C abc178C  test_abc178D abc178D test_abc178E abc178E test_abc178F abc178F
-OBJS_ABC179=test_abc179A abc179A test_abc179B abc179B test_abc179C abc179C  test_abc179D abc179D test_abc179E abc179E test_abc179F abc179F
-OBJS_ABC180=test_abc180A abc180A test_abc180B abc180B test_abc180C abc180C  test_abc180D abc180D test_abc180E abc180E test_abc180F abc180F
-OBJS_ABC181=test_abc181A abc181A test_abc181B abc181B test_abc181C abc181C  test_abc181D abc181D test_abc181E abc181E test_abc181F abc181F
-OBJS_ABC182=test_abc182A abc182A test_abc182B abc182B test_abc182C abc182C  test_abc182D abc182D test_abc182E abc182E test_abc182F abc182F
-OBJS_ABC183=test_abc183A abc183A test_abc183B abc183B test_abc183C abc183C  test_abc183D abc183D test_abc183E abc183E test_abc183F abc183F
-OBJS_ABC184=test_abc184A abc184A test_abc184B abc184B test_abc184C abc184C  test_abc184D abc184D test_abc184E abc184E test_abc184F abc184F
-OBJS_ABC185=test_abc185A abc185A test_abc185B abc185B test_abc185C abc185C  test_abc185D abc185D test_abc185E abc185E test_abc185F abc185F test_abc185F別回答 abc185F別回答
-OBJS_ABC186=test_abc186A abc186A test_abc186B abc186B test_abc186C abc186C  test_abc186D abc186D test_abc186E abc186E test_abc186F abc186F
-OBJS_ABC187=test_abc187A abc187A test_abc187B abc187B test_abc187C abc187C  test_abc187D abc187D test_abc187E abc187E test_abc187F abc187F
-OBJS_ABC188=test_abc188A abc188A test_abc188B abc188B test_abc188C abc188C  test_abc188D abc188D test_abc188E abc188E test_abc188F abc188F
-OBJS_ABC189=test_abc189A abc189A test_abc189B abc189B test_abc189C abc189C  test_abc189D abc189D test_abc189E abc189E test_abc189F abc189F test_abc189F別回答 abc189F別回答
-OBJS_ABC190=test_abc190A abc190A test_abc190B abc190B test_abc190C abc190C  test_abc190D abc190D test_abc190E abc190E test_abc190F abc190F
-OBJS_ABC191=test_abc191A abc191A test_abc191B abc191B test_abc191C abc191C  test_abc191D abc191D test_abc191E abc191E test_abc191F abc191F
-OBJS_ABC192=test_abc192A abc192A test_abc192B abc192B test_abc192C abc192C  test_abc192D abc192D test_abc192E abc192E test_abc192F abc192F
-OBJS_ABC193=test_abc193A abc193A test_abc193B abc193B test_abc193C abc193C  test_abc193D abc193D test_abc193E abc193E test_abc193F abc193F
-OBJS_ABC194=test_abc194A abc194A test_abc194B abc194B test_abc194C abc194C  test_abc194D abc194D test_abc194E abc194E test_abc194F abc194F
-OBJS_ABC195=test_abc195A abc195A test_abc195B abc195B test_abc195C abc195C  test_abc195D abc195D test_abc195E abc195E test_abc195F abc195F
-OBJS_ABC196=test_abc196A abc196A test_abc196B abc196B test_abc196C abc196C  test_abc196D abc196D test_abc196E abc196E test_abc196F abc196F
-OBJS_ABC197=test_abc197A abc197A test_abc197B abc197B test_abc197C abc197C  test_abc197D abc197D test_abc197E abc197E test_abc197F abc197F
-OBJS_ABC198=test_abc198A abc198A test_abc198B abc198B test_abc198C abc198C  test_abc198D abc198D test_abc198E abc198E test_abc198F abc198F
-OBJS_ABC199=test_abc199A abc199A test_abc199B abc199B test_abc199C abc199C  test_abc199D abc199D test_abc199E abc199E test_abc199F abc199F
-OBJS_ABC200=test_abc200A abc200A test_abc200B abc200B test_abc200C abc200C  test_abc200D abc200D test_abc200E abc200E test_abc200F abc200F
 
-all:	$(ABC151) $(ABC152) $(ABC153) $(ABC154) $(ABC155) $(ABC156) $(ABC157) $(ABC158) $(ABC185) $(ABC186) $(ABC187) $(ABC188) $(ABC189) $(ABC190) $(ABC191) $(ABC192) $(ABC193) $(ABC194) $(ABC195) $(ABC196) $(ABC197) $(ABC198) $(ABC199) $(ABC200)
-#all:	$(ABC151) $(ABC152) $(ABC153) $(ABC154) $(ABC155) $(ABC156) $(ABC157) $(ABC158) $(ABC159) $(ABC160) $(ABC161) $(ABC162) $(ABC163) $(ABC164) $(ABC165) $(ABC166) $(ABC167) $(ABC168) $(ABC169) $(ABC170) $(ABC171) $(ABC172) $(ABC173) $(ABC174) $(ABC175) $(ABC176) $(ABC177) $(ABC178) $(ABC179) $(ABC180) $(ABC181) $(ABC182) $(ABC183) $(ABC184) $(ABC185) $(ABC186) $(ABC187) $(ABC188) $(ABC189) $(ABC190) $(ABC191) $(ABC192) $(ABC193) $(ABC194) $(ABC195) $(ABC196) $(ABC197) $(ABC198) $(ABC199) $(ABC200)
+all:	_$(ABC151) _$(ABC152) _$(ABC153) _$(ABC154) _$(ABC155) _$(ABC156) _$(ABC157) _$(ABC158) _$(ABC159) _$(ABC160) _$(ABC161) _$(ABC162) _$(ABC163) _$(ABC164) _$(ABC165) _$(ABC185) _$(ABC186) _$(ABC187) _$(ABC188) _$(ABC189) _$(ABC190) _$(ABC191) _$(ABC192) _$(ABC193) _$(ABC194) _$(ABC195) _$(ABC196) _$(ABC197) _$(ABC198) _$(ABC199) _$(ABC200)
+#all:	_$(ABC151) _$(ABC152) _$(ABC153) _$(ABC154) _$(ABC155) _$(ABC156) _$(ABC157) _$(ABC158) _$(ABC159) _$(ABC160) _$(ABC161) _$(ABC162) _$(ABC163) _$(ABC164) _$(ABC165) _$(ABC166) _$(ABC167) _$(ABC168) _$(ABC169) _$(ABC170) _$(ABC171) _$(ABC172) _$(ABC173) _$(ABC174) _$(ABC175) _$(ABC176) _$(ABC177) _$(ABC178) _$(ABC179) _$(ABC180) _$(ABC181) _$(ABC182) _$(ABC183) _$(ABC184) _$(ABC185) _$(ABC186) _$(ABC187) _$(ABC188) _$(ABC189) _$(ABC190) _$(ABC191) _$(ABC192) _$(ABC193) _$(ABC194) _$(ABC195) _$(ABC196) _$(ABC197) _$(ABC198) _$(ABC199) _$(ABC200)
 
-abc151:	$(OBJS_ABC151)
+_$(ABC151):
+	make -C $(ABC151)
 
-abc152:	$(OBJS_ABC152)
+_$(ABC152):
+	make -C $(ABC152)
 
-abc153:	$(OBJS_ABC153)
+_$(ABC153):
+	make -C $(ABC153)
 
-abc154:	$(OBJS_ABC154)
+_$(ABC154):
+	make -C $(ABC154)
 
-abc155:	$(OBJS_ABC155)
+_$(ABC155):
+	make -C $(ABC155)
 
-abc156:	$(OBJS_ABC156)
+_$(ABC156):
+	make -C $(ABC156)
 
-abc157:	$(OBJS_ABC157)
+_$(ABC157):
+	make -C $(ABC157)
 
-abc158:	$(OBJS_ABC158)
+_$(ABC158):
+	make -C $(ABC158)
 
-abc159:	$(OBJS_ABC159)
+_$(ABC159):
+	make -C $(ABC159)
 
-abc160:	$(OBJS_ABC160)
+_$(ABC160):
+	make -C $(ABC160)
 
-abc161:	$(OBJS_ABC161)
+_$(ABC161):
+	make -C $(ABC161)
 
-abc162:	$(OBJS_ABC162)
+_$(ABC162):
+	make -C $(ABC162)
 
-abc163:	$(OBJS_ABC163)
+_$(ABC163):
+	make -C $(ABC163)
 
-abc164:	$(OBJS_ABC164)
+_$(ABC164):
+	make -C $(ABC164)
 
-abc165:	$(OBJS_ABC165)
+_$(ABC165):
+	make -C $(ABC165)
 
-abc166:	$(OBJS_ABC166)
+_$(ABC166):
+	make -C $(ABC166)
 
-abc167:	$(OBJS_ABC167)
+_$(ABC167):
+	make -C $(ABC167)
 
-abc168:	$(OBJS_ABC168)
+_$(ABC168):
+	make -C $(ABC168)
 
-abc169:	$(OBJS_ABC169)
+_$(ABC169):
+	make -C $(ABC169)
 
-abc170:	$(OBJS_ABC170)
+_$(ABC170):
+	make -C $(ABC170)
 
-abc171:	$(OBJS_ABC171)
+_$(ABC171):
+	make -C $(ABC171)
 
-abc172:	$(OBJS_ABC172)
+_$(ABC172):
+	make -C $(ABC172)
 
-abc173:	$(OBJS_ABC173)
+_$(ABC173):
+	make -C $(ABC173)
 
-abc174:	$(OBJS_ABC174)
+_$(ABC174):
+	make -C $(ABC174)
 
-abc175:	$(OBJS_ABC175)
+_$(ABC175):
+	make -C $(ABC175)
 
-abc176:	$(OBJS_ABC176)
+_$(ABC176):
+	make -C $(ABC176)
 
-abc177:	$(OBJS_ABC177)
+_$(ABC177):
+	make -C $(ABC177)
 
-abc178:	$(OBJS_ABC178)
+_$(ABC178):
+	make -C $(ABC178)
 
-abc179:	$(OBJS_ABC179)
+_$(ABC179):
+	make -C $(ABC179)
 
-abc180:	$(OBJS_ABC180)
+_$(ABC180):
+	make -C $(ABC180)
 
-abc181:	$(OBJS_ABC181)
+_$(ABC181):
+	make -C $(ABC181)
 
-abc182:	$(OBJS_ABC182)
+_$(ABC182):
+	make -C $(ABC182)
 
-abc183:	$(OBJS_ABC183)
+_$(ABC183):
+	make -C $(ABC183)
 
-abc184:	$(OBJS_ABC184)
+_$(ABC184):
+	make -C $(ABC184)
 
-abc185:	$(OBJS_ABC185)
+_$(ABC185):
+	make -C $(ABC185)
 
-abc186:	$(OBJS_ABC186)
+_$(ABC186):
+	make -C $(ABC186)
 
-abc187:	$(OBJS_ABC187)
+_$(ABC187):
+	make -C $(ABC187)
 
-abc188:	$(OBJS_ABC188)
+_$(ABC188):
+	make -C $(ABC188)
 
-abc189:	$(OBJS_ABC189)
+_$(ABC189):
+	make -C $(ABC189)
 
-abc190:	$(OBJS_ABC190)
+_$(ABC190):
+	make -C $(ABC190)
 
-abc191:	$(OBJS_ABC191)
+_$(ABC191):
+	make -C $(ABC191)
 
-abc192:	$(OBJS_ABC192)
+_$(ABC192):
+	make -C $(ABC192)
 
-abc193:	$(OBJS_ABC193)
+_$(ABC193):
+	make -C $(ABC193)
 
-abc194:	$(OBJS_ABC194)
+_$(ABC194):
+	make -C $(ABC194)
 
-abc195:	$(OBJS_ABC195)
+_$(ABC195):
+	make -C $(ABC195)
 
-abc196:	$(OBJS_ABC196)
+_$(ABC196):
+	make -C $(ABC196)
 
-abc197:	$(OBJS_ABC197)
+_$(ABC197):
+	make -C $(ABC197)
 
-abc198:	$(OBJS_ABC198)
+_$(ABC198):
+	make -C $(ABC198)
 
-abc199:	$(OBJS_ABC199)
+_$(ABC199):
+	make -C $(ABC199)
 
-abc200:	$(OBJS_ABC200)
-
-test_abc151A:	$(TEST_DIR)/$(ABC151)/test_abc151A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc151A:	$(SRC_DIR)/$(ABC151)/abc151A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc151B:	$(TEST_DIR)/$(ABC151)/test_abc151B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc151B:	$(SRC_DIR)/$(ABC151)/abc151B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc151C:	$(TEST_DIR)/$(ABC151)/test_abc151C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc151C:	$(SRC_DIR)/$(ABC151)/abc151C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc151D:	$(TEST_DIR)/$(ABC151)/test_abc151D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc151D:	$(SRC_DIR)/$(ABC151)/abc151D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc151E:	$(TEST_DIR)/$(ABC151)/test_abc151E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc151E:	$(SRC_DIR)/$(ABC151)/abc151E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc151F:	$(TEST_DIR)/$(ABC151)/test_abc151F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc151F:	$(SRC_DIR)/$(ABC151)/abc151F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc152A:	$(TEST_DIR)/$(ABC152)/test_abc152A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc152A:	$(SRC_DIR)/$(ABC152)/abc152A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc152B:	$(TEST_DIR)/$(ABC152)/test_abc152B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc152B:	$(SRC_DIR)/$(ABC152)/abc152B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc152C:	$(TEST_DIR)/$(ABC152)/test_abc152C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc152C:	$(SRC_DIR)/$(ABC152)/abc152C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc152D:	$(TEST_DIR)/$(ABC152)/test_abc152D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc152D:	$(SRC_DIR)/$(ABC152)/abc152D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc152E:	$(TEST_DIR)/$(ABC152)/test_abc152E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc152E:	$(SRC_DIR)/$(ABC152)/abc152E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc152F:	$(TEST_DIR)/$(ABC152)/test_abc152F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc152F:	$(SRC_DIR)/$(ABC152)/abc152F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc153A:	$(TEST_DIR)/$(ABC153)/test_abc153A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc153A:	$(SRC_DIR)/$(ABC153)/abc153A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc153B:	$(TEST_DIR)/$(ABC153)/test_abc153B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc153B:	$(SRC_DIR)/$(ABC153)/abc153B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc153C:	$(TEST_DIR)/$(ABC153)/test_abc153C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc153C:	$(SRC_DIR)/$(ABC153)/abc153C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc153D:	$(TEST_DIR)/$(ABC153)/test_abc153D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc153D:	$(SRC_DIR)/$(ABC153)/abc153D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc153E:	$(TEST_DIR)/$(ABC153)/test_abc153E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc153E:	$(SRC_DIR)/$(ABC153)/abc153E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc153F:	$(TEST_DIR)/$(ABC153)/test_abc153F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc153F:	$(SRC_DIR)/$(ABC153)/abc153F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc154A:	$(TEST_DIR)/$(ABC154)/test_abc154A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc154A:	$(SRC_DIR)/$(ABC154)/abc154A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc154B:	$(TEST_DIR)/$(ABC154)/test_abc154B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc154B:	$(SRC_DIR)/$(ABC154)/abc154B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc154C:	$(TEST_DIR)/$(ABC154)/test_abc154C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc154C:	$(SRC_DIR)/$(ABC154)/abc154C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc154D:	$(TEST_DIR)/$(ABC154)/test_abc154D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc154D:	$(SRC_DIR)/$(ABC154)/abc154D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc154E:	$(TEST_DIR)/$(ABC154)/test_abc154E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc154E:	$(SRC_DIR)/$(ABC154)/abc154E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc154F:	$(TEST_DIR)/$(ABC154)/test_abc154F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc154F:	$(SRC_DIR)/$(ABC154)/abc154F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc155A:	$(TEST_DIR)/$(ABC155)/test_abc155A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc155A:	$(SRC_DIR)/$(ABC155)/abc155A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc155B:	$(TEST_DIR)/$(ABC155)/test_abc155B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc155B:	$(SRC_DIR)/$(ABC155)/abc155B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc155C:	$(TEST_DIR)/$(ABC155)/test_abc155C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc155C:	$(SRC_DIR)/$(ABC155)/abc155C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc155D:	$(TEST_DIR)/$(ABC155)/test_abc155D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc155D:	$(SRC_DIR)/$(ABC155)/abc155D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc155E:	$(TEST_DIR)/$(ABC155)/test_abc155E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc155E:	$(SRC_DIR)/$(ABC155)/abc155E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc155F:	$(TEST_DIR)/$(ABC155)/test_abc155F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc155F:	$(SRC_DIR)/$(ABC155)/abc155F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc156A:	$(TEST_DIR)/$(ABC156)/test_abc156A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc156A:	$(SRC_DIR)/$(ABC156)/abc156A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc156B:	$(TEST_DIR)/$(ABC156)/test_abc156B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc156B:	$(SRC_DIR)/$(ABC156)/abc156B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc156C:	$(TEST_DIR)/$(ABC156)/test_abc156C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc156C:	$(SRC_DIR)/$(ABC156)/abc156C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc156D:	$(TEST_DIR)/$(ABC156)/test_abc156D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc156D:	$(SRC_DIR)/$(ABC156)/abc156D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc156E:	$(TEST_DIR)/$(ABC156)/test_abc156E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc156E:	$(SRC_DIR)/$(ABC156)/abc156E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc156F:	$(TEST_DIR)/$(ABC156)/test_abc156F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc156F:	$(SRC_DIR)/$(ABC156)/abc156F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc157A:	$(TEST_DIR)/$(ABC157)/test_abc157A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc157A:	$(SRC_DIR)/$(ABC157)/abc157A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc157B:	$(TEST_DIR)/$(ABC157)/test_abc157B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc157B:	$(SRC_DIR)/$(ABC157)/abc157B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc157C:	$(TEST_DIR)/$(ABC157)/test_abc157C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc157C:	$(SRC_DIR)/$(ABC157)/abc157C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc157D:	$(TEST_DIR)/$(ABC157)/test_abc157D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc157D:	$(SRC_DIR)/$(ABC157)/abc157D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc157E:	$(TEST_DIR)/$(ABC157)/test_abc157E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc157E:	$(SRC_DIR)/$(ABC157)/abc157E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc157F:	$(TEST_DIR)/$(ABC157)/test_abc157F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc157F:	$(SRC_DIR)/$(ABC157)/abc157F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc158A:	$(TEST_DIR)/$(ABC158)/test_abc158A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc158A:	$(SRC_DIR)/$(ABC158)/abc158A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc158B:	$(TEST_DIR)/$(ABC158)/test_abc158B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc158B:	$(SRC_DIR)/$(ABC158)/abc158B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc158C:	$(TEST_DIR)/$(ABC158)/test_abc158C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc158C:	$(SRC_DIR)/$(ABC158)/abc158C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc158D:	$(TEST_DIR)/$(ABC158)/test_abc158D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc158D:	$(SRC_DIR)/$(ABC158)/abc158D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc158E:	$(TEST_DIR)/$(ABC158)/test_abc158E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc158E:	$(SRC_DIR)/$(ABC158)/abc158E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc158F:	$(TEST_DIR)/$(ABC158)/test_abc158F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc158F:	$(SRC_DIR)/$(ABC158)/abc158F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc159A:	$(TEST_DIR)/$(ABC159)/test_abc159A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc159A:	$(SRC_DIR)/$(ABC159)/abc159A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc159B:	$(TEST_DIR)/$(ABC159)/test_abc159B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc159B:	$(SRC_DIR)/$(ABC159)/abc159B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc159C:	$(TEST_DIR)/$(ABC159)/test_abc159C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc159C:	$(SRC_DIR)/$(ABC159)/abc159C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc159D:	$(TEST_DIR)/$(ABC159)/test_abc159D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc159D:	$(SRC_DIR)/$(ABC159)/abc159D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc159E:	$(TEST_DIR)/$(ABC159)/test_abc159E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc159E:	$(SRC_DIR)/$(ABC159)/abc159E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc159F:	$(TEST_DIR)/$(ABC159)/test_abc159F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc159F:	$(SRC_DIR)/$(ABC159)/abc159F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc160A:	$(TEST_DIR)/$(ABC160)/test_abc160A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc160A:	$(SRC_DIR)/$(ABC160)/abc160A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc160B:	$(TEST_DIR)/$(ABC160)/test_abc160B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc160B:	$(SRC_DIR)/$(ABC160)/abc160B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc160C:	$(TEST_DIR)/$(ABC160)/test_abc160C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc160C:	$(SRC_DIR)/$(ABC160)/abc160C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc160D:	$(TEST_DIR)/$(ABC160)/test_abc160D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc160D:	$(SRC_DIR)/$(ABC160)/abc160D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc160E:	$(TEST_DIR)/$(ABC160)/test_abc160E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc160E:	$(SRC_DIR)/$(ABC160)/abc160E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc160F:	$(TEST_DIR)/$(ABC160)/test_abc160F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc160F:	$(SRC_DIR)/$(ABC160)/abc160F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc161A:	$(TEST_DIR)/$(ABC161)/test_abc161A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc161A:	$(SRC_DIR)/$(ABC161)/abc161A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc161B:	$(TEST_DIR)/$(ABC161)/test_abc161B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc161B:	$(SRC_DIR)/$(ABC161)/abc161B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc161C:	$(TEST_DIR)/$(ABC161)/test_abc161C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc161C:	$(SRC_DIR)/$(ABC161)/abc161C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc161D:	$(TEST_DIR)/$(ABC161)/test_abc161D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc161D:	$(SRC_DIR)/$(ABC161)/abc161D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc161E:	$(TEST_DIR)/$(ABC161)/test_abc161E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc161E:	$(SRC_DIR)/$(ABC161)/abc161E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc161F:	$(TEST_DIR)/$(ABC161)/test_abc161F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc161F:	$(SRC_DIR)/$(ABC161)/abc161F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc162A:	$(TEST_DIR)/$(ABC162)/test_abc162A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc162A:	$(SRC_DIR)/$(ABC162)/abc162A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc162B:	$(TEST_DIR)/$(ABC162)/test_abc162B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc162B:	$(SRC_DIR)/$(ABC162)/abc162B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc162C:	$(TEST_DIR)/$(ABC162)/test_abc162C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc162C:	$(SRC_DIR)/$(ABC162)/abc162C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc162D:	$(TEST_DIR)/$(ABC162)/test_abc162D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc162D:	$(SRC_DIR)/$(ABC162)/abc162D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc162E:	$(TEST_DIR)/$(ABC162)/test_abc162E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc162E:	$(SRC_DIR)/$(ABC162)/abc162E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc162F:	$(TEST_DIR)/$(ABC162)/test_abc162F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc162F:	$(SRC_DIR)/$(ABC162)/abc162F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc163A:	$(TEST_DIR)/$(ABC163)/test_abc163A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc163A:	$(SRC_DIR)/$(ABC163)/abc163A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc163B:	$(TEST_DIR)/$(ABC163)/test_abc163B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc163B:	$(SRC_DIR)/$(ABC163)/abc163B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc163C:	$(TEST_DIR)/$(ABC163)/test_abc163C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc163C:	$(SRC_DIR)/$(ABC163)/abc163C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc163D:	$(TEST_DIR)/$(ABC163)/test_abc163D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc163D:	$(SRC_DIR)/$(ABC163)/abc163D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc163E:	$(TEST_DIR)/$(ABC163)/test_abc163E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc163E:	$(SRC_DIR)/$(ABC163)/abc163E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc163F:	$(TEST_DIR)/$(ABC163)/test_abc163F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc163F:	$(SRC_DIR)/$(ABC163)/abc163F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc164A:	$(TEST_DIR)/$(ABC164)/test_abc164A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc164A:	$(SRC_DIR)/$(ABC164)/abc164A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc164B:	$(TEST_DIR)/$(ABC164)/test_abc164B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc164B:	$(SRC_DIR)/$(ABC164)/abc164B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc164C:	$(TEST_DIR)/$(ABC164)/test_abc164C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc164C:	$(SRC_DIR)/$(ABC164)/abc164C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc164D:	$(TEST_DIR)/$(ABC164)/test_abc164D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc164D:	$(SRC_DIR)/$(ABC164)/abc164D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc164E:	$(TEST_DIR)/$(ABC164)/test_abc164E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc164E:	$(SRC_DIR)/$(ABC164)/abc164E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc164F:	$(TEST_DIR)/$(ABC164)/test_abc164F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc164F:	$(SRC_DIR)/$(ABC164)/abc164F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc165A:	$(TEST_DIR)/$(ABC165)/test_abc165A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc165A:	$(SRC_DIR)/$(ABC165)/abc165A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc165B:	$(TEST_DIR)/$(ABC165)/test_abc165B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc165B:	$(SRC_DIR)/$(ABC165)/abc165B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc165C:	$(TEST_DIR)/$(ABC165)/test_abc165C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc165C:	$(SRC_DIR)/$(ABC165)/abc165C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc165D:	$(TEST_DIR)/$(ABC165)/test_abc165D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc165D:	$(SRC_DIR)/$(ABC165)/abc165D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc165E:	$(TEST_DIR)/$(ABC165)/test_abc165E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc165E:	$(SRC_DIR)/$(ABC165)/abc165E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc165F:	$(TEST_DIR)/$(ABC165)/test_abc165F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc165F:	$(SRC_DIR)/$(ABC165)/abc165F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc166A:	$(TEST_DIR)/$(ABC166)/test_abc166A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc166A:	$(SRC_DIR)/$(ABC166)/abc166A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc166B:	$(TEST_DIR)/$(ABC166)/test_abc166B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc166B:	$(SRC_DIR)/$(ABC166)/abc166B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc166C:	$(TEST_DIR)/$(ABC166)/test_abc166C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc166C:	$(SRC_DIR)/$(ABC166)/abc166C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc166D:	$(TEST_DIR)/$(ABC166)/test_abc166D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc166D:	$(SRC_DIR)/$(ABC166)/abc166D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc166E:	$(TEST_DIR)/$(ABC166)/test_abc166E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc166E:	$(SRC_DIR)/$(ABC166)/abc166E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc166F:	$(TEST_DIR)/$(ABC166)/test_abc166F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc166F:	$(SRC_DIR)/$(ABC166)/abc166F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc167A:	$(TEST_DIR)/$(ABC167)/test_abc167A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc167A:	$(SRC_DIR)/$(ABC167)/abc167A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc167B:	$(TEST_DIR)/$(ABC167)/test_abc167B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc167B:	$(SRC_DIR)/$(ABC167)/abc167B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc167C:	$(TEST_DIR)/$(ABC167)/test_abc167C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc167C:	$(SRC_DIR)/$(ABC167)/abc167C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc167D:	$(TEST_DIR)/$(ABC167)/test_abc167D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc167D:	$(SRC_DIR)/$(ABC167)/abc167D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc167E:	$(TEST_DIR)/$(ABC167)/test_abc167E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc167E:	$(SRC_DIR)/$(ABC167)/abc167E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc167F:	$(TEST_DIR)/$(ABC167)/test_abc167F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc167F:	$(SRC_DIR)/$(ABC167)/abc167F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc168A:	$(TEST_DIR)/$(ABC168)/test_abc168A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc168A:	$(SRC_DIR)/$(ABC168)/abc168A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc168B:	$(TEST_DIR)/$(ABC168)/test_abc168B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc168B:	$(SRC_DIR)/$(ABC168)/abc168B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc168C:	$(TEST_DIR)/$(ABC168)/test_abc168C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc168C:	$(SRC_DIR)/$(ABC168)/abc168C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc168D:	$(TEST_DIR)/$(ABC168)/test_abc168D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc168D:	$(SRC_DIR)/$(ABC168)/abc168D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc168E:	$(TEST_DIR)/$(ABC168)/test_abc168E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc168E:	$(SRC_DIR)/$(ABC168)/abc168E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc168F:	$(TEST_DIR)/$(ABC168)/test_abc168F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc168F:	$(SRC_DIR)/$(ABC168)/abc168F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc169A:	$(TEST_DIR)/$(ABC169)/test_abc169A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc169A:	$(SRC_DIR)/$(ABC169)/abc169A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc169B:	$(TEST_DIR)/$(ABC169)/test_abc169B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc169B:	$(SRC_DIR)/$(ABC169)/abc169B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc169C:	$(TEST_DIR)/$(ABC169)/test_abc169C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc169C:	$(SRC_DIR)/$(ABC169)/abc169C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc169D:	$(TEST_DIR)/$(ABC169)/test_abc169D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc169D:	$(SRC_DIR)/$(ABC169)/abc169D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc169E:	$(TEST_DIR)/$(ABC169)/test_abc169E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc169E:	$(SRC_DIR)/$(ABC169)/abc169E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc169F:	$(TEST_DIR)/$(ABC169)/test_abc169F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc169F:	$(SRC_DIR)/$(ABC169)/abc169F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc170A:	$(TEST_DIR)/$(ABC170)/test_abc170A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc170A:	$(SRC_DIR)/$(ABC170)/abc170A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc170B:	$(TEST_DIR)/$(ABC170)/test_abc170B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc170B:	$(SRC_DIR)/$(ABC170)/abc170B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc170C:	$(TEST_DIR)/$(ABC170)/test_abc170C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc170C:	$(SRC_DIR)/$(ABC170)/abc170C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc170D:	$(TEST_DIR)/$(ABC170)/test_abc170D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc170D:	$(SRC_DIR)/$(ABC170)/abc170D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc170E:	$(TEST_DIR)/$(ABC170)/test_abc170E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc170E:	$(SRC_DIR)/$(ABC170)/abc170E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc170F:	$(TEST_DIR)/$(ABC170)/test_abc170F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc170F:	$(SRC_DIR)/$(ABC170)/abc170F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc171A:	$(TEST_DIR)/$(ABC171)/test_abc171A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc171A:	$(SRC_DIR)/$(ABC171)/abc171A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc171B:	$(TEST_DIR)/$(ABC171)/test_abc171B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc171B:	$(SRC_DIR)/$(ABC171)/abc171B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc171C:	$(TEST_DIR)/$(ABC171)/test_abc171C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc171C:	$(SRC_DIR)/$(ABC171)/abc171C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc171D:	$(TEST_DIR)/$(ABC171)/test_abc171D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc171D:	$(SRC_DIR)/$(ABC171)/abc171D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc171E:	$(TEST_DIR)/$(ABC171)/test_abc171E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc171E:	$(SRC_DIR)/$(ABC171)/abc171E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc171F:	$(TEST_DIR)/$(ABC171)/test_abc171F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc171F:	$(SRC_DIR)/$(ABC171)/abc171F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc172A:	$(TEST_DIR)/$(ABC172)/test_abc172A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc172A:	$(SRC_DIR)/$(ABC172)/abc172A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc172B:	$(TEST_DIR)/$(ABC172)/test_abc172B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc172B:	$(SRC_DIR)/$(ABC172)/abc172B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc172C:	$(TEST_DIR)/$(ABC172)/test_abc172C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc172C:	$(SRC_DIR)/$(ABC172)/abc172C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc172D:	$(TEST_DIR)/$(ABC172)/test_abc172D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc172D:	$(SRC_DIR)/$(ABC172)/abc172D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc172E:	$(TEST_DIR)/$(ABC172)/test_abc172E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc172E:	$(SRC_DIR)/$(ABC172)/abc172E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc172F:	$(TEST_DIR)/$(ABC172)/test_abc172F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc172F:	$(SRC_DIR)/$(ABC172)/abc172F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc173A:	$(TEST_DIR)/$(ABC173)/test_abc173A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc173A:	$(SRC_DIR)/$(ABC173)/abc173A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc173B:	$(TEST_DIR)/$(ABC173)/test_abc173B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc173B:	$(SRC_DIR)/$(ABC173)/abc173B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc173C:	$(TEST_DIR)/$(ABC173)/test_abc173C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc173C:	$(SRC_DIR)/$(ABC173)/abc173C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc173D:	$(TEST_DIR)/$(ABC173)/test_abc173D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc173D:	$(SRC_DIR)/$(ABC173)/abc173D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc173E:	$(TEST_DIR)/$(ABC173)/test_abc173E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc173E:	$(SRC_DIR)/$(ABC173)/abc173E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc173F:	$(TEST_DIR)/$(ABC173)/test_abc173F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc173F:	$(SRC_DIR)/$(ABC173)/abc173F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc174A:	$(TEST_DIR)/$(ABC174)/test_abc174A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc174A:	$(SRC_DIR)/$(ABC174)/abc174A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc174B:	$(TEST_DIR)/$(ABC174)/test_abc174B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc174B:	$(SRC_DIR)/$(ABC174)/abc174B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc174C:	$(TEST_DIR)/$(ABC174)/test_abc174C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc174C:	$(SRC_DIR)/$(ABC174)/abc174C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc174D:	$(TEST_DIR)/$(ABC174)/test_abc174D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc174D:	$(SRC_DIR)/$(ABC174)/abc174D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc174E:	$(TEST_DIR)/$(ABC174)/test_abc174E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc174E:	$(SRC_DIR)/$(ABC174)/abc174E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc174F:	$(TEST_DIR)/$(ABC174)/test_abc174F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc174F:	$(SRC_DIR)/$(ABC174)/abc174F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc175A:	$(TEST_DIR)/$(ABC175)/test_abc175A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc175A:	$(SRC_DIR)/$(ABC175)/abc175A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc175B:	$(TEST_DIR)/$(ABC175)/test_abc175B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc175B:	$(SRC_DIR)/$(ABC175)/abc175B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc175C:	$(TEST_DIR)/$(ABC175)/test_abc175C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc175C:	$(SRC_DIR)/$(ABC175)/abc175C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc175D:	$(TEST_DIR)/$(ABC175)/test_abc175D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc175D:	$(SRC_DIR)/$(ABC175)/abc175D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc175E:	$(TEST_DIR)/$(ABC175)/test_abc175E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc175E:	$(SRC_DIR)/$(ABC175)/abc175E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc175F:	$(TEST_DIR)/$(ABC175)/test_abc175F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc175F:	$(SRC_DIR)/$(ABC175)/abc175F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc176A:	$(TEST_DIR)/$(ABC176)/test_abc176A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc176A:	$(SRC_DIR)/$(ABC176)/abc176A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc176B:	$(TEST_DIR)/$(ABC176)/test_abc176B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc176B:	$(SRC_DIR)/$(ABC176)/abc176B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc176C:	$(TEST_DIR)/$(ABC176)/test_abc176C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc176C:	$(SRC_DIR)/$(ABC176)/abc176C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc176D:	$(TEST_DIR)/$(ABC176)/test_abc176D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc176D:	$(SRC_DIR)/$(ABC176)/abc176D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc176E:	$(TEST_DIR)/$(ABC176)/test_abc176E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc176E:	$(SRC_DIR)/$(ABC176)/abc176E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc176F:	$(TEST_DIR)/$(ABC176)/test_abc176F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc176F:	$(SRC_DIR)/$(ABC176)/abc176F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc177A:	$(TEST_DIR)/$(ABC177)/test_abc177A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc177A:	$(SRC_DIR)/$(ABC177)/abc177A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc177B:	$(TEST_DIR)/$(ABC177)/test_abc177B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc177B:	$(SRC_DIR)/$(ABC177)/abc177B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc177C:	$(TEST_DIR)/$(ABC177)/test_abc177C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc177C:	$(SRC_DIR)/$(ABC177)/abc177C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc177D:	$(TEST_DIR)/$(ABC177)/test_abc177D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc177D:	$(SRC_DIR)/$(ABC177)/abc177D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc177E:	$(TEST_DIR)/$(ABC177)/test_abc177E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc177E:	$(SRC_DIR)/$(ABC177)/abc177E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc177F:	$(TEST_DIR)/$(ABC177)/test_abc177F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc177F:	$(SRC_DIR)/$(ABC177)/abc177F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc178A:	$(TEST_DIR)/$(ABC178)/test_abc178A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc178A:	$(SRC_DIR)/$(ABC178)/abc178A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc178B:	$(TEST_DIR)/$(ABC178)/test_abc178B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc178B:	$(SRC_DIR)/$(ABC178)/abc178B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc178C:	$(TEST_DIR)/$(ABC178)/test_abc178C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc178C:	$(SRC_DIR)/$(ABC178)/abc178C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc178D:	$(TEST_DIR)/$(ABC178)/test_abc178D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc178D:	$(SRC_DIR)/$(ABC178)/abc178D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc178E:	$(TEST_DIR)/$(ABC178)/test_abc178E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc178E:	$(SRC_DIR)/$(ABC178)/abc178E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc178F:	$(TEST_DIR)/$(ABC178)/test_abc178F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc178F:	$(SRC_DIR)/$(ABC178)/abc178F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc179A:	$(TEST_DIR)/$(ABC179)/test_abc179A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc179A:	$(SRC_DIR)/$(ABC179)/abc179A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc179B:	$(TEST_DIR)/$(ABC179)/test_abc179B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc179B:	$(SRC_DIR)/$(ABC179)/abc179B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc179C:	$(TEST_DIR)/$(ABC179)/test_abc179C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc179C:	$(SRC_DIR)/$(ABC179)/abc179C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc179D:	$(TEST_DIR)/$(ABC179)/test_abc179D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc179D:	$(SRC_DIR)/$(ABC179)/abc179D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc179E:	$(TEST_DIR)/$(ABC179)/test_abc179E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc179E:	$(SRC_DIR)/$(ABC179)/abc179E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc179F:	$(TEST_DIR)/$(ABC179)/test_abc179F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc179F:	$(SRC_DIR)/$(ABC179)/abc179F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc180A:	$(TEST_DIR)/$(ABC180)/test_abc180A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc180A:	$(SRC_DIR)/$(ABC180)/abc180A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc180B:	$(TEST_DIR)/$(ABC180)/test_abc180B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc180B:	$(SRC_DIR)/$(ABC180)/abc180B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc180C:	$(TEST_DIR)/$(ABC180)/test_abc180C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc180C:	$(SRC_DIR)/$(ABC180)/abc180C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc180D:	$(TEST_DIR)/$(ABC180)/test_abc180D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc180D:	$(SRC_DIR)/$(ABC180)/abc180D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc180E:	$(TEST_DIR)/$(ABC180)/test_abc180E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc180E:	$(SRC_DIR)/$(ABC180)/abc180E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc180F:	$(TEST_DIR)/$(ABC180)/test_abc180F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc180F:	$(SRC_DIR)/$(ABC180)/abc180F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc181A:	$(TEST_DIR)/$(ABC181)/test_abc181A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc181A:	$(SRC_DIR)/$(ABC181)/abc181A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc181B:	$(TEST_DIR)/$(ABC181)/test_abc181B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc181B:	$(SRC_DIR)/$(ABC181)/abc181B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc181C:	$(TEST_DIR)/$(ABC181)/test_abc181C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc181C:	$(SRC_DIR)/$(ABC181)/abc181C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc181D:	$(TEST_DIR)/$(ABC181)/test_abc181D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc181D:	$(SRC_DIR)/$(ABC181)/abc181D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc181E:	$(TEST_DIR)/$(ABC181)/test_abc181E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc181E:	$(SRC_DIR)/$(ABC181)/abc181E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc181F:	$(TEST_DIR)/$(ABC181)/test_abc181F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc181F:	$(SRC_DIR)/$(ABC181)/abc181F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc182A:	$(TEST_DIR)/$(ABC182)/test_abc182A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc182A:	$(SRC_DIR)/$(ABC182)/abc182A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc182B:	$(TEST_DIR)/$(ABC182)/test_abc182B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc182B:	$(SRC_DIR)/$(ABC182)/abc182B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc182C:	$(TEST_DIR)/$(ABC182)/test_abc182C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc182C:	$(SRC_DIR)/$(ABC182)/abc182C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc182D:	$(TEST_DIR)/$(ABC182)/test_abc182D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc182D:	$(SRC_DIR)/$(ABC182)/abc182D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc182E:	$(TEST_DIR)/$(ABC182)/test_abc182E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc182E:	$(SRC_DIR)/$(ABC182)/abc182E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc182F:	$(TEST_DIR)/$(ABC182)/test_abc182F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc182F:	$(SRC_DIR)/$(ABC182)/abc182F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc183A:	$(TEST_DIR)/$(ABC183)/test_abc183A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc183A:	$(SRC_DIR)/$(ABC183)/abc183A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc183B:	$(TEST_DIR)/$(ABC183)/test_abc183B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc183B:	$(SRC_DIR)/$(ABC183)/abc183B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc183C:	$(TEST_DIR)/$(ABC183)/test_abc183C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc183C:	$(SRC_DIR)/$(ABC183)/abc183C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc183D:	$(TEST_DIR)/$(ABC183)/test_abc183D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc183D:	$(SRC_DIR)/$(ABC183)/abc183D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc183E:	$(TEST_DIR)/$(ABC183)/test_abc183E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc183E:	$(SRC_DIR)/$(ABC183)/abc183E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc183F:	$(TEST_DIR)/$(ABC183)/test_abc183F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc183F:	$(SRC_DIR)/$(ABC183)/abc183F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc184A:	$(TEST_DIR)/$(ABC184)/test_abc184A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc184A:	$(SRC_DIR)/$(ABC184)/abc184A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc184B:	$(TEST_DIR)/$(ABC184)/test_abc184B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc184B:	$(SRC_DIR)/$(ABC184)/abc184B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc184C:	$(TEST_DIR)/$(ABC184)/test_abc184C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc184C:	$(SRC_DIR)/$(ABC184)/abc184C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc184D:	$(TEST_DIR)/$(ABC184)/test_abc184D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc184D:	$(SRC_DIR)/$(ABC184)/abc184D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc184E:	$(TEST_DIR)/$(ABC184)/test_abc184E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc184E:	$(SRC_DIR)/$(ABC184)/abc184E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc184F:	$(TEST_DIR)/$(ABC184)/test_abc184F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc184F:	$(SRC_DIR)/$(ABC184)/abc184F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc185A:	$(TEST_DIR)/$(ABC185)/test_abc185A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc185A:	$(SRC_DIR)/$(ABC185)/abc185A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc185B:	$(TEST_DIR)/$(ABC185)/test_abc185B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc185B:	$(SRC_DIR)/$(ABC185)/abc185B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc185C:	$(TEST_DIR)/$(ABC185)/test_abc185C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc185C:	$(SRC_DIR)/$(ABC185)/abc185C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc185D:	$(TEST_DIR)/$(ABC185)/test_abc185D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc185D:	$(SRC_DIR)/$(ABC185)/abc185D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc185E:	$(TEST_DIR)/$(ABC185)/test_abc185E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc185E:	$(SRC_DIR)/$(ABC185)/abc185E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc185F:	$(TEST_DIR)/$(ABC185)/test_abc185F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc185F:	$(SRC_DIR)/$(ABC185)/abc185F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc185F別回答:	$(TEST_DIR)/$(ABC185)/test_abc185F別回答.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc185F別回答:	$(SRC_DIR)/$(ABC185)/abc185F別回答.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc186A:	$(TEST_DIR)/$(ABC186)/test_abc186A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc186A:	$(SRC_DIR)/$(ABC186)/abc186A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc186B:	$(TEST_DIR)/$(ABC186)/test_abc186B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc186B:	$(SRC_DIR)/$(ABC186)/abc186B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc186C:	$(TEST_DIR)/$(ABC186)/test_abc186C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc186C:	$(SRC_DIR)/$(ABC186)/abc186C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc186D:	$(TEST_DIR)/$(ABC186)/test_abc186D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc186D:	$(SRC_DIR)/$(ABC186)/abc186D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc186E:	$(TEST_DIR)/$(ABC186)/test_abc186E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc186E:	$(SRC_DIR)/$(ABC186)/abc186E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc186F:	$(TEST_DIR)/$(ABC186)/test_abc186F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc186F:	$(SRC_DIR)/$(ABC186)/abc186F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc187A:	$(TEST_DIR)/$(ABC187)/test_abc187A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc187A:	$(SRC_DIR)/$(ABC187)/abc187A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc187B:	$(TEST_DIR)/$(ABC187)/test_abc187B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc187B:	$(SRC_DIR)/$(ABC187)/abc187B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc187C:	$(TEST_DIR)/$(ABC187)/test_abc187C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc187C:	$(SRC_DIR)/$(ABC187)/abc187C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc187D:	$(TEST_DIR)/$(ABC187)/test_abc187D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc187D:	$(SRC_DIR)/$(ABC187)/abc187D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc187E:	$(TEST_DIR)/$(ABC187)/test_abc187E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc187E:	$(SRC_DIR)/$(ABC187)/abc187E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc187F:	$(TEST_DIR)/$(ABC187)/test_abc187F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc187F:	$(SRC_DIR)/$(ABC187)/abc187F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc188A:	$(TEST_DIR)/$(ABC188)/test_abc188A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc188A:	$(SRC_DIR)/$(ABC188)/abc188A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc188B:	$(TEST_DIR)/$(ABC188)/test_abc188B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc188B:	$(SRC_DIR)/$(ABC188)/abc188B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc188C:	$(TEST_DIR)/$(ABC188)/test_abc188C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc188C:	$(SRC_DIR)/$(ABC188)/abc188C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc188D:	$(TEST_DIR)/$(ABC188)/test_abc188D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc188D:	$(SRC_DIR)/$(ABC188)/abc188D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc188E:	$(TEST_DIR)/$(ABC188)/test_abc188E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc188E:	$(SRC_DIR)/$(ABC188)/abc188E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc188F:	$(TEST_DIR)/$(ABC188)/test_abc188F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc188F:	$(SRC_DIR)/$(ABC188)/abc188F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc189A:	$(TEST_DIR)/$(ABC189)/test_abc189A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc189A:	$(SRC_DIR)/$(ABC189)/abc189A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc189B:	$(TEST_DIR)/$(ABC189)/test_abc189B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc189B:	$(SRC_DIR)/$(ABC189)/abc189B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc189C:	$(TEST_DIR)/$(ABC189)/test_abc189C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc189C:	$(SRC_DIR)/$(ABC189)/abc189C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc189D:	$(TEST_DIR)/$(ABC189)/test_abc189D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc189D:	$(SRC_DIR)/$(ABC189)/abc189D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc189E:	$(TEST_DIR)/$(ABC189)/test_abc189E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc189E:	$(SRC_DIR)/$(ABC189)/abc189E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc189F:	$(TEST_DIR)/$(ABC189)/test_abc189F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc189F:	$(SRC_DIR)/$(ABC189)/abc189F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc189F別回答:	$(TEST_DIR)/$(ABC189)/test_abc189F別回答.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc189F別回答:	$(SRC_DIR)/$(ABC189)/abc189F別回答.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc190A:	$(TEST_DIR)/$(ABC190)/test_abc190A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc190A:	$(SRC_DIR)/$(ABC190)/abc190A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc190B:	$(TEST_DIR)/$(ABC190)/test_abc190B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc190B:	$(SRC_DIR)/$(ABC190)/abc190B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc190C:	$(TEST_DIR)/$(ABC190)/test_abc190C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc190C:	$(SRC_DIR)/$(ABC190)/abc190C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc190D:	$(TEST_DIR)/$(ABC190)/test_abc190D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc190D:	$(SRC_DIR)/$(ABC190)/abc190D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc190E:	$(TEST_DIR)/$(ABC190)/test_abc190E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc190E:	$(SRC_DIR)/$(ABC190)/abc190E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc190F:	$(TEST_DIR)/$(ABC190)/test_abc190F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc190F:	$(SRC_DIR)/$(ABC190)/abc190F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc191A:	$(TEST_DIR)/$(ABC191)/test_abc191A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc191A:	$(SRC_DIR)/$(ABC191)/abc191A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc191B:	$(TEST_DIR)/$(ABC191)/test_abc191B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc191B:	$(SRC_DIR)/$(ABC191)/abc191B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc191C:	$(TEST_DIR)/$(ABC191)/test_abc191C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc191C:	$(SRC_DIR)/$(ABC191)/abc191C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc191D:	$(TEST_DIR)/$(ABC191)/test_abc191D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc191D:	$(SRC_DIR)/$(ABC191)/abc191D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc191E:	$(TEST_DIR)/$(ABC191)/test_abc191E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc191E:	$(SRC_DIR)/$(ABC191)/abc191E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc191F:	$(TEST_DIR)/$(ABC191)/test_abc191F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc191F:	$(SRC_DIR)/$(ABC191)/abc191F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc192A:	$(TEST_DIR)/$(ABC192)/test_abc192A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc192A:	$(SRC_DIR)/$(ABC192)/abc192A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc192B:	$(TEST_DIR)/$(ABC192)/test_abc192B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc192B:	$(SRC_DIR)/$(ABC192)/abc192B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc192C:	$(TEST_DIR)/$(ABC192)/test_abc192C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc192C:	$(SRC_DIR)/$(ABC192)/abc192C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc192D:	$(TEST_DIR)/$(ABC192)/test_abc192D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc192D:	$(SRC_DIR)/$(ABC192)/abc192D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc192E:	$(TEST_DIR)/$(ABC192)/test_abc192E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc192E:	$(SRC_DIR)/$(ABC192)/abc192E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc192F:	$(TEST_DIR)/$(ABC192)/test_abc192F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc192F:	$(SRC_DIR)/$(ABC192)/abc192F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc193A:	$(TEST_DIR)/$(ABC193)/test_abc193A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc193A:	$(SRC_DIR)/$(ABC193)/abc193A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc193B:	$(TEST_DIR)/$(ABC193)/test_abc193B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc193B:	$(SRC_DIR)/$(ABC193)/abc193B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc193C:	$(TEST_DIR)/$(ABC193)/test_abc193C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc193C:	$(SRC_DIR)/$(ABC193)/abc193C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc193D:	$(TEST_DIR)/$(ABC193)/test_abc193D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc193D:	$(SRC_DIR)/$(ABC193)/abc193D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc193E:	$(TEST_DIR)/$(ABC193)/test_abc193E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc193E:	$(SRC_DIR)/$(ABC193)/abc193E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc193F:	$(TEST_DIR)/$(ABC193)/test_abc193F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc193F:	$(SRC_DIR)/$(ABC193)/abc193F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc194A:	$(TEST_DIR)/$(ABC194)/test_abc194A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc194A:	$(SRC_DIR)/$(ABC194)/abc194A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc194B:	$(TEST_DIR)/$(ABC194)/test_abc194B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc194B:	$(SRC_DIR)/$(ABC194)/abc194B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc194C:	$(TEST_DIR)/$(ABC194)/test_abc194C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc194C:	$(SRC_DIR)/$(ABC194)/abc194C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc194D:	$(TEST_DIR)/$(ABC194)/test_abc194D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc194D:	$(SRC_DIR)/$(ABC194)/abc194D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc194E:	$(TEST_DIR)/$(ABC194)/test_abc194E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc194E:	$(SRC_DIR)/$(ABC194)/abc194E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc194F:	$(TEST_DIR)/$(ABC194)/test_abc194F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc194F:	$(SRC_DIR)/$(ABC194)/abc194F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc195A:	$(TEST_DIR)/$(ABC195)/test_abc195A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc195A:	$(SRC_DIR)/$(ABC195)/abc195A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc195B:	$(TEST_DIR)/$(ABC195)/test_abc195B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc195B:	$(SRC_DIR)/$(ABC195)/abc195B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc195C:	$(TEST_DIR)/$(ABC195)/test_abc195C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc195C:	$(SRC_DIR)/$(ABC195)/abc195C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc195D:	$(TEST_DIR)/$(ABC195)/test_abc195D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc195D:	$(SRC_DIR)/$(ABC195)/abc195D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc195E:	$(TEST_DIR)/$(ABC195)/test_abc195E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc195E:	$(SRC_DIR)/$(ABC195)/abc195E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc195F:	$(TEST_DIR)/$(ABC195)/test_abc195F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc195F:	$(SRC_DIR)/$(ABC195)/abc195F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc196A:	$(TEST_DIR)/$(ABC196)/test_abc196A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc196A:	$(SRC_DIR)/$(ABC196)/abc196A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc196B:	$(TEST_DIR)/$(ABC196)/test_abc196B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc196B:	$(SRC_DIR)/$(ABC196)/abc196B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc196C:	$(TEST_DIR)/$(ABC196)/test_abc196C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc196C:	$(SRC_DIR)/$(ABC196)/abc196C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc196D:	$(TEST_DIR)/$(ABC196)/test_abc196D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc196D:	$(SRC_DIR)/$(ABC196)/abc196D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc196E:	$(TEST_DIR)/$(ABC196)/test_abc196E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc196E:	$(SRC_DIR)/$(ABC196)/abc196E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc196F:	$(TEST_DIR)/$(ABC196)/test_abc196F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc196F:	$(SRC_DIR)/$(ABC196)/abc196F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc197A:	$(TEST_DIR)/$(ABC197)/test_abc197A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc197A:	$(SRC_DIR)/$(ABC197)/abc197A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc197B:	$(TEST_DIR)/$(ABC197)/test_abc197B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc197B:	$(SRC_DIR)/$(ABC197)/abc197B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc197C:	$(TEST_DIR)/$(ABC197)/test_abc197C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc197C:	$(SRC_DIR)/$(ABC197)/abc197C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc197D:	$(TEST_DIR)/$(ABC197)/test_abc197D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc197D:	$(SRC_DIR)/$(ABC197)/abc197D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc197E:	$(TEST_DIR)/$(ABC197)/test_abc197E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc197E:	$(SRC_DIR)/$(ABC197)/abc197E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc197F:	$(TEST_DIR)/$(ABC197)/test_abc197F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc197F:	$(SRC_DIR)/$(ABC197)/abc197F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc198A:	$(TEST_DIR)/$(ABC198)/test_abc198A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc198A:	$(SRC_DIR)/$(ABC198)/abc198A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc198B:	$(TEST_DIR)/$(ABC198)/test_abc198B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc198B:	$(SRC_DIR)/$(ABC198)/abc198B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc198C:	$(TEST_DIR)/$(ABC198)/test_abc198C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc198C:	$(SRC_DIR)/$(ABC198)/abc198C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc198D:	$(TEST_DIR)/$(ABC198)/test_abc198D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc198D:	$(SRC_DIR)/$(ABC198)/abc198D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc198E:	$(TEST_DIR)/$(ABC198)/test_abc198E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc198E:	$(SRC_DIR)/$(ABC198)/abc198E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc198F:	$(TEST_DIR)/$(ABC198)/test_abc198F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc198F:	$(SRC_DIR)/$(ABC198)/abc198F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc199A:	$(TEST_DIR)/$(ABC199)/test_abc199A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc199A:	$(SRC_DIR)/$(ABC199)/abc199A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc199B:	$(TEST_DIR)/$(ABC199)/test_abc199B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc199B:	$(SRC_DIR)/$(ABC199)/abc199B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc199C:	$(TEST_DIR)/$(ABC199)/test_abc199C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc199C:	$(SRC_DIR)/$(ABC199)/abc199C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc199D:	$(TEST_DIR)/$(ABC199)/test_abc199D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc199D:	$(SRC_DIR)/$(ABC199)/abc199D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc199E:	$(TEST_DIR)/$(ABC199)/test_abc199E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc199E:	$(SRC_DIR)/$(ABC199)/abc199E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc199F:	$(TEST_DIR)/$(ABC199)/test_abc199F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc199F:	$(SRC_DIR)/$(ABC199)/abc199F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc200A:	$(TEST_DIR)/$(ABC200)/test_abc200A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc200A:	$(SRC_DIR)/$(ABC200)/abc200A.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc200B:	$(TEST_DIR)/$(ABC200)/test_abc200B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc200B:	$(SRC_DIR)/$(ABC200)/abc200B.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc200C:	$(TEST_DIR)/$(ABC200)/test_abc200C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc200C:	$(SRC_DIR)/$(ABC200)/abc200C.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc200D:	$(TEST_DIR)/$(ABC200)/test_abc200D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc200D:	$(SRC_DIR)/$(ABC200)/abc200D.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc200E:	$(TEST_DIR)/$(ABC200)/test_abc200E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc200E:	$(SRC_DIR)/$(ABC200)/abc200E.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
-
-test_abc200F:	$(TEST_DIR)/$(ABC200)/test_abc200F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE) $(LIBS)
-
-abc200F:	$(SRC_DIR)/$(ABC200)/abc200F.cpp
-	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+_$(ABC200):
+	make -C $(ABC200)
 
 clean:
-	rm -f $(OBJS_ABC151) $(OBJS_ABC152) $(OBJS_ABC153) $(OBJS_ABC154) $(OBJS_ABC155) $(OBJS_ABC156) $(OBJS_ABC157) $(OBJS_ABC158) $(OBJS_ABC159) $(OBJS_ABC160) $(OBJS_ABC161) $(OBJS_ABC162) $(OBJS_ABC163) $(OBJS_ABC164) $(OBJS_ABC165) $(OBJS_ABC166) $(OBJS_ABC167) $(OBJS_ABC168) $(OBJS_ABC169) $(OBJS_ABC170) $(OBJS_ABC171) $(OBJS_ABC172) $(OBJS_ABC173) $(OBJS_ABC174) $(OBJS_ABC175) $(OBJS_ABC176) $(OBJS_ABC177) $(OBJS_ABC178) $(OBJS_ABC179) $(OBJS_ABC180) $(OBJS_ABC181) $(OBJS_ABC182) $(OBJS_ABC183) $(OBJS_ABC184) $(OBJS_ABC185) $(OBJS_ABC186) $(OBJS_ABC187) $(OBJS_ABC188) $(OBJS_ABC189) $(OBJS_ABC190) $(OBJS_ABC191) $(OBJS_ABC192) $(OBJS_ABC193) $(OBJS_ABC194) $(OBJS_ABC195) $(OBJS_ABC196) $(OBJS_ABC197) $(OBJS_ABC198) $(OBJS_ABC199) $(OBJS_ABC200)
+	make -C $(ABC151) clean
+	make -C $(ABC152) clean
+	make -C $(ABC153) clean
+	make -C $(ABC154) clean
+	make -C $(ABC155) clean
+	make -C $(ABC156) clean
+	make -C $(ABC157) clean
+	make -C $(ABC158) clean
+	make -C $(ABC159) clean
+	make -C $(ABC160) clean
+	make -C $(ABC161) clean
+	make -C $(ABC162) clean
+	make -C $(ABC163) clean
+	make -C $(ABC164) clean
+	make -C $(ABC165) clean
+#	make -C $(ABC166) clean
+#	make -C $(ABC167) clean
+#	make -C $(ABC168) clean
+#	make -C $(ABC169) clean
+#	make -C $(ABC170) clean
+#	make -C $(ABC171) clean
+#	make -C $(ABC172) clean
+#	make -C $(ABC173) clean
+#	make -C $(ABC174) clean
+#	make -C $(ABC175) clean
+#	make -C $(ABC176) clean
+#	make -C $(ABC177) clean
+#	make -C $(ABC178) clean
+#	make -C $(ABC179) clean
+#	make -C $(ABC180) clean
+#	make -C $(ABC181) clean
+#	make -C $(ABC182) clean
+#	make -C $(ABC183) clean
+#	make -C $(ABC184) clean
+	make -C $(ABC185) clean
+	make -C $(ABC186) clean
+	make -C $(ABC187) clean
+	make -C $(ABC188) clean
+	make -C $(ABC189) clean
+	make -C $(ABC190) clean
+	make -C $(ABC191) clean
+	make -C $(ABC192) clean
+	make -C $(ABC193) clean
+	make -C $(ABC194) clean
+	make -C $(ABC195) clean
+	make -C $(ABC196) clean
+	make -C $(ABC197) clean
+	make -C $(ABC198) clean
+	make -C $(ABC199) clean
+	make -C $(ABC200) clean

@@ -6,6 +6,6 @@ using namespace std;
 
 static const string COMMAND = "ex7";
 
-TEST(ex7, case1) {
+TEST(apg4b_ex7, case1) {
 	check(PATH + COMMAND, string(""), string("") + "AtCoder");
 }

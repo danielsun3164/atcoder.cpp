@@ -6,10 +6,10 @@ using namespace std;
 
 static const string COMMAND = "ex5";
 
-TEST(ex5, case1) {
+TEST(apg4b_ex5, case1) {
 	check(PATH + COMMAND, string("") + "1 2", string("") + "3");
 }
 
-TEST(ex5, case2) {
+TEST(apg4b_ex5, case2) {
 	check(PATH + COMMAND, string("") + "100 99", string("") + "199");
 }
