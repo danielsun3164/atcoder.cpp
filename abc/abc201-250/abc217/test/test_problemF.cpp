@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+#include <gtest/gtest.h>
+#include <command.h>
+using namespace std;
+
+static const string COMMAND = "problemF";
+
+TEST(abc217_problemF, case1) {
+	check(PATH + COMMAND, string("") + "2 3\n" + "1 2\n" + "1 4\n" + "2 3", string("") + "1");
+}
+
+TEST(abc217_problemF, case2) {
+	check(PATH + COMMAND, string("") + "2 2\n" + "1 2\n" + "3 4", string("") + "2");
+}
+
+TEST(abc217_problemF, case3) {
+	check(PATH + COMMAND, string("") + "2 2\n" + "1 3\n" + "2 4", string("") + "0");
+}
