@@ -4,11 +4,14 @@
 
 using namespace std;
 
-static const string COMMAND = "problemC";
+static_block
+{
+	COMMAND = "problemC";
+}
 
 void check(int n, int m) {
 	string input = to_string(n) + " " + to_string(m);
-	Command cmd = execute(PATH + COMMAND, input);
+	Command cmd = execute(input);
 	streambuf *orig = cin.rdbuf();
 	istringstream input_ss(cmd.StdOut);
 	cin.rdbuf(input_ss.rdbuf());
@@ -34,5 +37,5 @@ TEST(abc006_problemC, case2) {
 }
 
 TEST(abc006_problemC, case3) {
-	check(PATH + COMMAND, string("") + "10 41", string("") + "-1 -1 -1");
+	check(string("") + "10 41", string("") + "-1 -1 -1");
 }

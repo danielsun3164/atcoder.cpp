@@ -3,15 +3,18 @@
 #include <command.h>
 using namespace std;
 
-static const string COMMAND = "problemF";
+static_block
+{
+	COMMAND = "problemF";
+}
 
 TEST(abc212_problemF, case1) {
-	check(PATH + COMMAND, string("") + "3 2 3\n" + "1 2 1 3\n" + "2 3 3 5\n" + "1 1 5\n" + "2 2 3\n" + "1 3 2",
+	check(string("") + "3 2 3\n" + "1 2 1 3\n" + "2 3 3 5\n" + "1 1 5\n" + "2 2 3\n" + "1 3 2",
 			string("") + "2 3\n" + "2\n" + "3");
 }
 
 TEST(abc212_problemF, case2) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "8 10 10\n" + "4 3 329982133 872113932\n" + "6 8 101082040 756263297\n"
 					+ "4 7 515073851 793074419\n" + "8 7 899017043 941751547\n" + "5 7 295510441 597348810\n"
 					+ "7 2 688716395 890599546\n" + "6 1 414221915 748470452\n" + "6 4 810915860 904512496\n"

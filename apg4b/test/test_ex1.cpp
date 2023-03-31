@@ -4,8 +4,10 @@
 
 using namespace std;
 
-static const string COMMAND = "ex1";
+static_block {
+	COMMAND = "ex1";
+}
 
 TEST(apg4b_ex1, case1) {
-	check(PATH + COMMAND, string(""), string("") + "こんにちは\n" + "AtCoder");
+	check(string(""), string("") + "こんにちは\n" + "AtCoder");
 }

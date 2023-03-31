@@ -4,22 +4,24 @@
 
 using namespace std;
 
-static const string COMMAND = "problemA";
+static_block {
+	COMMAND = "problemA";
+}
 
 TEST(atc002_problemA, case1) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "7 8\n" + "2 2\n" + "4 5\n" + "########\n" + "#......#\n" + "#.######\n" + "#..#...#\n"
 					+ "#..##..#\n" + "##.....#\n" + "########", string("") + "11");
 }
 
 TEST(atc002_problemA, case2) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "5 8\n" + "2 2\n" + "2 4\n" + "########\n" + "#.#....#\n" + "#.###..#\n" + "#......#\n"
 					+ "########", string("") + "10");
 }
 
 TEST(atc002_problemA, case3) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "50 50\n" + "2 2\n" + "49 49\n" + "##################################################\n"
 					+ "#................................................#\n"
 					+ "#................................................#\n"

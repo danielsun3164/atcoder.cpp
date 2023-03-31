@@ -4,7 +4,9 @@
 
 using namespace std;
 
-static const string COMMAND = "problemB";
+static_block {
+	COMMAND = "problemB";
+}
 
 const char QUESTION = '?';
 const char ANSWER = '!';

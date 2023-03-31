@@ -4,7 +4,10 @@
 
 using namespace std;
 
-static const string COMMAND = "problemD";
+static_block
+{
+	COMMAND = "problemD";
+}
 static const double TOLERANCE = 1E-6;
 static const double EXPECTED = 100.0;
 
@@ -14,7 +17,7 @@ double f(int a, int b, int c, double t) {
 
 void check(int a, int b, int c) {
 	string input = to_string(a) + " " + to_string(b) + " " + to_string(c);
-	Command cmd = execute(PATH + COMMAND, input);
+	Command cmd = execute(input);
 	streambuf *orig = cin.rdbuf();
 	istringstream input_ss(cmd.StdOut);
 	cin.rdbuf(input_ss.rdbuf());

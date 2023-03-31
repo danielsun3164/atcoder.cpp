@@ -4,7 +4,9 @@
 
 using namespace std;
 
-static const string COMMAND = "problem018";
+static_block {
+	COMMAND = "problem018";
+}
 
 const static double TOLERANCE = 1E-7;
 

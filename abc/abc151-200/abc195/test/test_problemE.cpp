@@ -4,20 +4,23 @@
 
 using namespace std;
 
-static const string COMMAND = "problemE";
+static_block
+{
+	COMMAND = "problemE";
+}
 
 TEST(abc195_problemE, case1) {
-	check(PATH + COMMAND, string("") + "2\n" + "35\n" + "AT", string("") + "Takahashi");
+	check(string("") + "2\n" + "35\n" + "AT", string("") + "Takahashi");
 }
 
 TEST(abc195_problemE, case2) {
-	check(PATH + COMMAND, string("") + "5\n" + "12345\n" + "AAAAT", string("") + "Aoki");
+	check(string("") + "5\n" + "12345\n" + "AAAAT", string("") + "Aoki");
 }
 
 TEST(abc195_problemE, case3) {
-	check(PATH + COMMAND, string("") + "5\n" + "67890\n" + "TTTTA", string("") + "Takahashi");
+	check(string("") + "5\n" + "67890\n" + "TTTTA", string("") + "Takahashi");
 }
 
 TEST(abc195_problemE, case4) {
-	check(PATH + COMMAND, string("") + "5\n" + "12345\n" + "ATATA", string("") + "Aoki");
+	check(string("") + "5\n" + "12345\n" + "ATATA", string("") + "Aoki");
 }

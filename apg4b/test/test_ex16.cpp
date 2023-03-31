@@ -4,20 +4,22 @@
 
 using namespace std;
 
-static const string COMMAND = "ex16";
+static_block {
+	COMMAND = "ex16";
+}
 
 TEST(apg4b_ex16, case1) {
-	check(PATH + COMMAND, string("") + "5 3 3 1 4", string("") + "YES");
+	check(string("") + "5 3 3 1 4", string("") + "YES");
 }
 
 TEST(apg4b_ex16, case2) {
-	check(PATH + COMMAND, string("") + "1 1 2 3 4", string("") + "YES");
+	check(string("") + "1 1 2 3 4", string("") + "YES");
 }
 
 TEST(apg4b_ex16, case3) {
-	check(PATH + COMMAND, string("") + "1 2 1 2 1", string("") + "NO");
+	check(string("") + "1 2 1 2 1", string("") + "NO");
 }
 
 TEST(apg4b_ex16, case4) {
-	check(PATH + COMMAND, string("") + "100 100 100 100 100", string("") + "YES");
+	check(string("") + "100 100 100 100 100", string("") + "YES");
 }

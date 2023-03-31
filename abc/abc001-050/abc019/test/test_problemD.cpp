@@ -4,7 +4,10 @@
 
 using namespace std;
 
-static const string COMMAND = "problemD";
+static_block
+{
+	COMMAND = "problemD";
+}
 
 class Command2 {
 public:

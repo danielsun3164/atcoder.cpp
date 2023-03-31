@@ -4,18 +4,20 @@
 
 using namespace std;
 
-static const string COMMAND = "problem028";
+static_block {
+	COMMAND = "problem028";
+}
 
 TEST(typical90_problem028, case1) {
-	check(PATH + COMMAND, string("") + "2\n" + "1 1 3 2\n" + "2 1 4 2", string("") + "2\n" + "1");
+	check(string("") + "2\n" + "1 1 3 2\n" + "2 1 4 2", string("") + "2\n" + "1");
 }
 
 TEST(typical90_problem028, case2) {
-	check(PATH + COMMAND, string("") + "2\n" + "1 1 3 4\n" + "3 4 6 5", string("") + "9\n" + "0");
+	check(string("") + "2\n" + "1 1 3 4\n" + "3 4 6 5", string("") + "9\n" + "0");
 }
 
 TEST(typical90_problem028, case3) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "20\n" + "61 98 76 100\n" + "70 99 95 100\n" + "10 64 96 91\n" + "12 37 99 66\n"
 					+ "63 93 65 95\n" + "16 18 18 67\n" + "30 47 88 56\n" + "33 6 38 8\n" + "37 19 40 68\n"
 					+ "4 56 12 84\n" + "3 16 92 78\n" + "39 24 67 96\n" + "46 1 69 57\n" + "40 34 65 65\n"

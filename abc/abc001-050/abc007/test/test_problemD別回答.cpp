@@ -4,20 +4,23 @@
 
 using namespace std;
 
-static const string COMMAND = "problemD別回答";
+static_block
+{
+	COMMAND = "problemD別回答";
+}
 
 TEST(abc007_problemD別回答, case1) {
-	check(PATH + COMMAND, string("") + "1 9", string("") + "2");
+	check(string("") + "1 9", string("") + "2");
 }
 
 TEST(abc007_problemD別回答, case2) {
-	check(PATH + COMMAND, string("") + "40 49", string("") + "10");
+	check(string("") + "40 49", string("") + "10");
 }
 
 TEST(abc007_problemD別回答, case3) {
-	check(PATH + COMMAND, string("") + "1 1000", string("") + "488");
+	check(string("") + "1 1000", string("") + "488");
 }
 
 TEST(abc007_problemD別回答, case4) {
-	check(PATH + COMMAND, string("") + "1 1000000000000000000", string("") + "981985601490518016");
+	check(string("") + "1 1000000000000000000", string("") + "981985601490518016");
 }

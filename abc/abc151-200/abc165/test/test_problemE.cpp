@@ -4,12 +4,15 @@
 
 using namespace std;
 
-static const string COMMAND = "problemE";
+static_block
+{
+	COMMAND = "problemE";
+}
 
 TEST(abc165_problemE, case1) {
-	check(PATH + COMMAND, string("") + "4 1", string("") + "2 3");
+	check(string("") + "4 1", string("") + "2 3");
 }
 
 TEST(abc165_problemE, case2) {
-	check(PATH + COMMAND, string("") + "7 3", string("") + "1 3\n" + "4 7\n" + "5 6");
+	check(string("") + "7 3", string("") + "1 3\n" + "4 7\n" + "5 6");
 }

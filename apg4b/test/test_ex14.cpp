@@ -4,20 +4,22 @@
 
 using namespace std;
 
-static const string COMMAND = "ex14";
+static_block {
+	COMMAND = "ex14";
+}
 
 TEST(apg4b_ex14, case1) {
-	check(PATH + COMMAND, string("") + "160 154 152", string("") + "8");
+	check(string("") + "160 154 152", string("") + "8");
 }
 
 TEST(apg4b_ex14, case2) {
-	check(PATH + COMMAND, string("") + "200 200 200", string("") + "0");
+	check(string("") + "200 200 200", string("") + "0");
 }
 
 TEST(apg4b_ex14, case3) {
-	check(PATH + COMMAND, string("") + "145 1 170", string("") + "169");
+	check(string("") + "145 1 170", string("") + "169");
 }
 
 TEST(apg4b_ex14, case4) {
-	check(PATH + COMMAND, string("") + "150 190 160", string("") + "40");
+	check(string("") + "150 190 160", string("") + "40");
 }

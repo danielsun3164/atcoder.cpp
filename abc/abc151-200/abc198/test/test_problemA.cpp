@@ -3,16 +3,19 @@
 #include <command.h>
 using namespace std;
 
-static const string COMMAND = "problemA";
+static_block
+{
+	COMMAND = "problemA";
+}
 
 TEST(abc198_problemA, case1) {
-	check(PATH + COMMAND, string("") + "2", string("") + "1");
+	check(string("") + "2", string("") + "1");
 }
 
 TEST(abc198_problemA, case2) {
-	check(PATH + COMMAND, string("") + "1", string("") + "0");
+	check(string("") + "1", string("") + "0");
 }
 
 TEST(abc198_problemA, case3) {
-	check(PATH + COMMAND, string("") + "3", string("") + "2");
+	check(string("") + "3", string("") + "2");
 }

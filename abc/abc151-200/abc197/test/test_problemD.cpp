@@ -3,13 +3,16 @@
 #include <command.h>
 using namespace std;
 
-static const string COMMAND = "problemD";
+static_block
+{
+	COMMAND = "problemD";
+}
 
 static const double TOLERANCE = 1E-5;
 
 template<typename ... Args>
-void check(string input, const Args ... args) {
-	Command cmd = execute(PATH + COMMAND, input);
+void my_check(string input, const Args ... args) {
+	Command cmd = execute(input);
 	streambuf *orig = cin.rdbuf();
 	istringstream input_ss(cmd.StdOut);
 	cin.rdbuf(input_ss.rdbuf());
@@ -31,10 +34,10 @@ void check(string input, const Args ... args) {
 }
 
 TEST(abc197_problemD, case1) {
-	check(string("") + "4\n" + "1 1\n" + "2 2", 2.0, 1.0);
+	my_check(string("") + "4\n" + "1 1\n" + "2 2", 2.0, 1.0);
 }
 
 TEST(abc197_problemD, case2) {
-	check(string("") + "6\n" + "5 3\n" + "7 4", 5.93301270189, 2.38397459622);
+	my_check(string("") + "6\n" + "5 3\n" + "7 4", 5.93301270189, 2.38397459622);
 }
 

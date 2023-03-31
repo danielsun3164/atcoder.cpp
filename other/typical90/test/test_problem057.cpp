@@ -4,23 +4,24 @@
 
 using namespace std;
 
-static const string COMMAND = "problem057";
+static_block {
+	COMMAND = "problem057";
+}
 
 TEST(typical90_problem057, case1) {
-	check(PATH + COMMAND, string("") + "2 3\n" + "2\n" + "1 2\n" + "2\n" + "2 3\n" + "1 0 1", string("") + "1");
+	check(string("") + "2 3\n" + "2\n" + "1 2\n" + "2\n" + "2 3\n" + "1 0 1", string("") + "1");
 }
 
 TEST(typical90_problem057, case2) {
-	check(PATH + COMMAND, string("") + "2 3\n" + "1\n" + "1\n" + "1\n" + "2\n" + "0 1 1", string("") + "0");
+	check(string("") + "2 3\n" + "1\n" + "1\n" + "1\n" + "2\n" + "0 1 1", string("") + "0");
 }
 
 TEST(typical90_problem057, case3) {
-	check(PATH + COMMAND, string("") + "3 2\n" + "1\n" + "1\n" + "1\n" + "2\n" + "1\n" + "2\n" + "1 0",
-			string("") + "2");
+	check(string("") + "3 2\n" + "1\n" + "1\n" + "1\n" + "2\n" + "1\n" + "2\n" + "1 0", string("") + "2");
 }
 
 TEST(typical90_problem057, case4) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "13 6\n" + "3\n" + "1 3 5\n" + "3\n" + "1 4 5\n" + "4\n" + "3 4 5 6\n" + "2\n" + "2 5\n"
 					+ "4\n" + "1 2 3 5\n" + "3\n" + "3 4 6\n" + "3\n" + "4 5 6\n" + "6\n" + "1 2 3 4 5 6\n" + "4\n"
 					+ "1 3 5 6\n" + "3\n" + "1 2 4\n" + "3\n" + "1 5 6\n" + "4\n" + "1 2 3 4\n" + "1\n" + "5\n"

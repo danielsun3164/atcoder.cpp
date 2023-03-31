@@ -11,6 +11,7 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
+#include "static_block.hpp"
 
 using namespace std;
 
@@ -116,22 +117,25 @@ public:
 	}
 };
 
-Command execute(string command, string input) {
+static string COMMAND;
+string PATH;
+
+Command execute(string input) {
 	Command cmd;
-	cmd.Command = command;
+	cmd.Command = PATH + COMMAND;
 	cmd.StdIn = input + "\n";
 	cmd.execute();
 	return cmd;
 }
 
-void check(string command, string input, string output) {
-	Command cmd = execute(command, input);
+void check(string input, string output) {
+	Command cmd = execute(input);
 	EXPECT_EQ(output + "\n", cmd.StdOut);
 }
 
 template<typename ... Args>
-void check(string command, string input, Args ... args) {
-	Command cmd = execute(command, input);
+void check(string input, Args ... args) {
+	Command cmd = execute(input);
 	vector<string> outputs = { args... };
 	for (int i = 0; i < int(outputs.size()); i++) {
 		outputs[i].append("\n");
@@ -147,8 +151,8 @@ void check(string command, string input, Args ... args) {
 	}
 }
 
-void check_about(string command, string input, double expected, double tolerance) {
-	Command cmd = execute(command, input);
+void check_about(string input, double expected, double tolerance) {
+	Command cmd = execute(input);
 	streambuf *orig = cin.rdbuf();
 	istringstream input_ss(cmd.StdOut);
 	cin.rdbuf(input_ss.rdbuf());
@@ -166,12 +170,10 @@ void check_about(string command, string input, double expected, double tolerance
 	cin.rdbuf(orig);
 }
 
-void check_empty(string command, string input) {
-	Command cmd = execute(command, input);
+void check_empty(string input) {
+	Command cmd = execute(input);
 	EXPECT_EQ("", cmd.StdOut);
 }
-
-string PATH;
 
 int main(int argc, char **argv) {
 	testing::InitGoogleTest(&argc, argv);

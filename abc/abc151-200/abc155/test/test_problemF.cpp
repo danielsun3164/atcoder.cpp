@@ -4,24 +4,26 @@
 
 using namespace std;
 
-static const string COMMAND = "problemF";
+static_block
+{
+	COMMAND = "problemF";
+}
 
 TEST(abc155_problemF, case1) {
-	check(PATH + COMMAND, string("") + "3 4\n" + "5 1\n" + "10 1\n" + "8 0\n" + "1 10\n" + "4 5\n" + "6 7\n" + "8 9",
+	check(string("") + "3 4\n" + "5 1\n" + "10 1\n" + "8 0\n" + "1 10\n" + "4 5\n" + "6 7\n" + "8 9",
 			string("") + "2\n" + "1 4");
 }
 
 TEST(abc155_problemF, case2) {
-	check(PATH + COMMAND, string("") + "4 2\n" + "2 0\n" + "3 1\n" + "5 1\n" + "7 0\n" + "1 4\n" + "4 7",
-			string("") + "-1");
+	check(string("") + "4 2\n" + "2 0\n" + "3 1\n" + "5 1\n" + "7 0\n" + "1 4\n" + "4 7", string("") + "-1");
 }
 
 TEST(abc155_problemF, case3) {
-	check(PATH + COMMAND, string("") + "3 2\n" + "5 0\n" + "10 0\n" + "8 0\n" + "6 9\n" + "66 99", string("") + "0\n");
+	check(string("") + "3 2\n" + "5 0\n" + "10 0\n" + "8 0\n" + "6 9\n" + "66 99", string("") + "0\n");
 }
 
 TEST(abc155_problemF, case4) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "12 20\n" + "536130100 1\n" + "150049660 1\n" + "79245447 1\n" + "132551741 0\n"
 					+ "89484841 1\n" + "328129089 0\n" + "623467741 0\n" + "248785745 0\n" + "421631475 0\n"
 					+ "498966877 0\n" + "43768791 1\n" + "112237273 0\n" + "21499042 142460201\n"

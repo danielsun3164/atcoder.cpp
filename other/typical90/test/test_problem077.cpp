@@ -5,7 +5,9 @@
 using namespace std;
 using ll = long long;
 
-static const string COMMAND = "problem077";
+static_block {
+	COMMAND = "problem077";
+}
 
 static const vector<int> DX { 0, 1, 1, 0, -1, -1, -1, 0, 1 };
 static const vector<int> DY { 0, 0, 1, 1, 1, 0, -1, -1, -1 };
@@ -153,8 +155,7 @@ TEST(typical90_problem077, case1) {
 }
 
 TEST(typical90_problem077, case2) {
-	check(PATH + COMMAND, string("") + "3 2\n" + "3 3\n" + "5 5\n" + "9 2\n" + "11 1000000000\n" + "5 5\n" + "3 3",
-			string("") + "No");
+	check(string("") + "3 2\n" + "3 3\n" + "5 5\n" + "9 2\n" + "11 1000000000\n" + "5 5\n" + "3 3", string("") + "No");
 }
 
 TEST(typical90_problem077, case3) {

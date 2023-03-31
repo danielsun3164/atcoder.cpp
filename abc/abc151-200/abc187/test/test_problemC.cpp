@@ -4,15 +4,17 @@
 
 using namespace std;
 
-static const string COMMAND = "problemC";
+static_block
+{
+	COMMAND = "problemC";
+}
 
 TEST(abc187_problemC, case1) {
-	check(PATH + COMMAND, string("") + "6\n" + "a\n" + "!a\n" + "b\n" + "!c\n" + "d\n" + "!d", string("") + "a",
-			string("") + "d");
+	check(string("") + "6\n" + "a\n" + "!a\n" + "b\n" + "!c\n" + "d\n" + "!d", string("") + "a", string("") + "d");
 }
 
 TEST(abc187_problemC, case2) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "10\n" + "red\n" + "red\n" + "red\n" + "!orange\n" + "yellow\n" + "!blue\n" + "cyan\n"
 					+ "!green\n" + "brown\n" + "!gray", string("") + "satisfiable");
 }

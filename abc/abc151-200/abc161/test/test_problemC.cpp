@@ -4,16 +4,19 @@
 
 using namespace std;
 
-static const string COMMAND = "problemC";
+static_block
+{
+	COMMAND = "problemC";
+}
 
 TEST(abc161_problemC, case1) {
-	check(PATH + COMMAND, string("") + "7 4", string("") + "1");
+	check(string("") + "7 4", string("") + "1");
 }
 
 TEST(abc161_problemC, case2) {
-	check(PATH + COMMAND, string("") + "2 6", string("") + "2");
+	check(string("") + "2 6", string("") + "2");
 }
 
 TEST(abc161_problemC, case3) {
-	check(PATH + COMMAND, string("") + "1000000000000000000 1", string("") + "0");
+	check(string("") + "1000000000000000000 1", string("") + "0");
 }

@@ -4,7 +4,9 @@
 
 using namespace std;
 
-static const string COMMAND = "problem071";
+static_block {
+	COMMAND = "problem071";
+}
 
 class Command2 {
 public:
@@ -148,7 +150,7 @@ TEST(typical90_problem071, case1) {
 }
 
 TEST(typical90_problem071, case2) {
-	check(PATH + COMMAND, string("") + "5 2 1\n" + "1 3\n" + "3 1", string("") + "-1");
+	check(string("") + "5 2 1\n" + "1 3\n" + "3 1", string("") + "-1");
 }
 
 TEST(typical90_problem071, case3) {

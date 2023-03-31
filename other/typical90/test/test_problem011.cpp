@@ -4,25 +4,27 @@
 
 using namespace std;
 
-static const string COMMAND = "problem011";
+static_block {
+	COMMAND = "problem011";
+}
 
 TEST(typical90_problem011, case1) {
-	check(PATH + COMMAND, string("") + "1\n" + "12 3 69853", string("") + "69853");
+	check(string("") + "1\n" + "12 3 69853", string("") + "69853");
 }
 
 TEST(typical90_problem011, case2) {
-	check(PATH + COMMAND, string("") + "3\n" + "7 3 200000\n" + "3 2 100000\n" + "5 3 150000", string("") + "350000");
+	check(string("") + "3\n" + "7 3 200000\n" + "3 2 100000\n" + "5 3 150000", string("") + "350000");
 }
 
 TEST(typical90_problem011, case3) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "8\n" + "376 640 602876667\n" + "4015 1868 533609371\n" + "3330 152 408704870\n"
 					+ "1874 798 30417810\n" + "2 1450 40706045\n" + "3344 1840 801881841\n" + "2853 1229 5235900\n"
 					+ "458 1277 997429858", string("") + "1744196082");
 }
 
 TEST(typical90_problem011, case4) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "20\n" + "376 640 602876667\n" + "4015 868 533609371\n" + "3330 152 408704870\n"
 					+ "1874 798 30417810\n" + "2 450 40706045\n" + "3344 840 801881841\n" + "2853 229 5235900\n"
 					+ "458 277 997429858\n" + "1689 948 981897272\n" + "4774 393 997361572\n" + "4237 750 294800444\n"
@@ -32,7 +34,7 @@ TEST(typical90_problem011, case4) {
 }
 
 TEST(typical90_problem011, case5) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "30\n" + "376 140 602876667\n" + "4015 368 533609371\n" + "3330 152 408704870\n"
 					+ "1874 298 30417810\n" + "2 450 40706045\n" + "3344 340 801881841\n" + "2853 229 5235900\n"
 					+ "458 277 997429858\n" + "1689 448 981897272\n" + "4774 393 997361572\n" + "4237 250 294800444\n"

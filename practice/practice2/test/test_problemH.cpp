@@ -4,12 +4,14 @@
 
 using namespace std;
 
-static const string COMMAND = "problemH";
+static_block {
+	COMMAND = "problemH";
+}
 
 TEST(practice2_problemH, case1) {
-	check(PATH + COMMAND, string("") + "3 2\n" + "1 4\n" + "2 5\n" + "0 6", string("") + "Yes\n" + "4\n" + "2\n" + "0");
+	check(string("") + "3 2\n" + "1 4\n" + "2 5\n" + "0 6", string("") + "Yes\n" + "4\n" + "2\n" + "0");
 }
 
 TEST(practice2_problemH, case2) {
-	check(PATH + COMMAND, string("") + "3 3\n" + "1 4\n" + "2 5\n" + "0 6", string("") + "No");
+	check(string("") + "3 3\n" + "1 4\n" + "2 5\n" + "0 6", string("") + "No");
 }

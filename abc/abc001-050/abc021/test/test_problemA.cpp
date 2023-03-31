@@ -4,10 +4,13 @@
 
 using namespace std;
 
-static const string COMMAND = "problemA";
+static_block
+{
+	COMMAND = "problemA";
+}
 
 void check(int n) {
-	Command cmd = execute(PATH + COMMAND, to_string(n));
+	Command cmd = execute(to_string(n));
 	int count = 0;
 	for (int i = 0; i < int(cmd.StdOut.size()); i++) {
 		if ('\n' == cmd.StdOut[i]) {

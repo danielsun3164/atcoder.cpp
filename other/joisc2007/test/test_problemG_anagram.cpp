@@ -4,12 +4,14 @@
 
 using namespace std;
 
-static const string COMMAND = "problemG_anagram";
+static_block {
+	COMMAND = "problemG_anagram";
+}
 
 TEST(joisc2007_problemG, case1) {
-	check(PATH + COMMAND, string("") + "HEART", string("") + "55");
+	check(string("") + "HEART", string("") + "55");
 }
 
 TEST(joisc2007_problemG, case2) {
-	check(PATH + COMMAND, string("") + "IOI", string("") + "2");
+	check(string("") + "IOI", string("") + "2");
 }
