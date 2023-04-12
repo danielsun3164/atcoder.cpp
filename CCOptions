@@ -1,0 +1,5 @@
+SRC_DIR=./src
+TEST_DIR=./test
+CC=g++
+CFLAGS=-Og -g -std=gnu++17 -Wall -Wextra -fsplit-stack
+LIBS=-lgtest -lgtest_main -lZipper -DDATA_DIR=\"$(DATA_DIR)\"
