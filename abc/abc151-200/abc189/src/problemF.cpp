@@ -27,7 +27,7 @@ int main() {
 	if (abs(g[0][0] - 1.0) < 0.00000000001) {
 		cout << -1 << endl;
 	} else {
-		cout << fixed << (g[0][1] / (1.0 - g[0][0])) << endl;
+		cout << setprecision(20) << (g[0][1] / (1.0 - g[0][0])) << endl;
 	}
 	return 0;
 }

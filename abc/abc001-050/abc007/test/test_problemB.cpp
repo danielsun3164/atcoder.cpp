@@ -11,16 +11,13 @@ static_block
 
 void check(string input) {
 	Command cmd = execute(input);
-	streambuf *orig = cin.rdbuf();
 	istringstream input_ss(cmd.StdOut);
-	cin.rdbuf(input_ss.rdbuf());
 	string output;
-	cin >> output;
+	input_ss >> output;
 	EXPECT_TRUE(output < input);
 	if (output >= input) {
 		cout << "output=" << output << ", input=" << input << endl;
 	}
-	cin.rdbuf(orig);
 }
 
 TEST(abc007_problemB, case1) {

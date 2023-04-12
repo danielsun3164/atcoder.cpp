@@ -4,7 +4,8 @@
 
 using namespace std;
 
-static_block {
+static_block
+{
 	COMMAND = "problemB_factorial";
 }
 

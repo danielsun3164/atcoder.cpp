@@ -1,6 +1,3 @@
-SRC_DIR=./src
-TEST_DIR=./test
-CC=g++
-CFLAGS=-Og -g -std=gnu++17 -Wall -Wextra
-LIBS=-lgtest -lgtest_main
+include ../../../CCOptions
+-include ../../../DataOptions
 INCLUDE=-I../../../include

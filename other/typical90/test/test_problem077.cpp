@@ -5,10 +5,6 @@
 using namespace std;
 using ll = long long;
 
-static_block {
-	COMMAND = "problem077";
-}
-
 static const vector<int> DX { 0, 1, 1, 0, -1, -1, -1, 0, 1 };
 static const vector<int> DY { 0, 0, 1, 1, 1, 0, -1, -1, -1 };
 
@@ -53,6 +49,9 @@ public:
 			close(infd[WRITE_END]);
 			throw runtime_error(strerror(errno));
 		}
+		// 出力が多いとフリーズしてしまう問題対応
+		// 事前に sysctl fs.pipe-max-size=4194304 を設定する必要があり
+		fcntl(outfd[WRITE_END], F_SETPIPE_SZ, PIPE_SIZE);
 
 		rc = pipe(errfd);
 		if (rc < 0) {
@@ -102,37 +101,35 @@ public:
 		}
 
 		int status = 0;
-		waitpid(pid, &status, 0);
+		waitpid(pid, &status, WNOHANG);
 
 		if (WIFEXITED(status)) {
 			ExitStatus = WEXITSTATUS(status);
 		}
 
-		istringstream out_input;
 		array<char, 256> buffer;
 		ssize_t bytes = 0;
-		if ((bytes = read(outfd[READ_END], buffer.data(), buffer.size())) < 0) {
-			throw runtime_error(strerror(errno));
+		while ((bytes = read(outfd[READ_END], buffer.data(), buffer.size())) > 0) {
+			StdOut.append(buffer.data(), bytes);
 		}
-
-		out_input.rdbuf()->pubsetbuf(buffer.data(), bytes);
+		istringstream output_ss(StdOut);
 		set<pair<ll, ll>> st, expected_st;
 		for (int i = 0; i < n; i++) {
 			expected_st.insert( { bx[i], by[i] });
 		}
 		string s;
-		out_input >> s;
+		output_ss >> s;
 		EXPECT_EQ("Yes", s);
 		for (int i = 0; i < n; i++) {
 			int d;
-			out_input >> d;
+			output_ss >> d;
 			st.insert( { ax[i] + DX[d] * t, ay[i] + DY[d] * t });
 		}
 		EXPECT_EQ(expected_st, st);
-		do {
-			bytes = read(errfd[READ_END], buffer.data(), buffer.size());
+
+		while ((bytes = read(errfd[READ_END], buffer.data(), buffer.size())) > 0) {
 			StdErr.append(buffer.data(), bytes);
-		} while (bytes > 0);
+		}
 
 		cleanup();
 	}
@@ -148,6 +145,35 @@ void check(int n, ll t, vector<ll> ax, vector<ll> ay, vector<ll> bx, vector<ll> 
 	cmd.bx = bx;
 	cmd.by = by;
 	cmd.execute();
+}
+
+void my_check(string input, string expected) {
+	istringstream expected_ss(expected);
+	string result;
+	expected_ss >> result;
+	if ("No" == result) {
+		check_from_file(input, expected);
+	} else {
+		istringstream input_ss(input);
+		int n;
+		ll t;
+		input_ss >> n >> t;
+		vector<ll> ax(n), ay(n), bx(n), by(n);
+		for (int i = 0; i < n; i++) {
+			input_ss >> ax[i] >> ay[i];
+		}
+		for (int i = 0; i < n; i++) {
+			input_ss >> bx[i] >> by[i];
+		}
+		check(n, t, ax, ay, bx, by);
+	}
+}
+
+static_block
+{
+	COMMAND = "problem077";
+	EXTERNAL = "typical90/077";
+	FUNC = &my_check;
 }
 
 TEST(typical90_problem077, case1) {

@@ -4,8 +4,10 @@
 
 using namespace std;
 
-static_block {
+static_block
+{
 	COMMAND = "problem021";
+	EXTERNAL = "typical90/021";
 }
 
 TEST(typical90_problem021, case1) {

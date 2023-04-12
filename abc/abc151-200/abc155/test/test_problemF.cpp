@@ -4,9 +4,77 @@
 
 using namespace std;
 
+void my_check(string input, string expected) {
+	istringstream expected_ss(expected);
+	int result;
+	expected_ss >> result;
+	if (-1 == result) {
+		check_from_file(input, expected);
+	} else {
+		istringstream input_ss(input);
+		int n, m;
+		input_ss >> n >> m;
+		vector<int> a(n), b(n), l(m), r(m);
+		map<int, int> mp, mp_diff;
+		for (int i = 0; i < n; i++) {
+			input_ss >> a[i] >> b[i];
+			mp[a[i]] = b[i];
+		}
+		for (int i = 0; i < m; i++) {
+			input_ss >> l[i] >> r[i];
+		}
+		pair<int, int> prev;
+		bool first = true;
+		for (pair<int, int> entry : mp) {
+			if (first) {
+				first = false;
+				mp_diff[entry.first] = entry.second;
+			} else {
+				mp_diff[entry.first] = entry.second - prev.second;
+			}
+			prev = entry;
+		}
+		Command cmd = execute(input);
+		istringstream output_ss(cmd.StdOut);
+		int k;
+		output_ss >> k;
+		for (int i = 0; i < k; i++) {
+			int c;
+			output_ss >> c;
+			EXPECT_TRUE((c >= 1) && (c <= m));
+			if (!((c >= 1) && (c <= m))) {
+				cout << "c=" << c << endl;
+			}
+			c--;
+			auto left = mp_diff.lower_bound(l[c]);
+			if (mp_diff.end() != left) {
+				left->second++;
+			}
+			auto right = mp_diff.upper_bound(r[c]);
+			if (mp_diff.end() != right) {
+				right->second--;
+			}
+		}
+		first = true;
+		for (pair<int, int> entry : mp_diff) {
+			if (first) {
+				first = false;
+			} else {
+				entry.second += prev.second;
+			}
+			prev = entry;
+		}
+		for (pair<int, int> entry : mp_diff) {
+			EXPECT_EQ(0, 1 & entry.second);
+		}
+	}
+}
+
 static_block
 {
 	COMMAND = "problemF";
+	EXTERNAL = "ABC155/F";
+	FUNC = &my_check;
 }
 
 TEST(abc155_problemF, case1) {

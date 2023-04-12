@@ -4,12 +4,6 @@
 
 using namespace std;
 
-static_block {
-	COMMAND = "problem018";
-}
-
-const static double TOLERANCE = 1E-7;
-
 class Command2 {
 public:
 	int ExitStatus = 0;
@@ -118,7 +112,7 @@ public:
 		}
 
 		int status = 0;
-		waitpid(pid, &status, 0);
+		waitpid(pid, &status, WNOHANG);
 
 		if (WIFEXITED(status)) {
 			ExitStatus = WEXITSTATUS(status);
@@ -126,10 +120,9 @@ public:
 
 		array<char, 256> buffer;
 		ssize_t bytes = 0;
-		do {
-			bytes = read(errfd[READ_END], buffer.data(), buffer.size());
+		while ((bytes = read(errfd[READ_END], buffer.data(), buffer.size())) > 0) {
 			StdErr.append(buffer.data(), bytes);
-		} while (bytes > 0);
+		}
 
 		cleanup();
 	}
@@ -143,6 +136,27 @@ void check(string input, int q, vector<int> e, vector<double> expected) {
 	cmd.e = e;
 	cmd.expected = expected;
 	cmd.execute();
+}
+
+void my_check(string input, string expected) {
+	istringstream input_ss(input), expected_ss(expected);
+	int t, l, x, y, q;
+	input_ss >> t >> l >> x >> y >> q;
+	vector<int> e(q);
+	vector<double> expected_v(q);
+	for (int i = 0; i < q; i++) {
+		input_ss >> e[i];
+		expected_ss >> expected_v[i];
+	}
+	check(to_string(t) + "\n" + to_string(l) + " " + to_string(x) + " " + to_string(y), q, e, expected_v);
+}
+
+static_block
+{
+	COMMAND = "problem018";
+	EXTERNAL = "typical90/018";
+	FUNC = &my_check;
+	TOLERANCE = 1E-7;
 }
 
 TEST(typical90_problem018, case1) {

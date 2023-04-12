@@ -4,10 +4,6 @@
 
 using namespace std;
 
-static_block {
-	COMMAND = "problem026";
-}
-
 class Command2 {
 public:
 	int ExitStatus = 0;
@@ -94,27 +90,26 @@ public:
 		}
 
 		int status = 0;
-		waitpid(pid, &status, 0);
+		waitpid(pid, &status, WNOHANG);
 
 		if (WIFEXITED(status)) {
 			ExitStatus = WEXITSTATUS(status);
 		}
 
-		istringstream out_input;
 		array<char, 256> buffer;
 		ssize_t bytes = 0;
+		while ((bytes = read(outfd[READ_END], buffer.data(), buffer.size())) > 0) {
+			StdOut.append(buffer.data(), bytes);
+		}
+		istringstream output_ss(StdOut);
 		vector<set<int>> edges(n + 1);
 		for (int i = 0; i < n - 1; i++) {
 			edges[a[i]].insert(b[i]);
 			edges[b[i]].insert(a[i]);
 		}
-		if ((bytes = read(outfd[READ_END], buffer.data(), buffer.size())) < 0) {
-			throw runtime_error(strerror(errno));
-		}
 		vector<int> c(n >> 1);
-		out_input.rdbuf()->pubsetbuf(buffer.data(), bytes);
 		for (int i = 0; i < (n >> 1); i++) {
-			out_input >> c[i];
+			output_ss >> c[i];
 			EXPECT_TRUE((c[i] >= 1) && (c[i] <= n));
 			if (!((c[i] >= 1) && (c[i] <= n))) {
 				cout << "Invalid input " << c[i] << endl;
@@ -127,10 +122,9 @@ public:
 			}
 		}
 
-		do {
-			bytes = read(errfd[READ_END], buffer.data(), buffer.size());
+		while ((bytes = read(errfd[READ_END], buffer.data(), buffer.size())) > 0) {
 			StdErr.append(buffer.data(), bytes);
-		} while (bytes > 0);
+		}
 
 		cleanup();
 	}
@@ -143,6 +137,23 @@ void check(int n, vector<int> a, vector<int> b) {
 	cmd.a = a;
 	cmd.b = b;
 	cmd.execute();
+}
+
+void my_check(string input, __attribute__((unused))        string expected) {
+	istringstream input_ss(input);
+	int n;
+	input_ss >> n;
+	vector<int> a(n - 1), b(n - 1);
+	for (int i = 0; i < n - 1; i++) {
+		input_ss >> a[i] >> b[i];
+	}
+}
+
+static_block
+{
+	COMMAND = "problem026";
+	EXTERNAL = "typical90/026";
+	FUNC = &my_check;
 }
 
 TEST(typical90_problem026, case1) {

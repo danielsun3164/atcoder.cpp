@@ -6,6 +6,7 @@ using namespace std;
 static_block
 {
 	COMMAND = "problemF";
+	EXTERNAL = "abc211/F";
 }
 
 TEST(abc211_problemF, case1) {

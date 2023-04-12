@@ -18,7 +18,7 @@ ll dfs(vector<int> &c, vector<vector<int>> &edges, vector<ll> &count, vector<ll>
 }
 
 int main() {
-	ll n;
+	int n;
 	cin >> n;
 	vector<int> c(n);
 	for (int i = 0; i < n; i++) {
@@ -34,7 +34,7 @@ int main() {
 		edges[a].emplace_back(b);
 		edges[b].emplace_back(a);
 	}
-	vector<ll> count(n, 0LL), answer(n, n * (ll) (n + 1) / 2);
+	vector<ll> count(n, 0LL), answer(n, n * ll(n + 1) / 2);
 	dfs(c, edges, count, answer, 0, -1);
 	for (int i = 0; i < n; i++) {
 		if (i != c[0]) {

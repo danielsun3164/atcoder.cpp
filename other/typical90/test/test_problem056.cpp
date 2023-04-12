@@ -4,8 +4,38 @@
 
 using namespace std;
 
-static_block {
+void my_check(string input, __attribute__((unused))  string expected) {
+	istringstream expected_ss(expected);
+	string result;
+	expected_ss >> result;
+	if ("Impossible" == result) {
+		check_from_file(input, expected);
+	} else {
+		istringstream input_ss(input);
+		int n, s;
+		input_ss >> n >> s;
+		vector<vector<int>> ab(n, vector<int>(2));
+		for (int i = 0; i < n; i++) {
+			input_ss >> ab[i][0] >> ab[i][1];
+		}
+		Command cmd = execute(input);
+		istringstream output_ss(cmd.StdOut);
+		string output;
+		output_ss >> output;
+		EXPECT_EQ(n, output.size());
+		int sum = 0;
+		for (int i = 0; i < n; i++) {
+			sum += ab[i][output[i] - 'A'];
+		}
+		EXPECT_EQ(s, sum);
+	}
+}
+
+static_block
+{
 	COMMAND = "problem056";
+	EXTERNAL = "typical90/056";
+	FUNC = &my_check;
 }
 
 TEST(typical90_problem056, case1) {

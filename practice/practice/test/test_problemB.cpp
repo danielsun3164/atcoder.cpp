@@ -4,7 +4,8 @@
 
 using namespace std;
 
-static_block {
+static_block
+{
 	COMMAND = "problemB";
 }
 
@@ -126,7 +127,7 @@ public:
 		}
 
 		int status = 0;
-		waitpid(pid, &status, 0);
+		waitpid(pid, &status, WNOHANG);
 
 		if (WIFEXITED(status)) {
 			ExitStatus = WEXITSTATUS(status);
@@ -134,10 +135,9 @@ public:
 
 		array<char, 256> buffer;
 		ssize_t bytes = 0;
-		do {
-			bytes = read(errfd[READ_END], buffer.data(), buffer.size());
+		while ((bytes = read(errfd[READ_END], buffer.data(), buffer.size())) > 0) {
 			StdErr.append(buffer.data(), bytes);
-		} while (bytes > 0);
+		}
 
 		cleanup();
 	}

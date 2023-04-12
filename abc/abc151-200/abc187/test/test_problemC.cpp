@@ -4,9 +4,37 @@
 
 using namespace std;
 
+const static string SATISFIABLE = "satisfiable";
+
+void my_check(string input, string expected) {
+	istringstream expected_ss(expected);
+	string result;
+	expected_ss >> result;
+	if (SATISFIABLE == result) {
+		check_from_file(input, expected);
+	} else {
+		istringstream input_ss(input);
+		int n;
+		input_ss >> n;
+		set<string> st;
+		for (int i = 0; i < n; i++) {
+			string s;
+			input_ss >> s;
+			st.insert(s);
+		}
+		Command cmd = execute(input);
+		istringstream output_ss(cmd.StdOut);
+		output_ss >> result;
+		EXPECT_NE(st.end(), st.find(result));
+		EXPECT_NE(st.end(), st.find("!" + result));
+	}
+}
+
 static_block
 {
 	COMMAND = "problemC";
+	EXTERNAL = "ABC187/C";
+	FUNC = &my_check;
 }
 
 TEST(abc187_problemC, case1) {

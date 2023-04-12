@@ -60,6 +60,6 @@ int main() {
 			ng = med;
 		}
 	}
-	cout << setprecision(10) << ok << endl;
+	cout << setprecision(20) << ok << endl;
 	return 0;
 }

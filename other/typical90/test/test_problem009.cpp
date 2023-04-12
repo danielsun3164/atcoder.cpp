@@ -4,23 +4,25 @@
 
 using namespace std;
 
-static_block {
+static_block
+{
 	COMMAND = "problem009";
+	EXTERNAL = "typical90/009";
+	TOLERANCE = 1E-7;
 }
-static const double TOLERANCE = 1E-7;
 
 TEST(typical90_problem009, case1) {
-	check_about(string("") + "3\n" + "0 0\n" + "0 10\n" + "10 10", 90, TOLERANCE);
+	check_about(string("") + "3\n" + "0 0\n" + "0 10\n" + "10 10", 90.0);
 }
 
 TEST(typical90_problem009, case2) {
-	check_about(string("") + "5\n" + "8 6\n" + "9 1\n" + "2 0\n" + "1 0\n" + "0 1", 171.869897645844, TOLERANCE);
+	check_about(string("") + "5\n" + "8 6\n" + "9 1\n" + "2 0\n" + "1 0\n" + "0 1", 171.869897645844);
 }
 
 TEST(typical90_problem009, case3) {
 	check_about(
 			string("") + "10\n" + "0 0\n" + "1 7\n" + "2 6\n" + "2 8\n" + "3 5\n" + "5 5\n" + "6 7\n" + "7 1\n"
-					+ "7 9\n" + "8 8", 180, TOLERANCE);
+					+ "7 9\n" + "8 8", 180.0);
 }
 
 TEST(typical90_problem009, case4) {
@@ -37,5 +39,5 @@ TEST(typical90_problem009, case4) {
 					+ "68833418 76340212\n" + "911399808 745744264\n" + "551223563 854507876\n" + "196296968 52144186\n"
 					+ "431165823 275217640\n" + "424495332 847375861\n" + "337078801 83054466\n"
 					+ "648322745 694789156\n" + "301518763 319851750\n" + "432518459 772897937\n"
-					+ "630628124 581390864\n" + "313132255 350770227", 179.9834340684232, TOLERANCE);
+					+ "630628124 581390864\n" + "313132255 350770227", 179.9834340684232);
 }

@@ -242,8 +242,8 @@ clean:
 	make -C $(ABC031) clean
 	make -C $(ABC032) clean
 	make -C $(ABC033) clean
-#	make -C $(ABC034) clean
-#	make -C $(ABC035) clean
+	make -C $(ABC034) clean
+	make -C $(ABC035) clean
 #	make -C $(ABC036) clean
 #	make -C $(ABC037) clean
 #	make -C $(ABC038) clean
