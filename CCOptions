@@ -1,5 +1,5 @@
 SRC_DIR=./src
 TEST_DIR=./test
 CC=g++
-CFLAGS=-Og -g -std=gnu++17 -Wall -Wextra -fsplit-stack
+CFLAGS=-Og -g -std=gnu++20 -Wall -Wextra -mtune=native -march=native -lgmpxx -lgmp -fconstexpr-depth=2147483647 -fconstexpr-loop-limit=2147483647 -fconstexpr-ops-limit=2147483647   
 LIBS=-lgtest -lgtest_main -lZipper -DDATA_DIR=\"$(DATA_DIR)\"
