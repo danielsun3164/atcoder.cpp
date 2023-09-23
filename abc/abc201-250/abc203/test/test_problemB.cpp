@@ -3,12 +3,16 @@
 #include <command.h>
 using namespace std;
 
-static const string COMMAND = "problemB";
+static_block
+{
+	COMMAND = "problemB";
+	EXTERNAL = "abc203/B";
+}
 
 TEST(abc203_problemB, case1) {
-	check(PATH + COMMAND, string("") + "1 2", string("") + "203");
+	check(string("") + "1 2", string("") + "203");
 }
 
 TEST(abc203_problemB, case2) {
-	check(PATH + COMMAND, string("") + "3 3", string("") + "1818");
+	check(string("") + "3 3", string("") + "1818");
 }

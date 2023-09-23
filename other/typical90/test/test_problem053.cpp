@@ -3,8 +3,7 @@
 #include <command.h>
 
 using namespace std;
-
-static const string COMMAND = "problem053";
+using ll = long long;
 
 const char QUESTION = '?';
 const char ANSWER = '!';
@@ -125,7 +124,7 @@ public:
 		}
 
 		int status = 0;
-		waitpid(pid, &status, 0);
+		waitpid(pid, &status, WNOHANG);
 
 		if (WIFEXITED(status)) {
 			ExitStatus = WEXITSTATUS(status);
@@ -133,10 +132,9 @@ public:
 
 		array<char, 256> buffer;
 		ssize_t bytes = 0;
-		do {
-			bytes = read(errfd[READ_END], buffer.data(), buffer.size());
+		while ((bytes = read(errfd[READ_END], buffer.data(), buffer.size())) > 0) {
 			StdErr.append(buffer.data(), bytes);
-		} while (bytes > 0);
+		}
 
 		cleanup();
 	}
@@ -148,6 +146,59 @@ void check(vector<vector<int>> data) {
 	cmd.Command = PATH + COMMAND;
 	cmd.data = data;
 	cmd.execute();
+}
+
+const static int MAX_VALUE = 1'000'000'001;
+
+void my_check(string input, __attribute__((unused))      string expected) {
+	istringstream input_ss(input);
+	int t;
+	input_ss >> t;
+	vector<vector<int>> data(t);
+	for (int i = 0; i < t; i++) {
+		string s;
+		input_ss >> s;
+		if ("deterministic-judge" == s) {
+			int n;
+			input_ss >> n;
+			data[i].resize(n);
+			for (int j = 0; j < n; j++) {
+				input_ss >> data[i][j];
+			}
+		} else {
+			int n, r;
+			ll seed;
+			input_ss >> n >> r >> seed;
+			set<int> st;
+			srand(seed);
+			int mx = MAX_VALUE;
+			while (int(st.size()) < r) {
+				int rd = rand();
+				if (rd < mx) {
+					st.insert(rd);
+				}
+			}
+			data[i].reserve(n);
+			copy(st.begin(), st.end(), back_inserter(data[i]));
+			mx = *st.rbegin();
+			st.clear();
+			while (int(st.size()) < n - r) {
+				int rd = rand();
+				if (rd < mx) {
+					st.insert(rd);
+				}
+			}
+			copy(st.rbegin(), st.rend(), back_inserter(data[i]));
+		}
+	}
+	check(data);
+}
+
+static_block
+{
+	COMMAND = "problem053";
+	EXTERNAL = "typical90/053";
+	FUNC = &my_check;
 }
 
 TEST(practice_problem053, case1) {

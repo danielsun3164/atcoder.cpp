@@ -4,20 +4,23 @@
 
 using namespace std;
 
-static const string COMMAND = "problemI";
+static_block
+{
+	COMMAND = "problemI";
+}
 
 TEST(practice2_problemI, case1) {
-	check(PATH + COMMAND, string("") + "abcbcba", string("") + "21");
+	check(string("") + "abcbcba", string("") + "21");
 }
 
 TEST(practice2_problemI, case2) {
-	check(PATH + COMMAND, string("") + "mississippi", string("") + "53");
+	check(string("") + "mississippi", string("") + "53");
 }
 
 TEST(practice2_problemI, case3) {
-	check(PATH + COMMAND, string("") + "ababacaca", string("") + "33");
+	check(string("") + "ababacaca", string("") + "33");
 }
 
 TEST(practice2_problemI, case4) {
-	check(PATH + COMMAND, string("") + "aaaaa", string("") + "5");
+	check(string("") + "aaaaa", string("") + "5");
 }

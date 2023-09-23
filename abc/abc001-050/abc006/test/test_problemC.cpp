@@ -4,16 +4,17 @@
 
 using namespace std;
 
-static const string COMMAND = "problemC";
+static_block
+{
+	COMMAND = "problemC";
+}
 
 void check(int n, int m) {
 	string input = to_string(n) + " " + to_string(m);
-	Command cmd = execute(PATH + COMMAND, input);
-	streambuf *orig = cin.rdbuf();
+	Command cmd = execute(input);
 	istringstream input_ss(cmd.StdOut);
-	cin.rdbuf(input_ss.rdbuf());
 	int a, b, c;
-	cin >> a >> b >> c;
+	input_ss >> a >> b >> c;
 	EXPECT_EQ(n, a + b + c);
 	if (n != a + b + c) {
 		cout << n << "!=" << a << "+" << b << "+" << c << endl;
@@ -22,7 +23,6 @@ void check(int n, int m) {
 	if (m != 2 * a + 3 * b + 4 * c) {
 		cout << m << "!=2x" << a << "+3x" << b << "+4x" << c << endl;
 	}
-	cin.rdbuf(orig);
 }
 
 TEST(abc006_problemC, case1) {
@@ -34,5 +34,5 @@ TEST(abc006_problemC, case2) {
 }
 
 TEST(abc006_problemC, case3) {
-	check(PATH + COMMAND, string("") + "10 41", string("") + "-1 -1 -1");
+	check(string("") + "10 41", string("") + "-1 -1 -1");
 }

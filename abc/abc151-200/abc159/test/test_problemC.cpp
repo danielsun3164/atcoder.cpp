@@ -4,13 +4,17 @@
 
 using namespace std;
 
-static const string COMMAND = "problemC";
-static const double TOLERANCE = 1E-6;
+static_block
+{
+	COMMAND = "problemC";
+	EXTERNAL = "ABC159/C";
+	TOLERANCE = 1E-6;
+}
 
 TEST(abc159_problemC, case1) {
-	check_about(PATH + COMMAND, string("") + "3", 1.0, TOLERANCE);
+	check_about(string("") + "3", 1.0);
 }
 
 TEST(abc159_problemC, case2) {
-	check_about(PATH + COMMAND, string("") + "999", 36926037.0, TOLERANCE);
+	check_about(string("") + "999", 36926037.0);
 }

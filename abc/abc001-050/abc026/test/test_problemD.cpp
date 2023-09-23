@@ -4,8 +4,11 @@
 
 using namespace std;
 
-static const string COMMAND = "problemD";
-static const double TOLERANCE = 1E-6;
+static_block
+{
+	COMMAND = "problemD";
+	TOLERANCE = 1E-6;
+}
 static const double EXPECTED = 100.0;
 
 double f(int a, int b, int c, double t) {
@@ -14,12 +17,10 @@ double f(int a, int b, int c, double t) {
 
 void check(int a, int b, int c) {
 	string input = to_string(a) + " " + to_string(b) + " " + to_string(c);
-	Command cmd = execute(PATH + COMMAND, input);
-	streambuf *orig = cin.rdbuf();
+	Command cmd = execute(input);
 	istringstream input_ss(cmd.StdOut);
-	cin.rdbuf(input_ss.rdbuf());
 	double output;
-	cin >> output;
+	input_ss >> output;
 	double fn = f(a, b, c, output);
 	EXPECT_TRUE(abs(fn - EXPECTED) < TOLERANCE);
 	if (abs(fn - EXPECTED) >= TOLERANCE) {
@@ -32,7 +33,6 @@ void check(int a, int b, int c) {
 		cout << "TOLERANCE" << endl;
 		cout << defaultfloat << TOLERANCE << endl;
 	}
-	cin.rdbuf(orig);
 }
 
 TEST(abc026_problemD, case1) {

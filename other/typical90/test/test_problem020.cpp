@@ -4,16 +4,20 @@
 
 using namespace std;
 
-static const string COMMAND = "problem020";
+static_block
+{
+	COMMAND = "problem020";
+	EXTERNAL = "typical90/020";
+}
 
 TEST(typical90_problem020, case1) {
-	check(PATH + COMMAND, string("") + "4 3 2", string("") + "Yes");
+	check(string("") + "4 3 2", string("") + "Yes");
 }
 
 TEST(typical90_problem020, case2) {
-	check(PATH + COMMAND, string("") + "16 3 2", string("") + "No");
+	check(string("") + "16 3 2", string("") + "No");
 }
 
 TEST(typical90_problem020, case3) {
-	check(PATH + COMMAND, string("") + "8 3 2", string("") + "No");
+	check(string("") + "8 3 2", string("") + "No");
 }

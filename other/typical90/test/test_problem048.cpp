@@ -4,18 +4,22 @@
 
 using namespace std;
 
-static const string COMMAND = "problem048";
+static_block
+{
+	COMMAND = "problem048";
+	EXTERNAL = "typical90/048";
+}
 
 TEST(typical90_problem048, case1) {
-	check(PATH + COMMAND, string("") + "4 3\n" + "4 3\n" + "9 5\n" + "15 8\n" + "8 6", string("") + "21");
+	check(string("") + "4 3\n" + "4 3\n" + "9 5\n" + "15 8\n" + "8 6", string("") + "21");
 }
 
 TEST(typical90_problem048, case2) {
-	check(PATH + COMMAND, string("") + "2 2\n" + "7 6\n" + "3 2", string("") + "8");
+	check(string("") + "2 2\n" + "7 6\n" + "3 2", string("") + "8");
 }
 
 TEST(typical90_problem048, case3) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "10 12\n" + "987753612 748826789\n" + "36950727 36005047\n" + "961239509 808587458\n"
 					+ "905633062 623962559\n" + "940964276 685396947\n" + "959540552 928301562\n"
 					+ "60467784 37828572\n" + "953685176 482123245\n" + "87983282 66762644\n" + "912605260 709048491",

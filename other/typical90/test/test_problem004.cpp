@@ -4,25 +4,28 @@
 
 using namespace std;
 
-static const string COMMAND = "problem004";
+static_block
+{
+	COMMAND = "problem004";
+	EXTERNAL = "typical90/004";
+}
 
 TEST(typical90_problem004, case1) {
-	check(PATH + COMMAND, string("") + "3 3\n" + "1 1 1\n" + "1 1 1\n" + "1 1 1",
-			string("") + "5 5 5\n" + "5 5 5\n" + "5 5 5");
+	check(string("") + "3 3\n" + "1 1 1\n" + "1 1 1\n" + "1 1 1", string("") + "5 5 5\n" + "5 5 5\n" + "5 5 5");
 }
 
 TEST(typical90_problem004, case2) {
-	check(PATH + COMMAND, string("") + "4 4\n" + "3 1 4 1\n" + "5 9 2 6\n" + "5 3 5 8\n" + "9 7 9 3",
+	check(string("") + "4 4\n" + "3 1 4 1\n" + "5 9 2 6\n" + "5 3 5 8\n" + "9 7 9 3",
 			string("") + "28 28 25 26\n" + "39 33 40 34\n" + "38 38 36 31\n" + "41 41 39 43");
 }
 
 TEST(typical90_problem004, case3) {
-	check(PATH + COMMAND, string("") + "2 10\n" + "31 41 59 26 53 58 97 93 23 84\n" + "62 64 33 83 27 95 2 88 41 97",
+	check(string("") + "2 10\n" + "31 41 59 26 53 58 97 93 23 84\n" + "62 64 33 83 27 95 2 88 41 97",
 			string("") + "627 629 598 648 592 660 567 653 606 662\n" + "623 633 651 618 645 650 689 685 615 676");
 }
 
 TEST(typical90_problem004, case4) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "10 10\n" + "83 86 77 65 93 85 86 92 99 71\n" + "62 77 90 59 63 76 90 76 72 86\n"
 					+ "61 68 67 79 82 80 62 73 67 85\n" + "79 52 72 58 69 67 93 56 61 92\n"
 					+ "79 73 71 69 84 87 98 74 65 70\n" + "63 76 91 80 56 73 62 70 96 81\n"

@@ -3,14 +3,18 @@
 #include <command.h>
 using namespace std;
 
-static const string COMMAND = "problemE";
+static_block
+{
+	COMMAND = "problemE";
+	EXTERNAL = "abc215/E";
+}
 
 TEST(abc215_problemE, case1) {
-	check(PATH + COMMAND, string("") + "4\n" + "BGBH", string("") + "13");
+	check(string("") + "4\n" + "BGBH", string("") + "13");
 }
 
 TEST(abc215_problemE, case2) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "100\n"
 					+ "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBIEIJEIJIJCGCCFGIEBIHFCGFBFAEJIEJAJJHHEBBBJJJGJJJCCCBAAADCEHIIFEHHBGF",
 			string("") + "330219020");

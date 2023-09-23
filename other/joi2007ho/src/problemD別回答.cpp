@@ -19,7 +19,7 @@ int main() {
 	int n, m;
 	cin >> n >> m;
 	vector<vector<int>> v(n);
-	bool exists[n][n];
+	vector<vector<bool>> exists(n, vector<bool>(n, false));
 
 	for (int i = 0; i < m; i++) {
 		int w, l;

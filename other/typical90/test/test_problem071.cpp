@@ -4,8 +4,6 @@
 
 using namespace std;
 
-static const string COMMAND = "problem071";
-
 class Command2 {
 public:
 	int ExitStatus = 0;
@@ -46,6 +44,9 @@ public:
 			close(infd[WRITE_END]);
 			throw runtime_error(strerror(errno));
 		}
+		// 出力が多いとフリーズしてしまう問題対応
+		// 事前に sysctl fs.pipe-max-size=4194304 を設定する必要があり
+		fcntl(outfd[WRITE_END], F_SETPIPE_SZ, PIPE_SIZE);
 
 		rc = pipe(errfd);
 		if (rc < 0) {
@@ -92,24 +93,23 @@ public:
 		}
 
 		int status = 0;
-		waitpid(pid, &status, 0);
+		waitpid(pid, &status, WNOHANG);
 
 		if (WIFEXITED(status)) {
 			ExitStatus = WEXITSTATUS(status);
 		}
 
-		istringstream out_input;
 		array<char, 256> buffer;
 		ssize_t bytes = 0;
-		if ((bytes = read(outfd[READ_END], buffer.data(), buffer.size())) < 0) {
-			throw runtime_error(strerror(errno));
+		while ((bytes = read(outfd[READ_END], buffer.data(), buffer.size())) > 0) {
+			StdOut.append(buffer.data(), bytes);
 		}
+		istringstream output_ss(StdOut);
 		while (k--) {
 			vector<int> p(n), idx(n + 1);
 			set<int> st;
-			out_input.rdbuf()->pubsetbuf(buffer.data(), bytes);
 			for (int i = 0; i < n; i++) {
-				out_input >> p[i];
+				output_ss >> p[i];
 				EXPECT_TRUE((p[i] >= 1) && (p[i] <= n));
 				EXPECT_EQ(st.end(), st.find(p[i]));
 				st.insert(p[i]);
@@ -123,10 +123,9 @@ public:
 			}
 		}
 
-		do {
-			bytes = read(errfd[READ_END], buffer.data(), buffer.size());
+		while ((bytes = read(errfd[READ_END], buffer.data(), buffer.size())) > 0) {
 			StdErr.append(buffer.data(), bytes);
-		} while (bytes > 0);
+		}
 
 		cleanup();
 	}
@@ -143,12 +142,37 @@ void check(int n, int m, int k, vector<int> a, vector<int> b) {
 	cmd.execute();
 }
 
+void my_check(string input, string expected) {
+	istringstream expected_ss(expected);
+	int result;
+	expected_ss >> result;
+	if (-1 == result) {
+		check_from_file(input, expected);
+	} else {
+		istringstream input_ss(input);
+		int n, m, k;
+		input_ss >> n >> m >> k;
+		vector<int> a(m), b(m);
+		for (int i = 0; i < m; i++) {
+			input_ss >> a[i] >> b[i];
+		}
+		check(n, m, k, a, b);
+	}
+}
+
+static_block
+{
+	COMMAND = "problem071";
+	EXTERNAL = "typical90/071";
+	FUNC = &my_check;
+}
+
 TEST(typical90_problem071, case1) {
 	check(5, 2, 3, vector<int> { 1, 3 }, vector<int> { 2, 4 });
 }
 
 TEST(typical90_problem071, case2) {
-	check(PATH + COMMAND, string("") + "5 2 1\n" + "1 3\n" + "3 1", string("") + "-1");
+	check(string("") + "5 2 1\n" + "1 3\n" + "3 1", string("") + "-1");
 }
 
 TEST(typical90_problem071, case3) {

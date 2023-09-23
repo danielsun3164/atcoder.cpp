@@ -4,8 +4,6 @@
 
 using namespace std;
 
-static const string COMMAND = "problem088";
-
 class Command2 {
 public:
 	int ExitStatus = 0;
@@ -46,6 +44,9 @@ public:
 			close(infd[WRITE_END]);
 			throw runtime_error(strerror(errno));
 		}
+		// 出力が多いとフリーズしてしまう問題対応
+		// 事前に sysctl fs.pipe-max-size=4194304 を設定する必要があり
+		fcntl(outfd[WRITE_END], F_SETPIPE_SZ, PIPE_SIZE);
 
 		rc = pipe(errfd);
 		if (rc < 0) {
@@ -96,36 +97,34 @@ public:
 		}
 
 		int status = 0;
-		waitpid(pid, &status, 0);
+		waitpid(pid, &status, WNOHANG);
 
 		if (WIFEXITED(status)) {
 			ExitStatus = WEXITSTATUS(status);
 		}
 
-		istringstream out_input;
 		array<char, 256> buffer;
 		ssize_t bytes = 0;
-		if ((bytes = read(outfd[READ_END], buffer.data(), buffer.size())) < 0) {
-			throw runtime_error(strerror(errno));
+		while ((bytes = read(outfd[READ_END], buffer.data(), buffer.size())) > 0) {
+			StdOut.append(buffer.data(), bytes);
 		}
-
-		out_input.rdbuf()->pubsetbuf(buffer.data(), bytes);
+		istringstream output_ss(StdOut);
 		int nb, nc, b_sum = 0, c_sum = 0;
 		set<int> b, c;
-		out_input >> nb;
+		output_ss >> nb;
 		EXPECT_TRUE(nb > 0);
 		for (int i = 0; i < nb; i++) {
 			int bi;
-			out_input >> bi;
+			output_ss >> bi;
 			EXPECT_EQ(b.end(), b.find(bi));
 			b.insert(bi);
 			b_sum += a[bi - 1];
 		}
-		out_input >> nc;
+		output_ss >> nc;
 		EXPECT_TRUE(nc > 0);
 		for (int i = 0; i < nc; i++) {
 			int ci;
-			out_input >> ci;
+			output_ss >> ci;
 			EXPECT_EQ(c.end(), c.find(ci));
 			c.insert(ci);
 			c_sum += a[ci - 1];
@@ -137,10 +136,9 @@ public:
 		}
 		EXPECT_EQ(b_sum, c_sum);
 
-		do {
-			bytes = read(errfd[READ_END], buffer.data(), buffer.size());
+		while ((bytes = read(errfd[READ_END], buffer.data(), buffer.size())) > 0) {
 			StdErr.append(buffer.data(), bytes);
-		} while (bytes > 0);
+		}
 
 		cleanup();
 	}
@@ -155,6 +153,28 @@ void check(int n, int q, vector<int> a, vector<int> x, vector<int> y) {
 	cmd.x = x;
 	cmd.y = y;
 	cmd.execute();
+}
+
+void my_check(string input, __attribute__((unused))        string expected) {
+	istringstream input_ss(input);
+	int n, q;
+	input_ss >> n >> q;
+	vector<int> a(n);
+	for (int i = 0; i < n; i++) {
+		input_ss >> a[i];
+	}
+	vector<int> x(q), y(q);
+	for (int i = 0; i < q; i++) {
+		input_ss >> x[i] >> y[i];
+	}
+	check(n, q, a, x, y);
+}
+
+static_block
+{
+	COMMAND = "problem088";
+	EXTERNAL = "typical90/088";
+	FUNC = &my_check;
 }
 
 TEST(typical90_problem088, case1) {

@@ -1,0 +1,2 @@
+# データファイルを格納するフォルダーを指定する
+DATA_DIR=/path/to/data/file/folder

@@ -4,16 +4,20 @@
 
 using namespace std;
 
-static const string COMMAND = "problemE";
+static_block
+{
+	COMMAND = "problemE";
+	EXTERNAL = "ABC158/E";
+}
 
 TEST(abc158_problemE, case1) {
-	check(PATH + COMMAND, string("") + "4 3\n" + "3543", string("") + "6");
+	check(string("") + "4 3\n" + "3543", string("") + "6");
 }
 
 TEST(abc158_problemE, case2) {
-	check(PATH + COMMAND, string("") + "4 2\n" + "2020", string("") + "10");
+	check(string("") + "4 2\n" + "2020", string("") + "10");
 }
 
 TEST(abc158_problemE, case3) {
-	check(PATH + COMMAND, string("") + "20 11\n" + "33883322005544116655", string("") + "68");
+	check(string("") + "20 11\n" + "33883322005544116655", string("") + "68");
 }

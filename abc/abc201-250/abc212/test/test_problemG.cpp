@@ -3,16 +3,20 @@
 #include <command.h>
 using namespace std;
 
-static const string COMMAND = "problemG";
+static_block
+{
+	COMMAND = "problemG";
+	EXTERNAL = "abc212/G";
+}
 
 TEST(abc212_problemG, case1) {
-	check(PATH + COMMAND, string("") + "3", string("") + "4");
+	check(string("") + "3", string("") + "4");
 }
 
 TEST(abc212_problemG, case2) {
-	check(PATH + COMMAND, string("") + "11", string("") + "64");
+	check(string("") + "11", string("") + "64");
 }
 
 TEST(abc212_problemG, case3) {
-	check(PATH + COMMAND, string("") + "998244353", string("") + "329133417");
+	check(string("") + "998244353", string("") + "329133417");
 }

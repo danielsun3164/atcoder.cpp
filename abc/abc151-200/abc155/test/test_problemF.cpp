@@ -4,24 +4,94 @@
 
 using namespace std;
 
-static const string COMMAND = "problemF";
+void my_check(string input, string expected) {
+	istringstream expected_ss(expected);
+	int result;
+	expected_ss >> result;
+	if (-1 == result) {
+		check_from_file(input, expected);
+	} else {
+		istringstream input_ss(input);
+		int n, m;
+		input_ss >> n >> m;
+		vector<int> a(n), b(n), l(m), r(m);
+		map<int, int> mp, mp_diff;
+		for (int i = 0; i < n; i++) {
+			input_ss >> a[i] >> b[i];
+			mp[a[i]] = b[i];
+		}
+		for (int i = 0; i < m; i++) {
+			input_ss >> l[i] >> r[i];
+		}
+		pair<int, int> prev;
+		bool first = true;
+		for (pair<int, int> entry : mp) {
+			if (first) {
+				first = false;
+				mp_diff[entry.first] = entry.second;
+			} else {
+				mp_diff[entry.first] = entry.second - prev.second;
+			}
+			prev = entry;
+		}
+		Command cmd = execute(input);
+		istringstream output_ss(cmd.StdOut);
+		int k;
+		output_ss >> k;
+		for (int i = 0; i < k; i++) {
+			int c;
+			output_ss >> c;
+			EXPECT_TRUE((c >= 1) && (c <= m));
+			if (!((c >= 1) && (c <= m))) {
+				cout << "c=" << c << endl;
+			}
+			c--;
+			auto left = mp_diff.lower_bound(l[c]);
+			if (mp_diff.end() != left) {
+				left->second++;
+			}
+			auto right = mp_diff.upper_bound(r[c]);
+			if (mp_diff.end() != right) {
+				right->second--;
+			}
+		}
+		first = true;
+		for (pair<int, int> entry : mp_diff) {
+			if (first) {
+				first = false;
+			} else {
+				entry.second += prev.second;
+			}
+			prev = entry;
+		}
+		for (pair<int, int> entry : mp_diff) {
+			EXPECT_EQ(0, 1 & entry.second);
+		}
+	}
+}
+
+static_block
+{
+	COMMAND = "problemF";
+	EXTERNAL = "ABC155/F";
+	FUNC = &my_check;
+}
 
 TEST(abc155_problemF, case1) {
-	check(PATH + COMMAND, string("") + "3 4\n" + "5 1\n" + "10 1\n" + "8 0\n" + "1 10\n" + "4 5\n" + "6 7\n" + "8 9",
+	check(string("") + "3 4\n" + "5 1\n" + "10 1\n" + "8 0\n" + "1 10\n" + "4 5\n" + "6 7\n" + "8 9",
 			string("") + "2\n" + "1 4");
 }
 
 TEST(abc155_problemF, case2) {
-	check(PATH + COMMAND, string("") + "4 2\n" + "2 0\n" + "3 1\n" + "5 1\n" + "7 0\n" + "1 4\n" + "4 7",
-			string("") + "-1");
+	check(string("") + "4 2\n" + "2 0\n" + "3 1\n" + "5 1\n" + "7 0\n" + "1 4\n" + "4 7", string("") + "-1");
 }
 
 TEST(abc155_problemF, case3) {
-	check(PATH + COMMAND, string("") + "3 2\n" + "5 0\n" + "10 0\n" + "8 0\n" + "6 9\n" + "66 99", string("") + "0\n");
+	check(string("") + "3 2\n" + "5 0\n" + "10 0\n" + "8 0\n" + "6 9\n" + "66 99", string("") + "0\n");
 }
 
 TEST(abc155_problemF, case4) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "12 20\n" + "536130100 1\n" + "150049660 1\n" + "79245447 1\n" + "132551741 0\n"
 					+ "89484841 1\n" + "328129089 0\n" + "623467741 0\n" + "248785745 0\n" + "421631475 0\n"
 					+ "498966877 0\n" + "43768791 1\n" + "112237273 0\n" + "21499042 142460201\n"

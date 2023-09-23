@@ -4,24 +4,28 @@
 
 using namespace std;
 
-static const string COMMAND = "problem023";
+static_block
+{
+	COMMAND = "problem023";
+	EXTERNAL = "typical90/023";
+}
 
 TEST(typical90_problem023, case1) {
-	check(PATH + COMMAND, string("") + "1 3\n" + "...", string("") + "5");
+	check(string("") + "1 3\n" + "...", string("") + "5");
 }
 
 TEST(typical90_problem023, case2) {
-	check(PATH + COMMAND, string("") + "3 3\n" + ".#.\n" + "#..\n" + ".##", string("") + "13");
+	check(string("") + "3 3\n" + ".#.\n" + "#..\n" + ".##", string("") + "13");
 }
 
 TEST(typical90_problem023, case3) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "8 9\n" + "######.##\n" + "####..##.\n" + "..#...#..\n" + "###...###\n" + "#....##.#\n"
 					+ ".##......\n" + "#.####..#\n" + "#.#######", string("") + "273768");
 }
 
 TEST(typical90_problem023, case4) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "17 17\n" + ".####...#.....#.#\n" + ".#....#.#####...#\n" + "#...##.##...#..##\n"
 					+ "..#..####..#...##\n" + ".#..#..#.#.##...#\n" + ".#.#.#...#.##..#.\n" + "#...#..#..##..###\n"
 					+ "###.#..###..###..\n" + "...#.##.##.#....#\n" + "..####....#.#...#\n" + ".##...##.#.#...#.\n"
@@ -30,7 +34,7 @@ TEST(typical90_problem023, case4) {
 }
 
 TEST(typical90_problem023, case5) {
-	check(PATH + COMMAND,
+	check(
 			string("") + "22 18\n" + ".##.##.#.#.#...##.\n" + "####.#..###.#.#..#\n" + "#####.##...##.###.\n"
 					+ "...#.#.#.##.##.###\n" + "..#.##.#.#....#...\n" + "#.###.##....###..#\n" + "....#####...#...#.\n"
 					+ ".#..##..#..###....\n" + "....#..##.#.#..#.#\n" + "###.#.....#..##.#.\n" + "#..#..#.#.##..###.\n"

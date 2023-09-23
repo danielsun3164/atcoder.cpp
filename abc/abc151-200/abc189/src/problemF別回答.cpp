@@ -2,7 +2,7 @@
 using namespace std;
 
 const double INF = 8e10;
-const double TOLERANCE = 1E-3;
+const double TOLERANCE = 1E-5;
 
 // 解法2 二分探索 の実装
 int main() {
@@ -35,7 +35,7 @@ int main() {
 	if (INF == right) {
 		cout << -1 << endl;
 	} else {
-		cout << fixed << right << endl;
+		cout << setprecision(20) << right << endl;
 	}
 	return 0;
 }

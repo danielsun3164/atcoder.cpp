@@ -4,18 +4,22 @@
 
 using namespace std;
 
-static const string COMMAND = "problemE";
+static_block
+{
+	COMMAND = "problemE";
+	EXTERNAL = "ABC155/E";
+}
 
 TEST(abc155_problemE, case1) {
-	check(PATH + COMMAND, string("") + "36", string("") + "8");
+	check(string("") + "36", string("") + "8");
 }
 
 TEST(abc155_problemE, case2) {
-	check(PATH + COMMAND, string("") + "91", string("") + "3");
+	check(string("") + "91", string("") + "3");
 }
 
 TEST(abc155_problemE, case3) {
-	check(PATH + COMMAND,
+	check(
 			string("")
 					+ "314159265358979323846264338327950288419716939937551058209749445923078164062862089986280348253421170",
 			string("") + "243");

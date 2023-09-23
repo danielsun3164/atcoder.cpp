@@ -4,16 +4,20 @@
 
 using namespace std;
 
-static const string COMMAND = "problemB";
+static_block
+{
+	COMMAND = "problemB";
+	EXTERNAL = "ABC154/B";
+}
 
 TEST(abc154_problemB, case1) {
-	check(PATH + COMMAND, string("") + "sardine", string("") + "xxxxxxx");
+	check(string("") + "sardine", string("") + "xxxxxxx");
 }
 
 TEST(abc154_problemB, case2) {
-	check(PATH + COMMAND, string("") + "xxxx", string("") + "xxxx");
+	check(string("") + "xxxx", string("") + "xxxx");
 }
 
 TEST(abc154_problemB, case3) {
-	check(PATH + COMMAND, string("") + "gone", string("") + "xxxx");
+	check(string("") + "gone", string("") + "xxxx");
 }

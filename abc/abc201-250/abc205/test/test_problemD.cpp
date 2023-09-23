@@ -3,12 +3,16 @@
 #include <command.h>
 using namespace std;
 
-static const string COMMAND = "problemD";
+static_block
+{
+	COMMAND = "problemD";
+	EXTERNAL = "abc205/D";
+}
 
 TEST(abc205_problemD, case1) {
-	check(PATH + COMMAND, string("") + "4 3\n" + "3 5 6 7\n" + "2\n" + "5\n" + "3", string("") + "2\n" + "9\n" + "4");
+	check(string("") + "4 3\n" + "3 5 6 7\n" + "2\n" + "5\n" + "3", string("") + "2\n" + "9\n" + "4");
 }
 
 TEST(abc205_problemD, case2) {
-	check(PATH + COMMAND, string("") + "5 2\n" + "1 2 3 4 5\n" + "1\n" + "10", string("") + "6\n" + "15");
+	check(string("") + "5 2\n" + "1 2 3 4 5\n" + "1\n" + "10", string("") + "6\n" + "15");
 }
