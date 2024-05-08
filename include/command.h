@@ -17,6 +17,7 @@ const static char SLASH = '/';
 const static string IN_NAME = "in";
 const static string OUT_NAME = "out";
 const static int PIPE_SIZE = 4'194'304;
+const static int DOUBLE_DIGITS = 50;
 
 class Command {
 public:
@@ -157,22 +158,23 @@ void check(string input, Args ... args) {
 
 void check_about(string input, double expected) {
 	EXPECT_TRUE(TOLERANCE > 0.0);
-	if (0.0 == TOLERANCE) {
-		cout << "TOLERANCE is 0.0" << endl;
-		return;
+	double tolerance = TOLERANCE, max_value = TOLERANCE * pow(2.0, DOUBLE_DIGITS);
+	while (max_value < expected) {
+		max_value *= 2.0;
+		tolerance *= 2.0;
 	}
 	Command cmd = execute(input + "\n");
 	istringstream output_ss(cmd.StdOut);
 	double output;
 	output_ss >> output;
-	EXPECT_TRUE(abs(output - expected) < TOLERANCE);
-	if (abs(output - expected) >= TOLERANCE) {
+	EXPECT_TRUE(abs(output - expected) < tolerance);
+	if (abs(output - expected) >= tolerance) {
 		cout << "Actual:" << endl;
 		cout << fixed << setprecision(10) << output << endl;
 		cout << "Expected:" << endl;
 		cout << fixed << setprecision(10) << expected << endl;
 		cout << "TOLERANCE" << endl;
-		cout << defaultfloat << TOLERANCE << endl;
+		cout << defaultfloat << tolerance << endl;
 	}
 }
 
