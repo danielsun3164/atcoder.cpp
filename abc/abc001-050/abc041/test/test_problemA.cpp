@@ -4,7 +4,9 @@
 
 using namespace std;
 
-static_block { COMMAND = "problemA"; }
+static_block {
+	COMMAND = "problemA";
+}
 
 TEST(abc041_problemA, case1) {
 	check(string("") + "atcoder\n" + "3", string("") + "c");

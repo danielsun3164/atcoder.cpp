@@ -4,9 +4,13 @@
 
 using namespace std;
 
-static_block { COMMAND = "problemB"; }
+static_block {
+	COMMAND = "problemB";
+}
 
-TEST(abc041_problemB, case1) { check(string("") + "2 3 4", string("") + "24"); }
+TEST(abc041_problemB, case1) {
+	check(string("") + "2 3 4", string("") + "24");
+}
 
 TEST(abc041_problemB, case2) {
 	check(string("") + "10000 1000 100", string("") + "1000000000");
