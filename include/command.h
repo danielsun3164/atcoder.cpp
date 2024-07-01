@@ -16,11 +16,11 @@ namespace fs = std::filesystem;
 const static char SLASH = '/';
 const static string IN_NAME = "in";
 const static string OUT_NAME = "out";
-const static int PIPE_SIZE = 4'194'304;
+const static int PIPE_SIZE = 8'388'608;
 const static int DOUBLE_DIGITS = 50;
 
 class Command {
-public:
+   public:
 	int ExitStatus = 0;
 	string Command;
 	string StdIn;
@@ -31,9 +31,9 @@ public:
 		const int READ_END = 0;
 		const int WRITE_END = 1;
 
-		int infd[2] = { 0, 0 };
-		int outfd[2] = { 0, 0 };
-		int errfd[2] = { 0, 0 };
+		int infd[2] = {0, 0};
+		int outfd[2] = {0, 0};
+		int errfd[2] = {0, 0};
 
 		auto cleanup = [&]() {
 			close(infd[READ_END]);
@@ -58,7 +58,7 @@ public:
 			throw runtime_error(strerror(errno));
 		}
 		// 出力が多いとフリーズしてしまう問題対応
-		// 事前に sysctl fs.pipe-max-size=4194304 を設定する必要があり
+		// 事前に sysctl fs.pipe-max-size=8388608 を設定する必要があり
 		fcntl(outfd[WRITE_END], F_SETPIPE_SZ, PIPE_SIZE);
 
 		rc = pipe(errfd);
@@ -72,25 +72,28 @@ public:
 		}
 
 		auto pid = fork();
-		if (pid > 0) { // PARENT
-			close(infd[READ_END]);	// Parent does not read from stdin
+		if (pid > 0) {				  // PARENT
+			close(infd[READ_END]);	  // Parent does not read from stdin
 			close(outfd[WRITE_END]);  // Parent does not write to stdout
 			close(errfd[WRITE_END]);  // Parent does not write to stderr
 
 			if (write(infd[WRITE_END], StdIn.data(), StdIn.size()) < 0) {
 				throw runtime_error(strerror(errno));
 			}
-			close(infd[WRITE_END]); // Done writing
-		} else if (pid == 0) { // CHILD
+			close(infd[WRITE_END]);	 // Done writing
+		} else if (pid == 0) {		 // CHILD
+			close(infd[WRITE_END]);	 // Child does not write to stdin
+			close(outfd[READ_END]);	 // Child does not read from stdout
+			close(errfd[READ_END]);	 // Child does not read from stderr
+
 			dup2(infd[READ_END], STDIN_FILENO);
 			dup2(outfd[WRITE_END], STDOUT_FILENO);
 			dup2(errfd[WRITE_END], STDERR_FILENO);
 
-			close(infd[WRITE_END]);   // Child does not write to stdin
-			close(outfd[READ_END]);   // Child does not read from stdout
-			close(errfd[READ_END]);   // Child does not read from stderr
-
 			execl("/bin/bash", "bash", "-c", Command.c_str(), nullptr);
+			close(infd[READ_END]);
+			close(outfd[WRITE_END]);
+			close(errfd[WRITE_END]);
 			exit(EXIT_SUCCESS);
 		}
 
@@ -105,11 +108,13 @@ public:
 
 		array<char, 256> buffer;
 		ssize_t bytes = 0;
-		while ((bytes = read(outfd[READ_END], buffer.data(), buffer.size())) > 0) {
+		while ((bytes = read(outfd[READ_END], buffer.data(), buffer.size())) >
+			   0) {
 			StdOut.append(buffer.data(), bytes);
 		}
 
-		while ((bytes = read(errfd[READ_END], buffer.data(), buffer.size())) > 0) {
+		while ((bytes = read(errfd[READ_END], buffer.data(), buffer.size())) >
+			   0) {
 			StdErr.append(buffer.data(), bytes);
 		}
 
@@ -138,14 +143,15 @@ void check(string input, string expected) {
 	EXPECT_EQ(expected + "\n", cmd.StdOut);
 }
 
-template<typename ... Args>
-void check(string input, Args ... args) {
+template <typename... Args>
+void check(string input, Args... args) {
 	Command cmd = execute(input + "\n");
-	vector<string> outputs = { args... };
+	vector<string> outputs = {args...};
 	for (int i = 0; i < int(outputs.size()); i++) {
 		outputs[i].append("\n");
 	}
-	EXPECT_TRUE(find(outputs.begin(), outputs.end(), cmd.StdOut) != outputs.end());
+	EXPECT_TRUE(find(outputs.begin(), outputs.end(), cmd.StdOut) !=
+				outputs.end());
 	if (outputs.end() == find(outputs.begin(), outputs.end(), cmd.StdOut)) {
 		cout << "Actual:" << endl;
 		cout << cmd.StdOut << endl;
@@ -158,7 +164,8 @@ void check(string input, Args ... args) {
 
 void check_about(string input, double expected) {
 	EXPECT_TRUE(TOLERANCE > 0.0);
-	double tolerance = TOLERANCE, max_value = TOLERANCE * pow(2.0, DOUBLE_DIGITS);
+	double tolerance = TOLERANCE,
+		   max_value = TOLERANCE * pow(2.0, DOUBLE_DIGITS);
 	while (max_value < expected) {
 		max_value *= 2.0;
 		tolerance *= 2.0;
@@ -227,24 +234,26 @@ void check_file(string input_file, string output_file) {
 	output_fs.close();
 }
 
-class MyTest: public testing::Test {
-public:
-	MyTest(string input, string output, void (*func)(string, string)) :
-			input_(input), output_(output), func_(func) {
-	}
+class MyTest : public testing::Test {
+   public:
+	MyTest(string input, string output, void (*func)(string, string))
+		: input_(input), output_(output), func_(func) {}
 	void TestBody() override {
 		func_(input_, output_);
 	}
-private:
+
+   private:
 	string input_, output_;
 	void (*func_)(string, string);
 };
 
 bool starts_with(string &s, string prefix) {
-	return (s.size() < prefix.size()) ? false : equal(begin(prefix), end(prefix), begin(s));
+	return (s.size() < prefix.size())
+			   ? false
+			   : equal(begin(prefix), end(prefix), begin(s));
 }
 
-__attribute__((unused)) static void (*FUNC)(string, string)=&check_from_file;
+__attribute__((unused)) static void (*FUNC)(string, string) = &check_from_file;
 #ifdef DATA_DIR
 void registerMyTests() {
 	string data_folder = DATA_DIR;
@@ -255,12 +264,14 @@ void registerMyTests() {
 			fs::path current_pth(PATH);
 			string crrnt_path = canonical(current_pth).string();
 			size_t index = crrnt_path.find_last_of(SLASH);
-			string testname = crrnt_path.substr(index + 1, crrnt_path.length() - 1 - index);
+			string testname =
+				crrnt_path.substr(index + 1, crrnt_path.length() - 1 - index);
 			string folder, filename, path = "";
 			index = EXTERNAL.find_last_of(SLASH);
 			folder = EXTERNAL.substr(index + 1);
 			if (1 == cnt) {
-				filename = EXTERNAL.substr(0, EXTERNAL.find_last_of(SLASH, index));
+				filename =
+					EXTERNAL.substr(0, EXTERNAL.find_last_of(SLASH, index));
 			} else {
 				size_t index2 = index;
 				index = EXTERNAL.find_last_of(SLASH, index2 - 1);
@@ -272,7 +283,8 @@ void registerMyTests() {
 			}
 			fs::directory_entry zip_file;
 			for (fs::directory_entry entry : fs::directory_iterator(pth)) {
-				if (boost::iequals(entry.path().filename().string(), filename + ".zip")) {
+				if (boost::iequals(entry.path().filename().string(),
+								   filename + ".zip")) {
 					zip_file = entry;
 					break;
 				}
@@ -284,27 +296,34 @@ void registerMyTests() {
 				set<string> st;
 				// ファイル名とZipEntryのマップを作成
 				for (ZipEntry entry : entries) {
-					if ((SLASH != entry.name.back()) && starts_with(entry.name, folder + SLASH)) {
+					if ((SLASH != entry.name.back()) &&
+						starts_with(entry.name, folder + SLASH)) {
 						st.insert(entry.name);
 					}
 				}
 				for (string in_path : st) {
 					string out_path = in_path;
-					boost::replace_all(out_path, SLASH + IN_NAME + SLASH, SLASH + OUT_NAME + SLASH);
+					boost::replace_all(out_path, SLASH + IN_NAME + SLASH,
+									   SLASH + OUT_NAME + SLASH);
 					boost::replace_all(out_path, "." + IN_NAME, "." + OUT_NAME);
-					if (starts_with(in_path, folder + SLASH + IN_NAME + SLASH) && (st.end() != st.find(out_path))) {
-						string casename = in_path.substr(in_path.find_last_of(SLASH) + 1);
-						boost::replace_all(casename, "." + IN_NAME, "." + OUT_NAME);
+					if (starts_with(in_path,
+									folder + SLASH + IN_NAME + SLASH) &&
+						(st.end() != st.find(out_path))) {
+						string casename =
+							in_path.substr(in_path.find_last_of(SLASH) + 1);
+						boost::replace_all(casename, "." + IN_NAME,
+										   "." + OUT_NAME);
 						ostringstream input, output;
 						unzipper.extractEntryToStream(in_path, input);
 						unzipper.extractEntryToStream(out_path, output);
-						string input_str = input.str(), output_str = output.str();
-						testing::RegisterTest((testname + "_" + COMMAND + "_external").c_str(), casename.c_str(),
-								nullptr, input_str.c_str(),
-								__FILE__,
-								__LINE__, [=]() -> MyTest* {
-									return new MyTest(input_str, output_str, FUNC);
-								});
+						string input_str = input.str(),
+							   output_str = output.str();
+						testing::RegisterTest(
+							(testname + "_" + COMMAND + "_external").c_str(),
+							casename.c_str(), nullptr, input_str.c_str(),
+							__FILE__, __LINE__, [=]() -> MyTest * {
+								return new MyTest(input_str, output_str, FUNC);
+							});
 					}
 				}
 			}
@@ -312,7 +331,7 @@ void registerMyTests() {
 	}
 }
 
-#endif  //DATA_DIR
+#endif	// DATA_DIR
 
 int main(int argc, char **argv) {
 	testing::InitGoogleTest(&argc, argv);
@@ -327,4 +346,4 @@ int main(int argc, char **argv) {
 	return RUN_ALL_TESTS();
 }
 
-#endif  // COMMAND_H_
+#endif	// COMMAND_H_
