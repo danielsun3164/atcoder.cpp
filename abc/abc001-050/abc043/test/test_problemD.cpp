@@ -152,7 +152,7 @@ static_block {
 }
 
 TEST(abc043_problemD, case1) {
-	check(string("") + "needed", string("") + "2 3");
+	check("needed");
 }
 
 TEST(abc043_problemD, case2) {
