@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 using namespace std;
 
 const static string UNSOLVABLE = "UNSOLVABLE";
@@ -39,8 +39,7 @@ void my_check(string input, string expected) {
 	}
 }
 
-static_block
-{
+static_block {
 	COMMAND = "problemD";
 	EXTERNAL = "abc198/D";
 	FUNC = &my_check;

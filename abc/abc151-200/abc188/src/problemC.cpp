@@ -19,7 +19,7 @@ int main(void) {
 	for (int i = 0; i < (1 << n); i++) {
 		int v;
 		cin >> v;
-		a[i] = { v, i + 1 };
+		a[i] = {v, i + 1};
 	}
 	cout << solve(a) << endl;
 	return 0;

@@ -6,15 +6,14 @@ ll INF = LONG_LONG_MAX >> 1;
 
 bool check(vector<pair<ll, ll>> &g, int k, ll min_dist) {
 	int n = g.size();
-	vector<vector<int>> v = { { 0 } };
+	vector<vector<int>> v = {{0}};
 	for (int i = 1; i < n; i++) {
 		bool found = false;
 		for (vector<int> vi : v) {
 			ll m = 0LL;
 			for (int vii : vi) {
-				m = max(m,
-						(g[i].first - g[vii].first) * (g[i].first - g[vii].first)
-								+ (g[i].second - g[vii].second) * (g[i].second - g[vii].second));
+				m = max(m, (g[i].first - g[vii].first) * (g[i].first - g[vii].first) +
+							   (g[i].second - g[vii].second) * (g[i].second - g[vii].second));
 			}
 			if (m <= min_dist) {
 				vi.emplace_back(i);
@@ -23,7 +22,7 @@ bool check(vector<pair<ll, ll>> &g, int k, ll min_dist) {
 			}
 		}
 		if (!found) {
-			vector<int> vii = { i };
+			vector<int> vii = {i};
 			v.emplace_back(vii);
 			if (int(v.size()) > k) {
 				return false;

@@ -16,8 +16,8 @@ int main(void) {
 		dp[(i + 1) & 1] = dp[i & 1];
 		for (int j = 0; j <= x; j++) {
 			for (int k = 0; k <= y; k++) {
-				dp[(i + 1) & 1][min(x, j + a[i])][min(y, k + b[i])] = min(
-						dp[(i + 1) & 1][min(x, j + a[i])][min(y, k + b[i])], dp[i & 1][j][k] + 1);
+				dp[(i + 1) & 1][min(x, j + a[i])][min(y, k + b[i])] =
+					min(dp[(i + 1) & 1][min(x, j + a[i])][min(y, k + b[i])], dp[i & 1][j][k] + 1);
 			}
 		}
 	}

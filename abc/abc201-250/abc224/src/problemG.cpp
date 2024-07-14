@@ -15,11 +15,11 @@ int main(void) {
 		if (s <= t) {
 			x = min(x, t - s);
 		}
-		answer = min(answer, a * (x - 1) / 2.0 + (double) b * n / x);
+		answer = min(answer, a * (x - 1) / 2.0 + (double)b * n / x);
 	}
 
 	if (s <= t) {
-		answer = min(answer, (double) (t - s) * a);
+		answer = min(answer, (double)(t - s) * a);
 	}
 	cout << setprecision(20) << answer << endl;
 	return 0;

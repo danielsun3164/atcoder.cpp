@@ -15,7 +15,8 @@ int main(void) {
 			sets[0].insert(s);
 		}
 	}
-	set_intersection(sets[0].begin(), sets[0].end(), sets[1].begin(), sets[1].end(), inserter(r, r.end()));
+	set_intersection(sets[0].begin(), sets[0].end(), sets[1].begin(), sets[1].end(),
+					 inserter(r, r.end()));
 	if (r.empty()) {
 		cout << "satisfiable" << endl;
 	} else {

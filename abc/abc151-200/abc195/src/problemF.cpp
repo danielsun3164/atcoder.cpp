@@ -24,7 +24,7 @@ vector<ll> get_primes(int n) {
 int main() {
 	ll a, b;
 	cin >> a >> b;
-	int n = (int) (b - a);
+	int n = (int)(b - a);
 	vector<ll> primes = get_primes(n);
 	int m = int(primes.size());
 	vector<vector<ll>> dp(n + 2, vector<ll>(1 << m, 0LL));

@@ -11,8 +11,9 @@ bool calc(int n, int k, vector<double> &x, vector<double> &y, vector<double> &c,
 		double ri = time / c[i];
 		for (int j = i + 1; j < n; j++) {
 			double rj = time / c[j];
-			double a = 2 * (x[j] - x[i]), b = 2 * (y[j] - y[i]), cc = (x[i] + x[j]) * (x[i] - x[j])
-					+ (y[i] + y[j]) * (y[i] - y[j]) + (rj + ri) * (rj - ri);
+			double a = 2 * (x[j] - x[i]), b = 2 * (y[j] - y[i]),
+				   cc = (x[i] + x[j]) * (x[i] - x[j]) + (y[i] + y[j]) * (y[i] - y[j]) +
+						(rj + ri) * (rj - ri);
 			double d = abs(a * x[i] + b * y[i] + cc), e = a * a + b * b;
 			double f = e * ri * ri - d * d;
 			if (f >= 0.0) {

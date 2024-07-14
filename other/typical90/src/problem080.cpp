@@ -21,7 +21,8 @@ int main() {
 	ll answer = 0LL;
 	for (int i = 0; i <= n; i++) {
 		for (pair<ll, int> dpi : dp[i]) {
-			answer += ((1 & i) ? -1 : 1) * (1LL << (d - __builtin_popcountll(dpi.first))) * dpi.second;
+			answer +=
+				((1 & i) ? -1 : 1) * (1LL << (d - __builtin_popcountll(dpi.first))) * dpi.second;
 		}
 	}
 	cout << answer << endl;

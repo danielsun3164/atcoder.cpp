@@ -12,7 +12,7 @@ int main(void) {
 		cin >> a[i] >> b[i] >> c[i];
 		a[i]--;
 		b[i]--;
-		v.push_back( { c[i], i });
+		v.push_back({c[i], i});
 	}
 	sort(v.begin(), v.end());
 	atcoder::dsu d(n);

@@ -26,7 +26,8 @@ int main(void) {
 				if (-INF != dp[1 & i][j]) {
 					dp[1 & (i + 1)][j] = max(dp[1 & (i + 1)][j], dp[1 & i][j]);
 					if (j + w[i] <= p) {
-						dp[1 & (i + 1)][j + w[i]] = max(dp[1 & (i + 1)][j + w[i]], dp[1 & i][j] + v[i]);
+						dp[1 & (i + 1)][j + w[i]] =
+							max(dp[1 & (i + 1)][j + w[i]], dp[1 & i][j] + v[i]);
 					}
 				}
 			}
@@ -42,7 +43,8 @@ int main(void) {
 				if (INF != dp[1 & i][j]) {
 					dp[1 & (i + 1)][j] = min(dp[1 & (i + 1)][j], dp[1 & i][j]);
 					if (j + v[i] <= p) {
-						dp[1 & (i + 1)][j + v[i]] = min(dp[1 & (i + 1)][j + v[i]], dp[1 & i][j] + w[i]);
+						dp[1 & (i + 1)][j + v[i]] =
+							min(dp[1 & (i + 1)][j + v[i]], dp[1 & i][j] + w[i]);
 					}
 				}
 			}

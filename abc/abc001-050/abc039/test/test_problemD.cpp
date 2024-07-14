@@ -1,18 +1,17 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-static_block
-{
+static_block {
 	COMMAND = "problemD";
 }
 
 const static char BLACK = '#';
 const static char WHITE = '.';
-const static vector<int> XS { 1, 1, 1, 0, 0, -1, -1, -1 };
-const static vector<int> YS { -1, 0, 1, -1, 1, -1, 0, 1 };
+const static vector<int> XS{1, 1, 1, 0, 0, -1, -1, -1};
+const static vector<int> YS{-1, 0, 1, -1, 1, -1, 0, 1};
 
 vector<string> convert(vector<string> &t) {
 	int h = t.size(), w = t[0].size();
@@ -55,13 +54,14 @@ void check(int h, int w, vector<string> s) {
 }
 
 TEST(abc039_problemD, case1) {
-	check(4, 4, vector<string> { "##..", "##..", "..##", "..##" });
+	check(4, 4, vector<string>{"##..", "##..", "..##", "..##"});
 }
 
 TEST(abc039_problemD, case2) {
-	check(4, 4, vector<string> { "###.", "####", "..##", "..##" });
+	check(4, 4, vector<string>{"###.", "####", "..##", "..##"});
 }
 
 TEST(abc039_problemD, case3) {
-	check(string("") + "4 4\n" + "###.\n" + "##.#\n" + "..##\n" + "..##", string("") + "impossible");
+	check(string("") + "4 4\n" + "###.\n" + "##.#\n" + "..##\n" + "..##",
+		  string("") + "impossible");
 }

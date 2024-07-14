@@ -10,7 +10,7 @@ int main() {
 	queue<pair<int, int>> bfs;
 	for (int i = 0; i < n; i++) {
 		d[i][i] = 0;
-		bfs.push( { i, i });
+		bfs.push({i, i});
 	}
 	vector<vector<pair<int, int>>> edges(n);
 	for (int i = 0; i < m; i++) {
@@ -23,8 +23,8 @@ int main() {
 		if (a != b) {
 			edges[b].emplace_back(make_pair(a, c - 'a'));
 			d[a][b] = d[b][a] = 1;
-			bfs.push( { a, b });
-			bfs.push( { b, a });
+			bfs.push({a, b});
+			bfs.push({b, a});
 		}
 	}
 	while (!bfs.empty()) {
@@ -36,7 +36,7 @@ int main() {
 				int end = next.first;
 				if ((INF == d[start][end]) && (prev.second == next.second)) {
 					d[start][end] = d[state.first][state.second] + 2;
-					bfs.push( { start, end });
+					bfs.push({start, end});
 				}
 			}
 		}

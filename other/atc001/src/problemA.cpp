@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const vector<int> XS = { 1, -1, 0, 0 };
-const vector<int> YS = { 0, 0, 1, -1 };
+const vector<int> XS = {1, -1, 0, 0};
+const vector<int> YS = {0, 0, 1, -1};
 const char BLOCK = '#';
 const char START = 's';
 const char GOAL = 'g';

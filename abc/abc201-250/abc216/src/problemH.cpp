@@ -42,7 +42,8 @@ int main(void) {
 					continue;
 				}
 				int mem = ((1 << k) - 1 - ((1 << l) - 1)) & j;
-				dp[i][j + (1 << l)] += ((__builtin_popcount(mem) & 1) ? -1 : 1) * dp[i - 1][j] * binom(n, i - x[l]);
+				dp[i][j + (1 << l)] +=
+					((__builtin_popcount(mem) & 1) ? -1 : 1) * dp[i - 1][j] * binom(n, i - x[l]);
 			}
 			dp[i][j] += dp[i - 1][j];
 		}

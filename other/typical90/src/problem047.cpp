@@ -3,7 +3,7 @@
 using namespace std;
 using mint = atcoder::modint998244353;
 
-const static vector<char> COLORS = { 'R', 'G', 'B' };
+const static vector<char> COLORS = {'R', 'G', 'B'};
 const static int N = 3;
 const static mint B = 353;
 
@@ -50,7 +50,8 @@ int main() {
 	int answer = 0;
 	for (int k = -(n - 1); k < n; k++) {
 		for (int j = 0; j < N; j++) {
-			if (((k < 0) && (hs[1][-k] == ht2[j][0][n + k - 1])) || ((k >= 0) && (hs[0][n - k - 1] == ht2[j][1][k]))) {
+			if (((k < 0) && (hs[1][-k] == ht2[j][0][n + k - 1])) ||
+				((k >= 0) && (hs[0][n - k - 1] == ht2[j][1][k]))) {
 				answer++;
 			}
 		}

@@ -12,11 +12,9 @@ int main() {
 		int d, c;
 		ll s;
 		cin >> d >> c >> s;
-		v.emplace_back(make_tuple(d, c, s)); // @suppress("Invalid arguments")
+		v.emplace_back(make_tuple(d, c, s));  // @suppress("Invalid arguments")
 	}
-	sort(v.begin(), v.end(), [](auto a, auto b) {
-		return get<0>(a) < get<0>(b);
-	});
+	sort(v.begin(), v.end(), [](auto a, auto b) { return get<0>(a) < get<0>(b); });
 	vector<vector<ll>> dp(n + 1, vector<ll>(N, 0LL));
 	for (int i = 0; i < n; i++) {
 		int d, c;

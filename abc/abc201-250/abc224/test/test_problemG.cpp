@@ -1,10 +1,9 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 using namespace std;
 
-static_block
-{
+static_block {
 	COMMAND = "problemG";
 	EXTERNAL = "abc224/G";
 	TOLERANCE = 1E-5;
@@ -19,5 +18,6 @@ TEST(abc224_problemG, case2) {
 }
 
 TEST(abc224_problemG, case3) {
-	check_about(string("") + "1000000000 1000000000 1 1000000000 1000000000", 1000000000000000000.0);
+	check_about(string("") + "1000000000 1000000000 1 1000000000 1000000000",
+				1000000000000000000.0);
 }

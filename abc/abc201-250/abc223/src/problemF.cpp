@@ -9,7 +9,7 @@ pair<int, int> op(pair<int, int> a, pair<int, int> b) {
 }
 
 pair<int, int> e() {
-	return {0,0};
+	return {0, 0};
 }
 
 int main(void) {

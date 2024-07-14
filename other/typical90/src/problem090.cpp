@@ -7,11 +7,12 @@ using mint = atcoder::modint998244353;
 
 vector<mint> polynomial_inverse(vector<mint> &c, int l) {
 	int n = c.size();
-	vector<mint> a = { 1, 0 };
+	vector<mint> a = {1, 0};
 	int level = 0;
 	while ((1 << level) < l) {
 		int cs = min(2 << level, n);
-		vector<mint> p = convolution(a, vector<mint>(c.begin(), c.begin() + cs)); // @suppress("Symbol is not resolved")
+		vector<mint> p = convolution(
+			a, vector<mint>(c.begin(), c.begin() + cs));  // @suppress("Symbol is not resolved")
 		vector<mint> q(2 << level);
 		q[0] = 1;
 		for (int j = (1 << level); j < (2 << level); j++) {
@@ -30,7 +31,7 @@ int main() {
 	int k;
 	cin >> n >> k;
 	vector<vector<mint>> dp(k + 1);
-	dp[k] = { 1, 1, 1 };
+	dp[k] = {1, 1, 1};
 	for (int i = k - 1; i >= 1; i--) {
 		int limit = min(ll(k / i), n);
 		vector<mint> c(dp[i + 1].size());
@@ -41,7 +42,7 @@ int main() {
 		dp[i] = polynomial_inverse(c, limit + 2);
 	}
 	int s = min(ll(k), n);
-	vector<ll> track = { n + s + 1 };
+	vector<ll> track = {n + s + 1};
 	while (track.back() >= s + 1) {
 		track.emplace_back(track.back() >> 1);
 	}

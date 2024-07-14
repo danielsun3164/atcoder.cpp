@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int saikoro[] = { 1, 3, 2, 4, 5, 6 };
+int saikoro[] = {1, 3, 2, 4, 5, 6};
 
 void swap(int i, int j) {
 	int temp = saikoro[i];

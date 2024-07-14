@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 using namespace std;
 
-static map<char, int> DIRECTION = { { 'U', 0 }, { 'D', 1 }, { 'L', 2 }, { 'R', 3 } };
-const static vector<int> DX = { 0, 0, -1, 1 };
-const static vector<int> DY = { 1, -1, 0, 0 };
+static map<char, int> DIRECTION = {{'U', 0}, {'D', 1}, {'L', 2}, {'R', 3}};
+const static vector<int> DX = {0, 0, -1, 1};
+const static vector<int> DY = {1, -1, 0, 0};
 
-void my_check(string input, __attribute__((unused))        string expected) {
+void my_check(string input, __attribute__((unused)) string expected) {
 	istringstream input_ss(input);
 	int n, a, b;
 	input_ss >> n >> a >> b;
@@ -36,8 +36,7 @@ void my_check(string input, __attribute__((unused))        string expected) {
 	}
 }
 
-static_block
-{
+static_block {
 	COMMAND = "problemG";
 	EXTERNAL = "abc221/G";
 	FUNC = &my_check;

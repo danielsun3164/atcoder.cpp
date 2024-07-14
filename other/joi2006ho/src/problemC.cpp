@@ -4,7 +4,7 @@ using namespace std;
 vector<vector<int>> dfs(int max, int remain) {
 	if (0 == remain) {
 		vector<int> v;
-		vector<vector<int>> vs { v };
+		vector<vector<int>> vs{v};
 		return vs;
 	}
 	vector<vector<int>> r;

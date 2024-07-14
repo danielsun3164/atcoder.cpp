@@ -18,7 +18,7 @@ void add(int x) {
 		count += p.second;
 	}
 	total += x * count;
-	st.push_back( { x, count });
+	st.push_back({x, count});
 }
 
 int main() {

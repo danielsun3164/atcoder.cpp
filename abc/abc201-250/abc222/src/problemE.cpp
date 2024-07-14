@@ -34,8 +34,8 @@ int main(void) {
 		cin >> u >> v;
 		u--;
 		v--;
-		edges[u].push_back( { v, i });
-		edges[v].push_back( { u, i });
+		edges[u].push_back({v, i});
+		edges[v].push_back({u, i});
 	}
 	vector<int> counts(n - 1, 0);
 	for (int i = 0; i < m - 1; i++) {

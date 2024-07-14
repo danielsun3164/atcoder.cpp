@@ -2,7 +2,8 @@
 using namespace std;
 using ll = long long;
 
-ll dfs(vector<int> &c, vector<vector<int>> &edges, vector<ll> &count, vector<ll> &answer, int now, int prv) {
+ll dfs(vector<int> &c, vector<vector<int>> &edges, vector<ll> &count, vector<ll> &answer, int now,
+	   int prv) {
 	ll size = 1LL, bfr = count[c[now]];
 	for (int nxt : edges[now]) {
 		if (nxt != prv) {

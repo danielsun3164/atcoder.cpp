@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const vector<int> XS = { 1, -1, 0, 0 };
-const vector<int> YS = { 0, 0, 1, -1 };
+const vector<int> XS = {1, -1, 0, 0};
+const vector<int> YS = {0, 0, 1, -1};
 const char BLOCK = '#';
 const int INF = INT_MAX >> 1;
 
@@ -21,7 +21,7 @@ int main() {
 	dp[sx][sy] = 0;
 	int start = sx * c + sy;
 	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> que;
-	que.push( { 0, start });
+	que.push({0, start});
 	while (!que.empty()) {
 		pair<int, int> now = que.top();
 		que.pop();
@@ -35,7 +35,7 @@ int main() {
 			if ((nx >= 0) && (nx < r) && (ny >= 0) && (ny < c) && (BLOCK != s[nx][ny])) {
 				if (dp[nx][ny] > now.first + 1) {
 					dp[nx][ny] = now.first + 1;
-					que.push( { dp[nx][ny], next });
+					que.push({dp[nx][ny], next});
 				}
 			}
 		}

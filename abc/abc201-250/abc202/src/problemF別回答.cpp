@@ -11,11 +11,11 @@ struct Point {
 		y = ny;
 	}
 
-	bool operator <(const Point &p) const {
+	bool operator<(const Point &p) const {
 		return (x < p.x) || ((x == p.x) && (y < p.y));
 	}
 
-	Point operator -(const Point &p) const {
+	Point operator-(const Point &p) const {
 		return Point(x - p.x, y - p.y);
 	}
 };
@@ -44,9 +44,7 @@ int main() {
 			pts.emplace_back(p[i] - p[leftmost]);
 		}
 		// 最初の(0,0)を除いてソートを実施する
-		sort(pts.begin() + 1, pts.end(), [](auto a, auto b) {
-			return cross(a, b) > 0;
-		});
+		sort(pts.begin() + 1, pts.end(), [](auto a, auto b) { return cross(a, b) > 0; });
 		int len = pts.size();
 		vector<vector<int>> count(len, vector<int>(len, 0));
 		for (int i = 0; i < len; i++) {
@@ -67,7 +65,8 @@ int main() {
 				for (int k = 0; k < 2; k++) {
 					for (int l = j + 1; l < len; l++) {
 						if (cross(pts[j] - pts[i], pts[l] - pts[j]) > 0) {
-							dp[j][l][k ^ (1 & cross(pts[j], pts[l]))] += dp[i][j][k] * pow2[count[j][l]];
+							dp[j][l][k ^ (1 & cross(pts[j], pts[l]))] +=
+								dp[i][j][k] * pow2[count[j][l]];
 						}
 					}
 				}

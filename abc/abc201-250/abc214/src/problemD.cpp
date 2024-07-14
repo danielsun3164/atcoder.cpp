@@ -12,7 +12,7 @@ int main(void) {
 		cin >> u >> v >> edges[i].first;
 		u--;
 		v--;
-		edges[i].second = { u, v };
+		edges[i].second = {u, v};
 	}
 	sort(edges.begin(), edges.end());
 	ll ans = 0LL;

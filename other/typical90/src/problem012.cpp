@@ -2,8 +2,8 @@
 #include <atcoder/dsu>
 using namespace std;
 
-const vector<int> XS = { 0, 0, 1, -1 };
-const vector<int> YS = { 1, -1, 0, 0 };
+const vector<int> XS = {0, 0, 1, -1};
+const vector<int> YS = {1, -1, 0, 0};
 
 int main() {
 	int h, w;

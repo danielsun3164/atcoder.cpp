@@ -2,8 +2,7 @@
 using namespace std;
 using ll = long long;
 
-ll calc(vector<ll> &t, vector<int> &k, vector<vector<int>> &a,
-		vector<bool> &learned, int now) {
+ll calc(vector<ll> &t, vector<int> &k, vector<vector<int>> &a, vector<bool> &learned, int now) {
 	ll answer = t[now];
 	for (int ai : a[now]) {
 		if (!learned[ai]) {

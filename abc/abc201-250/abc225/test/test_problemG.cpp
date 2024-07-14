@@ -13,8 +13,7 @@ TEST(abc225_problemG, case1) {
 }
 
 TEST(abc225_problemG, case2) {
-	check(string("") + "3 3 100\n" + "1 1 1\n" + "1 1 1\n" + "1 1 1",
-		  string("") + "0");
+	check(string("") + "3 3 100\n" + "1 1 1\n" + "1 1 1\n" + "1 1 1", string("") + "0");
 }
 
 TEST(abc225_problemG, case3) {

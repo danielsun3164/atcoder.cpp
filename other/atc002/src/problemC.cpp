@@ -5,14 +5,14 @@ using ll = long long;
 /**
  * https://ei1333.github.io/luzhiled/snippets/dp/hu-tucker.html を参考に作成
  */
-template<typename Heap, typename T>
+template <typename Heap, typename T>
 T hu_tucker(vector<T> vs, T INF) {
 	int n = vs.size();
 	Heap heap;
-	vector<typename Heap::Node*> hs(n - 1, heap.makeheap());
+	vector<typename Heap::Node *> hs(n - 1, heap.makeheap());
 	vector<int> ls(n), rs(n);
 	vector<T> cs(n - 1);
-	using pi = pair< T, int >;
+	using pi = pair<T, int>;
 	priority_queue<pi, vector<pi>, greater<pi> > que;
 	for (int i = 0; i + 1 < n; i++) {
 		ls[i] = i - 1;
@@ -83,10 +83,10 @@ T hu_tucker(vector<T> vs, T INF) {
 	return ret;
 }
 
-template<typename T, typename E = T>
+template <typename T, typename E = T>
 struct SkewHeap {
-	using G = function< T(T, E) >;
-	using H = function< E(E, E) >;
+	using G = function<T(T, E)>;
+	using H = function<E(E, E)>;
 
 	struct Node {
 		T key;
@@ -98,20 +98,14 @@ struct SkewHeap {
 	const H h;
 	const bool rev;
 
-	SkewHeap(bool rev = false) :
-			g([](const T &a, const E &b) {
-				return a + b;
-			}),
-			h([](const E &a, const E &b) {
-				return a + b;
-			}), rev(rev) {
-	}
+	SkewHeap(bool rev = false)
+		: g([](const T &a, const E &b) { return a + b; }),
+		  h([](const E &a, const E &b) { return a + b; }),
+		  rev(rev) {}
 
-	SkewHeap(const G &g, const H &h, bool rev = false) :
-			g(g), h(h), rev(rev) {
-	}
+	SkewHeap(const G &g, const H &h, bool rev = false) : g(g), h(h), rev(rev) {}
 
-	Node* propagate(Node *t) {
+	Node *propagate(Node *t) {
 		if (t->lazy != 0) {
 			if (t->l) {
 				t->l->lazy = h(t->l->lazy, t->lazy);
@@ -125,7 +119,7 @@ struct SkewHeap {
 		return t;
 	}
 
-	Node* merge(Node *x, Node *y) {
+	Node *merge(Node *x, Node *y) {
 		if (!x || !y) {
 			return x ? x : y;
 		}
@@ -139,7 +133,7 @@ struct SkewHeap {
 	}
 
 	void push(Node *&root, const T &key) {
-		root = merge(root, new Node( { key, 0, nullptr, nullptr }));
+		root = merge(root, new Node({key, 0, nullptr, nullptr}));
 	}
 
 	T top(Node *root) {
@@ -165,7 +159,7 @@ struct SkewHeap {
 		}
 	}
 
-	Node* makeheap() {
+	Node *makeheap() {
 		return nullptr;
 	}
 };

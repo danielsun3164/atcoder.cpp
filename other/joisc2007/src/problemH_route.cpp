@@ -45,10 +45,8 @@ int main() {
 	for (int i = 1; i < n; i++) {
 		visited[i][0] = true;
 	}
-	auto compare = [](edge a, edge b) {
-		return b.cost < a.cost;
-	};
-	priority_queue<edge, vector<edge>, decltype(compare)> q { compare };
+	auto compare = [](edge a, edge b) { return b.cost < a.cost; };
+	priority_queue<edge, vector<edge>, decltype(compare)> q{compare};
 	q.push(edge(0, 0, 0));
 	while (!q.empty()) {
 		edge now = q.top();

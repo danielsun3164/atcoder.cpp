@@ -21,7 +21,7 @@ int main(void) {
 	vector<mint> ans(n, 0);
 	ans[0] = 1;
 	queue<pair<int, ll>> q;
-	q.push( { 0, 0LL });
+	q.push({0, 0LL});
 	while (!q.empty()) {
 		pair<int, ll> node = q.front();
 		q.pop();
@@ -31,7 +31,7 @@ int main(void) {
 				if (dp[next] > dp[now] + 1) {
 					dp[next] = dp[now] + 1;
 					ans[next] = ans[now];
-					q.push( { next, dp[next] });
+					q.push({next, dp[next]});
 				} else if (dp[next] == dp[now] + 1) {
 					ans[next] += ans[now];
 				}

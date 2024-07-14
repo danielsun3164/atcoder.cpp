@@ -25,9 +25,7 @@ int main() {
 	for (int i = 0; i < mw[0]; i++) {
 		t[i] = i;
 	}
-	sort(t.begin(), t.end(), [&mh](int a, int b) {
-		return mh[a] < mh[b];
-	});
+	sort(t.begin(), t.end(), [&mh](int a, int b) { return mh[a] < mh[b]; });
 	atcoder::fenwick_tree<int> fw(w + 1);
 	for (int ti : t) {
 		fw.add(ti, 1);

@@ -18,7 +18,7 @@ vector<pair<double, double>> input(int n) {
 		v[i].first = hypot(x[i], y[i]);
 		v[i].second = atan2(y[i], x[i]);
 	}
-	sort(v.begin(), v.end(), greater<pair<double, double>> { });
+	sort(v.begin(), v.end(), greater<pair<double, double>>{});
 	return v;
 }
 
@@ -38,9 +38,10 @@ bool check(vector<pair<double, double>> &s, vector<pair<double, double>> &t, dou
 		new_t[i].first = t[i].first;
 		new_t[i].second = (t[i].first < EPS) ? 0.0 : adjust(t[i].second + diff);
 	}
-	sort(new_t.begin(), new_t.end(), greater<pair<double, double>> { });
+	sort(new_t.begin(), new_t.end(), greater<pair<double, double>>{});
 	for (int i = 0; i < n; i++) {
-		if ((abs(s[i].first - new_t[i].first) >= EPS) || (abs(s[i].second - new_t[i].second) >= EPS)) {
+		if ((abs(s[i].first - new_t[i].first) >= EPS) ||
+			(abs(s[i].second - new_t[i].second) >= EPS)) {
 			return false;
 		}
 	}

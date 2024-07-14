@@ -17,7 +17,6 @@ TEST(abc041_problemC, case2) {
 }
 
 TEST(abc041_problemC, case3) {
-	check(string("") + "8\n" + "3 1 4 15 9 2 6 5", string("") + "4\n" + "5\n" +
-													   "7\n" + "8\n" + "3\n" +
-													   "1\n" + "6\n" + "2");
+	check(string("") + "8\n" + "3 1 4 15 9 2 6 5",
+		  string("") + "4\n" + "5\n" + "7\n" + "8\n" + "3\n" + "1\n" + "6\n" + "2");
 }

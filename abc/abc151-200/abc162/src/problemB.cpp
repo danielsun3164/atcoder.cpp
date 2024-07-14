@@ -3,7 +3,7 @@ using namespace std;
 using ll = long long;
 
 ll sum(int n) {
-	return n * (ll) (n + 1) / 2;
+	return n * (ll)(n + 1) / 2;
 }
 
 int main(void) {

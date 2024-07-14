@@ -9,8 +9,7 @@ static_block {
 }
 
 TEST(abc225_problemB, case1) {
-	check(string("") + "5\n" + "1 4\n" + "2 4\n" + "3 4\n" + "4 5",
-		  string("") + "Yes");
+	check(string("") + "5\n" + "1 4\n" + "2 4\n" + "3 4\n" + "4 5", string("") + "Yes");
 }
 
 TEST(abc225_problemB, case2) {
@@ -18,7 +17,7 @@ TEST(abc225_problemB, case2) {
 }
 
 TEST(abc225_problemB, case3) {
-	check(string("") + "10\n" + "9 10\n" + "3 10\n" + "4 10\n" + "8 10\n" +
-			  "1 10\n" + "2 10\n" + "7 10\n" + "6 10\n" + "5 10",
+	check(string("") + "10\n" + "9 10\n" + "3 10\n" + "4 10\n" + "8 10\n" + "1 10\n" + "2 10\n" +
+			  "7 10\n" + "6 10\n" + "5 10",
 		  string("") + "Yes");
 }

@@ -1,11 +1,11 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
 class Command2 {
-public:
+   public:
 	int ExitStatus = 0;
 	string Command;
 	string StdIn;
@@ -18,9 +18,9 @@ public:
 		const int READ_END = 0;
 		const int WRITE_END = 1;
 
-		int infd[2] = { 0, 0 };
-		int outfd[2] = { 0, 0 };
-		int errfd[2] = { 0, 0 };
+		int infd[2] = {0, 0};
+		int outfd[2] = {0, 0};
+		int errfd[2] = {0, 0};
 
 		auto cleanup = [&]() {
 			close(infd[READ_END]);
@@ -59,8 +59,8 @@ public:
 		}
 
 		auto pid = fork();
-		if (pid > 0) { // PARENT
-			close(infd[READ_END]);	// Parent does not read from stdin
+		if (pid > 0) {				  // PARENT
+			close(infd[READ_END]);	  // Parent does not read from stdin
 			close(outfd[WRITE_END]);  // Parent does not write to stdout
 			close(errfd[WRITE_END]);  // Parent does not write to stderr
 
@@ -76,15 +76,15 @@ public:
 				throw runtime_error(strerror(errno));
 			}
 
-			close(infd[WRITE_END]); // Done writing
-		} else if (pid == 0) { // CHILD
+			close(infd[WRITE_END]);	 // Done writing
+		} else if (pid == 0) {		 // CHILD
 			dup2(infd[READ_END], STDIN_FILENO);
 			dup2(outfd[WRITE_END], STDOUT_FILENO);
 			dup2(errfd[WRITE_END], STDERR_FILENO);
 
-			close(infd[WRITE_END]); // Child does not write to stdin
-			close(outfd[READ_END]); // Child does not read from stdout
-			close(errfd[READ_END]); // Child does not read from stderr
+			close(infd[WRITE_END]);	 // Child does not write to stdin
+			close(outfd[READ_END]);	 // Child does not read from stdout
+			close(errfd[READ_END]);	 // Child does not read from stderr
 
 			execl("/bin/bash", "bash", "-c", Command.c_str(), nullptr);
 			exit(EXIT_SUCCESS);
@@ -155,7 +155,7 @@ void check(int n, int q, vector<int> a, vector<int> x, vector<int> y) {
 	cmd.execute();
 }
 
-void my_check(string input, __attribute__((unused))        string expected) {
+void my_check(string input, __attribute__((unused)) string expected) {
 	istringstream input_ss(input);
 	int n, q;
 	input_ss >> n >> q;
@@ -170,18 +170,17 @@ void my_check(string input, __attribute__((unused))        string expected) {
 	check(n, q, a, x, y);
 }
 
-static_block
-{
+static_block {
 	COMMAND = "problem088";
 	EXTERNAL = "typical90/088";
 	FUNC = &my_check;
 }
 
 TEST(typical90_problem088, case1) {
-	check(5, 2, vector<int> { 3, 1, 3, 2, 3 }, vector<int> { 1, 1 }, vector<int> { 2, 4 });
+	check(5, 2, vector<int>{3, 1, 3, 2, 3}, vector<int>{1, 1}, vector<int>{2, 4});
 }
 
 TEST(typical90_problem088, case2) {
-	check(10, 10, vector<int> { 2, 5, 7, 8, 11, 10, 1, 88, 86, 50 }, vector<int> { 1, 1, 1, 1, 1, 5, 6, 2, 9, 7 },
-			vector<int> { 2, 3, 4, 5, 6, 10, 10, 3, 10, 8 });
+	check(10, 10, vector<int>{2, 5, 7, 8, 11, 10, 1, 88, 86, 50},
+		  vector<int>{1, 1, 1, 1, 1, 5, 6, 2, 9, 7}, vector<int>{2, 3, 4, 5, 6, 10, 10, 3, 10, 8});
 }

@@ -20,7 +20,7 @@ int main() {
 	p[0] = 0;
 	queue<pair<int, int>> q;
 	for (int gi : mp[0]) {
-		q.push( { gi, 1 });
+		q.push({gi, 1});
 	}
 	while (!q.empty()) {
 		pair<int, int> now = q.front();
@@ -32,7 +32,7 @@ int main() {
 					p[rij] = now.second;
 					for (int ng : mp[rij]) {
 						if (-1 == g[ng]) {
-							q.push( { ng, now.second + 1 });
+							q.push({ng, now.second + 1});
 						}
 					}
 				}

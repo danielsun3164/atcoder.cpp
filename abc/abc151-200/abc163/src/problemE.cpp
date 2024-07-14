@@ -20,7 +20,8 @@ int main(void) {
 		for (int j = 0; j <= i; j++) {
 			if (dp[i][j] >= 0) {
 				dp[i + 1][j + 1] = max(dp[i + 1][j + 1], dp[i][j] + a[i].first * abs(idx - j));
-				dp[i + 1][j] = max(dp[i + 1][j], dp[i][j] + a[i].first * abs(n - 1 - (i - j) - idx));
+				dp[i + 1][j] =
+					max(dp[i + 1][j], dp[i][j] + a[i].first * abs(n - 1 - (i - j) - idx));
 			}
 		}
 	}

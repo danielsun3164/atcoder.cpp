@@ -2,7 +2,7 @@
 using namespace std;
 
 const static char WILD_CARD = '@';
-const static set<char> WILD_CARD_SET = { 'a', 't', 'c', 'o', 'd', 'e', 'r', '@' };
+const static set<char> WILD_CARD_SET = {'a', 't', 'c', 'o', 'd', 'e', 'r', '@'};
 
 int main(void) {
 	string s, t;

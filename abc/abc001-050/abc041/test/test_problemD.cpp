@@ -13,8 +13,7 @@ TEST(abc041_problemD, case1) {
 }
 
 TEST(abc041_problemD, case2) {
-	check(string("") + "5 5\n" + "1 2\n" + "2 3\n" + "3 5\n" + "1 4\n" + "4 5",
-		  string("") + "3");
+	check(string("") + "5 5\n" + "1 2\n" + "2 3\n" + "3 5\n" + "1 4\n" + "4 5", string("") + "3");
 }
 
 TEST(abc041_problemD, case3) {

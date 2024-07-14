@@ -7,7 +7,7 @@ vector<int> dijkstra(int n, vector<vector<pair<int, int>>> &edges, int src) {
 	vector<int> dist(n, INF);
 	dist[src] = 0;
 	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> que;
-	que.push( { 0, src });
+	que.push({0, src});
 	while (!que.empty()) {
 		pair<int, int> p = que.top();
 		que.pop();
@@ -15,7 +15,7 @@ vector<int> dijkstra(int n, vector<vector<pair<int, int>>> &edges, int src) {
 			for (pair<int, int> next : edges[p.second]) {
 				if (dist[next.second] > p.first + next.first) {
 					dist[next.second] = p.first + next.first;
-					que.push( { dist[next.second], next.second });
+					que.push({dist[next.second], next.second});
 				}
 			}
 		}

@@ -4,8 +4,8 @@ using namespace std;
 
 // 障害物
 const char OBSTACLE = '#';
-const vector<int> XS = { 0, 1, 0, -1 };
-const vector<int> YS = { 1, 0, -1, 0 };
+const vector<int> XS = {0, 1, 0, -1};
+const vector<int> YS = {1, 0, -1, 0};
 
 int main() {
 	int n, m;

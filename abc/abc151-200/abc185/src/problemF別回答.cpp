@@ -5,7 +5,7 @@ using namespace std;
 /** Fenwick tree (Binary indexed tree) を使った実装 */
 
 struct xorint {
-public:
+   public:
 	xorint() {
 		_v = 0;
 	}
@@ -14,22 +14,22 @@ public:
 		_v = v;
 	}
 
-	xorint& operator+=(int x) {
+	xorint &operator+=(int x) {
 		_v ^= x;
 		return *this;
 	}
 
-	xorint& operator+=(const xorint &x) {
+	xorint &operator+=(const xorint &x) {
 		_v ^= x.value();
 		return *this;
 	}
 
-	xorint& operator-=(int x) {
+	xorint &operator-=(int x) {
 		_v ^= x;
 		return *this;
 	}
 
-	xorint& operator-=(const xorint &x) {
+	xorint &operator-=(const xorint &x) {
 		_v ^= x.value();
 		return *this;
 	}
@@ -52,7 +52,8 @@ public:
 	int value() const {
 		return _v;
 	}
-private:
+
+   private:
 	int _v;
 };
 

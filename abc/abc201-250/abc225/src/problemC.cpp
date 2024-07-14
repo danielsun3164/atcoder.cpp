@@ -16,8 +16,7 @@ int main(void) {
 		for (int j = 0; j < m; j++) {
 			if (0 == j) {
 				if (0 == i) {
-					if (((0 == b[i][j] % SEVEN) && (m > 1)) ||
-						(b[i][j] % SEVEN > SEVEN - m + 1)) {
+					if (((0 == b[i][j] % SEVEN) && (m > 1)) || (b[i][j] % SEVEN > SEVEN - m + 1)) {
 						cout << "No" << endl;
 						return 0;
 					}

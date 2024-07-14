@@ -2,15 +2,16 @@
 using namespace std;
 using ll = long long;
 
-const static vector<int> BITS = { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536,
-		131072, 262144, 524288, 1048576, 2097152 };
+const static vector<int> BITS = {1,		2,		4,		8,		16,		 32,	 64,	128,
+								 256,	512,	1024,	2048,	4096,	 8192,	 16384, 32768,
+								 65536, 131072, 262144, 524288, 1048576, 2097152};
 
 struct edge {
 	struct edge *next;
 	int v;
 };
 
-void dfs(vector<edge*> &adj, vector<int> &deg, vector<ll> &dp, int u, int n) {
+void dfs(vector<edge *> &adj, vector<int> &deg, vector<ll> &dp, int u, int n) {
 	if (u == n) {
 		int k = 0;
 		for (int w = 0; w <= n; w++) {
@@ -34,7 +35,7 @@ void dfs(vector<edge*> &adj, vector<int> &deg, vector<ll> &dp, int u, int n) {
 int main(void) {
 	int n, m;
 	cin >> n >> m;
-	vector<edge*> adj(n + 1, NULL);
+	vector<edge *> adj(n + 1, NULL);
 	vector<edge> e(m);
 	vector<int> deg(n + 1, 0);
 	for (int i = 0; i < m; i++) {

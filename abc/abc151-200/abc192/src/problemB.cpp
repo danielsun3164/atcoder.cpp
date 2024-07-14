@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const char START[] = { 'a', 'A' };
-const char END[] = { 'z', 'Z' };
+const char START[] = {'a', 'A'};
+const char END[] = {'z', 'Z'};
 
 int main(void) {
 	string s;

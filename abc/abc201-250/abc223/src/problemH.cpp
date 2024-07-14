@@ -22,7 +22,7 @@ int main(void) {
 	}
 	vector<pair<ll, int>> base(N);
 	for (int i = 0; i < N; i++) {
-		base[i] = { 1LL << i, -1 };
+		base[i] = {1LL << i, -1};
 	}
 	vector<bool> answers(q);
 	for (int i = 0; i < n; i++) {

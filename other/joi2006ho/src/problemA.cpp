@@ -13,7 +13,8 @@ int main() {
 		}
 	}
 	// マップを配列へ変換
-	vector<pair<int, int>> v { std::make_move_iterator(begin(map)), std::make_move_iterator(end(map)) };
+	vector<pair<int, int>> v{std::make_move_iterator(begin(map)),
+							 std::make_move_iterator(end(map))};
 	// 配列に対してソートを実施
 	sort(begin(v), end(v), [](auto p1, auto p2) {
 		if (p1.second == p2.second) {

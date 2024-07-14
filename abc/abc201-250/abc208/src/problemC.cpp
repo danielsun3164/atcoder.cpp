@@ -11,9 +11,7 @@ int main(void) {
 		cin >> a[i];
 		order[i] = i;
 	}
-	sort(order.begin(), order.end(), [&](int x, int y) {
-		return a[x] < a[y];
-	});
+	sort(order.begin(), order.end(), [&](int x, int y) { return a[x] < a[y]; });
 	vector<ll> ans(n, k / n);
 	k %= n;
 	for (int i = 0; i < k; i++) {

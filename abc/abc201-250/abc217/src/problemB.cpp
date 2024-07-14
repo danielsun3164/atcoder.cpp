@@ -4,7 +4,7 @@ using namespace std;
 const static int N = 3;
 
 int main(void) {
-	set<string> st { "ABC", "ARC", "AGC", "AHC" };
+	set<string> st{"ABC", "ARC", "AGC", "AHC"};
 	for (int i = 0; i < N; i++) {
 		string s;
 		cin >> s;

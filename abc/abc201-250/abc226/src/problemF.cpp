@@ -27,8 +27,7 @@ void init(int n) {
 	}
 }
 
-void dfs(int n, int k, mint &answer, int rest, int now, int c, ll LCM,
-		 mint ways) {
+void dfs(int n, int k, mint &answer, int rest, int now, int c, ll LCM, mint ways) {
 	if (now && (rest >= now)) {
 		dfs(n, k, answer, rest - now, now, c + 1, LCM, ways);
 	}

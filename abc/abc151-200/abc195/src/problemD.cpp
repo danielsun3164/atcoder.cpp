@@ -9,7 +9,7 @@ int main(void) {
 	for (int i = 0; i < n; i++) {
 		int w, v;
 		cin >> w >> v;
-		wv[i] = { w, v };
+		wv[i] = {w, v};
 	}
 	sort(wv.begin(), wv.end());
 	vector<int> x(m);

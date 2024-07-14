@@ -5,8 +5,8 @@ using mint = atcoder::modint998244353;
 
 const static int N = 5;
 
-void dfs(int k, int p, int idx, int num, int &cnt, int blc, vector<vector<int>> &edges, vector<vector<int>> &d,
-		vector<int> &mx, vector<int> &mv) {
+void dfs(int k, int p, int idx, int num, int &cnt, int blc, vector<vector<int>> &edges,
+		 vector<vector<int>> &d, vector<int> &mx, vector<int> &mv) {
 	if (-1 == p) {
 		d[k][idx] = 0;
 	} else {

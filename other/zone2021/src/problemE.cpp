@@ -3,9 +3,9 @@ using namespace std;
 
 const int INF = INT_MAX >> 1;
 
-void check(
-		priority_queue<tuple<int, int, int, int>, vector<tuple<int, int, int, int>>, greater<tuple<int, int, int, int>>> &que,
-		vector<vector<vector<int>>> &dist, int f, int r, int c, int cost) {
+void check(priority_queue<tuple<int, int, int, int>, vector<tuple<int, int, int, int>>,
+						  greater<tuple<int, int, int, int>>> &que,
+		   vector<vector<vector<int>>> &dist, int f, int r, int c, int cost) {
 	if (dist[f][r][c] > cost) {
 		dist[f][r][c] = cost;
 		que.emplace(cost, f, r, c);
@@ -28,7 +28,9 @@ int main() {
 	}
 	vector<vector<vector<int>>> dist(2, vector<vector<int>>(r, vector<int>(c, INF)));
 	dist[0][0][0] = 0;
-	priority_queue<tuple<int, int, int, int>, vector<tuple<int, int, int, int>>, greater<tuple<int, int, int, int>>> que;
+	priority_queue<tuple<int, int, int, int>, vector<tuple<int, int, int, int>>,
+				   greater<tuple<int, int, int, int>>>
+		que;
 	que.emplace(0, 0, 0, 0);
 	while (!que.empty()) {
 		auto [cost, f, pr, pc] = que.top();

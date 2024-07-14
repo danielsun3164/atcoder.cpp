@@ -7,7 +7,7 @@ const int MAX = 100'000;
 struct dat {
 	int x, y, idx;
 
-	bool operator <(const dat other) const {
+	bool operator<(const dat other) const {
 		return (x == other.x) ? (y < other.y) : (x < other.x);
 	}
 };
@@ -15,7 +15,7 @@ struct dat {
 struct grid {
 	int x, yl, yr, num;
 
-	bool operator <(const grid other) const {
+	bool operator<(const grid other) const {
 		return x < other.x;
 	}
 };
@@ -51,7 +51,7 @@ int main() {
 		for (int i = 0; i < m; i++) {
 			if (a[i].x == a[(i + 1) % m].x) {
 				int y = a[i].y, y2 = a[(i + 1) % m].y;
-				gd.push_back( { a[i].x, min(y, y2), max(y, y2), (y < y2) ? s : -s });
+				gd.push_back({a[i].x, min(y, y2), max(y, y2), (y < y2) ? s : -s});
 			}
 		}
 	}

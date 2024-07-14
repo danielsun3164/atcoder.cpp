@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-void my_check(string input, __attribute__((unused))  string expected) {
+void my_check(string input, __attribute__((unused)) string expected) {
 	istringstream expected_ss(expected);
 	string result;
 	expected_ss >> result;
@@ -31,8 +31,7 @@ void my_check(string input, __attribute__((unused))  string expected) {
 	}
 }
 
-static_block
-{
+static_block {
 	COMMAND = "problem056";
 	EXTERNAL = "typical90/056";
 	FUNC = &my_check;
@@ -43,10 +42,11 @@ TEST(typical90_problem056, case1) {
 }
 
 TEST(typical90_problem056, case2) {
-	check(string("") + "5 77\n" + "1 16\n" + "3 91\n" + "43 9\n" + "4 26\n" + "23 11", string("") + "BABBA",
-			string("") + "BAAAB");
+	check(string("") + "5 77\n" + "1 16\n" + "3 91\n" + "43 9\n" + "4 26\n" + "23 11",
+		  string("") + "BABBA", string("") + "BAAAB");
 }
 
 TEST(typical90_problem056, case3) {
-	check(string("") + "5 59\n" + "8 13\n" + "55 5\n" + "58 8\n" + "23 14\n" + "4 61", string("") + "Impossible");
+	check(string("") + "5 59\n" + "8 13\n" + "55 5\n" + "58 8\n" + "23 14\n" + "4 61",
+		  string("") + "Impossible");
 }

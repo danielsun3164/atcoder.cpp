@@ -11,11 +11,11 @@ struct Point {
 		y = ny;
 	}
 
-	bool operator <(const Point &p) const {
+	bool operator<(const Point &p) const {
 		return (x < p.x) || ((x == p.x) && (y < p.y));
 	}
 
-	Point operator -(const Point &p) const {
+	Point operator-(const Point &p) const {
 		return Point(x - p.x, y - p.y);
 	}
 };
@@ -36,8 +36,8 @@ int main() {
 		cin >> p[i].x >> p[i].y;
 	}
 	sort(p.begin(), p.end());
-	vector<vector<vector<int>>> inside(n, vector<vector<int>>(n, vector<int>(n, 0))), parity(n,
-			vector<vector<int>>(n, vector<int>(n)));
+	vector<vector<vector<int>>> inside(n, vector<vector<int>>(n, vector<int>(n, 0))),
+		parity(n, vector<vector<int>>(n, vector<int>(n)));
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
 			for (int k = 0; k < n; k++) {
@@ -47,8 +47,8 @@ int main() {
 				int area = area2(p, i, j, k);
 				parity[i][j][k] = area & 1;
 				for (int l = 0; l < n; l++) {
-					if ((l != i) && (l != j) && (l != k)
-							&& (area2(p, l, i, j) + area2(p, l, j, k) + area2(p, l, k, i) == area)) {
+					if ((l != i) && (l != j) && (l != k) &&
+						(area2(p, l, i, j) + area2(p, l, j, k) + area2(p, l, k, i) == area)) {
 						inside[i][j][k]++;
 					}
 				}
@@ -61,8 +61,8 @@ int main() {
 		pow2[i] = pow2[i - 1] * 2;
 	}
 	mint ans = 0;
-	vector<vector<vector<mint>>> upper(n, vector<vector<mint>>(n, vector<mint>(2))), lower(n,
-			vector<vector<mint>>(n, vector<mint>(2)));
+	vector<vector<vector<mint>>> upper(n, vector<vector<mint>>(n, vector<mint>(2))),
+		lower(n, vector<vector<mint>>(n, vector<mint>(2)));
 	for (int must = n - 1; must >= 0; must--) {
 		for (int i = must; i < n; i++) {
 			for (int j = must; j < n; j++) {
@@ -79,9 +79,11 @@ int main() {
 				for (int k = 0; k < 2; k++) {
 					for (int l = j + 1; l < n; l++) {
 						if (cross(p[l] - p[j], p[j] - p[i]) > 0) {
-							upper[j][l][k ^ parity[must][j][l]] += upper[i][j][k] * pow2[inside[must][j][l]];
+							upper[j][l][k ^ parity[must][j][l]] +=
+								upper[i][j][k] * pow2[inside[must][j][l]];
 						} else {
-							lower[j][l][k ^ parity[must][j][l]] += lower[i][j][k] * pow2[inside[must][j][l]];
+							lower[j][l][k ^ parity[must][j][l]] +=
+								lower[i][j][k] * pow2[inside[must][j][l]];
 						}
 					}
 				}

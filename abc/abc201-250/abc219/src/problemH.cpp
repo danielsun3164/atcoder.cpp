@@ -28,8 +28,8 @@ int main(void) {
 			i0 = i;
 		}
 	}
-	vector<vector<vector<ll>>> dp(n + 1, vector<vector<ll>>(2, vector<ll>(n + 1, -INF))), dp2(n + 1,
-			vector<vector<ll>>(2, vector<ll>(n + 1, -INF)));
+	vector<vector<vector<ll>>> dp(n + 1, vector<vector<ll>>(2, vector<ll>(n + 1, -INF))),
+		dp2(n + 1, vector<vector<ll>>(2, vector<ll>(n + 1, -INF)));
 	for (int i = 0; i <= n; i++) {
 		for (int j = 0; j < 2; j++) {
 			dp[i][j][0] = 0LL;
@@ -39,22 +39,27 @@ int main(void) {
 		for (int i = 0; i < n - j; i++) {
 			for (int k = 1; k < n - j; k++) {
 				if (i > 0) {
-					dp2[i][0][k] = max(dp2[i][0][k], dp[i - 1][0][k] - k * (vec[i].first - vec[i - 1].first));
-					dp2[i][0][k] = max(dp2[i][0][k],
-							dp[i - 1][0][k - 1] + vec[i - 1].second - k * (vec[i].first - vec[i - 1].first));
+					dp2[i][0][k] =
+						max(dp2[i][0][k], dp[i - 1][0][k] - k * (vec[i].first - vec[i - 1].first));
+					dp2[i][0][k] = max(dp2[i][0][k], dp[i - 1][0][k - 1] + vec[i - 1].second -
+														 k * (vec[i].first - vec[i - 1].first));
 
-					dp2[i][1][k] = max(dp2[i][1][k], dp[i - 1][0][k] - k * (vec[i + j].first - vec[i - 1].first));
 					dp2[i][1][k] = max(dp2[i][1][k],
-							dp[i - 1][0][k - 1] + vec[i - 1].second - k * (vec[i + j].first - vec[i - 1].first));
+									   dp[i - 1][0][k] - k * (vec[i + j].first - vec[i - 1].first));
+					dp2[i][1][k] = max(dp2[i][1][k], dp[i - 1][0][k - 1] + vec[i - 1].second -
+														 k * (vec[i + j].first - vec[i - 1].first));
 				}
 				if ((i + j) < (n - 1)) {
-					dp2[i][0][k] = max(dp2[i][0][k], dp[i][1][k] - k * (vec[i + j + 1].first - vec[i].first));
-					dp2[i][0][k] = max(dp2[i][0][k],
-							dp[i][1][k - 1] + vec[i + j + 1].second - k * (vec[i + j + 1].first - vec[i].first));
+					dp2[i][0][k] =
+						max(dp2[i][0][k], dp[i][1][k] - k * (vec[i + j + 1].first - vec[i].first));
+					dp2[i][0][k] = max(dp2[i][0][k], dp[i][1][k - 1] + vec[i + j + 1].second -
+														 k * (vec[i + j + 1].first - vec[i].first));
 
-					dp2[i][1][k] = max(dp2[i][1][k], dp[i][1][k] - k * (vec[i + j + 1].first - vec[i + j].first));
 					dp2[i][1][k] = max(dp2[i][1][k],
-							dp[i][1][k - 1] + vec[i + j + 1].second - k * (vec[i + j + 1].first - vec[i + j].first));
+									   dp[i][1][k] - k * (vec[i + j + 1].first - vec[i + j].first));
+					dp2[i][1][k] =
+						max(dp2[i][1][k], dp[i][1][k - 1] + vec[i + j + 1].second -
+											  k * (vec[i + j + 1].first - vec[i + j].first));
 				}
 			}
 		}

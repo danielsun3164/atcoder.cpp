@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void build_tree(int &idx, int prev, int now, vector<vector<int>> &g, vector<vector<int>> &par, vector<int> &depth,
-		vector<int> &id) {
+void build_tree(int &idx, int prev, int now, vector<vector<int>> &g, vector<vector<int>> &par,
+				vector<int> &depth, vector<int> &id) {
 	par[0][now] = prev;
 	id[now] = idx++;
 	for (int next : g[now]) {
@@ -68,9 +68,7 @@ int main() {
 		for (int i = 0; i < k; i++) {
 			cin >> v[i];
 		}
-		sort(v.begin(), v.end(), [&](int va, int vb) {
-			return id[va] < id[vb];
-		});
+		sort(v.begin(), v.end(), [&](int va, int vb) { return id[va] < id[vb]; });
 		int answer = 0;
 		for (int i = 0; i < k; i++) {
 			answer += depth[v[i]];

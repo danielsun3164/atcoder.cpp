@@ -3,8 +3,7 @@
 using namespace std;
 using mint = atcoder::modint998244353;
 
-void dfs(vector<vector<int>> &edges, vector<bool> &used, int now, int &node,
-		 int &edge) {
+void dfs(vector<vector<int>> &edges, vector<bool> &used, int now, int &node, int &edge) {
 	used[now] = true;
 	node++;
 	edge += edges[now].size();

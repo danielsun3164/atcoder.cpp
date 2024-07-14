@@ -22,7 +22,7 @@ mint binom(int n, int m) {
 	return (n >= m) ? fact[n] * inv_fact[m] * inv_fact[n - m] : 0;
 }
 
-template<class F, class T>
+template <class F, class T>
 void bitwise_transform(const F f, std::vector<T> &a) {
 	using usize = std::size_t;
 	const usize n = a.size();
@@ -58,12 +58,8 @@ int main(void) {
 	for (int i = 0; i < m; i++) {
 		g[c[i]] += b[i];
 	}
-	bitwise_transform([](int &l, int &r) {
-		r += l;
-	}, f);
-	bitwise_transform([](int &l, int &r) {
-		r += l;
-	}, g);
+	bitwise_transform([](int &l, int &r) { r += l; }, f);
+	bitwise_transform([](int &l, int &r) { r += l; }, g);
 	int x = INT_MAX;
 	for (int s = 0; s < p; s++) {
 		if (g[s] > 0) {
@@ -80,9 +76,7 @@ int main(void) {
 			h[s] = 1;
 		}
 	}
-	bitwise_transform([](int &l, int &r) {
-		l += r;
-	}, h);
+	bitwise_transform([](int &l, int &r) { l += r; }, h);
 	int q = f.back();
 	init(q);
 	mint y = 0;

@@ -17,7 +17,8 @@ int main(void) {
 	}
 	mint ans = 0;
 	for (int i = 0; i <= min(n - 1, k); i++) {
-		ans += fact[n] * inv_fact[n - i] * inv_fact[i] * fact[n - 1] * inv_fact[n - 1 - i] * inv_fact[i];
+		ans += fact[n] * inv_fact[n - i] * inv_fact[i] * fact[n - 1] * inv_fact[n - 1 - i] *
+			   inv_fact[i];
 	}
 	cout << ans.val() << endl;
 	return 0;

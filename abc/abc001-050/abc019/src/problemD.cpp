@@ -14,7 +14,7 @@ pair<int, int> get_max(int n, int now) {
 			}
 		}
 	}
-	return {m,mi};
+	return {m, mi};
 }
 
 int main(void) {

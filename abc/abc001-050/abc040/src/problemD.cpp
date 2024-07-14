@@ -11,7 +11,7 @@ int main(void) {
 		cin >> a >> b >> y;
 		a--;
 		b--;
-		g[i] = { y, { a, b } };
+		g[i] = {y, {a, b}};
 	}
 	sort(g.rbegin(), g.rend());
 	int q;
@@ -21,7 +21,7 @@ int main(void) {
 		int v, w;
 		cin >> v >> w;
 		v--;
-		vw.push_back( { w, v, i });
+		vw.push_back({w, v, i});
 	}
 	sort(vw.rbegin(), vw.rend());
 	atcoder::dsu d(n);

@@ -6,10 +6,10 @@ const static ll INF = LONG_LONG_MAX >> 1;
 
 pair<ll, int> f(vector<ll> &b, int value) {
 	int n = b.size();
-	vector<pair<ll, int>> dp(n + 1, { -INF, 0 }), ep(n + 1, { -INF, 0 });
-	ep[0] = { 0, 0 };
+	vector<pair<ll, int>> dp(n + 1, {-INF, 0}), ep(n + 1, {-INF, 0});
+	ep[0] = {0, 0};
 	for (int i = 0; i < n; i++) {
-		dp[i + 1] = { ep[i].first + b[i] - value, ep[i].second + 1 };
+		dp[i + 1] = {ep[i].first + b[i] - value, ep[i].second + 1};
 		ep[i + 1] = max(dp[i], ep[i]);
 	}
 	return max(dp[n], ep[n]);

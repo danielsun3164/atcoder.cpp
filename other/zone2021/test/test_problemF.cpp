@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 #include <atcoder/dsu>
 
 using namespace std;
@@ -41,8 +41,7 @@ void my_check(string input, string expected) {
 	}
 }
 
-static_block
-{
+static_block {
 	COMMAND = "problemF";
 	EXTERNAL = "ZONe2021/F";
 	FUNC = &my_check;
@@ -53,7 +52,8 @@ TEST(zone2021_problemE, case1) {
 }
 
 TEST(zone2021_problemE, case2) {
-	my_check(string("") + "8 0\n" + "", string("") + "0 1\n" + "2 3\n" + "4 5\n" + "6 7\n" + "0 2\n" + "4 6\n" + "0 4");
+	my_check(string("") + "8 0\n" + "",
+			 string("") + "0 1\n" + "2 3\n" + "4 5\n" + "6 7\n" + "0 2\n" + "4 6\n" + "0 4");
 }
 
 TEST(zone2021_problemE, case3) {

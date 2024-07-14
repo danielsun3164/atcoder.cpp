@@ -15,8 +15,10 @@ int main(void) {
 	string s;
 	cin >> s;
 	int n = s.size();
-	cout
-			<< ((is_palindrome(s) && is_palindrome(s.substr(0, n / 2)) && is_palindrome(s.substr((n + 1) / 2, n / 2))) ?
-					"Yes" : "No") << endl;
+	cout << ((is_palindrome(s) && is_palindrome(s.substr(0, n / 2)) &&
+			  is_palindrome(s.substr((n + 1) / 2, n / 2)))
+				 ? "Yes"
+				 : "No")
+		 << endl;
 	return 0;
 }

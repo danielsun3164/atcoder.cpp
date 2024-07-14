@@ -1,11 +1,10 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-static_block
-{
+static_block {
 	COMMAND = "problemB";
 }
 
@@ -18,6 +17,6 @@ TEST(abc008_problemB, case2) {
 }
 
 TEST(abc008_problemB, case3) {
-	check(string("") + "9\n" + "a\n" + "b\n" + "c\n" + "c\n" + "b\n" + "c\n" + "b\n" + "d\n" + "e", string("") + "b",
-			string("") + "c");
+	check(string("") + "9\n" + "a\n" + "b\n" + "c\n" + "c\n" + "b\n" + "c\n" + "b\n" + "d\n" + "e",
+		  string("") + "b", string("") + "c");
 }

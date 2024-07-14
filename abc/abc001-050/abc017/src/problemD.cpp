@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
-#include <atcoder/segtree>
 #include <atcoder/modint>
+#include <atcoder/segtree>
 using namespace std;
 using mint = atcoder::modint1000000007;
 

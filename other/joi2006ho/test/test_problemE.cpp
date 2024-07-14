@@ -1,21 +1,21 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-static_block
-{
+static_block {
 	COMMAND = "problemE";
 }
 
 TEST(joi2006ho_problemE, case1) {
-	check(string("") + "5 1\n" + "0 0 3 2\n" + "1 1 2 5\n" + "0 4 6 5\n" + "3 3 5 6\n" + "5 0 7 6", string("") + "29");
+	check(string("") + "5 1\n" + "0 0 3 2\n" + "1 1 2 5\n" + "0 4 6 5\n" + "3 3 5 6\n" + "5 0 7 6",
+		  string("") + "29");
 }
 
 TEST(joi2006ho_problemE, case2) {
 	check(string("") + "5 2\n" + "0 0 3 2\n" + "1 1 2 5\n" + "0 4 6 5\n" + "3 3 5 6\n" + "5 0 7 6",
-			string("") + "29\n" + "38");
+		  string("") + "29\n" + "38");
 }
 
 TEST(joi2006ho_problemE, case3) {

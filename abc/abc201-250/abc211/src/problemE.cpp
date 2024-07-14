@@ -2,8 +2,8 @@
 using namespace std;
 using ll = long long;
 
-const vector<int> XS = { -1, 1, 0, 0 };
-const vector<int> YS = { 0, 0, -1, 1 };
+const vector<int> XS = {-1, 1, 0, 0};
+const vector<int> YS = {0, 0, -1, 1};
 const char WHITE = '.';
 
 set<ll> memo;
@@ -24,7 +24,8 @@ int dfs(int n, vector<string> &s, int k, ll bit) {
 					} else {
 						for (int k = 0; k < int(XS.size()); k++) {
 							int nx = i + XS[k], ny = j + YS[k];
-							if ((0 <= nx) && (nx < n) && (0 <= ny) && (ny < n) && ((1LL << (nx * n + ny) & bit))) {
+							if ((0 <= nx) && (nx < n) && (0 <= ny) && (ny < n) &&
+								((1LL << (nx * n + ny) & bit))) {
 								ok = true;
 								break;
 							}

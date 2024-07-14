@@ -3,7 +3,8 @@
 using namespace std;
 using mint = atcoder::modint1000000007;
 
-void dfs(int now, vector<vector<int>> &edges, vector<bool> &visited, vector<pair<mint, mint>> &counts) {
+void dfs(int now, vector<vector<int>> &edges, vector<bool> &visited,
+		 vector<pair<mint, mint>> &counts) {
 	visited[now] = true;
 	for (int next : edges[now]) {
 		if (!visited[next]) {

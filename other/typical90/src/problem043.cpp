@@ -4,8 +4,8 @@ using namespace std;
 const static int N = 4;
 const static int INF = INT_MAX >> 1;
 const static char WALL = '#';
-const vector<int> XS = { 1, -1, 0, 0 };
-const vector<int> YS = { 0, 0, 1, -1 };
+const vector<int> XS = {1, -1, 0, 0};
+const vector<int> YS = {0, 0, 1, -1};
 
 int main() {
 	int h, w, rs, cs, rt, ct;
@@ -19,7 +19,7 @@ int main() {
 	fill(dp[rs][cs].begin(), dp[rs][cs].end(), 0);
 	deque<pair<int, int>> dque;
 	for (int i = 0; i < N; i++) {
-		dque.push_back( { (rs * w + cs) * N + i, 0 });
+		dque.push_back({(rs * w + cs) * N + i, 0});
 	}
 	while (!dque.empty()) {
 		pair<int, int> now = dque.front();
@@ -32,9 +32,9 @@ int main() {
 					if (dp[nx][ny][i] > dp[x][y][d] + dd) {
 						dp[nx][ny][i] = dp[x][y][d] + dd;
 						if (i == d) {
-							dque.push_front( { (nx * w + ny) * N + i, dp[nx][ny][i] });
+							dque.push_front({(nx * w + ny) * N + i, dp[nx][ny][i]});
 						} else {
-							dque.push_back( { (nx * w + ny) * N + i, dp[nx][ny][i] });
+							dque.push_back({(nx * w + ny) * N + i, dp[nx][ny][i]});
 						}
 					}
 				}

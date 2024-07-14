@@ -3,8 +3,8 @@
 using namespace std;
 using mint = atcoder::modint1000000007;
 
-static const vector<int> dx = { 1, 1, 1, 0, 0, -1, -1, -1 };
-static const vector<int> dy = { -1, 0, 1, -1, 1, -1, 0, 1 };
+static const vector<int> dx = {1, 1, 1, 0, 0, -1, -1, -1};
+static const vector<int> dy = {-1, 0, 1, -1, 1, -1, 0, 1};
 
 bool hantei(int h, int w, vector<vector<bool>> &used, int sx, int sy) {
 	for (int i = 0; i < int(dx.size()); i++) {
@@ -17,7 +17,7 @@ bool hantei(int h, int w, vector<vector<bool>> &used, int sx, int sy) {
 }
 
 void dfs(int h, int w, vector<int> &cnt, vector<vector<bool>> &used, vector<vector<int>> &state,
-		vector<map<int, pair<int, bool>>> &maps, int pos, int dep, int str) {
+		 vector<map<int, pair<int, bool>>> &maps, int pos, int dep, int str) {
 	int sx = pos / w, sy = pos % w;
 	if (w + 1 == dep) {
 		int idx = cnt[sy];

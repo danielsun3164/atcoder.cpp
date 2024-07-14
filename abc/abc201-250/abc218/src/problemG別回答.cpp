@@ -3,10 +3,10 @@ using namespace std;
 
 const static int INF = INT_MAX >> 1;
 
-template<class T> struct my_data {
-public:
-	my_data() {
-	}
+template <class T>
+struct my_data {
+   public:
+	my_data() {}
 
 	void add(T value) {
 		if (s.empty()) {
@@ -36,7 +36,8 @@ public:
 			return (*s.rbegin() + *t.begin()) >> 1;
 		}
 	}
-private:
+
+   private:
 	multiset<T> s, t;
 
 	void refresh() {
@@ -51,7 +52,8 @@ private:
 	}
 };
 
-int calc(vector<int> &a, vector<vector<int>> &edges, vector<bool> &used, my_data<int> &dt, int now, bool use_max) {
+int calc(vector<int> &a, vector<vector<int>> &edges, vector<bool> &used, my_data<int> &dt, int now,
+		 bool use_max) {
 	bool has_next = false;
 	for (int next : edges[now]) {
 		if (!used[next]) {
@@ -77,17 +79,17 @@ int calc(vector<int> &a, vector<vector<int>> &edges, vector<bool> &used, my_data
 }
 
 int main(void) {
-//	my_data<int> d;
-//	d.add(2);
-//	d.add(2);
-//	d.add(4);
-//	cout << d.get_middle() << endl;
-//	d.add(4);
-//	cout << d.get_middle() << endl;
-//	d.add(6);
-//	cout << d.get_middle() << endl;
-//
-//	return 0;
+	//	my_data<int> d;
+	//	d.add(2);
+	//	d.add(2);
+	//	d.add(4);
+	//	cout << d.get_middle() << endl;
+	//	d.add(4);
+	//	cout << d.get_middle() << endl;
+	//	d.add(6);
+	//	cout << d.get_middle() << endl;
+	//
+	//	return 0;
 	int n;
 	cin >> n;
 	vector<int> a(n);

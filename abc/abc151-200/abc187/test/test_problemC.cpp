@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
@@ -30,19 +30,19 @@ void my_check(string input, string expected) {
 	}
 }
 
-static_block
-{
+static_block {
 	COMMAND = "problemC";
 	EXTERNAL = "ABC187/C";
 	FUNC = &my_check;
 }
 
 TEST(abc187_problemC, case1) {
-	check(string("") + "6\n" + "a\n" + "!a\n" + "b\n" + "!c\n" + "d\n" + "!d", string("") + "a", string("") + "d");
+	check(string("") + "6\n" + "a\n" + "!a\n" + "b\n" + "!c\n" + "d\n" + "!d", string("") + "a",
+		  string("") + "d");
 }
 
 TEST(abc187_problemC, case2) {
-	check(
-			string("") + "10\n" + "red\n" + "red\n" + "red\n" + "!orange\n" + "yellow\n" + "!blue\n" + "cyan\n"
-					+ "!green\n" + "brown\n" + "!gray", string("") + "satisfiable");
+	check(string("") + "10\n" + "red\n" + "red\n" + "red\n" + "!orange\n" + "yellow\n" + "!blue\n" +
+			  "cyan\n" + "!green\n" + "brown\n" + "!gray",
+		  string("") + "satisfiable");
 }

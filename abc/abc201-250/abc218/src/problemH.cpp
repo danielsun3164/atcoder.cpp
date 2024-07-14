@@ -15,7 +15,7 @@ int main(void) {
 	set<pair<ll, int>> data_set;
 	set<int> idx_set;
 	for (int i = 0; i < n; i++) {
-		data_set.insert( { b[i], i });
+		data_set.insert({b[i], i});
 		idx_set.insert(i);
 	}
 	ll answer = 0LL;
@@ -26,20 +26,20 @@ int main(void) {
 		auto idx_it = idx_set.find(now_it->second);
 		auto idx_next_it = next(idx_it);
 		if (idx_set.begin() == idx_it) {
-			data_set.erase( { b[*idx_next_it], *idx_next_it });
+			data_set.erase({b[*idx_next_it], *idx_next_it});
 			idx_set.erase(idx_it);
 			idx_set.erase(idx_next_it);
 		} else if (idx_set.end() == idx_next_it) {
 			auto idx_prev_it = prev(idx_it);
-			data_set.erase( { b[*idx_prev_it], *idx_prev_it });
+			data_set.erase({b[*idx_prev_it], *idx_prev_it});
 			idx_set.erase(idx_prev_it);
 			idx_set.erase(idx_it);
 		} else {
 			auto idx_prev_it = prev(idx_it);
 			b[now_it->second] = b[*idx_prev_it] - now_it->first + b[*idx_next_it];
-			data_set.insert( { b[now_it->second], now_it->second });
-			data_set.erase( { b[*idx_prev_it], *idx_prev_it });
-			data_set.erase( { b[*idx_next_it], *idx_next_it });
+			data_set.insert({b[now_it->second], now_it->second});
+			data_set.erase({b[*idx_prev_it], *idx_prev_it});
+			data_set.erase({b[*idx_next_it], *idx_next_it});
 			idx_set.erase(idx_prev_it);
 			idx_set.erase(idx_next_it);
 		}

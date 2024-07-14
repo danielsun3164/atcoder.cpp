@@ -75,4 +75,3 @@ int main(void) {
 	cout << ((k <= M) ? answer[k] : (answer[M] + (k - M) * mp.size())) << endl;
 	return 0;
 }
-

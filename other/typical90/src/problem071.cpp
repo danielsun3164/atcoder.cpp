@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool dfs(int n, int k, vector<vector<int>> &g, vector<int> &degree, vector<vector<int>> &answers, int depth,
-		vector<int> &st, vector<int> &perm) {
+bool dfs(int n, int k, vector<vector<int>> &g, vector<int> &degree, vector<vector<int>> &answers,
+		 int depth, vector<int> &st, vector<int> &perm) {
 	if (depth == n) {
 		answers.emplace_back(perm);
 		return true;

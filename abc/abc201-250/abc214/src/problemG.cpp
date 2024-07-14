@@ -57,13 +57,13 @@ int main(void) {
 				dp[cnt] = 2;
 				for (int first = 0; first < cnt; first++) {
 					for (int other = 0; other < cnt - first; other++) {
-						dp[cnt - other - 1] += binom(cnt - first + other, 2 * other + 1)
-								+ binom(cnt - first + other - 1, 2 * other) * first;
+						dp[cnt - other - 1] += binom(cnt - first + other, 2 * other + 1) +
+											   binom(cnt - first + other - 1, 2 * other) * first;
 					}
 				}
 				vector<mint> next(coeff.size() + dp.size() - 1);
-				for (int i = 0; i < (int) coeff.size(); ++i) {
-					for (int j = 0; j < (int) dp.size(); ++j) {
+				for (int i = 0; i < (int)coeff.size(); ++i) {
+					for (int j = 0; j < (int)dp.size(); ++j) {
 						next[i + j] += coeff[i] * dp[j];
 					}
 				}

@@ -12,8 +12,7 @@ int main(void) {
 	for (string &si : s) {
 		cin >> si;
 	}
-	sort(s.begin(), s.end(),
-		 [](string x, string y) { return (x + y) < (y + x); });
+	sort(s.begin(), s.end(), [](string x, string y) { return (x + y) < (y + x); });
 	vector<vector<string>> dp(n + 1, vector<string>(k + 1, "{"));
 	dp[n][0] = "";
 	for (int i = n - 1; i >= 0; i--) {

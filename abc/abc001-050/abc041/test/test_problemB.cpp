@@ -21,6 +21,5 @@ TEST(abc041_problemB, case3) {
 }
 
 TEST(abc041_problemB, case4) {
-	check(string("") + "1000000000 1000000000 1000000000",
-		  string("") + "999999664");
+	check(string("") + "1000000000 1000000000 1000000000", string("") + "999999664");
 }

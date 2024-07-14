@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
@@ -13,8 +13,9 @@ TEST(apg4b_ex17, case1) {
 }
 
 TEST(apg4b_ex17, case2) {
-	check(string("") + "10 600\n" + "70 110 90 120 90 20 260 150 220 150\n" + "170 100 250 350 60 280 450 460 20 220",
-			string("") + "2");
+	check(string("") + "10 600\n" + "70 110 90 120 90 20 260 150 220 150\n" +
+			  "170 100 250 350 60 280 450 460 20 220",
+		  string("") + "2");
 }
 
 TEST(apg4b_ex17, case3) {

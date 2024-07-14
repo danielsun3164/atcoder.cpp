@@ -4,7 +4,7 @@ using namespace std;
 using ll = long long;
 using mint = atcoder::modint998244353;
 
-const vector<int> LENS = { 1, 1, 2, 3, 5, 8, 13 };
+const vector<int> LENS = {1, 1, 2, 3, 5, 8, 13};
 
 vector<vector<mint>> multiply(vector<vector<mint>> &a, vector<vector<mint>> &b) {
 	vector<vector<mint>> r(a.size(), vector<mint>(b[0].size(), 0));

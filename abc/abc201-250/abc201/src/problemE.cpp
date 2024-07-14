@@ -23,14 +23,14 @@ int main(void) {
 	vector<ll> dist(n, INF);
 	dist[0] = 0LL;
 	queue<pair<int, ll>> que;
-	que.push( { 0, 0LL });
+	que.push({0, 0LL});
 	while (!que.empty()) {
 		pair<int, ll> now = que.front();
 		que.pop();
 		for (pair<int, ll> next : edges[now.first]) {
 			if (INF == dist[next.first]) {
 				dist[next.first] = now.second ^ next.second;
-				que.push( { next.first, dist[next.first] });
+				que.push({next.first, dist[next.first]});
 			}
 		}
 	}

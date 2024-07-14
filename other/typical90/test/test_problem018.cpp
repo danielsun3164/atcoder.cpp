@@ -1,11 +1,11 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
 class Command2 {
-public:
+   public:
 	int ExitStatus = 0;
 	string Command;
 	string StdIn;
@@ -20,9 +20,9 @@ public:
 		const int READ_END = 0;
 		const int WRITE_END = 1;
 
-		int infd[2] = { 0, 0 };
-		int outfd[2] = { 0, 0 };
-		int errfd[2] = { 0, 0 };
+		int infd[2] = {0, 0};
+		int outfd[2] = {0, 0};
+		int errfd[2] = {0, 0};
 
 		auto cleanup = [&]() {
 			close(infd[READ_END]);
@@ -58,8 +58,8 @@ public:
 		}
 
 		auto pid = fork();
-		if (pid > 0) { // PARENT
-			close(infd[READ_END]);	// Parent does not read from stdin
+		if (pid > 0) {				  // PARENT
+			close(infd[READ_END]);	  // Parent does not read from stdin
 			close(outfd[WRITE_END]);  // Parent does not write to stdout
 			close(errfd[WRITE_END]);  // Parent does not write to stderr
 
@@ -91,15 +91,15 @@ public:
 					cout << fixed << setprecision(10) << expected[i] << endl;
 				}
 			}
-			close(infd[WRITE_END]); // Done writing
-		} else if (pid == 0) { // CHILD
+			close(infd[WRITE_END]);	 // Done writing
+		} else if (pid == 0) {		 // CHILD
 			dup2(infd[READ_END], STDIN_FILENO);
 			dup2(outfd[WRITE_END], STDOUT_FILENO);
 			dup2(errfd[WRITE_END], STDERR_FILENO);
 
-			close(infd[WRITE_END]);   // Child does not write to stdin
-			close(outfd[READ_END]);   // Child does not read from stdout
-			close(errfd[READ_END]);   // Child does not read from stderr
+			close(infd[WRITE_END]);	 // Child does not write to stdin
+			close(outfd[READ_END]);	 // Child does not read from stdout
+			close(errfd[READ_END]);	 // Child does not read from stderr
 
 			execl("/bin/bash", "bash", "-c", Command.c_str(), nullptr);
 			exit(EXIT_SUCCESS);
@@ -148,11 +148,11 @@ void my_check(string input, string expected) {
 		input_ss >> e[i];
 		expected_ss >> expected_v[i];
 	}
-	check(to_string(t) + "\n" + to_string(l) + " " + to_string(x) + " " + to_string(y), q, e, expected_v);
+	check(to_string(t) + "\n" + to_string(l) + " " + to_string(x) + " " + to_string(y), q, e,
+		  expected_v);
 }
 
-static_block
-{
+static_block {
 	COMMAND = "problem018";
 	EXTERNAL = "typical90/018";
 	FUNC = &my_check;
@@ -160,12 +160,13 @@ static_block
 }
 
 TEST(typical90_problem018, case1) {
-	check(string("") + "4\n" + "2 1 1", 4, vector<int> { 0, 1, 2, 3 }, vector<double> { 0.000000000000, 24.094842552111,
-			54.735610317245, 45.000000000000 });
+	check(string("") + "4\n" + "2 1 1", 4, vector<int>{0, 1, 2, 3},
+		  vector<double>{0.000000000000, 24.094842552111, 54.735610317245, 45.000000000000});
 }
 
 TEST(typical90_problem018, case2) {
-	check(string("") + "5121\n" + "312000000 4123 3314", 6, vector<int> { 123, 12, 445, 4114, 42, 1233 },
-			vector<double> { 4.322765775902, 0.421184234768, 15.640867693969, 35.396039162484, 1.475665637902,
-					43.338582976959 });
+	check(string("") + "5121\n" + "312000000 4123 3314", 6,
+		  vector<int>{123, 12, 445, 4114, 42, 1233},
+		  vector<double>{4.322765775902, 0.421184234768, 15.640867693969, 35.396039162484,
+						 1.475665637902, 43.338582976959});
 }

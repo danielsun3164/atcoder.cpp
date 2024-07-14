@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const vector<int> COINS = { 500, 100, 50, 10, 5, 1 };
+const vector<int> COINS = {500, 100, 50, 10, 5, 1};
 
 int main() {
 	int a;

@@ -9,7 +9,7 @@ int main(void) {
 	ll ans = 0L;
 	for (int i = 0; i < n; i++) {
 		cin >> a[i];
-		ans += (n - 1) * (ll) (a[i]) * a[i];
+		ans += (n - 1) * (ll)(a[i]) * a[i];
 	}
 	sort(a.begin(), a.end());
 	sum[0] = 0;

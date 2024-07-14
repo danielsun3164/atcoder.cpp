@@ -3,8 +3,8 @@
 using namespace std;
 using ll = long long;
 
-const static vector<int> DX { 0, 1, 1, 0, -1, -1, -1, 0, 1 };
-const static vector<int> DY { 0, 0, 1, 1, 1, 0, -1, -1, -1 };
+const static vector<int> DX{0, 1, 1, 0, -1, -1, -1, 0, 1};
+const static vector<int> DY{0, 0, 1, 1, 1, 0, -1, -1, -1};
 const static int N = 9;
 
 int main() {
@@ -18,14 +18,14 @@ int main() {
 	map<pair<ll, ll>, int> mp;
 	for (int i = 1; i <= n; i++) {
 		cin >> bx[i] >> by[i];
-		mp[ { bx[i], by[i] }] = i;
+		mp[{bx[i], by[i]}] = i;
 	}
 	atcoder::mf_graph<int> g(2 * n + 3);
 	vector<vector<int>> nex(n + 1, vector<int>(N));
 	for (int i = 1; i <= n; i++) {
 		for (int j = 1; j < N; j++) {
 			ll tx = ax[i] + DX[j] * t, ty = ay[i] + DY[j] * t;
-			nex[i][j] = mp[ { tx, ty }];
+			nex[i][j] = mp[{tx, ty}];
 			if (0 != nex[i][j]) {
 				g.add_edge(i, n + nex[i][j], 1);
 			}
