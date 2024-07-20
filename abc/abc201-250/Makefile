@@ -53,7 +53,7 @@ all:	_$(ABC201) _$(ABC202) _$(ABC203) _$(ABC204) _$(ABC205) _$(ABC206) _$(ABC207
 	_$(ABC208) _$(ABC209) _$(ABC210) _$(ABC211) _$(ABC212) _$(ABC213) _$(ABC214) \
 	_$(ABC215) _$(ABC216) _$(ABC217) _$(ABC218) _$(ABC219) _$(ABC220) _$(ABC221) \
 	_$(ABC222) _$(ABC223) _$(ABC224) _$(ABC225) _$(ABC226) _$(ABC227) _$(ABC228) \
-	#_$(ABC229) _$(ABC230) _$(ABC231) _$(ABC232) _$(ABC233) _$(ABC234) _$(ABC235) \
+	_$(ABC229) #_$(ABC230) _$(ABC231) _$(ABC232) _$(ABC233) _$(ABC234) _$(ABC235) \
 	#_$(ABC236) _$(ABC237) _$(ABC238) _$(ABC239) _$(ABC240) _$(ABC241) _$(ABC242) \
 	#_$(ABC243) _$(ABC244) _$(ABC245) _$(ABC246) _$(ABC247) _$(ABC248) _$(ABC249) \
 	#_$(ABC250)
@@ -237,7 +237,7 @@ clean:
 	make -C $(ABC226) clean
 	make -C $(ABC227) clean
 	make -C $(ABC228) clean
-#	make -C $(ABC229) clean
+	make -C $(ABC229) clean
 #	make -C $(ABC230) clean
 #	make -C $(ABC231) clean
 #	make -C $(ABC232) clean
