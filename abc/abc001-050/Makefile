@@ -55,7 +55,7 @@ all:	_$(ABC001) _$(ABC002) _$(ABC003) _$(ABC004) _$(ABC005) _$(ABC006) _$(ABC007
 	_$(ABC022) _$(ABC023) _$(ABC024) _$(ABC025) _$(ABC026) _$(ABC027) _$(ABC028) \
 	_$(ABC029) _$(ABC030) _$(ABC031) _$(ABC032) _$(ABC033) _$(ABC034) _$(ABC035) \
 	_$(ABC036) _$(ABC037) _$(ABC038) _$(ABC039) _$(ABC040) _$(ABC041) _$(ABC042) \
-	_$(ABC043) _$(ABC044) _$(ABC045) _$(ABC046) _$(ABC047) #_$(ABC048) _$(ABC049) \
+	_$(ABC043) _$(ABC044) _$(ABC045) _$(ABC046) _$(ABC047) _$(ABC048) #_$(ABC049) \
 	_$(ABC050)
 
 _$(ABC001):
@@ -256,6 +256,6 @@ clean:
 	make -C $(ABC045) clean
 	make -C $(ABC046) clean
 	make -C $(ABC047) clean
-#	make -C $(ABC048) clean
+	make -C $(ABC048) clean
 #	make -C $(ABC049) clean
 #	make -C $(ABC050) clean
