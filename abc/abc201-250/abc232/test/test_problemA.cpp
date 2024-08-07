@@ -6,7 +6,6 @@ using namespace std;
 static_block {
 	COMMAND = "problemA";
 	EXTERNAL = "abc232/A";
-	TOLERANCE = 1E-3;
 }
 
 TEST(abc232_problemA, case1) {
