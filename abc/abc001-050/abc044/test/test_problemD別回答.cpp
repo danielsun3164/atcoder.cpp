@@ -149,22 +149,22 @@ static_block {
 	FUNC = &my_check;
 }
 
-TEST(abc044_problemD, case1) {
+TEST(abc044_problemD別回答, case1) {
 	check(87654LL, 30LL);
 }
 
-TEST(abc044_problemD, case2) {
+TEST(abc044_problemD別回答, case2) {
 	check(87654LL, 138LL);
 }
 
-TEST(abc044_problemD, case3) {
+TEST(abc044_problemD別回答, case3) {
 	check(string("") + "87654\n" + "45678", string("") + "-1");
 }
 
-TEST(abc044_problemD, case4) {
+TEST(abc044_problemD別回答, case4) {
 	check(31415926535LL, 1LL);
 }
 
-TEST(abc044_problemD, case5) {
+TEST(abc044_problemD別回答, case5) {
 	check(string("") + "1\n" + "31415926535", string("") + "-1");
 }
