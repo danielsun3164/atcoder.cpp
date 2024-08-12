@@ -3,13 +3,6 @@
 #include <gtest/gtest.h>
 using namespace std;
 
-void print(vector<int> &p) {
-	for (int pi : p) {
-		cout << pi << ",";
-	}
-	cout << endl;
-}
-
 class Command2 {
    public:
 	int ExitStatus = 0;
