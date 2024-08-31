@@ -1,7 +1,5 @@
 #include <bits/stdc++.h>
-#include <atcoder/modint>
 using namespace std;
-using mint = atcoder::modint1000000007;
 
 const static char LEFT = 'L';
 const static char RIGHT = 'R';
