@@ -6,6 +6,7 @@ using namespace std;
 
 static_block {
 	COMMAND = "problemK_lines";
+	EXTERNAL = "joisc2007/Lines";
 }
 
 TEST(joisc2007_problemK, case1) {

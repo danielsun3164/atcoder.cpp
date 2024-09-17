@@ -6,6 +6,7 @@ using namespace std;
 
 static_block {
 	COMMAND = "problemG_anagram";
+	EXTERNAL = "joisc2007/Anagram";
 }
 
 TEST(joisc2007_problemG, case1) {

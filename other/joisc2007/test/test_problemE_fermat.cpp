@@ -6,6 +6,7 @@ using namespace std;
 
 static_block {
 	COMMAND = "problemE_fermat";
+	EXTERNAL = "joisc2007/Fermat";
 }
 
 TEST(joisc2007_problemE, case1) {

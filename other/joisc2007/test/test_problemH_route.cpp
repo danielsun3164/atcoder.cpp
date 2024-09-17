@@ -6,6 +6,7 @@ using namespace std;
 
 static_block {
 	COMMAND = "problemH_route";
+	EXTERNAL = "joisc2007/Route";
 }
 
 TEST(joisc2007_problemH, case1) {
