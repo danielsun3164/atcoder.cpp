@@ -5,8 +5,8 @@
 #include "salt.h"
 
 static int N;
-static bool V[16];
-static int E[14][2];
+static bool V[1001];
+static int E[1000][2];
 static int V_size;
 static int E_size;
 static void proc(int u, int v, const char *player) {
@@ -99,14 +99,14 @@ int main() {
 		fprintf(stderr, "read error\n");
 		return 1;
 	}
-	if (N < 1 || N > 15) {
-		fprintf(stderr, "N should be between 1 and 15\n");
+	if (N < 1 || N > 1000) {
+		fprintf(stderr, "N should be between 1 and 1000\n");
 		return 1;
 	}
 	for (int i = 1; i <= N; i++) V[i] = true;
 	V_size = N;
 	E_size = N - 1;
-	int E2[14][2];
+	int E2[1000][2];
 	for (int i = 0; i < N - 1; i++) {
 		if (scanf("%d%d", &E[i][0], &E[i][1]) < 2) {
 			fprintf(stderr, "read error\n");
@@ -114,6 +114,7 @@ int main() {
 		}
 		if (!(1 <= E[i][0] && E[i][0] < E[i][1] && E[i][1] <= N)) {
 			fprintf(stderr, "edge condition failed\n");
+			fprintf(stderr, "i=%d, %d %d", i, E[i][0], E[i][1]);
 			return 1;
 		}
 		E2[i][0] = E[i][0];
