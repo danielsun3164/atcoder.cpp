@@ -15,11 +15,10 @@ double f(int a, int b, int c, double t) {
 }
 
 void check(int a, int b, int c) {
-	string input = to_string(a) + " " + to_string(b) + " " + to_string(c);
-	Command cmd = execute(input);
-	istringstream input_ss(cmd.StdOut);
+	Command cmd = execute(to_string(a) + " " + to_string(b) + " " + to_string(c));
+	istringstream output_ss(cmd.StdOut);
 	double output;
-	input_ss >> output;
+	output_ss >> output;
 	double fn = f(a, b, c, output);
 	EXPECT_TRUE(abs(fn - EXPECTED) < TOLERANCE);
 	if (abs(fn - EXPECTED) >= TOLERANCE) {

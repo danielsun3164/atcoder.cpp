@@ -41,13 +41,13 @@ void check(int h, int w, vector<string> s) {
 		input += "\n" + si;
 	}
 	Command cmd = execute(input);
-	istringstream input_ss(cmd.StdOut);
+	istringstream output_ss(cmd.StdOut);
 	string result;
-	input_ss >> result;
+	output_ss >> result;
 	EXPECT_EQ("possible", result);
 	vector<string> t(h);
 	for (string &ti : t) {
-		input_ss >> ti;
+		output_ss >> ti;
 	}
 	vector<string> ct = convert(t);
 	EXPECT_EQ(s, ct);

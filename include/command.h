@@ -108,13 +108,11 @@ class Command {
 
 		array<char, 256> buffer;
 		ssize_t bytes = 0;
-		while ((bytes = read(outfd[READ_END], buffer.data(), buffer.size())) >
-			   0) {
+		while ((bytes = read(outfd[READ_END], buffer.data(), buffer.size())) > 0) {
 			StdOut.append(buffer.data(), bytes);
 		}
 
-		while ((bytes = read(errfd[READ_END], buffer.data(), buffer.size())) >
-			   0) {
+		while ((bytes = read(errfd[READ_END], buffer.data(), buffer.size())) > 0) {
 			StdErr.append(buffer.data(), bytes);
 		}
 
@@ -133,25 +131,24 @@ string PATH;
 Command execute(string input) {
 	Command cmd;
 	cmd.Command = PATH + COMMAND;
-	cmd.StdIn = input;
+	cmd.StdIn = input + "\n";
 	cmd.execute();
 	return cmd;
 }
 
 void check(string input, string expected) {
-	Command cmd = execute(input + "\n");
+	Command cmd = execute(input);
 	EXPECT_EQ(expected + "\n", cmd.StdOut);
 }
 
 template <typename... Args>
 void check(string input, Args... args) {
-	Command cmd = execute(input + "\n");
+	Command cmd = execute(input);
 	vector<string> outputs = {args...};
 	for (int i = 0; i < int(outputs.size()); i++) {
 		outputs[i].append("\n");
 	}
-	EXPECT_TRUE(find(outputs.begin(), outputs.end(), cmd.StdOut) !=
-				outputs.end());
+	EXPECT_TRUE(find(outputs.begin(), outputs.end(), cmd.StdOut) != outputs.end());
 	if (outputs.end() == find(outputs.begin(), outputs.end(), cmd.StdOut)) {
 		cout << "Actual:" << endl;
 		cout << cmd.StdOut << endl;
@@ -164,13 +161,12 @@ void check(string input, Args... args) {
 
 void check_about(string input, double expected) {
 	EXPECT_TRUE(TOLERANCE > 0.0);
-	double tolerance = TOLERANCE,
-		   max_value = TOLERANCE * pow(2.0, DOUBLE_DIGITS);
+	double tolerance = TOLERANCE, max_value = TOLERANCE * pow(2.0, DOUBLE_DIGITS);
 	while (max_value < expected) {
 		max_value *= 2.0;
 		tolerance *= 2.0;
 	}
-	Command cmd = execute(input + "\n");
+	Command cmd = execute(input);
 	istringstream output_ss(cmd.StdOut);
 	double output;
 	output_ss >> output;
@@ -186,11 +182,12 @@ void check_about(string input, double expected) {
 }
 
 void check_empty(string input) {
-	Command cmd = execute(input + "\n");
+	Command cmd = execute(input);
 	EXPECT_EQ("", cmd.StdOut);
 }
 
 void check_from_file(string input, string expected) {
+	input.pop_back();
 	if (TOLERANCE > 0.0) {
 		istringstream expected_ss(expected);
 		double expected_value;
@@ -248,9 +245,7 @@ class MyTest : public testing::Test {
 };
 
 bool starts_with(string &s, string prefix) {
-	return (s.size() < prefix.size())
-			   ? false
-			   : equal(begin(prefix), end(prefix), begin(s));
+	return (s.size() < prefix.size()) ? false : equal(begin(prefix), end(prefix), begin(s));
 }
 
 __attribute__((unused)) static void (*FUNC)(string, string) = &check_from_file;
@@ -264,14 +259,12 @@ void registerMyTests() {
 			fs::path current_pth(PATH);
 			string crrnt_path = canonical(current_pth).string();
 			size_t index = crrnt_path.find_last_of(SLASH);
-			string testname =
-				crrnt_path.substr(index + 1, crrnt_path.length() - 1 - index);
+			string testname = crrnt_path.substr(index + 1, crrnt_path.length() - 1 - index);
 			string folder, filename, path = "";
 			index = EXTERNAL.find_last_of(SLASH);
 			folder = EXTERNAL.substr(index + 1);
 			if (1 == cnt) {
-				filename =
-					EXTERNAL.substr(0, EXTERNAL.find_last_of(SLASH, index));
+				filename = EXTERNAL.substr(0, EXTERNAL.find_last_of(SLASH, index));
 			} else {
 				size_t index2 = index;
 				index = EXTERNAL.find_last_of(SLASH, index2 - 1);
@@ -283,8 +276,7 @@ void registerMyTests() {
 			}
 			fs::directory_entry zip_file;
 			for (fs::directory_entry entry : fs::directory_iterator(pth)) {
-				if (boost::iequals(entry.path().filename().string(),
-								   filename + ".zip")) {
+				if (boost::iequals(entry.path().filename().string(), filename + ".zip")) {
 					zip_file = entry;
 					break;
 				}
@@ -296,34 +288,26 @@ void registerMyTests() {
 				set<string> st;
 				// ファイル名とZipEntryのマップを作成
 				for (ZipEntry entry : entries) {
-					if ((SLASH != entry.name.back()) &&
-						starts_with(entry.name, folder + SLASH)) {
+					if ((SLASH != entry.name.back()) && starts_with(entry.name, folder + SLASH)) {
 						st.insert(entry.name);
 					}
 				}
 				for (string in_path : st) {
 					string out_path = in_path;
-					boost::replace_all(out_path, SLASH + IN_NAME + SLASH,
-									   SLASH + OUT_NAME + SLASH);
+					boost::replace_all(out_path, SLASH + IN_NAME + SLASH, SLASH + OUT_NAME + SLASH);
 					boost::replace_all(out_path, "." + IN_NAME, "." + OUT_NAME);
-					if (starts_with(in_path,
-									folder + SLASH + IN_NAME + SLASH) &&
+					if (starts_with(in_path, folder + SLASH + IN_NAME + SLASH) &&
 						(st.end() != st.find(out_path))) {
-						string casename =
-							in_path.substr(in_path.find_last_of(SLASH) + 1);
-						boost::replace_all(casename, "." + IN_NAME,
-										   "." + OUT_NAME);
+						string casename = in_path.substr(in_path.find_last_of(SLASH) + 1);
+						boost::replace_all(casename, "." + IN_NAME, "." + OUT_NAME);
 						ostringstream input, output;
 						unzipper.extractEntryToStream(in_path, input);
 						unzipper.extractEntryToStream(out_path, output);
-						string input_str = input.str(),
-							   output_str = output.str();
+						string input_str = input.str(), output_str = output.str();
 						testing::RegisterTest(
-							(testname + "_" + COMMAND + "_external").c_str(),
-							casename.c_str(), nullptr, input_str.c_str(),
-							__FILE__, __LINE__, [=]() -> MyTest * {
-								return new MyTest(input_str, output_str, FUNC);
-							});
+							(testname + "_" + COMMAND + "_external").c_str(), casename.c_str(),
+							nullptr, input_str.c_str(), __FILE__, __LINE__,
+							[=]() -> MyTest * { return new MyTest(input_str, output_str, FUNC); });
 					}
 				}
 			}

@@ -17,14 +17,14 @@ void check(int n) {
 		}
 	}
 	EXPECT_TRUE(count > 1);
-	istringstream out_input(cmd.StdOut);
+	istringstream output_ss(cmd.StdOut);
 	int k;
-	out_input >> k;
+	output_ss >> k;
 	EXPECT_EQ(count, k + 1);
 	int sum = 0;
 	for (int i = 0; i < k; i++) {
 		int a;
-		out_input >> a;
+		output_ss >> a;
 		EXPECT_EQ(1, __builtin_popcount(a));
 		sum += a;
 	}

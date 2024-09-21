@@ -6,11 +6,11 @@ using namespace std;
 const static int N = 2;
 
 void check(string input, vector<double> expecteds) {
-	Command cmd = execute(input + "\n");
-	istringstream input_ss(cmd.StdOut);
+	Command cmd = execute(input);
+	istringstream output_ss(cmd.StdOut);
 	for (double expected : expecteds) {
 		double output;
-		input_ss >> output;
+		output_ss >> output;
 		EXPECT_TRUE(abs(output - expected) < TOLERANCE);
 		if (abs(output - expected) >= TOLERANCE) {
 			cout << "Actual:" << endl;
