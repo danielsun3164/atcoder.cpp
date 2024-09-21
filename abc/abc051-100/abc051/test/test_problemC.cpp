@@ -34,8 +34,7 @@ void check(int sx, int sy, int tx, int ty) {
 	EXPECT_EQ(2, mp[make_pair(tx, ty)]);
 }
 
-void my_check(string input, string expected) {
-	ignore = expected;
+void my_check(string input, __attribute__((unused)) string expected) {
 	istringstream input_ss(input);
 	int sx, sy, tx, ty;
 	input_ss >> sx >> sy >> tx >> ty;

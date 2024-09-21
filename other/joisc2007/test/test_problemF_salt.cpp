@@ -11,8 +11,7 @@ void check(string input) {
 	EXPECT_EQ("AC: player won", cmd.StdErr.substr(last2 + 1, last1 - last2 - 1));
 }
 
-void my_check(string input, string expected) {
-	ignore = expected;
+void my_check(string input, __attribute__((unused)) string expected) {
 	check(input);
 }
 
