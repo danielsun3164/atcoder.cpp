@@ -159,26 +159,30 @@ void check(string input, Args... args) {
 	}
 }
 
-void check_about(string input, double expected) {
+void check_output_about(string output_string, double expected) {
 	EXPECT_TRUE(TOLERANCE > 0.0);
 	double tolerance = TOLERANCE, max_value = TOLERANCE * pow(2.0, DOUBLE_DIGITS);
 	while (max_value < expected) {
 		max_value *= 2.0;
 		tolerance *= 2.0;
 	}
-	Command cmd = execute(input);
-	istringstream output_ss(cmd.StdOut);
+	istringstream output_ss(output_string);
 	double output;
 	output_ss >> output;
 	EXPECT_TRUE(abs(output - expected) < tolerance);
 	if (abs(output - expected) >= tolerance) {
 		cout << "Actual:" << endl;
-		cout << fixed << setprecision(10) << output << endl;
+		cout << fixed << setprecision(15) << output << endl;
 		cout << "Expected:" << endl;
-		cout << fixed << setprecision(10) << expected << endl;
+		cout << fixed << setprecision(15) << expected << endl;
 		cout << "TOLERANCE" << endl;
 		cout << defaultfloat << tolerance << endl;
 	}
+}
+
+void check_about(string input, double expected) {
+	Command cmd = execute(input);
+	check_output_about(cmd.StdOut, expected);
 }
 
 void check_empty(string input) {
