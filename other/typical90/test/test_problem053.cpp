@@ -199,15 +199,15 @@ static_block {
 	FUNC = &my_check;
 }
 
-TEST(practice_problem053, case1) {
+TEST(typical90_problem053, case1) {
 	check(vector<vector<int>>{{1, 2, 3, 4, 5, 6, 9, 1}});
 }
 
-TEST(practice_problem053, case2) {
+TEST(typical90_problem053, case2) {
 	check(vector<vector<int>>{{0}, {1000000000}});
 }
 
-TEST(practice_problem053, case3) {
+TEST(typical90_problem053, case3) {
 	check(vector<vector<int>>{
 		{598774,	644286,	   1101376,	  3674413,	 4816056,	6435548,   6628083,	  9550349,
 		 11011709,	13448949,  13460453,  14148441,	 15536434,	16137530,  16301186,  16684314,
