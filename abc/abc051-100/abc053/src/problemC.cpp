@@ -8,14 +8,10 @@ const static int M = 11;
 int main(void) {
 	ll x;
 	cin >> x;
-	ll answer = 1L;
-	x -= N;
+	ll answer = x / M * 2;
+	x %= M;
 	if (x > 0) {
-		answer += x / M * 2;
-		x %= M;
-		if (x > 0) {
-			answer += (x >= N) ? 2 : 1;
-		}
+		answer += (x > N) ? 2 : 1;
 	}
 	cout << answer << endl;
 	return 0;
