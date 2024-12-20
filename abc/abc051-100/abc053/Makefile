@@ -32,5 +32,6 @@ test_problemD別回答:	$(TEST_DIR)/test_problemD別回答.cpp
 
 problemD別回答:	$(SRC_DIR)/problemD別回答.cpp
 	$(CC) $(CFLAGS) $(^) -o $(@) $(INCLUDE)
+
 clean:
 	rm -f $(OBJS)
