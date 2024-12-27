@@ -135,17 +135,15 @@ vector<int> calc_vec(map<string, int> &var_int, map<string, vector<int>> &var_ve
 }
 
 int main() {
-
 	// 命令の行数を取得
 	int N;
 	cin >> N;
 
-	map<string, int> var_int; // intの変数を管理するmap
-	map<string, vector<int>> var_vec; // vectorの変数を管理するmap
+	map<string, int> var_int;		   // intの変数を管理するmap
+	map<string, vector<int>> var_vec;  // vectorの変数を管理するmap
 
 	// 行数分の処理
 	for (int i = 0; i < N; i++) {
-
 		// 命令を受け取る
 		string s;
 		cin >> s;

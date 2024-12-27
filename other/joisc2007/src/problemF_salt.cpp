@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void delete_node(vector<vector<int> > &e, int x, vector<bool> &deleted) {
+void delete_node(vector<vector<int>> &e, int x, vector<bool> &deleted) {
 	for (int i : e[x]) {
 		for (auto itr = e[i].begin(); itr < e[i].end(); itr++) {
 			if (*itr == x) {
@@ -16,7 +16,7 @@ void delete_node(vector<vector<int> > &e, int x, vector<bool> &deleted) {
 	deleted[x] = true;
 }
 
-void delete_edge(vector<vector<int> > &e, int x, int y) {
+void delete_edge(vector<vector<int>> &e, int x, int y) {
 	// 辺を削除する
 	for (auto itr = e[x].begin(); itr < e[x].end(); itr++) {
 		if (*itr == y) {
@@ -55,7 +55,7 @@ void play(int N, int E[][2]) {
 						x = i;
 						y = e[i][0];
 						if (x > y) {
-							swap(x, y); // @suppress("Invalid arguments")
+							swap(x, y);	 // @suppress("Invalid arguments")
 						}
 						break;
 					}

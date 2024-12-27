@@ -5,7 +5,8 @@ using mint = atcoder::modint1000000007;
 
 const static char A = 'a';
 
-void dfs(int n, vector<char> &c, vector<vector<int>> &g, vector<vector<mint>> &dp, int now, int prev) {
+void dfs(int n, vector<char> &c, vector<vector<int>> &g, vector<vector<mint>> &dp, int now,
+		 int prev) {
 	mint val1 = 1, val2 = 1;
 	for (int next : g[now]) {
 		if (next != prev) {

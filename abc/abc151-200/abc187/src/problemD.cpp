@@ -10,7 +10,7 @@ int main(void) {
 	for (int i = 0; i < n; i++) {
 		ll a, b;
 		cin >> a >> b;
-		d[i] = { a, b };
+		d[i] = {a, b};
 		aoki += a;
 	}
 	sort(d.begin(), d.end(), [](pair<ll, ll> a, pair<ll, ll> b) {

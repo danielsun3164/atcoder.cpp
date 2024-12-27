@@ -38,7 +38,8 @@ int main() {
 	}
 	mint ans = 0;
 	for (int i = 0; i <= s; i++) {
-		ans += (((1 & s) == (1 & i)) ? 1 : -1) * dp[i] * l[i] * r[i] * inv_fact[i] * inv_fact[s - i];
+		ans +=
+			(((1 & s) == (1 & i)) ? 1 : -1) * dp[i] * l[i] * r[i] * inv_fact[i] * inv_fact[s - i];
 	}
 	cout << ans.val() << endl;
 	return 0;

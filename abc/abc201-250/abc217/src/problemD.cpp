@@ -4,7 +4,7 @@ using namespace std;
 int main(void) {
 	int l, q;
 	cin >> l >> q;
-	set<int> st { 0, l };
+	set<int> st{0, l};
 	while (q--) {
 		int c, x;
 		cin >> c >> x;

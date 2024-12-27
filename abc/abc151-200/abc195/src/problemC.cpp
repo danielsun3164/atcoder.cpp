@@ -2,9 +2,10 @@
 using namespace std;
 using ll = long long;
 
-static vector<ll> LOWERS = { 999LL, 999'999LL, 999'999'999LL, 999'999'999'999LL, 999'999'999'999'999LL };
-static vector<ll> UPPERS = { 999'999LL, 999'999'999LL, 999'999'999'999LL, 999'999'999'999'999LL,
-		999'999'999'999'999'999LL };
+static vector<ll> LOWERS = {999LL, 999'999LL, 999'999'999LL, 999'999'999'999LL,
+							999'999'999'999'999LL};
+static vector<ll> UPPERS = {999'999LL, 999'999'999LL, 999'999'999'999LL, 999'999'999'999'999LL,
+							999'999'999'999'999'999LL};
 
 int main(void) {
 	ll n;

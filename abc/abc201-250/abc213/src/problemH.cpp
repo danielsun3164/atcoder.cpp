@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
-#include <atcoder/modint>
 #include <atcoder/convolution>
+#include <atcoder/modint>
 using namespace std;
 using mint = atcoder::modint998244353;
 
@@ -8,8 +8,8 @@ vector<mint> sub_vec(vector<mint> &v, int l, int r) {
 	return {begin(v) + l, begin(v) + r};
 }
 
-void online_convolution(vector<int> &a, vector<int> &b, vector<vector<mint>> &p, vector<vector<mint>> &dp, int l,
-		int r) {
+void online_convolution(vector<int> &a, vector<int> &b, vector<vector<mint>> &p,
+						vector<vector<mint>> &dp, int l, int r) {
 	if (l + 1 >= r) {
 		return;
 	}

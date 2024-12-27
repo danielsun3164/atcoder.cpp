@@ -10,7 +10,7 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		ll x, h;
 		cin >> x >> h;
-		v[i] = { x, (h + a - 1) / a };
+		v[i] = {x, (h + a - 1) / a};
 	}
 	sort(v.begin(), v.end());
 	vector<ll> s(n + 2, 0LL);
@@ -19,7 +19,7 @@ int main() {
 	for (auto p : v) {
 		s[idx] += p.second;
 		s[idx + 1] -= p.second;
-		v2[idx - 1] = { p.first, idx };
+		v2[idx - 1] = {p.first, idx};
 		idx++;
 	}
 	idx = 1;

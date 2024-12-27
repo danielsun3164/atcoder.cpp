@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const static vector<int> FIBONACCI { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597 };
+const static vector<int> FIBONACCI{1,  2,  3,	5,	 8,	  13,  21,	34,
+								   55, 89, 144, 233, 377, 610, 987, 1597};
 
 void ask(vector<int> &a, int index) {
 	cout << "? " << index << endl;

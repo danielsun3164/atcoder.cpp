@@ -10,7 +10,8 @@ void dfs(vector<vector<int>> &edges, vector<vector<vector<vector<mint>>>> &dp, i
 		if (dp[next].empty()) {
 			dfs(edges, dp, next);
 			int a = dp[now].size(), b = dp[next].size();
-			vector<vector<vector<mint>>> nex(a + b - 1, vector<vector<mint>>(2, vector<mint>(2, 0)));
+			vector<vector<vector<mint>>> nex(a + b - 1,
+											 vector<vector<mint>>(2, vector<mint>(2, 0)));
 			for (int i = 0; i < a; i++) {
 				for (int k = 0; k < 2; k++) {
 					for (int l = 0; l < 2; l++) {

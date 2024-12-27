@@ -10,8 +10,8 @@ int main(void) {
 	for (int i = 0; i < r; i++) {
 		cin >> s[i];
 	}
-	vector<vector<int>> yoko(r, vector<int>(c, 0)), yoko_rev(r, vector<int>(c, 0)), tate(r, vector<int>(c, 0)),
-			tate_rev(r, vector<int>(c, 0));
+	vector<vector<int>> yoko(r, vector<int>(c, 0)), yoko_rev(r, vector<int>(c, 0)),
+		tate(r, vector<int>(c, 0)), tate_rev(r, vector<int>(c, 0));
 	for (int i = 0; i < r; i++) {
 		for (int j = 0; j < c; j++) {
 			if (WHITE == s[i][j]) {

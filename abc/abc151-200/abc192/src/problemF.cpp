@@ -16,7 +16,7 @@ ll solve(int n, ll x, vector<int> a, int c) {
 			}
 		}
 	}
-	return (dp[n][c][(int) (x % c)] >= 0L) ? (x - dp[n][c][(int) (x % c)]) / c : -1L;
+	return (dp[n][c][(int)(x % c)] >= 0L) ? (x - dp[n][c][(int)(x % c)]) / c : -1L;
 }
 
 int main() {

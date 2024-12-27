@@ -1,19 +1,18 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-static_block
-{
+static_block {
 	COMMAND = "problemB";
 }
 
 void check(string input) {
 	Command cmd = execute(input);
-	istringstream input_ss(cmd.StdOut);
+	istringstream output_ss(cmd.StdOut);
 	string output;
-	input_ss >> output;
+	output_ss >> output;
 	EXPECT_TRUE(output < input);
 	if (output >= input) {
 		cout << "output=" << output << ", input=" << input << endl;

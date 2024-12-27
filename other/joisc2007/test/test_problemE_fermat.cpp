@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-static_block
-{
+static_block {
 	COMMAND = "problemE_fermat";
+	EXTERNAL = "joisc2007/Fermat";
 }
 
 TEST(joisc2007_problemE, case1) {

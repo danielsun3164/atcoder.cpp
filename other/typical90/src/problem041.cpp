@@ -7,11 +7,11 @@ struct Point {
 };
 
 Point operator+(const Point &a1, const Point &a2) {
-	return Point { a1.px + a2.px, a1.py + a2.py };
+	return Point{a1.px + a2.px, a1.py + a2.py};
 }
 
 Point operator-(const Point &a1, const Point &a2) {
-	return Point { a1.px - a2.px, a1.py - a2.py };
+	return Point{a1.px - a2.px, a1.py - a2.py};
 }
 
 bool operator<(const Point &a1, const Point &a2) {
@@ -45,10 +45,12 @@ int main() {
 	g1.emplace_back(g[0]), g2.emplace_back(g[0]);
 	g2.emplace_back(g[1]), g1.emplace_back(g[1]);
 	for (int i = 2; i < n; i++) {
-		while ((g1.size() >= 2) && (crs(g1[g1.size() - 1] - g1[g1.size() - 2], g[i] - g1[g1.size() - 1]) <= 0LL)) {
+		while ((g1.size() >= 2) &&
+			   (crs(g1[g1.size() - 1] - g1[g1.size() - 2], g[i] - g1[g1.size() - 1]) <= 0LL)) {
 			g1.pop_back();
 		}
-		while ((g2.size() >= 2) && (crs(g2[g2.size() - 1] - g2[g2.size() - 2], g[i] - g2[g2.size() - 1]) >= 0LL)) {
+		while ((g2.size() >= 2) &&
+			   (crs(g2[g2.size() - 1] - g2[g2.size() - 2], g[i] - g2[g2.size() - 1]) >= 0LL)) {
 			g2.pop_back();
 		}
 		g1.emplace_back(g[i]);
@@ -65,7 +67,8 @@ int main() {
 	ll edge_point = totsuhou.size();
 	int s = totsuhou.size();
 	for (int i = 0; i < s; i++) {
-		ll ax = totsuhou[i].px, ay = totsuhou[i].py, bx = totsuhou[(i + 1) % s].px, by = totsuhou[(i + 1) % s].py;
+		ll ax = totsuhou[i].px, ay = totsuhou[i].py, bx = totsuhou[(i + 1) % s].px,
+		   by = totsuhou[(i + 1) % s].py;
 		long vx = abs(bx - ax), vy = abs(by - ay), r = gcd(vx, vy);
 		edge_point += r - 1LL;
 	}
@@ -73,7 +76,8 @@ int main() {
 	// Step #4. 多角形の面積（を2倍した値）を求める
 	ll area = 0LL;
 	for (int i = 0; i < s; i++) {
-		ll ax = totsuhou[i].px, ay = totsuhou[i].py, bx = totsuhou[(i + 1) % s].px, by = totsuhou[(i + 1) % s].py;
+		ll ax = totsuhou[i].px, ay = totsuhou[i].py, bx = totsuhou[(i + 1) % s].px,
+		   by = totsuhou[(i + 1) % s].py;
 		area += (bx - ax) * (by + ay);
 	}
 	area = abs(area);

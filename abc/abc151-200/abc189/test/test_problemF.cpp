@@ -1,11 +1,10 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-static_block
-{
+static_block {
 	COMMAND = "problemF";
 	EXTERNAL = "ABC189/Fcpp";
 	TOLERANCE = 1E-3;

@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const vector<int> XS = { 0, 0, 1, 1 };
-const vector<int> YS = { 0, 1, 0, 1 };
+const vector<int> XS = {0, 0, 1, 1};
+const vector<int> YS = {0, 1, 0, 1};
 const char BLACK = '#';
 
 int count(int i, int j, vector<string> &s) {

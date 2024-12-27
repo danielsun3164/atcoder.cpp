@@ -13,6 +13,7 @@ int main(void) {
 	ll x;
 	cin >> x;
 	ll d = x % sum[n - 1];
-	cout << (x / sum[n - 1] * n + distance(sum.begin(), upper_bound(sum.begin(), sum.end(), d)) + 1) << endl;
+	cout << (x / sum[n - 1] * n + distance(sum.begin(), upper_bound(sum.begin(), sum.end(), d)) + 1)
+		 << endl;
 	return 0;
 }

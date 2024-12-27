@@ -14,7 +14,7 @@ int main(void) {
 		ci--;
 		cnt_r[ri]++;
 		cnt_c[ci]++;
-		s.push_back( { ri, ci });
+		s.push_back({ri, ci});
 	}
 	vector<int> sum_r(c + 1, 0), sum_c(r + 1, 0);
 	for (int cri : cnt_r) {
@@ -25,7 +25,7 @@ int main(void) {
 	}
 	ll ans = 0LL;
 	for (int i = max(0, k - r); i <= min(k, c); i++) {
-		ans += sum_r[i] * (ll) sum_c[k - i];
+		ans += sum_r[i] * (ll)sum_c[k - i];
 	}
 	for (pair<int, int> p : s) {
 		int sum = cnt_r[p.first] + cnt_c[p.second];

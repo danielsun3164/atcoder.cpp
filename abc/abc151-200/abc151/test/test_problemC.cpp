@@ -1,17 +1,17 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-static_block
-{
+static_block {
 	COMMAND = "problemC";
 	EXTERNAL = "ABC151/C";
 }
 
 TEST(abc151_problemC, case1) {
-	check(string("") + "2 5\n" + "1 WA\n" + "1 AC\n" + "2 WA\n" + "2 AC\n" + "2 WA", string("") + "2 2");
+	check(string("") + "2 5\n" + "1 WA\n" + "1 AC\n" + "2 WA\n" + "2 AC\n" + "2 WA",
+		  string("") + "2 2");
 }
 
 TEST(abc151_problemC, case2) {

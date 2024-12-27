@@ -1,20 +1,18 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-static_block
-{
+static_block {
 	COMMAND = "problemC";
 }
 
 void check(int n, int m) {
-	string input = to_string(n) + " " + to_string(m);
-	Command cmd = execute(input);
-	istringstream input_ss(cmd.StdOut);
+	Command cmd = execute(to_string(n) + " " + to_string(m));
+	istringstream output_ss(cmd.StdOut);
 	int a, b, c;
-	input_ss >> a >> b >> c;
+	output_ss >> a >> b >> c;
 	EXPECT_EQ(n, a + b + c);
 	if (n != a + b + c) {
 		cout << n << "!=" << a << "+" << b << "+" << c << endl;

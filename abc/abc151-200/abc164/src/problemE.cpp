@@ -29,24 +29,26 @@ int main(void) {
 	}
 	vector<vector<ll>> dp(n, vector<ll>(max_a + 1, INF));
 	priority_queue<status, vector<status>, greater<status>> que;
-	que.push(make_tuple(0LL, 0, s)); // @suppress("Invalid arguments")
+	que.push(make_tuple(0LL, 0, s));  // @suppress("Invalid arguments")
 	while (!que.empty()) {
 		ll time, money;
 		int now;
 		tie(time, now, money) = que.top();
 		que.pop();
-		money = min((ll) max_a, money);
+		money = min((ll)max_a, money);
 		if (dp[now][money] > time) {
 			dp[now][money] = time;
 			if (money < max_a) {
-				que.push(make_tuple(time + d[now], now, money + c[now])); // @suppress("Invalid arguments")
+				que.push(make_tuple(time + d[now], now,
+									money + c[now]));  // @suppress("Invalid arguments")
 			}
 			for (edge e : edges[now]) {
 				int nxt, a;
 				ll b;
 				tie(nxt, a, b) = e;
 				if (money >= a) {
-					que.push(make_tuple(time + b, nxt, money - a)); // @suppress("Invalid arguments")
+					que.push(
+						make_tuple(time + b, nxt, money - a));	// @suppress("Invalid arguments")
 				}
 			}
 		}

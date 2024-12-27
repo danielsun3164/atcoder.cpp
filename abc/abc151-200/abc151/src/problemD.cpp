@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const vector<int> XS = { -1, 1, 0, 0 };
-const vector<int> YS = { 0, 0, -1, 1 };
+const vector<int> XS = {-1, 1, 0, 0};
+const vector<int> YS = {0, 0, -1, 1};
 const char ROAD = '.';
 const int INF = INT_MAX >> 1;
 
@@ -11,17 +11,17 @@ vector<vector<int>> dijkstra(int h, int w, vector<string> &s, int x, int y) {
 	if (ROAD == s[x][y]) {
 		dp[x][y] = 0;
 		queue<pair<int, int>> q;
-		q.push( { x, y });
+		q.push({x, y});
 		while (!q.empty()) {
 			int cx, cy;
 			tie(cx, cy) = q.front();
 			q.pop();
 			for (int i = 0; i < int(XS.size()); i++) {
 				int nx = cx + XS[i], ny = cy + YS[i];
-				if ((0 <= nx) && (nx < h) && (0 <= ny) && (ny < w) && (ROAD == s[nx][ny])
-						&& (dp[nx][ny] > dp[cx][cy] + 1)) {
+				if ((0 <= nx) && (nx < h) && (0 <= ny) && (ny < w) && (ROAD == s[nx][ny]) &&
+					(dp[nx][ny] > dp[cx][cy] + 1)) {
 					dp[nx][ny] = dp[cx][cy] + 1;
-					q.push( { nx, ny });
+					q.push({nx, ny});
 				}
 			}
 		}

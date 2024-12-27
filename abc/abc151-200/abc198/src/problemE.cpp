@@ -3,8 +3,8 @@ using namespace std;
 
 static const int N = 100'002;
 
-void process(int n, vector<int> &c, vector<vector<int>> &edges, int now, vector<int> &cnt, vector<bool> &used,
-		vector<bool> &ok) {
+void process(int n, vector<int> &c, vector<vector<int>> &edges, int now, vector<int> &cnt,
+			 vector<bool> &used, vector<bool> &ok) {
 	if (0 == cnt[c[now]]) {
 		ok[now] = true;
 	}

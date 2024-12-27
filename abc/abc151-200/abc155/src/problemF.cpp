@@ -4,7 +4,8 @@ using namespace std;
 
 const int INF = 1'000'000'005;
 
-int dfs(vector<int> &x, vector<vector<pair<int, int>>> &edges, vector<int> &ans, int now, int prev) {
+int dfs(vector<int> &x, vector<vector<pair<int, int>>> &edges, vector<int> &ans, int now,
+		int prev) {
 	for (auto e : edges[now]) {
 		if (prev != e.first) {
 			if (dfs(x, edges, ans, e.first, now)) {
@@ -40,8 +41,8 @@ int main() {
 		ri = lower_bound(a.begin(), a.end(), r + 1) - a.begin();
 		if (!d.same(li, ri)) {
 			d.merge(li, ri);
-			edges[li].push_back( { ri, i });
-			edges[ri].push_back( { li, i });
+			edges[li].push_back({ri, i});
+			edges[ri].push_back({li, i});
 		}
 	}
 	vector<int> cnt(n + 1, 0);

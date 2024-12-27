@@ -3,8 +3,8 @@ using namespace std;
 using ll = long long;
 
 const static int N = 4;
-const static vector<int> DX { 0, 1, 0, 1 };
-const static vector<int> DY { 0, 0, 1, 1 };
+const static vector<int> DX{0, 1, 0, 1};
+const static vector<int> DY{0, 0, 1, 1};
 
 int main() {
 	int h, w;

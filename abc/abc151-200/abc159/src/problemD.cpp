@@ -13,7 +13,7 @@ int main(void) {
 	}
 	ll sum = 0LL;
 	for (pair<int, int> p : m) {
-		sum += p.second * (ll) (p.second - 1) / 2;
+		sum += p.second * (ll)(p.second - 1) / 2;
 	}
 	for (int i = 0; i < n; i++) {
 		cout << (sum - m[a[i]] + 1) << endl;

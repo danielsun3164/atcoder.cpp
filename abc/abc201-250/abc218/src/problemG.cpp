@@ -5,16 +5,13 @@ using namespace std;
 const static int INF = INT_MAX >> 1;
 
 // Binary Trieの実装
-template<class T> struct BIT {
+template <class T>
+struct BIT {
 	using U = atcoder::internal::to_unsigned_t<T>;
 
-public:
-	BIT() :
-			_n(0) {
-	}
-	explicit BIT(int n) :
-			_n(n), data(n, 0) {
-	}
+   public:
+	BIT() : _n(0) {}
+	explicit BIT(int n) : _n(n), data(n, 0) {}
 
 	void add(int p, T x) {
 		assert(0 <= p && p < _n);
@@ -48,7 +45,7 @@ public:
 		return res;
 	}
 
-private:
+   private:
 	int _n;
 	vector<U> data;
 
@@ -62,8 +59,8 @@ private:
 	}
 };
 
-int calc(vector<int> &a, vector<vector<int>> &edges, vector<int> &sa, map<int, int> &mp, vector<bool> &used,
-		BIT<int> &bt, int now, int count) {
+int calc(vector<int> &a, vector<vector<int>> &edges, vector<int> &sa, map<int, int> &mp,
+		 vector<bool> &used, BIT<int> &bt, int now, int count) {
 	bool has_next = false;
 	for (int next : edges[now]) {
 		if (!used[next]) {
@@ -86,7 +83,8 @@ int calc(vector<int> &a, vector<vector<int>> &edges, vector<int> &sa, map<int, i
 		}
 		return result;
 	}
-	return (1 & count) ? sa[bt.get(count >> 1)] : (sa[bt.get(count >> 1)] + sa[bt.get((count - 1) >> 1)]) >> 1;
+	return (1 & count) ? sa[bt.get(count >> 1)]
+					   : (sa[bt.get(count >> 1)] + sa[bt.get((count - 1) >> 1)]) >> 1;
 }
 
 int main(void) {

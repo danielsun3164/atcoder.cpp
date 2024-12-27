@@ -33,7 +33,8 @@ int main() {
 			if (dp0j > p) {
 				break;
 			}
-			answer += distance(dp[1][k - j].begin(), upper_bound(dp[1][k - j].begin(), dp[1][k - j].end(), p - dp0j));
+			answer += distance(dp[1][k - j].begin(),
+							   upper_bound(dp[1][k - j].begin(), dp[1][k - j].end(), p - dp0j));
 		}
 	}
 	cout << answer << endl;

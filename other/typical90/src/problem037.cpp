@@ -26,7 +26,8 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		segs[0] = segs[1];
 		for (int j = l[i]; j <= w; j++) {
-			segs[1].set(j, max(segs[0].prod(max(0, j - r[i]), min(w + 1, j - l[i] + 1)) + v[i], segs[0].get(j)));
+			segs[1].set(j, max(segs[0].prod(max(0, j - r[i]), min(w + 1, j - l[i] + 1)) + v[i],
+							   segs[0].get(j)));
 		}
 	}
 	cout << ((segs[1].get(w) > 0) ? segs[1].get(w) : -1LL) << endl;

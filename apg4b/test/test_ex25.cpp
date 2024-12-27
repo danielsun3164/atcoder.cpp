@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
@@ -17,7 +17,8 @@ TEST(apg4b_ex25, case2) {
 }
 
 TEST(apg4b_ex25, case3) {
-	check(string("") + "3\n" + "0 1 2\n" + "3\n" + "1 2 3\n" + "symmetric_diff", string("") + "0 3");
+	check(string("") + "3\n" + "0 1 2\n" + "3\n" + "1 2 3\n" + "symmetric_diff",
+		  string("") + "0 3");
 }
 
 TEST(apg4b_ex25, case4) {
@@ -29,5 +30,6 @@ TEST(apg4b_ex25, case5) {
 }
 
 TEST(apg4b_ex25, case6) {
-	check(string("") + "3\n" + "0 1 49\n" + "3\n" + "1 2 3\n" + "decrement", string("") + "0 48 49");
+	check(string("") + "3\n" + "0 1 49\n" + "3\n" + "1 2 3\n" + "decrement",
+		  string("") + "0 48 49");
 }

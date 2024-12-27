@@ -18,7 +18,8 @@ void init(int n) {
 	}
 }
 
-void calc_count(vector<vector<int>> &edges, vector<mint> &dp, vector<int> &count, int now, int prev) {
+void calc_count(vector<vector<int>> &edges, vector<mint> &dp, vector<int> &count, int now,
+				int prev) {
 	dp[now] = 1;
 	int sum = 0;
 	for (int to : edges[now]) {
@@ -32,8 +33,8 @@ void calc_count(vector<vector<int>> &edges, vector<mint> &dp, vector<int> &count
 	count[now] = sum + 1;
 }
 
-void calc_answer(vector<vector<int>> &edges, vector<mint> &dp, vector<mint> &ans, vector<int> &count, int now,
-		int prev) {
+void calc_answer(vector<vector<int>> &edges, vector<mint> &dp, vector<mint> &ans,
+				 vector<int> &count, int now, int prev) {
 	ans[now] = 1;
 	int sum = 0;
 	for (int to : edges[now]) {

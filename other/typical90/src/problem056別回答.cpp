@@ -1,7 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool calc(int n, int s, vector<int> &a, vector<int> &b, int now, int nowS, string &sb, map<int, bool> &memo) {
+bool calc(int n, int s, vector<int> &a, vector<int> &b, int now, int nowS, string &sb,
+		  map<int, bool> &memo) {
 	if (now == n) {
 		return (0 == nowS);
 	}

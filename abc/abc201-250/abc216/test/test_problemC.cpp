@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 using namespace std;
 using ll = long long;
 
-void my_check(string input, __attribute__((unused))  string expected) {
+void my_check(string input, __attribute__((unused)) string expected) {
 	istringstream input_ss(input);
 	ll n, l = 0LL;
 	input_ss >> n;
@@ -22,8 +22,7 @@ void my_check(string input, __attribute__((unused))  string expected) {
 	EXPECT_EQ(n, l);
 }
 
-static_block
-{
+static_block {
 	COMMAND = "problemC";
 	EXTERNAL = "abc216/C";
 	FUNC = &my_check;

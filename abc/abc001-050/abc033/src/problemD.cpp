@@ -30,19 +30,23 @@ int main(void) {
 		vector<double> angles;
 		for (int j = 0; j < n; j++) {
 			if (j != i) {
-				angles.emplace_back(atan2((double) y[j] - y[i], (double) x[j] - x[i]));
+				angles.emplace_back(atan2((double)y[j] - y[i], (double)x[j] - x[i]));
 			}
 		}
 		sort(angles.begin(), angles.end());
 		for (int j = 0; j < n - 1; j++) {
 			double now = angles[j];
 			double mx = now + M_PI / 2.0;
-			int from_mx = distance(angles.begin(), lower_bound(angles.begin(), angles.end(), convert(mx - EPS)));
-			int to_mx = distance(angles.begin(), upper_bound(angles.begin(), angles.end(), convert(mx + EPS)));
+			int from_mx = distance(angles.begin(),
+								   lower_bound(angles.begin(), angles.end(), convert(mx - EPS)));
+			int to_mx = distance(angles.begin(),
+								 upper_bound(angles.begin(), angles.end(), convert(mx + EPS)));
 			right += dist(from_mx, to_mx, n - 1);
 			double mn = now - M_PI / 2.0;
-			int from_mn = distance(angles.begin(), lower_bound(angles.begin(), angles.end(), convert(mn - EPS)));
-			int to_mn = distance(angles.begin(), upper_bound(angles.begin(), angles.end(), convert(mn + EPS)));
+			int from_mn = distance(angles.begin(),
+								   lower_bound(angles.begin(), angles.end(), convert(mn - EPS)));
+			int to_mn = distance(angles.begin(),
+								 upper_bound(angles.begin(), angles.end(), convert(mn + EPS)));
 			right += dist(from_mn, to_mn, n - 1);
 			obtuse += dist(to_mx, from_mn, n - 1);
 		}

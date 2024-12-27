@@ -2,7 +2,7 @@
 #include <atcoder/string>
 using namespace std;
 
-const static vector<char> COLORS = { 'R', 'G', 'B' };
+const static vector<char> COLORS = {'R', 'G', 'B'};
 const static int N = 3;
 
 string replace(string s, char a, char b) {

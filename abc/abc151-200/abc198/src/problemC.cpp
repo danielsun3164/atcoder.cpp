@@ -10,7 +10,7 @@ int main(void) {
 	} else if (d <= r * 2.0) {
 		cout << 2 << endl;
 	} else {
-		cout << ((int) ceil(d / r)) << endl;
+		cout << ((int)ceil(d / r)) << endl;
 	}
 	return 0;
 }

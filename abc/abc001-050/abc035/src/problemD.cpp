@@ -9,7 +9,7 @@ vector<ll> dijkstra(int src, vector<vector<pair<int, int>>> &edges) {
 	vector<ll> dist(n, INF);
 	dist[src] = 0LL;
 	queue<pair<ll, int>> que;
-	que.push( { 0L, src });
+	que.push({0L, src});
 	while (!que.empty()) {
 		pair<ll, int> now = que.front();
 		que.pop();
@@ -17,7 +17,7 @@ vector<ll> dijkstra(int src, vector<vector<pair<int, int>>> &edges) {
 			for (pair<int, int> e : edges[now.second]) {
 				if (dist[e.first] > dist[now.second] + e.second) {
 					dist[e.first] = dist[now.second] + e.second;
-					que.push( { dist[e.first], e.first });
+					que.push({dist[e.first], e.first});
 				}
 			}
 		}
@@ -39,8 +39,8 @@ int main(void) {
 		cin >> a >> b >> c;
 		a--;
 		b--;
-		edges[a].push_back( { b, c });
-		redges[b].push_back( { a, c });
+		edges[a].push_back({b, c});
+		redges[b].push_back({a, c});
 	}
 	vector<ll> dist = dijkstra(0, edges), rdist = dijkstra(0, redges);
 	ll answer = 0LL;

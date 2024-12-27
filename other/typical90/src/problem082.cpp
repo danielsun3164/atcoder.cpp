@@ -11,10 +11,10 @@ int main() {
 	cin >> l >> r;
 	r++;
 	vector<pair<ll, ll>> v;
-	v.push_back( { 0, 1 });
+	v.push_back({0, 1});
 	ll now = 1LL;
 	for (int i = 1; i <= N; i++) {
-		v.push_back( { now, (i == N) ? now + 1 : now * 10 });
+		v.push_back({now, (i == N) ? now + 1 : now * 10});
 		now *= 10;
 	}
 	mint answer = 0;

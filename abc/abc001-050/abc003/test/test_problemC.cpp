@@ -1,11 +1,10 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-static_block
-{
+static_block {
 	COMMAND = "problemC";
 	TOLERANCE = 1E-6;
 }
@@ -19,5 +18,6 @@ TEST(abc003_problemC, case2) {
 }
 
 TEST(abc003_problemC, case3) {
-	check_about(string("") + "10 5\n" + "2604 2281 3204 2264 2200 2650 2229 2461 2439 2211", 2820.03125);
+	check_about(string("") + "10 5\n" + "2604 2281 3204 2264 2200 2650 2229 2461 2439 2211",
+				2820.03125);
 }

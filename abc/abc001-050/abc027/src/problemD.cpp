@@ -19,6 +19,8 @@ int main(void) {
 	}
 	sort(v.begin(), v.end());
 	int m = v.size();
-	cout << (accumulate(v.begin() + m / 2, v.end(), 0) - accumulate(v.begin(), v.begin() + m / 2, 0)) << endl;
+	cout << (accumulate(v.begin() + m / 2, v.end(), 0) -
+			 accumulate(v.begin(), v.begin() + m / 2, 0))
+		 << endl;
 	return 0;
 }

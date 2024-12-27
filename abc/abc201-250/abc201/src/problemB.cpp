@@ -8,7 +8,7 @@ int main(void) {
 	for (int i = 0; i < n; i++) {
 		cin >> data[i].second >> data[i].first;
 	}
-	sort(data.begin(), data.end(), greater<pair<int, string>> { });
+	sort(data.begin(), data.end(), greater<pair<int, string>>{});
 	cout << data[1].second << endl;
 	return 0;
 }

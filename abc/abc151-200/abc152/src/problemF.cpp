@@ -2,7 +2,8 @@
 using namespace std;
 using ll = long long;
 
-bool dfs(int now, int index, int prev, int target, ll &mask, vector<vector<pair<int, int>>> &edges) {
+bool dfs(int now, int index, int prev, int target, ll &mask,
+		 vector<vector<pair<int, int>>> &edges) {
 	mask ^= (-1 == prev) ? 0LL : 1LL << index;
 	if (now == target) {
 		return true;
@@ -25,8 +26,8 @@ int main() {
 		cin >> a >> b;
 		a--;
 		b--;
-		edges[a].push_back( { b, i });
-		edges[b].push_back( { a, i });
+		edges[a].push_back({b, i});
+		edges[b].push_back({a, i});
 	}
 	int m;
 	cin >> m;
@@ -48,7 +49,8 @@ int main() {
 				mask |= masks[j];
 			}
 		}
-		ans += ((1 & bitset<32>(i).count()) ? -1LL : 1LL) * (1LL << (n - 1 - bitset<64>(mask).count()));
+		ans += ((1 & bitset<32>(i).count()) ? -1LL : 1LL) *
+			   (1LL << (n - 1 - bitset<64>(mask).count()));
 	}
 	cout << ans << endl;
 	return 0;

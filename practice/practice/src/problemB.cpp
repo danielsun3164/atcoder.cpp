@@ -2,7 +2,7 @@
 using namespace std;
 
 /** Merge insertion sort用 */
-const vector<int> T = { 0, 2, 4, 10 };
+const vector<int> T = {0, 2, 4, 10};
 
 bool comp(char c1, char c2) {
 	cout << "? " << c1 << " " << c2 << endl;
@@ -71,7 +71,8 @@ string merge_insertion_sort(string &s) {
 		}
 		for (int j = T[i]; j > start; j--) {
 			if (j < int(t.size())) {
-				insert(r, *(find(s.begin(), s.end(), t[j]) - 1), 0, find(r.begin(), r.end(), t[i]) - r.begin());
+				insert(r, *(find(s.begin(), s.end(), t[j]) - 1), 0,
+					   find(r.begin(), r.end(), t[i]) - r.begin());
 			} else if ((2 * j + 1) == int(s.size())) {
 				insert(r, s[2 * j], 0, r.size());
 			} else {

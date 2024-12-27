@@ -30,8 +30,8 @@ int main() {
 		}
 	}
 
-	int correct_count = 0; // ここに正しい値のマスの個数を入れる
-	int wrong_count = 0;   // ここに誤った値のマスの個数を入れる
+	int correct_count = 0;	// ここに正しい値のマスの個数を入れる
+	int wrong_count = 0;	// ここに誤った値のマスの個数を入れる
 
 	// A, correct_count, wrong_countを参照渡し
 	saiten(A, correct_count, wrong_count);

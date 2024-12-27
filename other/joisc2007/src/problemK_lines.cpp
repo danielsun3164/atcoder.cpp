@@ -7,7 +7,8 @@ bool same_line(int a1, int b1, int c1, int d1, int a2, int b2, int c2, int d2) {
 	return (0.0 == p) && (0.0 == q);
 }
 
-bool intersect(int a1, int b1, int c1, int d1, int a2, int b2, int c2, int d2, double &x, double &y) {
+bool intersect(int a1, int b1, int c1, int d1, int a2, int b2, int c2, int d2, double &x,
+			   double &y) {
 	double denominator = (a1 - c1) * (b2 - d2) - (b1 - d1) * (a2 - c2);
 	if (0.0 == denominator) {
 		return false;
@@ -32,7 +33,7 @@ int main() {
 		for (int j = 0; j < i; j++) {
 			bool result = intersect(a[i], b[i], c[i], d[i], a[j], b[j], c[j], d[j], x, y);
 			if (result) {
-				s.insert( { x, y });
+				s.insert({x, y});
 			}
 			if (same_line(a[i], b[i], c[i], d[i], a[j], b[j], c[j], d[j])) {
 				same++;

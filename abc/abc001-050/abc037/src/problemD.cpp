@@ -3,8 +3,8 @@
 using namespace std;
 using mint = atcoder::modint1000000007;
 
-const static vector<int> DX = { -1, 1, 0, 0 };
-const static vector<int> DY = { 0, 0, -1, 1 };
+const static vector<int> DX = {-1, 1, 0, 0};
+const static vector<int> DY = {0, 0, -1, 1};
 
 void calc(int h, int w, int x, int y, vector<vector<int>> &a, vector<vector<mint>> &dp) {
 	for (int i = 0; i < int(DX.size()); i++) {
@@ -23,7 +23,7 @@ int main(void) {
 	for (int i = 0; i < h; i++) {
 		for (int j = 0; j < w; j++) {
 			cin >> a[i][j];
-			values.push_back( { a[i][j], { i, j } });
+			values.push_back({a[i][j], {i, j}});
 		}
 	}
 	sort(values.begin(), values.end());

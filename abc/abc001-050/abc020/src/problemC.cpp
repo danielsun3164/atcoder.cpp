@@ -6,8 +6,8 @@ const ll INF = LLONG_MAX >> 1;
 const char BLACK = '#';
 const char START = 'S';
 const char GOAL = 'G';
-const vector<int> XS { 0, 0, 1, -1 };
-const vector<int> YS { 1, -1, 0, 0 };
+const vector<int> XS{0, 0, 1, -1};
+const vector<int> YS{1, -1, 0, 0};
 
 int h, w, sx, sy, ex, ey;
 
@@ -15,7 +15,7 @@ bool is_ok(vector<string> &s, int z, ll t) {
 	vector<vector<ll>> d(h, vector<ll>(w, INF));
 	d[sx][sy] = 0LL;
 	priority_queue<pair<ll, int>, vector<pair<ll, int>>, greater<pair<ll, int>>> q;
-	q.push( { 0LL, sx * w + sy });
+	q.push({0LL, sx * w + sy});
 	while (!q.empty()) {
 		pair<ll, int> now = q.top();
 		q.pop();
@@ -29,7 +29,7 @@ bool is_ok(vector<string> &s, int z, ll t) {
 				if ((nx >= 0) && (nx < h) && (ny >= 0) && (ny < w)) {
 					if (d[x][y] + ((BLACK == s[nx][ny]) ? z : 1) < d[nx][ny]) {
 						d[nx][ny] = d[x][y] + ((BLACK == s[nx][ny]) ? z : 1);
-						q.push( { d[nx][ny], nx * w + ny });
+						q.push({d[nx][ny], nx * w + ny});
 					}
 				}
 			}

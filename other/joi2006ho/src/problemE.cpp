@@ -13,15 +13,13 @@ int main() {
 	for (int i = 0; i < n; i++) {
 		int x1, y1, x2, y2;
 		cin >> x1 >> y1 >> x2 >> y2;
-		regions[i] = Region { x1, y1, x2, y2 };
+		regions[i] = Region{x1, y1, x2, y2};
 		x_max = max(x_max, x2);
 		x_min = min(x_min, x1);
 		y_max = max(y_max, y2);
 		y_min = min(y_min, y1);
 	}
-	sort(regions.begin(), regions.end(), [](auto a, auto b) {
-		return a.y1 < b.y1;
-	});
+	sort(regions.begin(), regions.end(), [](auto a, auto b) { return a.y1 < b.y1; });
 	int count = 0;
 	int dp[2][x_max - x_min + 1];
 	for (int i = 0; i < 2; i++) {

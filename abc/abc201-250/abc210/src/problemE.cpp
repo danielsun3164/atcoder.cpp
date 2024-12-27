@@ -14,7 +14,7 @@ int main(void) {
 		int a;
 		ll c;
 		cin >> a >> c;
-		v[i] = { c, a };
+		v[i] = {c, a};
 	}
 	sort(v.begin(), v.end());
 	int x = n;

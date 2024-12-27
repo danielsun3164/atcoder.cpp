@@ -21,7 +21,8 @@ ll process(string &s, vector<int> &dict) {
 	return res;
 }
 
-bool solve(string &s1, string &s2, string &s3, vector<char> &vars, vector<int> &dict, vector<bool> &used, int idx) {
+bool solve(string &s1, string &s2, string &s3, vector<char> &vars, vector<int> &dict,
+		   vector<bool> &used, int idx) {
 	if (idx == int(vars.size())) {
 		return process(s1, dict) + process(s2, dict) == process(s3, dict);
 	}

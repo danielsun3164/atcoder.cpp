@@ -2,8 +2,8 @@
 using namespace std;
 
 const int INF = INT_MAX >> 1;
-const vector<int> XS = { 1, -1, 0, 0 };
-const vector<int> YS = { 0, 0, 1, -1 };
+const vector<int> XS = {1, -1, 0, 0};
+const vector<int> YS = {0, 0, 1, -1};
 const char OK = '.';
 
 struct masu {
@@ -28,7 +28,7 @@ int main(void) {
 	vector<vector<int>> dp(r, vector<int>(c, INF));
 	dp[sx][sy] = 0;
 	priority_queue<masu> que;
-	que.push( { sx, sy, 0 });
+	que.push({sx, sy, 0});
 	while (!que.empty()) {
 		masu m = que.top();
 		que.pop();
@@ -38,7 +38,7 @@ int main(void) {
 				if ((nx >= 0) && (nx < r) && (ny >= 0) && (ny < c) && (OK == s[nx][ny])) {
 					if (dp[nx][ny] > dp[m.x][m.y] + 1) {
 						dp[nx][ny] = dp[m.x][m.y] + 1;
-						que.push( { nx, ny, dp[nx][ny] });
+						que.push({nx, ny, dp[nx][ny]});
 					}
 				}
 			}

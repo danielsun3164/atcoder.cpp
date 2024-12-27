@@ -1,11 +1,10 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-static_block
-{
+static_block {
 	COMMAND = "problemD";
 	EXTERNAL = "ABC159/D";
 }
@@ -24,5 +23,5 @@ TEST(abc159_problemD, case3) {
 
 TEST(abc159_problemD, case4) {
 	check(string("") + "8\n" + "1 2 1 4 2 1 4 1",
-			string("") + "5\n" + "7\n" + "5\n" + "7\n" + "7\n" + "5\n" + "7\n" + "5");
+		  string("") + "5\n" + "7\n" + "5\n" + "7\n" + "7\n" + "5\n" + "7\n" + "5");
 }

@@ -4,12 +4,12 @@ using ll = long long;
 
 const static ll INF = LONG_LONG_MAX >> 1;
 
-pair<ll, int> f(vector<ll> &b, int value) {
+pair<ll, int> f(vector<ll> &b, ll value) {
 	int n = b.size();
-	vector<pair<ll, int>> dp(n + 1, { -INF, 0 }), ep(n + 1, { -INF, 0 });
-	ep[0] = { 0, 0 };
+	vector<pair<ll, int>> dp(n + 1, {-INF, 0}), ep(n + 1, {-INF, 0});
+	ep[0] = {0, 0};
 	for (int i = 0; i < n; i++) {
-		dp[i + 1] = { ep[i].first + b[i] - value, ep[i].second + 1 };
+		dp[i + 1] = {ep[i].first + b[i] - value, ep[i].second + 1};
 		ep[i + 1] = max(dp[i], ep[i]);
 	}
 	return max(dp[n], ep[n]);
@@ -25,15 +25,15 @@ int main(void) {
 		b[i] += a[i];
 		b[i + 1] += a[i];
 	}
-	int ok = 0, ng = 1 << 31;
+	ll ok = 0LL, ng = 1LL << 31;
 	while (ng > ok + 1) {
-		int med = (ok + ng) >> 1;
+		ll med = (ok + ng) >> 1;
 		if (f(b, med).second >= r) {
 			ok = med;
 		} else {
 			ng = med;
 		}
 	}
-	cout << (f(b, ok).first + r * ll(ok)) << endl;
+	cout << (f(b, ok).first + r * ok) << endl;
 	return 0;
 }

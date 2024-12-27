@@ -10,6 +10,7 @@ int main(void) {
 		cin >> a;
 		s.insert(a);
 	}
-	cout << (((1 == *s.cbegin()) && (n == *s.crbegin()) && (n == int(s.size()))) ? "Yes" : "No") << endl;
+	cout << (((1 == *s.cbegin()) && (n == *s.crbegin()) && (n == int(s.size()))) ? "Yes" : "No")
+		 << endl;
 	return 0;
 }

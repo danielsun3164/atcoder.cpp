@@ -19,8 +19,8 @@ int main(void) {
 		cin >> a >> b >> c >> d;
 		a--;
 		b--;
-		edges[a].push_back( { b, c, d });
-		edges[b].push_back( { a, c, d });
+		edges[a].push_back({b, c, d});
+		edges[b].push_back({a, c, d});
 	}
 	vector<ll> d(n, INF);
 	d[0] = 0LL;

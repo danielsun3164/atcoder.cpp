@@ -24,9 +24,9 @@ int main(void) {
 			b[i] = b[i - 1];
 		} else {
 			dp[i][0] = min(dp[i - 1][0] + abs(a[i - 1] - b[i]) + (b[i] - a[i]),
-					dp[i - 1][1] + abs(b[i - 1] - b[i]) + (b[i] - a[i]));
+						   dp[i - 1][1] + abs(b[i - 1] - b[i]) + (b[i] - a[i]));
 			dp[i][1] = min(dp[i - 1][0] + abs(a[i - 1] - a[i]) + (b[i] - a[i]),
-					dp[i - 1][1] + abs(b[i - 1] - a[i]) + (b[i] - a[i]));
+						   dp[i - 1][1] + abs(b[i - 1] - a[i]) + (b[i] - a[i]));
 		}
 	}
 	cout << min(dp[n][0] + abs(a[n]), dp[n][1] + abs(b[n])) << endl;

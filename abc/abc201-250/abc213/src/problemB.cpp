@@ -9,9 +9,7 @@ int main(void) {
 		cin >> a[i];
 	}
 	iota(idx.begin(), idx.end(), 0);
-	sort(idx.begin(), idx.end(), [&](const int x, const int y) {
-		return a[y] < a[x];
-	});
+	sort(idx.begin(), idx.end(), [&](const int x, const int y) { return a[y] < a[x]; });
 	cout << (idx[1] + 1) << endl;
 	return 0;
 }

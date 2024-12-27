@@ -13,7 +13,7 @@ vector<int> calc_spf() {
 	for (int i = 2; i <= N; i++) {
 		if (!res[i]) {
 			res[i] = i;
-			for (ll j = i * (ll) i; j <= N; j += i) {
+			for (ll j = i * (ll)i; j <= N; j += i) {
 				if (!res[j]) {
 					res[j] = i;
 				}

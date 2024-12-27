@@ -1,11 +1,10 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-static_block
-{
+static_block {
 	COMMAND = "problemF";
 	EXTERNAL = "ABC151/F";
 	TOLERANCE = 1E-6;
@@ -20,7 +19,7 @@ TEST(abc151_problemF, case2) {
 }
 
 TEST(abc151_problemF, case3) {
-	check_about(
-			string("") + "10\n" + "10 9\n" + "5 9\n" + "2 0\n" + "0 0\n" + "2 7\n" + "3 3\n" + "2 5\n" + "10 0\n"
-					+ "3 7\n" + "1 9", 6.726812023536805158);
+	check_about(string("") + "10\n" + "10 9\n" + "5 9\n" + "2 0\n" + "0 0\n" + "2 7\n" + "3 3\n" +
+					"2 5\n" + "10 0\n" + "3 7\n" + "1 9",
+				6.726812023536805158);
 }

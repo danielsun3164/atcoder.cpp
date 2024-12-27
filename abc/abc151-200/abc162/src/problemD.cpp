@@ -14,7 +14,7 @@ int main(void) {
 	for (int i = 0; i < n; i++) {
 		sets[getColor(s[i])].insert(i + 1);
 	}
-	ll ans = sets[0].size() * (ll) sets[1].size() * sets[2].size();
+	ll ans = sets[0].size() * (ll)sets[1].size() * sets[2].size();
 	for (int ri : sets[0]) {
 		for (int gi : sets[1]) {
 			ans -= (sets[2].end() != sets[2].find(ri + ri - gi)) ? 1 : 0;

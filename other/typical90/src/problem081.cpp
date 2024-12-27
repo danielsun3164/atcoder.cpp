@@ -21,7 +21,8 @@ int main() {
 	int answer = 0;
 	for (int i = k + 1; i < N; i++) {
 		for (int j = k + 1; j < N; j++) {
-			answer = max(answer, sum[i][j] + sum[i - k - 1][j - k - 1] - sum[i - k - 1][j] - sum[i][j - k - 1]);
+			answer = max(answer, sum[i][j] + sum[i - k - 1][j - k - 1] - sum[i - k - 1][j] -
+									 sum[i][j - k - 1]);
 		}
 	}
 	cout << answer << endl;

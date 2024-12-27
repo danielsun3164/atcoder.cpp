@@ -10,14 +10,14 @@ int main(void) {
 	for (int i = 0; i < m; i++) {
 		int l, r, x;
 		cin >> l >> r >> x;
-		edges[l - 1].push_back( { r - l + 1 - x, r });
+		edges[l - 1].push_back({r - l + 1 - x, r});
 	}
 	for (int i = 0; i < n; i++) {
-		edges[i + 1].push_back( { 0, i });
-		edges[i].push_back( { 1, i + 1 });
+		edges[i + 1].push_back({0, i});
+		edges[i].push_back({1, i + 1});
 	}
 	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> que;
-	que.push( { 0, 0 });
+	que.push({0, 0});
 	vector<int> b(n + 1, INF);
 	b[0] = 0;
 	while (!que.empty()) {
@@ -27,7 +27,7 @@ int main(void) {
 			for (pair<int, int> edge : edges[now.second]) {
 				if (b[edge.second] > b[now.second] + edge.first) {
 					b[edge.second] = b[now.second] + edge.first;
-					que.push( { b[edge.second], edge.second });
+					que.push({b[edge.second], edge.second});
 				}
 			}
 		}

@@ -22,7 +22,7 @@ int main(void) {
 	vector<int> dist(n, INF);
 	dist[a] = 0;
 	priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> que;
-	que.push( { 0, a });
+	que.push({0, a});
 	vector<mint> ans(n, 0);
 	ans[a] = 1;
 	while (!que.empty()) {
@@ -34,7 +34,7 @@ int main(void) {
 				if (dist[next] > dist[to] + 1) {
 					dist[next] = dist[to] + 1;
 					ans[next] = ans[to];
-					que.push( { dist[next], next });
+					que.push({dist[next], next});
 				} else if (dist[next] == dist[to] + 1) {
 					ans[next] += ans[to];
 				}

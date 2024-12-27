@@ -94,8 +94,8 @@ bool check() {
 			as2 &= ans[j][i];
 			os2 |= ans[j][i];
 		}
-		if (((0 == s[i]) && (as != u[i])) || ((1 == s[i]) && (os != u[i])) || ((0 == t[i]) && (as2 != v[i]))
-				|| ((1 == t[i]) && (os2 != v[i]))) {
+		if (((0 == s[i]) && (as != u[i])) || ((1 == s[i]) && (os != u[i])) ||
+			((0 == t[i]) && (as2 != v[i])) || ((1 == t[i]) && (os2 != v[i]))) {
 			return false;
 		}
 	}

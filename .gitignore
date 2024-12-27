@@ -3,4 +3,7 @@
 .cproject
 .project
 .settings
+.vscode
+.clang-format
+.editorconfig
 DataOptions

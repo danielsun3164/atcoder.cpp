@@ -1,11 +1,10 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-static_block
-{
+static_block {
 	COMMAND = "problem051";
 	EXTERNAL = "typical90/051";
 }
@@ -19,8 +18,7 @@ TEST(typical90_problem051, case2) {
 }
 
 TEST(typical90_problem051, case3) {
-	check(
-			string("") + "40 20 100\n"
-					+ "1 3 1 3 4 1 3 5 5 3 3 4 1 5 4 4 3 1 3 4 1 3 2 4 4 1 5 2 5 3 1 3 3 3 5 5 5 2 3 5",
-			string("") + "137846528820");
+	check(string("") + "40 20 100\n" +
+			  "1 3 1 3 4 1 3 5 5 3 3 4 1 5 4 4 3 1 3 4 1 3 2 4 4 1 5 2 5 3 1 3 3 3 5 5 5 2 3 5",
+		  string("") + "137846528820");
 }

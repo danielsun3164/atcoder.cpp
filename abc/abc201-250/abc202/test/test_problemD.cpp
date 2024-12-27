@@ -1,10 +1,9 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 using namespace std;
 
-static_block
-{
+static_block {
 	COMMAND = "problemD";
 	EXTERNAL = "abc202/D";
 }
@@ -15,5 +14,5 @@ TEST(abc202_problemD, case1) {
 
 TEST(abc202_problemD, case2) {
 	check(string("") + "30 30 118264581564861424",
-			string("") + "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+		  string("") + "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
 }

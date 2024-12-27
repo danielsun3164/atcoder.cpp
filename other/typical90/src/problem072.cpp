@@ -3,10 +3,11 @@ using namespace std;
 
 const static char MOUNTAIN = '#';
 const static int N = 4;
-const static vector<int> DX { 1, -1, 0, 0 };
-const static vector<int> DY { 0, 0, 1, -1 };
+const static vector<int> DX{1, -1, 0, 0};
+const static vector<int> DY{0, 0, 1, -1};
 
-int dfs(int h, int w, vector<string> &c, int sx, int sy, vector<vector<bool>> &visited, int x, int y, int step) {
+int dfs(int h, int w, vector<string> &c, int sx, int sy, vector<vector<bool>> &visited, int x,
+		int y, int step) {
 	int result = -1;
 	if (visited[x][y]) {
 		if ((sx == x) && (sy == y)) {

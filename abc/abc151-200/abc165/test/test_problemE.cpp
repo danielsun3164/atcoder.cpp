@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-void my_check(string input, __attribute__((unused))  string expected) {
+void my_check(string input, __attribute__((unused)) string expected) {
 	istringstream input_ss(input);
 	int n, m;
 	input_ss >> n >> m;
@@ -24,8 +24,7 @@ void my_check(string input, __attribute__((unused))  string expected) {
 	}
 }
 
-static_block
-{
+static_block {
 	COMMAND = "problemE";
 	EXTERNAL = "ABC165/E";
 	FUNC = &my_check;
@@ -36,5 +35,6 @@ TEST(abc165_problemE, case1) {
 }
 
 TEST(abc165_problemE, case2) {
-	check(string("") + "7 3", string("") + "1 3\n" + "4 7\n" + "5 6", string("") + "1 6\n" + "2 5\n" + "3 4");
+	check(string("") + "7 3", string("") + "1 3\n" + "4 7\n" + "5 6",
+		  string("") + "1 6\n" + "2 5\n" + "3 4");
 }

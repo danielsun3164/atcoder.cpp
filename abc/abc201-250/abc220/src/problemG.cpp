@@ -65,8 +65,8 @@ line norm(line l) {
 data_p calc(point &a, point &b) {
 	data_p ret;
 	ret.sumc = a.c + b.c;
-	ret.p = { a.x + b.x, a.y + b.y };
-	ret.l = norm( { 2 * (b.x - a.x), 2 * (b.y - a.y), a.x * a.x + a.y * a.y - b.x * b.x - b.y * b.y });
+	ret.p = {a.x + b.x, a.y + b.y};
+	ret.l = norm({2 * (b.x - a.x), 2 * (b.y - a.y), a.x * a.x + a.y * a.y - b.x * b.x - b.y * b.y});
 	return ret;
 }
 
@@ -83,12 +83,10 @@ int main(void) {
 			vec.emplace_back(calc(a[i], a[j]));
 		}
 	}
-	sort(vec.begin(), vec.end(), [](data_p &x, data_p &y) {
-		return x.l < y.l;
-	});
+	sort(vec.begin(), vec.end(), [](data_p &x, data_p &y) { return x.l < y.l; });
 
 	ll answer = -1LL;
-	data_p nil = { { 0LL, 0LL, 0LL }, { 0LL, 0LL }, -INF }, p1 = nil;
+	data_p nil = {{0LL, 0LL, 0LL}, {0LL, 0LL}, -INF}, p1 = nil;
 	for (int pos = 0; pos < int(vec.size()); pos++) {
 		if ((pos > 0) && (vec[pos].l != vec[pos - 1].l)) {
 			p1 = nil;

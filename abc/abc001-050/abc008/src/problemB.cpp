@@ -10,8 +10,9 @@ int main(void) {
 		cin >> s;
 		m[s]++;
 	}
-	cout << max_element(m.begin(), m.end(), [](const auto a, const auto b) {
-		return a.second < b.second;
-	})->first << endl;
+	cout << max_element(m.begin(), m.end(),
+						[](const auto a, const auto b) { return a.second < b.second; })
+				->first
+		 << endl;
 	return 0;
 }

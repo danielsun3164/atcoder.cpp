@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const vector<string> DIRS = { "N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW",
-		"NW", "NNW", "N" };
+const vector<string> DIRS = {"N",	"NNE", "NE",  "ENE", "E",	"ESE", "SE",  "SSE", "S",
+							 "SSW", "SW",  "WSW", "W",	 "WNW", "NW",  "NNW", "N"};
 
 int main(void) {
 	int deg, dis, w;

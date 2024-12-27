@@ -10,8 +10,8 @@ int log2(int n) {
 	return k;
 }
 
-void dfs(vector<vector<int>> &edges, int now, vector<vector<int>> &parents, vector<int> &depths, int parent,
-		int depth) {
+void dfs(vector<vector<int>> &edges, int now, vector<vector<int>> &parents, vector<int> &depths,
+		 int parent, int depth) {
 	parents[0][now] = parent;
 	depths[now] = depth;
 	for (int next : edges[now]) {

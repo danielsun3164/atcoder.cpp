@@ -12,7 +12,8 @@ void dfs(int now, int prev, vector<vector<int>> &edges, vector<int> &dists, vect
 	}
 }
 
-void dfs2(int n, int now, int prev, vector<vector<int>> &edges, vector<int> &subs, vector<ll> &answers) {
+void dfs2(int n, int now, int prev, vector<vector<int>> &edges, vector<int> &subs,
+		  vector<ll> &answers) {
 	for (int next : edges[now]) {
 		if (next != prev) {
 			answers[next] = answers[now] + n - 2 * subs[next];

@@ -1,11 +1,10 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-static_block
-{
+static_block {
 	COMMAND = "problem066別回答";
 	EXTERNAL = "typical90/066";
 	TOLERANCE = 1E-7;
@@ -20,7 +19,7 @@ TEST(typical90_problem066別回答, case2) {
 }
 
 TEST(typical90_problem066別回答, case3) {
-	check_about(
-			string("") + "10\n" + "1 10\n" + "38 40\n" + "8 87\n" + "2 9\n" + "75 100\n" + "45 50\n" + "89 92\n"
-					+ "27 77\n" + "23 88\n" + "62 81", 13.696758921226);
+	check_about(string("") + "10\n" + "1 10\n" + "38 40\n" + "8 87\n" + "2 9\n" + "75 100\n" +
+					"45 50\n" + "89 92\n" + "27 77\n" + "23 88\n" + "62 81",
+				13.696758921226);
 }

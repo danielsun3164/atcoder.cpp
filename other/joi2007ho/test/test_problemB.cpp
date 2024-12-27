@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 
 using namespace std;
 
-static_block
-{
+static_block {
 	COMMAND = "problemB";
+	EXTERNAL = "joi2007ho/B";
 }
 
 TEST(joi2007ho_problemB, case1) {

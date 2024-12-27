@@ -2,8 +2,8 @@
 using namespace std;
 
 const static int N = 4;
-const static vector<int> DX { -1, 1, 0, 0 };
-const static vector<int> DY { 0, 0, -1, 1 };
+const static vector<int> DX{-1, 1, 0, 0};
+const static vector<int> DY{0, 0, -1, 1};
 
 void dfs(int x, int y, int c, vector<vector<bool>> &used, vector<vector<int>> &cover) {
 	used[x][y] = true;
@@ -40,7 +40,7 @@ int main(void) {
 				}
 			}
 		}
-		end1: ;
+	end1:;
 		for (int i = 0; i <= N + 1; i++) {
 			for (int j = 0; j <= N + 1; j++) {
 				used[i][j] = false;
@@ -55,7 +55,7 @@ int main(void) {
 				}
 			}
 		}
-		end2: ;
+	end2:;
 		for (int i = 0; i <= N + 1; i++) {
 			for (int j = 0; j <= N + 1; j++) {
 				flag &= used[i][j];

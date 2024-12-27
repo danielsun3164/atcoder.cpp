@@ -15,7 +15,7 @@ int main(void) {
 	ll answer = 0L;
 	while ((k > 0) && !mp.empty()) {
 		auto it = mp.begin();
-		pair<ll, int> now = *it, next = { 0LL, 0 };
+		pair<ll, int> now = *it, next = {0LL, 0};
 		if (mp.size() > 1) {
 			it++;
 			next = *it;

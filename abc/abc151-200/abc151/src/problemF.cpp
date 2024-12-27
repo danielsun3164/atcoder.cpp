@@ -5,7 +5,7 @@ const double TOLERANCE = 1E-7;
 
 pair<double, double> pv(double len, double x, double y) {
 	double plen = hypot(x, y);
-	return {x*len/plen, y*len/plen};
+	return {x * len / plen, y * len / plen};
 }
 
 bool isOk(vector<pair<int, int>> &p, double r) {
@@ -15,12 +15,13 @@ bool isOk(vector<pair<int, int>> &p, double r) {
 			double d = hypot(p[i].first - p[j].first, p[i].second - p[j].second);
 			double mx = (p[i].first + p[j].first) / 2.0, my = (p[i].second + p[j].second) / 2.0;
 			if (abs(d - 2 * r) < TOLERANCE) {
-				v.push_back( { mx, my });
+				v.push_back({mx, my});
 			} else if (d < 2 * r) {
 				double h = sqrt(r * r - d * d / 4.0);
-				pair<double, double> vec = pv(h, p[i].second - p[j].second, p[j].first - p[i].first);
-				v.push_back( { mx + vec.first, my + vec.second });
-				v.push_back( { mx - vec.first, my - vec.second });
+				pair<double, double> vec =
+					pv(h, p[i].second - p[j].second, p[j].first - p[i].first);
+				v.push_back({mx + vec.first, my + vec.second});
+				v.push_back({mx - vec.first, my - vec.second});
 			}
 		}
 	}

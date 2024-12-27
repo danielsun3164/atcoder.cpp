@@ -3,8 +3,8 @@ using namespace std;
 
 int t;
 
-void dfs(vector<vector<int>> &childrens, vector<vector<int>> &in_depth, int now, vector<int> &depths, vector<int> &in,
-		vector<int> &out) {
+void dfs(vector<vector<int>> &childrens, vector<vector<int>> &in_depth, int now,
+		 vector<int> &depths, vector<int> &in, vector<int> &out) {
 	in[now] = t++;
 	in_depth[depths[now]].emplace_back(in[now]);
 	for (int next : childrens[now]) {
@@ -34,7 +34,8 @@ int main(void) {
 		cin >> u >> d;
 		u--;
 		vector<int> &v = in_depth[d];
-		cout << (lower_bound(v.begin(), v.end(), out[u]) - lower_bound(v.begin(), v.end(), in[u])) << endl;
+		cout << (lower_bound(v.begin(), v.end(), out[u]) - lower_bound(v.begin(), v.end(), in[u]))
+			 << endl;
 	}
 	return 0;
 }

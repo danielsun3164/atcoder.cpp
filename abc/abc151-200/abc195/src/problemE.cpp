@@ -17,13 +17,13 @@ int main(void) {
 	for (int i = n - 1; i >= 0; i--) {
 		for (int r = 0; r < N; r++) {
 			if (AOKI == t[i]) {
-				if ((dp[i + 1].end() != dp[i + 1].find(10 * r % N))
-						&& (dp[i + 1].end() != dp[i + 1].find((10 * r + is[i]) % N))) {
+				if ((dp[i + 1].end() != dp[i + 1].find(10 * r % N)) &&
+					(dp[i + 1].end() != dp[i + 1].find((10 * r + is[i]) % N))) {
 					dp[i].insert(r);
 				}
 			} else {
-				if ((dp[i + 1].end() != dp[i + 1].find(10 * r % N))
-						|| (dp[i + 1].end() != dp[i + 1].find((10 * r + is[i]) % N))) {
+				if ((dp[i + 1].end() != dp[i + 1].find(10 * r % N)) ||
+					(dp[i + 1].end() != dp[i + 1].find((10 * r + is[i]) % N))) {
 					dp[i].insert(r);
 				}
 			}

@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
-#include <gtest/gtest.h>
 #include <command.h>
+#include <gtest/gtest.h>
 using namespace std;
 
-void my_check(string input, __attribute__((unused))         string expected) {
+void my_check(string input, __attribute__((unused)) string expected) {
 	istringstream input_ss(input);
 	int a, b, c;
 	input_ss >> a >> b >> c;
@@ -22,8 +22,7 @@ void my_check(string input, __attribute__((unused))         string expected) {
 	}
 }
 
-static_block
-{
+static_block {
 	COMMAND = "problemA";
 	EXTERNAL = "abc220/A";
 	FUNC = &my_check;

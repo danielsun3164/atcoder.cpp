@@ -10,7 +10,7 @@ int main(void) {
 		cin >> xi >> yi >> z;
 		xi--;
 		yi--;
-		y[yi].push_back( { xi, z });
+		y[yi].push_back({xi, z});
 	}
 	int ans = 0;
 	for (int i = 1; i < (1 << n); i++) {

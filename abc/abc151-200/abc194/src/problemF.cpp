@@ -5,7 +5,8 @@ using ll = long long;
 using mint = atcoder::modint1000000007;
 
 const int N = 16;
-const vector<char> NUMBERS = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+const vector<char> NUMBERS = {'0', '1', '2', '3', '4', '5', '6', '7',
+							  '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
 int main() {
 	string n;
