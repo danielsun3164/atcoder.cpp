@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(void) {
+	int w, a, b;
+	cin >> w >> a >> b;
+	if (a > b) {
+		swap(a, b);
+	}
+	cout << max(0, b - a - w) << endl;
+	return 0;
+}
