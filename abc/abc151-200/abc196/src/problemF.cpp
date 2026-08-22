@@ -19,7 +19,7 @@ int main() {
 	}
 	s1 = atcoder::convolution(s1, t2);
 	s2 = atcoder::convolution(s2, t1);
-	unsigned int ans = INT_MAX;
+	int ans = INT_MAX;
 	for (int i = m - 1; i < n; i++) {
 		ans = min(ans, s1[i].val() + s2[i].val());
 	}

@@ -12,7 +12,7 @@ int main() {
 		int d, c;
 		ll s;
 		cin >> d >> c >> s;
-		v.emplace_back(make_tuple(d, c, s));  // @suppress("Invalid arguments")
+		v.emplace_back(make_tuple(d, c, s));
 	}
 	sort(v.begin(), v.end(), [](auto a, auto b) { return get<0>(a) < get<0>(b); });
 	vector<vector<ll>> dp(n + 1, vector<ll>(N, 0LL));
@@ -20,7 +20,7 @@ int main() {
 		int d, c;
 		ll s;
 		tie(d, c, s) = v[i];
-		for (int j = 0; j <= N; j++) {
+		for (int j = 0; j < N; j++) {
 			dp[i + 1][j] = dp[i][j];
 			if ((j >= c) && (j <= d)) {
 				dp[i + 1][j] = max(dp[i][j], dp[i][j - c] + s);
