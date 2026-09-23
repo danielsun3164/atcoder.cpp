@@ -125,7 +125,7 @@ class Command {
 };
 
 static string COMMAND, EXTERNAL;
-static double TOLERANCE;
+static long double TOLERANCE;
 string PATH;
 
 Command execute(string input) {
@@ -191,7 +191,10 @@ void check_empty(string input) {
 }
 
 void check_from_file(string input, string expected) {
-	input.pop_back();
+	// 最後の改行を削除
+	if ('\n' == input.back()) {
+		input.pop_back();
+	}
 	if (TOLERANCE > 0.0) {
 		istringstream expected_ss(expected);
 		double expected_value;
