@@ -50,7 +50,7 @@ ABC099=abc099
 ABC100=abc100
 
 all:	_$(ABC051) _$(ABC052) _$(ABC053) _$(ABC054) _$(ABC055) _$(ABC056) _$(ABC057) \
-	#_$(ABC058) _$(ABC059) _$(ABC060) _$(ABC061) _$(ABC062) _$(ABC063) _$(ABC064) \
+	_$(ABC058) #_$(ABC059) _$(ABC060) _$(ABC061) _$(ABC062) _$(ABC063) _$(ABC064) \
 	#_$(ABC065) _$(ABC066) _$(ABC067) _$(ABC068) _$(ABC069) _$(ABC070) _$(ABC071) \
 	#_$(ABC072) _$(ABC073) _$(ABC074) _$(ABC075) _$(ABC076) _$(ABC077) _$(ABC078) \
 	#_$(ABC079) _$(ABC080) _$(ABC081) _$(ABC082) _$(ABC083) _$(ABC084) _$(ABC085) \
@@ -215,8 +215,8 @@ clean:
 	make -C $(ABC054) clean
 	make -C $(ABC055) clean
 	make -C $(ABC056) clean
-#	make -C $(ABC057) clean
-#	make -C $(ABC058) clean
+	make -C $(ABC057) clean
+	make -C $(ABC058) clean
 #	make -C $(ABC059) clean
 #	make -C $(ABC060) clean
 #	make -C $(ABC061) clean
